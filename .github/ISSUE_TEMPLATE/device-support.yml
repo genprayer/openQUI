@@ -1,0 +1,36 @@
+name: Device support
+description: Request or report support for an exact Corsair model
+labels: [device-support]
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Model, variant and firmware
+      placeholder: Exact product name, revision, firmware version
+    validations:
+      required: true
+  - type: input
+    id: usb
+    attributes:
+      label: USB identities and connection
+      description: Include peripheral and receiver VID:PID; specify cable, Bluetooth or 2.4 GHz.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Distribution, Qt version and OpenQUI revision
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Feature, steps and observed result
+      description: Distinguish editor behavior, protocol replies and physical device behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted descriptor and protocol evidence
+      description: Include relevant report lengths and status; exclude pairing keys and personal profiles.

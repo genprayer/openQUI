@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenQUI peripheral session service
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.kde.cyberdeck.icue
+ExecStart=/usr/bin/open-cue-gui --service
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=graphical-session.target

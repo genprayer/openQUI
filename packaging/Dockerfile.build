@@ -1,0 +1,9 @@
+FROM fedora:44@sha256:43b29f65a41eb9c35e1cd5323e3bdf3b655c2357a9f4f1ff2f9c2798e5045d80
+RUN dnf install -y gcc-c++ cmake ninja-build qt6-qtbase-devel \
+    qt6-qtdeclarative-devel qt6-qtsvg-devel qt6-qttools-devel qt6-linguist systemd-devel alsa-lib-devel \
+    dbus-daemon mesa-dri-drivers shadow-utils && dnf clean all
+ARG BUILD_UID=1000
+ARG BUILD_GID=1000
+RUN groupadd --gid "$BUILD_GID" openicue-builder && \
+    useradd --uid "$BUILD_UID" --gid "$BUILD_GID" --no-create-home openicue-builder
+WORKDIR /workspace

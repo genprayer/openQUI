@@ -1,0 +1,57 @@
+name: OpenQUI Linux build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    env:
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+    strategy:
+      fail-fast: false
+      matrix:
+        image: [debian:13-slim, fedora:44]
+    container:
+      image: ${{ matrix.image }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Install Debian dependencies
+        if: startsWith(matrix.image, 'debian:')
+        run: |
+          apt-get update
+          DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            git build-essential cmake ninja-build pkg-config python3 clang-format-19 \
+            qt6-base-dev qt6-declarative-dev qt6-svg-dev qt6-svg-plugins qt6-tools-dev qt6-tools-dev-tools \
+            qt6-wayland libudev-dev libasound2-dev dbus-daemon pipewire-bin jq fonts-dejavu-core \
+            qml6-module-qtquick qml6-module-qtquick-controls qml6-module-qtquick-layouts \
+            qml6-module-qtquick-dialogs qml6-module-qtqml-workerscript \
+            qml6-module-qtquick-templates qml6-module-qtquick-window
+      - name: Install Fedora dependencies
+        if: startsWith(matrix.image, 'fedora:')
+        run: |
+          dnf install -y git gcc-c++ cmake ninja-build pkgconf-pkg-config python3 \
+            qt6-qtbase-devel qt6-qtdeclarative-devel qt6-qtsvg-devel qt6-qttools-devel \
+            qt6-linguist qt6-qtwayland libudev-devel alsa-lib-devel \
+            pipewire-utils pipewire dbus-daemon jq dejavu-sans-fonts
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Check source formatting
+        if: startsWith(matrix.image, 'debian:')
+        run: find src tests/native -type f \( -name '*.cpp' -o -name '*.h' \) -print0 | xargs -0 clang-format-19 --dry-run --Werror
+      - name: Check translations
+        run: python3 tools/localization/update_catalog.py --check
+      - name: Configure
+        run: cmake --preset native
+      - name: Build
+        run: cmake --build --preset native --parallel 2
+      - name: Test
+        run: ctest --preset native

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node name="/org/kde/cyberdeck/icue">
+  <interface name="org.kde.cyberdeck.icue">
+    <signal name="stateChanged">
+    </signal>
+    <signal name="noticeChanged">
+    </signal>
+    <method name="GetState">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="ListDevices">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="selectDevice">
+      <arg type="s" direction="out" />
+      <arg name="id" type="s" direction="in" />
+    </method>
+    <method name="selectProfile">
+      <arg type="s" direction="out" />
+      <arg name="id" type="s" direction="in" />
+    </method>
+    <method name="createProfile">
+      <arg type="s" direction="out" />
+      <arg name="name" type="s" direction="in" />
+    </method>
+    <method name="renameProfile">
+      <arg type="s" direction="out" />
+      <arg name="id" type="s" direction="in" />
+      <arg name="name" type="s" direction="in" />
+    </method>
+    <method name="removeProfile">
+      <arg type="s" direction="out" />
+      <arg name="id" type="s" direction="in" />
+    </method>
+    <method name="importProfile">
+      <arg type="s" direction="out" />
+      <arg name="path" type="s" direction="in" />
+    </method>
+    <method name="setDocumentValue">
+      <arg type="s" direction="out" />
+      <arg name="key" type="s" direction="in" />
+      <arg name="value" type="v" direction="in" />
+    </method>
+    <method name="setEqGain">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+      <arg name="gain" type="d" direction="in" />
+    </method>
+    <method name="selectEqPreset">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+    </method>
+    <method name="addEqPreset">
+      <arg type="s" direction="out" />
+      <arg name="name" type="s" direction="in" />
+    </method>
+    <method name="removeEqPreset">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+    </method>
+    <method name="resetEqPreset">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="addDpiPreset">
+      <arg type="s" direction="out" />
+      <arg name="name" type="s" direction="in" />
+    </method>
+    <method name="selectDpiPreset">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+    </method>
+    <method name="removeDpiPreset">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+    </method>
+    <method name="resetDpiPreset">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="selectDpiStage">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+    </method>
+    <method name="setDpiStage">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+      <arg name="field" type="s" direction="in" />
+      <arg name="value" type="v" direction="in" />
+    </method>
+    <method name="setTiltAngle">
+      <arg type="s" direction="out" />
+      <arg name="index" type="i" direction="in" />
+      <arg name="angle" type="i" direction="in" />
+    </method>
+    <method name="setMixerControl">
+      <arg type="s" direction="out" />
+      <arg name="control" type="s" direction="in" />
+      <arg name="percent" type="i" direction="in" />
+      <arg name="isMuted" type="b" direction="in" />
+    </method>
+    <method name="startAudio">
+      <arg type="s" direction="out" />
+      <arg name="target" type="s" direction="in" />
+    </method>
+    <method name="stopAudio">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="setLightingEditorActive">
+      <arg type="s" direction="out" />
+      <arg name="isActive" type="b" direction="in" />
+    </method>
+    <method name="toggleSurround">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="applyHardware">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="applyDpiSettings">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="refresh">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="exportEqualizer">
+      <arg type="b" direction="out" />
+      <arg name="path" type="s" direction="in" />
+      <arg name="target" type="s" direction="in" />
+    </method>
+    <method name="pairDarkstar">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="probeHardware">
+      <arg type="s" direction="out" />
+    </method>
+    <method name="stopHardwareLighting">
+      <arg type="s" direction="out" />
+    </method>
+  </interface>
+</node>

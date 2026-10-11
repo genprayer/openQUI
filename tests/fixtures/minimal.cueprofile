@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cereal>
+  <profile>
+    <id>open-icue-example</id>
+    <name>Example profile</name>
+    <exporterVersion>5.0.0</exporterVersion>
+  </profile>
+</cereal>

@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "isCompleteCorsairCatalog": false,
+  "scope": "All resources present in the supplied installation snapshot",
+  "fileCount": 2697,
+  "bytes": 136422986,
+  "models": [
+    {
+      "id": "darkstar_wireless",
+      "name": "DARKSTAR WIRELESS",
+      "kind": "Mouse",
+      "usbIds": [
+        {
+          "pid": 7090,
+          "vid": 6940
+        }
+      ],
+      "manifest": "assets/darkstar_wireless.rcc/darkstar_wireless/darkstar_wireless_manifest.cuebmf",
+      "container": "darkstar_wireless.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "govee",
+      "name": "GOVEE",
+      "kind": "Govee",
+      "usbIds": [
+        {
+          "pid": -1026,
+          "vid": -1026
+        }
+      ],
+      "manifest": "assets/govee.rcc/govee/govee_manifest.cuebmf",
+      "container": "govee.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "k70_core_rgb",
+      "name": "K70 CORE RGB",
+      "kind": "Keyboard",
+      "usbIds": [
+        {
+          "pid": 7165,
+          "vid": 6940
+        }
+      ],
+      "manifest": "assets/k70_core_rgb.rcc/k70_core_rgb/k70_core_rgb_manifest.cuebmf",
+      "container": "k70_core_rgb.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "nanoleaf",
+      "name": "NANOLEAF",
+      "kind": "Nanoleaf",
+      "usbIds": [
+        {
+          "pid": -1025,
+          "vid": -1025
+        }
+      ],
+      "manifest": "assets/nanoleaf.rcc/nanoleaf/nanoleaf_manifest.cuebmf",
+      "container": "nanoleaf.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "philips_hue",
+      "name": "PHILIPS HUE",
+      "kind": "PhilipsHue",
+      "usbIds": [
+        {
+          "pid": -1024,
+          "vid": -1024
+        }
+      ],
+      "manifest": "assets/philips_hue.rcc/philips_hue/philips_hue_manifest.cuebmf",
+      "container": "philips_hue.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "slipstream_wireless_dongle_ss",
+      "name": "SLIPSTREAM WIRELESS USB Receiver",
+      "kind": "Dongle",
+      "usbIds": [
+        {
+          "pid": 7132,
+          "vid": 6940
+        }
+      ],
+      "manifest": "assets/slipstream_wireless_dongle_ss.rcc/slipstream_wireless_dongle_ss/slipstream_wireless_dongle_ss_manifest.cuebmf",
+      "container": "slipstream_wireless_dongle_ss.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "virtuoso_black",
+      "name": "VIRTUOSO",
+      "kind": "Headset",
+      "usbIds": [
+        {
+          "pid": 2625,
+          "vid": 6940
+        }
+      ],
+      "manifest": "assets/virtuoso_black.rcc/virtuoso_black/virtuoso_black_manifest.cuebmf",
+      "container": "virtuoso_black.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    },
+    {
+      "id": "virtuoso_black_dongle",
+      "name": "VIRTUOSO WIRELESS RECEIVER",
+      "kind": "Dongle",
+      "usbIds": [
+        {
+          "pid": 2634,
+          "vid": 6940
+        },
+        {
+          "pid": 2626,
+          "vid": 6940
+        }
+      ],
+      "manifest": "assets/virtuoso_black_dongle.rcc/virtuoso_black_dongle/virtuoso_black_dongle_manifest.cuebmf",
+      "container": "virtuoso_black_dongle.rcc",
+      "hardwareSupport": "See docs/compatibility.md; assets do not enable HID commands"
+    }
+  ],
+  "sourceVersion": "iCUE 5.52.93",
+  "containers": {
+    "CanvasCueQmlPlugin.dll": {
+      "files": 19,
+      "bytes": 7166043
+    },
+    "CuestyleCueQmlPlugin.dll": {
+      "files": 1889,
+      "bytes": 87561584
+    },
+    "DashboardScreenCueQmlPlugin.dll": {
+      "files": 1,
+      "bytes": 465
+    },
+    "DeviceViewCueQmlPlugin.dll": {
+      "files": 3,
+      "bytes": 1200
+    },
+    "FallbackManifest.dll": {
+      "files": 1,
+      "bytes": 19381
+    },
+    "FlashTapCueQmlPlugin.dll": {
+      "files": 3,
+      "bytes": 7629462
+    },
+    "GiphyCueQmlPlugin.dll": {
+      "files": 1,
+      "bytes": 650
+    },
+    "LoginCueQmlPlugin.dll": {
+      "files": 1,
+      "bytes": 2147284
+    },
+    "ManifestSharedResources.dll": {
+      "files": 190,
+      "bytes": 6854199
+    },
+    "QuickLightingZonesCueQmlPlugin.dll": {
+      "files": 1,
+      "bytes": 2914
+    },
+    "TutorialsCueQmlPlugin.dll": {
+      "files": 57,
+      "bytes": 84740
+    },
+    "WizardsCueQmlPlugin.dll": {
+      "files": 13,
+      "bytes": 385959
+    },
+    "cueres.bin": {
+      "files": 332,
+      "bytes": 6680524
+    },
+    "darkstar_wireless.rcc": {
+      "files": 31,
+      "bytes": 1779091
+    },
+    "govee.rcc": {
+      "files": 48,
+      "bytes": 1797804
+    },
+    "iCUE.dll": {
+      "files": 4,
+      "bytes": 8877
+    },
+    "k70_core_rgb.rcc": {
+      "files": 23,
+      "bytes": 10054796
+    },
+    "nanoleaf.rcc": {
+      "files": 41,
+      "bytes": 1241951
+    },
+    "philips_hue.rcc": {
+      "files": 10,
+      "bytes": 706080
+    },
+    "slipstream_wireless_dongle_ss.rcc": {
+      "files": 6,
+      "bytes": 265218
+    },
+    "virtuoso_black.rcc": {
+      "files": 14,
+      "bytes": 1357535
+    },
+    "virtuoso_black_dongle.rcc": {
+      "files": 6,
+      "bytes": 268330
+    },
+    "predefined_data": {
+      "files": 1,
+      "bytes": 3019
+    },
+    "sounds/default": {
+      "files": 2,
+      "bytes": 405880
+    }
+  }
+}

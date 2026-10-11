@@ -1,0 +1,637 @@
+{
+  "id": "de-iso",
+  "label": "Deutsch (ISO)",
+  "extendedRows": [
+    [
+      {
+        "id": "F13",
+        "label": "F13",
+        "units": 1
+      },
+      {
+        "id": "F14",
+        "label": "F14",
+        "units": 1
+      },
+      {
+        "id": "F15",
+        "label": "F15",
+        "units": 1
+      },
+      {
+        "id": "F16",
+        "label": "F16",
+        "units": 1
+      },
+      {
+        "id": "F17",
+        "label": "F17",
+        "units": 1
+      },
+      {
+        "id": "F18",
+        "label": "F18",
+        "units": 1
+      },
+      {
+        "id": "F19",
+        "label": "F19",
+        "units": 1
+      },
+      {
+        "id": "F20",
+        "label": "F20",
+        "units": 1
+      },
+      {
+        "id": "F21",
+        "label": "F21",
+        "units": 1
+      },
+      {
+        "id": "F22",
+        "label": "F22",
+        "units": 1
+      },
+      {
+        "id": "F23",
+        "label": "F23",
+        "units": 1
+      },
+      {
+        "id": "F24",
+        "label": "F24",
+        "units": 1
+      }
+    ]
+  ],
+  "mainRows": [
+    [
+      {
+        "id": "Escape",
+        "label": "Esc",
+        "units": 1
+      },
+      {
+        "id": "F1",
+        "label": "F1",
+        "units": 1
+      },
+      {
+        "id": "F2",
+        "label": "F2",
+        "units": 1
+      },
+      {
+        "id": "F3",
+        "label": "F3",
+        "units": 1
+      },
+      {
+        "id": "F4",
+        "label": "F4",
+        "units": 1
+      },
+      {
+        "id": "F5",
+        "label": "F5",
+        "units": 1
+      },
+      {
+        "id": "F6",
+        "label": "F6",
+        "units": 1
+      },
+      {
+        "id": "F7",
+        "label": "F7",
+        "units": 1
+      },
+      {
+        "id": "F8",
+        "label": "F8",
+        "units": 1
+      },
+      {
+        "id": "F9",
+        "label": "F9",
+        "units": 1
+      },
+      {
+        "id": "F10",
+        "label": "F10",
+        "units": 1
+      },
+      {
+        "id": "F11",
+        "label": "F11",
+        "units": 1
+      },
+      {
+        "id": "F12",
+        "label": "F12",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "GraveAccentAndTilde",
+        "label": "^ °",
+        "units": 1
+      },
+      {
+        "id": "1",
+        "label": "1",
+        "units": 1
+      },
+      {
+        "id": "2",
+        "label": "2",
+        "units": 1
+      },
+      {
+        "id": "3",
+        "label": "3",
+        "units": 1
+      },
+      {
+        "id": "4",
+        "label": "4",
+        "units": 1
+      },
+      {
+        "id": "5",
+        "label": "5",
+        "units": 1
+      },
+      {
+        "id": "6",
+        "label": "6",
+        "units": 1
+      },
+      {
+        "id": "7",
+        "label": "7",
+        "units": 1
+      },
+      {
+        "id": "8",
+        "label": "8",
+        "units": 1
+      },
+      {
+        "id": "9",
+        "label": "9",
+        "units": 1
+      },
+      {
+        "id": "0",
+        "label": "0",
+        "units": 1
+      },
+      {
+        "id": "MinusAndUnderscore",
+        "label": "ß ?",
+        "units": 1
+      },
+      {
+        "id": "EqualsAndPlus",
+        "label": "´ `",
+        "units": 1
+      },
+      {
+        "id": "Backspace",
+        "label": "⌫",
+        "units": 1.75
+      }
+    ],
+    [
+      {
+        "id": "Tab",
+        "label": "Tab",
+        "units": 1.4
+      },
+      {
+        "id": "Q",
+        "label": "Q",
+        "units": 1
+      },
+      {
+        "id": "W",
+        "label": "W",
+        "units": 1
+      },
+      {
+        "id": "E",
+        "label": "E",
+        "units": 1
+      },
+      {
+        "id": "R",
+        "label": "R",
+        "units": 1
+      },
+      {
+        "id": "T",
+        "label": "T",
+        "units": 1
+      },
+      {
+        "id": "Z",
+        "label": "Z",
+        "units": 1
+      },
+      {
+        "id": "U",
+        "label": "U",
+        "units": 1
+      },
+      {
+        "id": "I",
+        "label": "I",
+        "units": 1
+      },
+      {
+        "id": "O",
+        "label": "O",
+        "units": 1
+      },
+      {
+        "id": "P",
+        "label": "P",
+        "units": 1
+      },
+      {
+        "id": "BracketLeft",
+        "label": "Ü",
+        "units": 1
+      },
+      {
+        "id": "BracketRight",
+        "label": "+ *",
+        "units": 1
+      },
+      {
+        "id": "Enter",
+        "label": "Enter",
+        "units": 1.35
+      }
+    ],
+    [
+      {
+        "id": "CapsLock",
+        "label": "Caps",
+        "units": 1.7
+      },
+      {
+        "id": "A",
+        "label": "A",
+        "units": 1
+      },
+      {
+        "id": "S",
+        "label": "S",
+        "units": 1
+      },
+      {
+        "id": "D",
+        "label": "D",
+        "units": 1
+      },
+      {
+        "id": "F",
+        "label": "F",
+        "units": 1
+      },
+      {
+        "id": "G",
+        "label": "G",
+        "units": 1
+      },
+      {
+        "id": "H",
+        "label": "H",
+        "units": 1
+      },
+      {
+        "id": "J",
+        "label": "J",
+        "units": 1
+      },
+      {
+        "id": "K",
+        "label": "K",
+        "units": 1
+      },
+      {
+        "id": "L",
+        "label": "L",
+        "units": 1
+      },
+      {
+        "id": "SemicolonAndColon",
+        "label": "Ö",
+        "units": 1
+      },
+      {
+        "id": "ApostropheAndDoubleQuote",
+        "label": "Ä",
+        "units": 1
+      },
+      {
+        "id": "Backslash",
+        "label": "#",
+        "units": 1
+      },
+      {
+        "id": "PlayPause",
+        "label": "▶ / Ⅱ",
+        "units": 1.05
+      }
+    ],
+    [
+      {
+        "id": "LeftShift",
+        "label": "Shift",
+        "units": 1.4
+      },
+      {
+        "id": "NonUsBackslash",
+        "label": "< >",
+        "units": 1
+      },
+      {
+        "id": "Y",
+        "label": "Y",
+        "units": 1
+      },
+      {
+        "id": "X",
+        "label": "X",
+        "units": 1
+      },
+      {
+        "id": "C",
+        "label": "C",
+        "units": 1
+      },
+      {
+        "id": "V",
+        "label": "V",
+        "units": 1
+      },
+      {
+        "id": "B",
+        "label": "B",
+        "units": 1
+      },
+      {
+        "id": "N",
+        "label": "N",
+        "units": 1
+      },
+      {
+        "id": "M",
+        "label": "M",
+        "units": 1
+      },
+      {
+        "id": "CommaAndLessThan",
+        "label": ",",
+        "units": 1
+      },
+      {
+        "id": "PeriodAndBiggerThan",
+        "label": ".",
+        "units": 1
+      },
+      {
+        "id": "SlashAndQuestionMark",
+        "label": "- _",
+        "units": 1
+      },
+      {
+        "id": "RightShift",
+        "label": "Shift rechts",
+        "units": 2.6
+      }
+    ],
+    [
+      {
+        "id": "LeftCtrl",
+        "label": "Strg",
+        "units": 1.3
+      },
+      {
+        "id": "LeftGui",
+        "label": "Win",
+        "units": 1.2
+      },
+      {
+        "id": "LeftAlt",
+        "label": "Alt",
+        "units": 1.2
+      },
+      {
+        "id": "Space",
+        "label": "Leertaste",
+        "units": 5.8
+      },
+      {
+        "id": "RightAlt",
+        "label": "AltGr",
+        "units": 1.2
+      },
+      {
+        "id": "Fn",
+        "label": "Fn",
+        "units": 1
+      },
+      {
+        "id": "Application",
+        "label": "Menü",
+        "units": 1.2
+      },
+      {
+        "id": "RightCtrl",
+        "label": "Strg rechts",
+        "units": 1.65
+      }
+    ]
+  ],
+  "navigationRows": [
+    [
+      {
+        "id": "PrintScreen",
+        "label": "Druck",
+        "units": 1
+      },
+      {
+        "id": "ScrollLock",
+        "label": "Rollen",
+        "units": 1
+      },
+      {
+        "id": "PauseBreak",
+        "label": "Pause",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Insert",
+        "label": "Einfg",
+        "units": 1
+      },
+      {
+        "id": "Home",
+        "label": "Pos1",
+        "units": 1
+      },
+      {
+        "id": "PageUp",
+        "label": "Bild ↑",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Delete",
+        "label": "Entf",
+        "units": 1
+      },
+      {
+        "id": "End",
+        "label": "Ende",
+        "units": 1
+      },
+      {
+        "id": "PageDown",
+        "label": "Bild ↓",
+        "units": 1
+      }
+    ],
+    [],
+    [
+      {
+        "id": "UpArrow",
+        "label": "↑",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "LeftArrow",
+        "label": "←",
+        "units": 1
+      },
+      {
+        "id": "DownArrow",
+        "label": "↓",
+        "units": 1
+      },
+      {
+        "id": "RightArrow",
+        "label": "→",
+        "units": 1
+      }
+    ]
+  ],
+  "numpadRows": [
+    [
+      {
+        "id": "NumLock",
+        "label": "Num",
+        "units": 1
+      },
+      {
+        "id": "KeypadSlash",
+        "label": "/",
+        "units": 1
+      },
+      {
+        "id": "KeypadAsterisk",
+        "label": "*",
+        "units": 1
+      },
+      {
+        "id": "KeypadMinus",
+        "label": "−",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Keypad7",
+        "label": "7",
+        "units": 1
+      },
+      {
+        "id": "Keypad8",
+        "label": "8",
+        "units": 1
+      },
+      {
+        "id": "Keypad9",
+        "label": "9",
+        "units": 1
+      },
+      {
+        "id": "KeypadPlus",
+        "label": "+",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Keypad4",
+        "label": "4",
+        "units": 1
+      },
+      {
+        "id": "Keypad5",
+        "label": "5",
+        "units": 1
+      },
+      {
+        "id": "Keypad6",
+        "label": "6",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Keypad1",
+        "label": "1",
+        "units": 1
+      },
+      {
+        "id": "Keypad2",
+        "label": "2",
+        "units": 1
+      },
+      {
+        "id": "Keypad3",
+        "label": "3",
+        "units": 1
+      }
+    ],
+    [
+      {
+        "id": "Keypad0",
+        "label": "0",
+        "units": 2
+      },
+      {
+        "id": "KeypadPeriodAndDelete",
+        "label": ",",
+        "units": 1
+      },
+      {
+        "id": "KeypadEnter",
+        "label": "Enter",
+        "units": 1
+      }
+    ]
+  ]
+}

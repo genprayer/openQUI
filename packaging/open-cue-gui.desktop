@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=OpenQUI
+GenericName=Peripheral manager
+GenericName[de]=Geräteverwaltung
+GenericName[ru]=Управление периферией
+Comment=Corsair peripherals and audio on Linux
+Comment[de]=Corsair-Geräte, Beleuchtung und Audio unter Linux
+Comment[ru]=Устройства Corsair, подсветка и звук в Linux
+Exec=open-cue-gui
+Icon=open-cue-gui
+Terminal=false
+Categories=Settings;HardwareSettings;
+StartupWMClass=open-cue-gui

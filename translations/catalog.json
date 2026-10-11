@@ -1,0 +1,2246 @@
+{
+  "schemaVersion": 1,
+  "context": "OpenICUE",
+  "languages": [
+    "de",
+    "en",
+    "ru"
+  ],
+  "messages": {
+    "Abbrechen": {
+      "de": "Abbrechen",
+      "en": "Cancel",
+      "ru": "Отмена"
+    },
+    "OK": {
+      "de": "OK",
+      "en": "OK",
+      "ru": "ОК"
+    },
+    "Einstellungen": {
+      "de": "Einstellungen",
+      "en": "Settings",
+      "ru": "Настройки"
+    },
+    "Allgemeine Einstellungen": {
+      "de": "Allgemeine Einstellungen",
+      "en": "General settings",
+      "ru": "Общие настройки"
+    },
+    "Geräteeinstellungen": {
+      "de": "Geräteeinstellungen",
+      "en": "Device settings",
+      "ru": "Настройки устройства"
+    },
+    "Verbindungen": {
+      "de": "Verbindungen",
+      "en": "Connections",
+      "ru": "Подключения"
+    },
+    "Sprache": {
+      "de": "Sprache",
+      "en": "Language",
+      "ru": "Язык"
+    },
+    "Der Sprachwechsel wird sofort übernommen und für den nächsten Start gespeichert.": {
+      "de": "Der Sprachwechsel wird sofort übernommen und für den nächsten Start gespeichert.",
+      "en": "The language changes immediately and is saved for the next launch.",
+      "ru": "Язык меняется сразу и сохраняется для следующего запуска."
+    },
+    "Gerätenamen und eigene Profilnamen bleiben unverändert.": {
+      "de": "Gerätenamen und eigene Profilnamen bleiben unverändert.",
+      "en": "Device names and custom profile names stay unchanged.",
+      "ru": "Названия устройств и пользовательских профилей сохраняются."
+    },
+    "Firmware": {
+      "de": "Firmware",
+      "en": "Firmware",
+      "ru": "Прошивка"
+    },
+    "Nicht aus dem Gerät ausgelesen": {
+      "de": "Nicht aus dem Gerät ausgelesen",
+      "en": "Not read from the device",
+      "ru": "Данные устройства не прочитаны"
+    },
+    "USB-Verbindung": {
+      "de": "USB-Verbindung",
+      "en": "USB connection",
+      "ru": "USB-подключение"
+    },
+    "Erkannt": {
+      "de": "Erkannt",
+      "en": "Detected",
+      "ru": "Обнаружено"
+    },
+    "Nicht verbunden": {
+      "de": "Nicht verbunden",
+      "en": "Not connected",
+      "ru": "Не подключено"
+    },
+    "Polling-Rate: bis %1 Hz": {
+      "de": "Polling-Rate: bis %1 Hz",
+      "en": "Polling rate: up to %1 Hz",
+      "ru": "Частота опроса: до %1 Гц"
+    },
+    "Die Funkverbindung und Firmware werden damit nicht bestätigt.": {
+      "de": "Die Funkverbindung und Firmware werden damit nicht bestätigt.",
+      "en": "This does not confirm the wireless connection or firmware.",
+      "ru": "Это не подтверждает беспроводное соединение или версию прошивки."
+    },
+    "Gerätestatus aktualisieren": {
+      "de": "Gerätestatus aktualisieren",
+      "en": "Refresh device status",
+      "ru": "Обновить статус устройства"
+    },
+    "USB-Geräte und Treiber": {
+      "de": "USB-Geräte und Treiber",
+      "en": "USB devices and drivers",
+      "ru": "USB-устройства и драйверы"
+    },
+    "USB-Erkennung bestätigt keine Funkverbindung.": {
+      "de": "USB-Erkennung bestätigt keine Funkverbindung.",
+      "en": "USB detection does not confirm a wireless connection.",
+      "ru": "Обнаружение USB не подтверждает беспроводную связь."
+    },
+    "Treiber: %1": {
+      "de": "Treiber: %1",
+      "en": "Drivers: %1",
+      "ru": "Драйверы: %1"
+    },
+    "Unbekannt": {
+      "de": "Unbekannt",
+      "en": "Unknown",
+      "ru": "Неизвестно"
+    },
+    "Eingabeschnittstellen: %1": {
+      "de": "Eingabeschnittstellen: %1",
+      "en": "Input interfaces: %1",
+      "ru": "Интерфейсы ввода: %1"
+    },
+    "Energieverwaltung: %1 · %2": {
+      "de": "Energieverwaltung: %1 · %2",
+      "en": "Power management: %1 · %2",
+      "ru": "Питание: %1 · %2"
+    },
+    "Keine unterstützten USB-Geräte erkannt": {
+      "de": "Keine unterstützten USB-Geräte erkannt",
+      "en": "No supported USB devices detected",
+      "ru": "Поддерживаемые USB-устройства не обнаружены"
+    },
+    "Verbindungen aktualisieren": {
+      "de": "Verbindungen aktualisieren",
+      "en": "Refresh connections",
+      "ru": "Обновить подключения"
+    },
+    "Funkstatus nicht ausgelesen": {
+      "de": "Funkstatus nicht ausgelesen",
+      "en": "Wireless status not read",
+      "ru": "Состояние радиосвязи не прочитано"
+    },
+    "Sichtbare Eingabeschnittstellen bestätigen nur die Anmeldung des Empfängers in Linux. Die Zuordnung einer Funkmaus ist damit nicht geprüft.": {
+      "de": "Sichtbare Eingabeschnittstellen bestätigen nur die Anmeldung des Empfängers in Linux. Die Zuordnung einer Funkmaus ist damit nicht geprüft.",
+      "en": "Visible input interfaces only confirm that Linux has registered the receiver. They do not verify a mouse's wireless pairing.",
+      "ru": "Наличие интерфейсов ввода означает, что Linux распознал ресивер. Сопряжение беспроводной мыши этим не подтверждается."
+    },
+    "Sobald gekoppelt, nutzt die Maus die vorhandenen Linux-HID-Treiber. Für das Koppeln sind herstellerspezifische Befehle erforderlich.": {
+      "de": "Sobald gekoppelt, nutzt die Maus die vorhandenen Linux-HID-Treiber. Für das Koppeln sind herstellerspezifische Befehle erforderlich.",
+      "en": "Once paired, the mouse uses the existing Linux HID drivers. Pairing requires vendor-specific commands.",
+      "ru": "После сопряжения мышь использует стандартные HID-драйверы Linux. Для сопряжения нужны команды производителя."
+    },
+    "Geräte koppeln": {
+      "de": "Geräte koppeln",
+      "en": "Pair devices",
+      "ru": "Сопряжение устройств"
+    },
+    "SLIPSTREAM-Kopplung ist in OpenQUI noch nicht implementiert.": {
+      "de": "SLIPSTREAM-Kopplung ist in OpenQUI noch nicht implementiert.",
+      "en": "SLIPSTREAM pairing is not implemented in OpenQUI yet.",
+      "ru": "Сопряжение SLIPSTREAM в OpenQUI пока не реализовано."
+    },
+    "Koppeln mit dem originalen iCUE": {
+      "de": "Koppeln mit dem originalen iCUE",
+      "en": "Pair using the original iCUE",
+      "ru": "Сопряжение через оригинальный iCUE"
+    },
+    "1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.": {
+      "de": "1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.",
+      "en": "1. Set the mouse to 2.4 GHz. Connect the mouse with a USB cable and the intended receiver directly to the PC.",
+      "ru": "1. Включите режим 2,4 ГГц. Подключите мышь кабелем USB и нужный ресивер напрямую к компьютеру."
+    },
+    "2. In iCUE den Empfänger wählen: Verbindungen → Koppeln → Vorgang starten.": {
+      "de": "2. In iCUE den Empfänger wählen: Verbindungen → Koppeln → Vorgang starten.",
+      "en": "2. In iCUE, select the receiver: Connections → Pair → Start Process.",
+      "ru": "2. В iCUE выберите ресивер: Connections → Pair → Start Process."
+    },
+    "3. Erst nach Abschluss das Kabel entfernen und 2,4 GHz testen. Eine weiße Status-LED an Darkstar zeigt die Verbindung an.": {
+      "de": "3. Erst nach Abschluss das Kabel entfernen und 2,4 GHz testen. Eine weiße Status-LED an Darkstar zeigt die Verbindung an.",
+      "en": "3. Disconnect the cable only after completion, then test 2.4 GHz. A solid white status LED on Darkstar indicates a connection.",
+      "ru": "3. После завершения отключите кабель и проверьте режим 2,4 ГГц. Постоянный белый индикатор Darkstar означает подключение."
+    },
+    "Multipoint unterstützt nur kompatible Kombinationen unterschiedlicher Gerätetypen. Mit einer Virtuoso-Garnitur wird deren Empfänger verwendet.": {
+      "de": "Multipoint unterstützt nur kompatible Kombinationen unterschiedlicher Gerätetypen. Mit einer Virtuoso-Garnitur wird deren Empfänger verwendet.",
+      "en": "Multipoint supports compatible combinations of different device types. A combination with a Virtuoso headset uses the headset's receiver.",
+      "ru": "Multipoint поддерживает совместимые устройства разных типов. Для набора с гарнитурой Virtuoso используется её ресивер."
+    },
+    "Corsair-Anleitung öffnen": {
+      "de": "Corsair-Anleitung öffnen",
+      "en": "Open Corsair instructions",
+      "ru": "Открыть инструкцию Corsair"
+    },
+    "Darkstar-Handbuch öffnen": {
+      "de": "Darkstar-Handbuch öffnen",
+      "en": "Open Darkstar manual",
+      "ru": "Открыть руководство Darkstar"
+    },
+    "iCUE-Profil importieren": {
+      "de": "iCUE-Profil importieren",
+      "en": "Import iCUE profile",
+      "ru": "Импорт профиля iCUE"
+    },
+    "iCUE Profile (*.cueprofile)": {
+      "de": "iCUE Profile (*.cueprofile)",
+      "en": "iCUE profiles (*.cueprofile)",
+      "ru": "Профили iCUE (*.cueprofile)"
+    },
+    "Profil erstellen": {
+      "de": "Profil erstellen",
+      "en": "Create profile",
+      "ru": "Создать профиль"
+    },
+    "Profilname": {
+      "de": "Profilname",
+      "en": "Profile name",
+      "ru": "Название профиля"
+    },
+    "Neues Profil": {
+      "de": "Neues Profil",
+      "en": "New profile",
+      "ru": "Новый профиль"
+    },
+    "PROFILE": {
+      "de": "PROFILE",
+      "en": "PROFILES",
+      "ru": "ПРОФИЛИ"
+    },
+    "Importieren": {
+      "de": "Importieren",
+      "en": "Import",
+      "ru": "Импорт"
+    },
+    "STARTSEITE": {
+      "de": "STARTSEITE",
+      "en": "HOME",
+      "ru": "ГЛАВНАЯ"
+    },
+    "DASHBOARD": {
+      "de": "DASHBOARD",
+      "en": "DASHBOARD",
+      "ru": "ПАНЕЛЬ"
+    },
+    "Auf Gerät anwenden": {
+      "de": "Auf Gerät anwenden",
+      "en": "Apply to device",
+      "ru": "Применить к устройству"
+    },
+    "USB-Gerät erkannt": {
+      "de": "USB-Gerät erkannt",
+      "en": "USB device detected",
+      "ru": "USB-устройство обнаружено"
+    },
+    "Profil bearbeiten · Gerät nicht per USB erkannt": {
+      "de": "Profil bearbeiten · Gerät nicht per USB erkannt",
+      "en": "Edit profile · device not detected over USB",
+      "ru": "Редактирование профиля · устройство не обнаружено по USB"
+    },
+    "Lokale Beleuchtungsvorschau": {
+      "de": "Lokale Beleuchtungsvorschau",
+      "en": "Local lighting preview",
+      "ru": "Предпросмотр подсветки"
+    },
+    "Klicken · Shift: mehrere · Ziehen: Bereich auswählen": {
+      "de": "Klicken · Shift: mehrere · Ziehen: Bereich auswählen",
+      "en": "Click · Shift: multiple · Drag: select an area",
+      "ru": "Клик · Shift: несколько · Перетаскивание: выбрать область"
+    },
+    "Beleuchtungseffekte": {
+      "de": "Beleuchtungseffekte",
+      "en": "Lighting effects",
+      "ru": "Эффекты подсветки"
+    },
+    "Tastenzuweisungen": {
+      "de": "Tastenzuweisungen",
+      "en": "Key assignments",
+      "ru": "Назначения клавиш"
+    },
+    "Gesten": {
+      "de": "Gesten",
+      "en": "Gestures",
+      "ru": "Жесты"
+    },
+    "Oberflächenkalibrierung": {
+      "de": "Oberflächenkalibrierung",
+      "en": "Surface calibration",
+      "ru": "Калибровка поверхности"
+    },
+    "Equalizer": {
+      "de": "Equalizer",
+      "en": "Equalizer",
+      "ru": "Эквалайзер"
+    },
+    "Performance": {
+      "de": "Performance",
+      "en": "Performance",
+      "ru": "Производительность"
+    },
+    "DialControl": {
+      "de": "DialControl",
+      "en": "Dial control",
+      "ru": "Управление колёсиком"
+    },
+    "Linksklick": {
+      "de": "Linksklick",
+      "en": "Left click",
+      "ru": "Левая кнопка"
+    },
+    "Rechtsklick": {
+      "de": "Rechtsklick",
+      "en": "Right click",
+      "ru": "Правая кнопка"
+    },
+    "Mittelklick": {
+      "de": "Mittelklick",
+      "en": "Middle click",
+      "ru": "Средняя кнопка"
+    },
+    "Scrollrad nach links": {
+      "de": "Scrollrad nach links",
+      "en": "Wheel tilt left",
+      "ru": "Наклон колеса влево"
+    },
+    "Scrollrad nach rechts": {
+      "de": "Scrollrad nach rechts",
+      "en": "Wheel tilt right",
+      "ru": "Наклон колеса вправо"
+    },
+    "Weiterleiten": {
+      "de": "Weiterleiten",
+      "en": "Forward",
+      "ru": "Вперёд"
+    },
+    "Zurück": {
+      "de": "Zurück",
+      "en": "Back",
+      "ru": "Назад"
+    },
+    "DPI auf": {
+      "de": "DPI auf",
+      "en": "DPI up",
+      "ru": "Повысить DPI"
+    },
+    "DPI ab": {
+      "de": "DPI ab",
+      "en": "DPI down",
+      "ru": "Понизить DPI"
+    },
+    "Profil nach oben": {
+      "de": "Profil nach oben",
+      "en": "Next profile",
+      "ru": "Следующий профиль"
+    },
+    "Profil nach unten": {
+      "de": "Profil nach unten",
+      "en": "Previous profile",
+      "ru": "Предыдущий профиль"
+    },
+    "Vorderseite 1": {
+      "de": "Vorderseite 1",
+      "en": "Front side 1",
+      "ru": "Передняя боковая 1"
+    },
+    "Vorderseite 2": {
+      "de": "Vorderseite 2",
+      "en": "Front side 2",
+      "ru": "Передняя боковая 2"
+    },
+    "Rückseite 1": {
+      "de": "Rückseite 1",
+      "en": "Rear side 1",
+      "ru": "Задняя боковая 1"
+    },
+    "Rückseite 2": {
+      "de": "Rückseite 2",
+      "en": "Rear side 2",
+      "ru": "Задняя боковая 2"
+    },
+    "Links neigen": {
+      "de": "Links neigen",
+      "en": "Tilt left",
+      "ru": "Наклон влево"
+    },
+    "Rechts neigen": {
+      "de": "Rechts neigen",
+      "en": "Tilt right",
+      "ru": "Наклон вправо"
+    },
+    "Vorne neigen": {
+      "de": "Vorne neigen",
+      "en": "Tilt forward",
+      "ru": "Наклон вперёд"
+    },
+    "Zurück neigen": {
+      "de": "Zurück neigen",
+      "en": "Tilt backward",
+      "ru": "Наклон назад"
+    },
+    "Regenbogen": {
+      "de": "Regenbogen",
+      "en": "Rainbow",
+      "ru": "Радуга"
+    },
+    "Farbpulse": {
+      "de": "Farbpulse",
+      "en": "Color pulse",
+      "ru": "Пульсация цвета"
+    },
+    "Farbwechsel": {
+      "de": "Farbwechsel",
+      "en": "Color shift",
+      "ru": "Смена цвета"
+    },
+    "Statische Farbe": {
+      "de": "Statische Farbe",
+      "en": "Static color",
+      "ru": "Статический цвет"
+    },
+    "Voll": {
+      "de": "Voll",
+      "en": "Solid",
+      "ru": "Сплошной цвет"
+    },
+    "Gradient": {
+      "de": "Gradient",
+      "en": "Gradient",
+      "ru": "Градиент"
+    },
+    "Regenbogenwelle": {
+      "de": "Regenbogenwelle",
+      "en": "Rainbow wave",
+      "ru": "Радужная волна"
+    },
+    "Spiralregenbogen": {
+      "de": "Spiralregenbogen",
+      "en": "Spiral rainbow",
+      "ru": "Радужная спираль"
+    },
+    "Tastenbeleuchtung": {
+      "de": "Tastenbeleuchtung",
+      "en": "Type lighting",
+      "ru": "Подсветка при нажатии"
+    },
+    "Welle": {
+      "de": "Welle",
+      "en": "Wave",
+      "ru": "Волна"
+    },
+    "Visier": {
+      "de": "Visier",
+      "en": "Visor",
+      "ru": "Сканирование"
+    },
+    "Regen": {
+      "de": "Regen",
+      "en": "Rain",
+      "ru": "Дождь"
+    },
+    "Farbwelle": {
+      "de": "Farbwelle",
+      "en": "Color wave",
+      "ru": "Цветовая волна"
+    },
+    "Wellenimpuls": {
+      "de": "Wellenimpuls",
+      "en": "Ripple",
+      "ru": "Рябь"
+    },
+    "Audiovisualisierung": {
+      "de": "Audiovisualisierung",
+      "en": "Audio visualizer",
+      "ru": "Визуализация звука"
+    },
+    "Beleuchtungsebenen": {
+      "de": "Beleuchtungsebenen",
+      "en": "Lighting layers",
+      "ru": "Слои подсветки"
+    },
+    "Beleuchtungsebene %1": {
+      "de": "Beleuchtungsebene %1",
+      "en": "Lighting layer %1",
+      "ru": "Слой подсветки %1"
+    },
+    "%1 Kopie": {
+      "de": "%1 Kopie",
+      "en": "%1 copy",
+      "ru": "%1 — копия"
+    },
+    "Ebene duplizieren": {
+      "de": "Ebene duplizieren",
+      "en": "Duplicate layer",
+      "ru": "Дублировать слой"
+    },
+    "Beleuchtungstyp": {
+      "de": "Beleuchtungstyp",
+      "en": "Lighting type",
+      "ru": "Тип подсветки"
+    },
+    "Benutzerdefiniert": {
+      "de": "Benutzerdefiniert",
+      "en": "Custom",
+      "ru": "Пользовательские"
+    },
+    "Voreinstellung": {
+      "de": "Voreinstellung",
+      "en": "Preset",
+      "ru": "Предустановки"
+    },
+    "Schnellbeleuchtungszone": {
+      "de": "Schnellbeleuchtungszone",
+      "en": "Quick lighting zone",
+      "ru": "Выбор зон подсветки"
+    },
+    "Alle": {
+      "de": "Alle",
+      "en": "All",
+      "ru": "Все"
+    },
+    "Auswahl aufheben": {
+      "de": "Auswahl aufheben",
+      "en": "Clear selection",
+      "ru": "Снять выделение"
+    },
+    "Ausgewählte Tasten / LEDs: %1": {
+      "de": "Ausgewählte Tasten / LEDs: %1",
+      "en": "Selected keys / LEDs: %1",
+      "ru": "Выбрано клавиш / светодиодов: %1"
+    },
+    "Shift + Klick fügt hinzu oder entfernt. Mit gedrückter linker Maustaste einen Bereich ziehen.": {
+      "de": "Shift + Klick fügt hinzu oder entfernt. Mit gedrückter linker Maustaste einen Bereich ziehen.",
+      "en": "Shift + click adds or removes a key. Hold the left mouse button and drag to select an area.",
+      "ru": "Shift + клик добавляет или убирает клавишу. Удерживайте левую кнопку мыши и выделяйте область."
+    },
+    "Beleuchtung": {
+      "de": "Beleuchtung",
+      "en": "Lighting",
+      "ru": "Подсветка"
+    },
+    "Beleuchtungsebene hinzufügen": {
+      "de": "Beleuchtungsebene hinzufügen",
+      "en": "Add a lighting layer",
+      "ru": "Добавьте слой подсветки"
+    },
+    "Zufällige Farben": {
+      "de": "Zufällige Farben",
+      "en": "Random colors",
+      "ru": "Случайные цвета"
+    },
+    "Eigene Farben": {
+      "de": "Eigene Farben",
+      "en": "Custom colors",
+      "ru": "Свои цвета"
+    },
+    "Deckkraft": {
+      "de": "Deckkraft",
+      "en": "Opacity",
+      "ru": "Непрозрачность"
+    },
+    "Geschwindigkeit": {
+      "de": "Geschwindigkeit",
+      "en": "Speed",
+      "ru": "Скорость"
+    },
+    "Dauer": {
+      "de": "Dauer",
+      "en": "Duration",
+      "ru": "Длительность"
+    },
+    "Richtung": {
+      "de": "Richtung",
+      "en": "Direction",
+      "ru": "Направление"
+    },
+    "Nach rechts": {
+      "de": "Nach rechts",
+      "en": "Right",
+      "ru": "Вправо"
+    },
+    "Nach links": {
+      "de": "Nach links",
+      "en": "Left",
+      "ru": "Влево"
+    },
+    "Nach unten": {
+      "de": "Nach unten",
+      "en": "Down",
+      "ru": "Вниз"
+    },
+    "Nach oben": {
+      "de": "Nach oben",
+      "en": "Up",
+      "ru": "Вверх"
+    },
+    "Audioanalyse noch nicht verfügbar": {
+      "de": "Audioanalyse noch nicht verfügbar",
+      "en": "Audio analysis is not available yet",
+      "ru": "Анализ звука пока недоступен"
+    },
+    "Zuweisung": {
+      "de": "Zuweisung",
+      "en": "Assignment",
+      "ru": "Назначение"
+    },
+    "Zuweisung %1": {
+      "de": "Zuweisung %1",
+      "en": "Assignment %1",
+      "ru": "Назначение %1"
+    },
+    "Tastatur": {
+      "de": "Tastatur",
+      "en": "Keyboard",
+      "ru": "Клавиатура"
+    },
+    "Maus": {
+      "de": "Maus",
+      "en": "Mouse",
+      "ru": "Мышь"
+    },
+    "Tastendruck": {
+      "de": "Tastendruck",
+      "en": "Keystroke",
+      "ru": "Нажатие клавиши"
+    },
+    "Text": {
+      "de": "Text",
+      "en": "Text",
+      "ru": "Текст"
+    },
+    "Medien": {
+      "de": "Medien",
+      "en": "Media",
+      "ru": "Мультимедиа"
+    },
+    "Anwendung starten": {
+      "de": "Anwendung starten",
+      "en": "Launch application",
+      "ru": "Запуск приложения"
+    },
+    "Deaktivieren": {
+      "de": "Deaktivieren",
+      "en": "Disable",
+      "ru": "Отключить"
+    },
+    "Profil wechseln": {
+      "de": "Profil wechseln",
+      "en": "Switch profile",
+      "ru": "Сменить профиль"
+    },
+    "Makro": {
+      "de": "Makro",
+      "en": "Macro",
+      "ru": "Макрос"
+    },
+    "Neu zuordnen": {
+      "de": "Neu zuordnen",
+      "en": "Remap",
+      "ru": "Переназначение"
+    },
+    "Regulär": {
+      "de": "Regulär",
+      "en": "Regular",
+      "ru": "Обычные"
+    },
+    "Zuweisungen": {
+      "de": "Zuweisungen",
+      "en": "Assignments",
+      "ru": "Назначения"
+    },
+    "Zuweisungstyp": {
+      "de": "Zuweisungstyp",
+      "en": "Assignment type",
+      "ru": "Тип назначения"
+    },
+    "Seitentasten": {
+      "de": "Seitentasten",
+      "en": "Side buttons",
+      "ru": "Боковые кнопки"
+    },
+    "Kerntasten": {
+      "de": "Kerntasten",
+      "en": "Core buttons",
+      "ru": "Основные кнопки"
+    },
+    "Tasten": {
+      "de": "Tasten",
+      "en": "Buttons",
+      "ru": "Кнопки"
+    },
+    "Taste auswählen": {
+      "de": "Taste auswählen",
+      "en": "Select a key",
+      "ru": "Выбрать клавишу"
+    },
+    "Text eingeben": {
+      "de": "Text eingeben",
+      "en": "Enter text",
+      "ru": "Введите текст"
+    },
+    "Nach oben scrollen": {
+      "de": "Nach oben scrollen",
+      "en": "Scroll up",
+      "ru": "Прокрутка вверх"
+    },
+    "Nach unten scrollen": {
+      "de": "Nach unten scrollen",
+      "en": "Scroll down",
+      "ru": "Прокрутка вниз"
+    },
+    "Wiedergabe/Pause": {
+      "de": "Wiedergabe/Pause",
+      "en": "Play/pause",
+      "ru": "Воспроизведение/пауза"
+    },
+    "Nächster Titel": {
+      "de": "Nächster Titel",
+      "en": "Next track",
+      "ru": "Следующая композиция"
+    },
+    "Vorheriger Titel": {
+      "de": "Vorheriger Titel",
+      "en": "Previous track",
+      "ru": "Предыдущая композиция"
+    },
+    "Lauter": {
+      "de": "Lauter",
+      "en": "Volume up",
+      "ru": "Увеличить громкость"
+    },
+    "Leiser": {
+      "de": "Leiser",
+      "en": "Volume down",
+      "ru": "Уменьшить громкость"
+    },
+    "Stumm": {
+      "de": "Stumm",
+      "en": "Mute",
+      "ru": "Без звука"
+    },
+    "Anwendung / Pfad": {
+      "de": "Anwendung / Pfad",
+      "en": "Application / path",
+      "ru": "Приложение / путь"
+    },
+    "Aufzeichnung": {
+      "de": "Aufzeichnung",
+      "en": "Recording",
+      "ru": "Запись"
+    },
+    "Allgemeine": {
+      "de": "Allgemeine",
+      "en": "General",
+      "ru": "Общие"
+    },
+    "Erweitert": {
+      "de": "Erweitert",
+      "en": "Advanced",
+      "ru": "Дополнительно"
+    },
+    "■ Stoppen": {
+      "de": "■ Stoppen",
+      "en": "■ Stop",
+      "ru": "■ Остановить"
+    },
+    "● Aufzeichnen": {
+      "de": "● Aufzeichnen",
+      "en": "● Record",
+      "ru": "● Записать"
+    },
+    "Tastenaufzeichnung in diesem Fenster": {
+      "de": "Tastenaufzeichnung in diesem Fenster",
+      "en": "Record keys in this window",
+      "ru": "Запись клавиш в этом окне"
+    },
+    "Ereignisse löschen": {
+      "de": "Ereignisse löschen",
+      "en": "Clear events",
+      "ru": "Удалить события"
+    },
+    "Verzögerungen": {
+      "de": "Verzögerungen",
+      "en": "Delays",
+      "ru": "Задержки"
+    },
+    "Tastaturereignisse": {
+      "de": "Tastaturereignisse",
+      "en": "Keyboard events",
+      "ru": "События клавиатуры"
+    },
+    "Mausklicks": {
+      "de": "Mausklicks",
+      "en": "Mouse clicks",
+      "ru": "Клики мыши"
+    },
+    "Mausradbewegungen": {
+      "de": "Mausradbewegungen",
+      "en": "Mouse wheel",
+      "ru": "Колесо мыши"
+    },
+    "Mausbewegungen": {
+      "de": "Mausbewegungen",
+      "en": "Mouse movement",
+      "ru": "Движения мыши"
+    },
+    "Auslöser": {
+      "de": "Auslöser",
+      "en": "Trigger",
+      "ru": "Условие запуска"
+    },
+    "Beim Drücken": {
+      "de": "Beim Drücken",
+      "en": "On press",
+      "ru": "При нажатии"
+    },
+    "Beim Loslassen": {
+      "de": "Beim Loslassen",
+      "en": "On release",
+      "ru": "При отпускании"
+    },
+    "Während gedrückt": {
+      "de": "Während gedrückt",
+      "en": "While held",
+      "ru": "Пока удерживается"
+    },
+    "Umschalten": {
+      "de": "Umschalten",
+      "en": "Toggle",
+      "ru": "Переключение"
+    },
+    "Wiederholen": {
+      "de": "Wiederholen",
+      "en": "Repeat",
+      "ru": "Повторять"
+    },
+    "Unterbrechen": {
+      "de": "Unterbrechen",
+      "en": "Interrupt",
+      "ru": "Прерывать"
+    },
+    "Virtuelle Tastatur · %1": {
+      "de": "Virtuelle Tastatur · %1",
+      "en": "Virtual keyboard · %1",
+      "ru": "Виртуальная клавиатура · %1"
+    },
+    "Ausgewählt: %1": {
+      "de": "Ausgewählt: %1",
+      "en": "Selected: %1",
+      "ru": "Выбрано: %1"
+    },
+    "Eine Taste auswählen": {
+      "de": "Eine Taste auswählen",
+      "en": "Select a key",
+      "ru": "Выберите клавишу"
+    },
+    "Num ": {
+      "de": "Num ",
+      "en": "Num ",
+      "ru": "Цифр. "
+    },
+    "Gestenkonfiguration": {
+      "de": "Gestenkonfiguration",
+      "en": "Gesture configuration",
+      "ru": "Настройка жестов"
+    },
+    "Mehrere Neigungsgesten zulassen": {
+      "de": "Mehrere Neigungsgesten zulassen",
+      "en": "Allow multiple tilt gestures",
+      "ru": "Разрешить несколько наклонов"
+    },
+    "Eine weitere Neigungsgeste erfordert sonst eine\nRückkehr in die neutrale Position.": {
+      "de": "Eine weitere Neigungsgeste erfordert sonst eine\nRückkehr in die neutrale Position.",
+      "en": "Otherwise, another tilt gesture requires a\nreturn to the neutral position.",
+      "ru": "Иначе для следующего наклона нужно\nвернуться в исходное положение."
+    },
+    "Gestenneigung kalibrieren": {
+      "de": "Gestenneigung kalibrieren",
+      "en": "Calibrate tilt gestures",
+      "ru": "Калибровать наклоны"
+    },
+    "Neigungs-Setup": {
+      "de": "Neigungs-Setup",
+      "en": "Tilt setup",
+      "ru": "Настройка наклонов"
+    },
+    "DPI-Voreinstellung": {
+      "de": "DPI-Voreinstellung",
+      "en": "DPI preset",
+      "ru": "Предустановка DPI"
+    },
+    "Neue Voreinstellung": {
+      "de": "Neue Voreinstellung",
+      "en": "New preset",
+      "ru": "Новая предустановка"
+    },
+    "DPI-Voreinstellungen": {
+      "de": "DPI-Voreinstellungen",
+      "en": "DPI presets",
+      "ru": "Предустановки DPI"
+    },
+    "DPI-Stufen": {
+      "de": "DPI-Stufen",
+      "en": "DPI stages",
+      "ru": "Ступени DPI"
+    },
+    "Aktivieren": {
+      "de": "Aktivieren",
+      "en": "Enable",
+      "ru": "Включить"
+    },
+    "X/Y unabhängig": {
+      "de": "X/Y unabhängig",
+      "en": "Independent X/Y",
+      "ru": "Раздельно X/Y"
+    },
+    "Standard stellen": {
+      "de": "Standard stellen",
+      "en": "Reset to default",
+      "ru": "Восстановить"
+    },
+    "Anzeigefarben": {
+      "de": "Anzeigefarben",
+      "en": "Indicator colors",
+      "ru": "Цвета индикаторов"
+    },
+    "Scharfschütze": {
+      "de": "Scharfschütze",
+      "en": "Sniper",
+      "ru": "Снайпер"
+    },
+    "Profil": {
+      "de": "Profil",
+      "en": "Profile",
+      "ru": "Профиль"
+    },
+    "Stufe 1": {
+      "de": "Stufe 1",
+      "en": "Stage 1",
+      "ru": "Ступень 1"
+    },
+    "Stufe 2": {
+      "de": "Stufe 2",
+      "en": "Stage 2",
+      "ru": "Ступень 2"
+    },
+    "Stufe 3": {
+      "de": "Stufe 3",
+      "en": "Stage 3",
+      "ru": "Ступень 3"
+    },
+    "Stufe 4": {
+      "de": "Stufe 4",
+      "en": "Stage 4",
+      "ru": "Ступень 4"
+    },
+    "Stufe 5": {
+      "de": "Stufe 5",
+      "en": "Stage 5",
+      "ru": "Ступень 5"
+    },
+    "Default": {
+      "de": "Default",
+      "en": "Default",
+      "ru": "По умолчанию"
+    },
+    "EQ-Voreinstellung": {
+      "de": "EQ-Voreinstellung",
+      "en": "EQ preset",
+      "ru": "Предустановка EQ"
+    },
+    "Lautstärke": {
+      "de": "Lautstärke",
+      "en": "Volume",
+      "ru": "Громкость"
+    },
+    "Nebenton": {
+      "de": "Nebenton",
+      "en": "Sidetone",
+      "ru": "Свой голос"
+    },
+    "♬  Stereo": {
+      "de": "♬  Stereo",
+      "en": "♬  Stereo",
+      "ru": "♬  Стерео"
+    },
+    "Surround-Sound": {
+      "de": "Surround-Sound",
+      "en": "Surround sound",
+      "ru": "Объёмный звук"
+    },
+    "Equalizer aktivieren": {
+      "de": "Equalizer aktivieren",
+      "en": "Enable equalizer",
+      "ru": "Включить эквалайзер"
+    },
+    "Audioausgang": {
+      "de": "Audioausgang",
+      "en": "Audio output",
+      "ru": "Аудиовыход"
+    },
+    "EQ aktivieren": {
+      "de": "EQ aktivieren",
+      "en": "Start EQ",
+      "ru": "Включить EQ"
+    },
+    "EQ stoppen": {
+      "de": "EQ stoppen",
+      "en": "Stop EQ",
+      "ru": "Выключить EQ"
+    },
+    "Schließen": {
+      "de": "Schließen",
+      "en": "Close",
+      "ru": "Закрыть"
+    },
+    "EQ-Voreinstellungen": {
+      "de": "EQ-Voreinstellungen",
+      "en": "EQ presets",
+      "ru": "Предустановки EQ"
+    },
+    "Löschen": {
+      "de": "Löschen",
+      "en": "Delete",
+      "ru": "Удалить"
+    },
+    "♙ Voicemod abrufen": {
+      "de": "♙ Voicemod abrufen",
+      "en": "♙ Get Voicemod",
+      "ru": "♙ Получить Voicemod"
+    },
+    "EQ-Schieberegler verknüpfen": {
+      "de": "EQ-Schieberegler verknüpfen",
+      "en": "Link EQ sliders",
+      "ru": "Связать полосы EQ"
+    },
+    "PureDirect": {
+      "de": "Direkter Klang",
+      "en": "Pure Direct",
+      "ru": "Чистый звук"
+    },
+    "MovieTheater": {
+      "de": "Kino",
+      "en": "Movie Theater",
+      "ru": "Кинотеатр"
+    },
+    "FPSCompetition": {
+      "de": "FPS-Wettkampf",
+      "en": "FPS Competition",
+      "ru": "Соревновательные FPS"
+    },
+    "ClearChat": {
+      "de": "Klare Sprache",
+      "en": "Clear Chat",
+      "ru": "Чёткая речь"
+    },
+    "BassBoost": {
+      "de": "Bassverstärkung",
+      "en": "Bass Boost",
+      "ru": "Усиление баса"
+    },
+    "Die Oberflächenkalibrierung ist noch nicht verfügbar.": {
+      "de": "Die Oberflächenkalibrierung ist noch nicht verfügbar.",
+      "en": "Surface calibration is not available yet.",
+      "ru": "Калибровка поверхности пока недоступна."
+    },
+    "USB-Empfänger und Funkverbindung werden getrennt geprüft.": {
+      "de": "USB-Empfänger und Funkverbindung werden getrennt geprüft.",
+      "en": "The USB receiver and wireless link are checked separately.",
+      "ru": "USB-ресивер и радиосвязь проверяются отдельно."
+    },
+    "Diese Gerätekonfiguration ist noch nicht verfügbar.": {
+      "de": "Diese Gerätekonfiguration ist noch nicht verfügbar.",
+      "en": "This device configuration is not available yet.",
+      "ru": "Эта настройка устройства пока недоступна."
+    },
+    "Hardware-Kommandos sind noch nicht verifiziert.": {
+      "de": "Hardware-Kommandos sind noch nicht verifiziert.",
+      "en": "Hardware commands are not verified yet.",
+      "ru": "Команды устройства пока не проверены."
+    },
+    "Start": {
+      "de": "Start",
+      "en": "Start",
+      "ru": "Начать"
+    },
+    "Profil importiert. Original-XML erhalten; Gerätezuordnung noch nicht portiert.": {
+      "de": "Profil importiert. Original-XML erhalten; Gerätezuordnung noch nicht portiert.",
+      "en": "Profile imported. Original XML preserved; hardware mapping is not implemented yet.",
+      "ru": "Профиль импортирован. Исходный XML сохранён; преобразование настроек для устройства пока не реализовано."
+    },
+    "HID-Steuerung noch nicht verifiziert. Profil gespeichert; Gerät unverändert.": {
+      "de": "HID-Steuerung noch nicht verifiziert. Profil gespeichert; Gerät unverändert.",
+      "en": "HID control is not verified yet. Profile saved; device unchanged.",
+      "ru": "HID-команды пока не проверены. Профиль сохранён; настройки устройства не изменены."
+    },
+    "A physical PipeWire target is required": {
+      "de": "Ein physischer PipeWire-Ausgang ist erforderlich",
+      "en": "A physical PipeWire target is required",
+      "ru": "Нужно выбрать физический выход PipeWire"
+    },
+    "Assignment keyboard layout is invalid": {
+      "de": "Die Tastaturbelegung ist ungültig",
+      "en": "Assignment keyboard layout is invalid",
+      "ru": "Недопустимая раскладка клавиатуры"
+    },
+    "Assignment keyboard layout is missing": {
+      "de": "Die Tastaturbelegung fehlt",
+      "en": "Assignment keyboard layout is missing",
+      "ru": "Раскладка клавиатуры отсутствует"
+    },
+    "Assignment requires an object": {
+      "de": "Die Zuweisung benötigt ein Objekt",
+      "en": "Assignment requires an object",
+      "ru": "Назначение должно быть объектом"
+    },
+    "Atomic file write failed": {
+      "de": "Atomisches Speichern fehlgeschlagen",
+      "en": "Atomic file write failed",
+      "ru": "Не удалось атомарно сохранить файл"
+    },
+    "Boolean setting requires a boolean value": {
+      "de": "Diese Einstellung benötigt einen booleschen Wert",
+      "en": "Boolean setting requires a boolean value",
+      "ru": "Этой настройке нужно логическое значение"
+    },
+    "Cannot create import directory": {
+      "de": "Importverzeichnis kann nicht erstellt werden",
+      "en": "Cannot create import directory",
+      "ru": "Не удалось создать папку импорта"
+    },
+    "Cannot create workspace directory": {
+      "de": "Profilverzeichnis kann nicht erstellt werden",
+      "en": "Cannot create workspace directory",
+      "ru": "Не удалось создать папку профилей"
+    },
+    "Cannot export EQ configuration": {
+      "de": "EQ-Konfiguration kann nicht exportiert werden",
+      "en": "Cannot export EQ configuration",
+      "ru": "Не удалось экспортировать настройки EQ"
+    },
+    "Cannot read profile within size limit": {
+      "de": "Das Profil kann innerhalb der Größenbegrenzung nicht gelesen werden",
+      "en": "Cannot read profile within size limit",
+      "ru": "Не удалось прочитать профиль в пределах допустимого размера"
+    },
+    "Cannot read workspace": {
+      "de": "Profile können nicht gelesen werden",
+      "en": "Cannot read workspace",
+      "ru": "Не удалось прочитать профили"
+    },
+    "Cannot register the native D-Bus object": {
+      "de": "D-Bus-Objekt kann nicht registriert werden",
+      "en": "Cannot register the native D-Bus object",
+      "ru": "Не удалось зарегистрировать объект D-Bus"
+    },
+    "Cannot remove DPI preset": {
+      "de": "DPI-Voreinstellung kann nicht gelöscht werden",
+      "en": "Cannot remove DPI preset",
+      "ru": "Не удалось удалить предустановку DPI"
+    },
+    "Cannot remove preset": {
+      "de": "Voreinstellung kann nicht gelöscht werden",
+      "en": "Cannot remove preset",
+      "ru": "Не удалось удалить предустановку"
+    },
+    "Cannot start PipeWire filter client": {
+      "de": "PipeWire-Filter kann nicht gestartet werden",
+      "en": "Cannot start PipeWire filter client",
+      "ru": "Не удалось запустить фильтр PipeWire"
+    },
+    "Cannot write EQ configuration": {
+      "de": "EQ-Konfiguration kann nicht gespeichert werden",
+      "en": "Cannot write EQ configuration",
+      "ru": "Не удалось сохранить настройки EQ"
+    },
+    "D-Bus value nesting exceeds limit": {
+      "de": "Der D-Bus-Wert ist zu tief verschachtelt",
+      "en": "D-Bus value nesting exceeds limit",
+      "ru": "Превышена глубина вложенности значения D-Bus"
+    },
+    "DPI is outside device range": {
+      "de": "DPI liegt außerhalb des Gerätebereichs",
+      "en": "DPI is outside device range",
+      "ru": "DPI вне допустимого диапазона устройства"
+    },
+    "DPI preset limit reached": {
+      "de": "Das Limit für DPI-Voreinstellungen wurde erreicht",
+      "en": "DPI preset limit reached",
+      "ru": "Достигнут лимит предустановок DPI"
+    },
+    "DPI stage is disabled or unavailable": {
+      "de": "DPI-Stufe ist deaktiviert oder nicht verfügbar",
+      "en": "DPI stage is disabled or unavailable",
+      "ru": "Ступень DPI отключена или недоступна"
+    },
+    "DTD and entity references are not accepted in profiles": {
+      "de": "DTD und Entity-Verweise sind in Profilen nicht erlaubt",
+      "en": "DTD and entity references are not accepted in profiles",
+      "ru": "DTD и ссылки на XML-сущности в профилях не поддерживаются"
+    },
+    "Device has no DPI settings": {
+      "de": "Dieses Gerät hat keine DPI-Einstellungen",
+      "en": "Device has no DPI settings",
+      "ru": "У этого устройства нет настроек DPI"
+    },
+    "Document field exceeds size limit": {
+      "de": "Das Profilfeld überschreitet die Größenbegrenzung",
+      "en": "Document field exceeds size limit",
+      "ru": "Поле профиля превышает допустимый размер"
+    },
+    "Document list requires an array": {
+      "de": "Die Profilliste benötigt ein Array",
+      "en": "Document list requires an array",
+      "ru": "Список профиля должен быть массивом"
+    },
+    "EQ gains require finite 0.5 dB steps between -12 and +12 dB": {
+      "de": "EQ-Werte benötigen endliche 0,5-dB-Schritte zwischen -12 und +12 dB",
+      "en": "EQ gains require finite 0.5 dB steps between -12 and +12 dB",
+      "ru": "Значения EQ должны быть конечными, с шагом 0,5 дБ в диапазоне от −12 до +12 дБ"
+    },
+    "EQ preset limit reached": {
+      "de": "Das Limit für EQ-Voreinstellungen wurde erreicht",
+      "en": "EQ preset limit reached",
+      "ru": "Достигнут лимит предустановок EQ"
+    },
+    "Equalizer requires ten gains": {
+      "de": "Der Equalizer benötigt zehn Bandwerte",
+      "en": "Equalizer requires ten gains",
+      "ru": "Эквалайзеру нужны значения десяти полос"
+    },
+    "Factory EQ presets are missing": {
+      "de": "Werks-EQ-Voreinstellungen fehlen",
+      "en": "Factory EQ presets are missing",
+      "ru": "Заводские предустановки EQ отсутствуют"
+    },
+    "Invalid Cereal profile XML": {
+      "de": "Ungültiges Cereal-Profil-XML",
+      "en": "Invalid Cereal profile XML",
+      "ru": "Недопустимый XML-профиль Cereal"
+    },
+    "Invalid DPI preset name": {
+      "de": "Ungültiger Name der DPI-Voreinstellung",
+      "en": "Invalid DPI preset name",
+      "ru": "Недопустимое название предустановки DPI"
+    },
+    "Invalid EQ band": {
+      "de": "Ungültiges EQ-Band",
+      "en": "Invalid EQ band",
+      "ru": "Недопустимая полоса EQ"
+    },
+    "Invalid EQ preset name": {
+      "de": "Ungültiger Name der EQ-Voreinstellung",
+      "en": "Invalid EQ preset name",
+      "ru": "Недопустимое название предустановки EQ"
+    },
+    "Invalid indicator color": {
+      "de": "Ungültige Anzeigefarbe",
+      "en": "Invalid indicator color",
+      "ru": "Недопустимый цвет индикатора"
+    },
+    "Invalid lighting color": {
+      "de": "Ungültige Beleuchtungsfarbe",
+      "en": "Invalid lighting color",
+      "ru": "Недопустимый цвет подсветки"
+    },
+    "Invalid lighting color count": {
+      "de": "Ungültige Anzahl von Beleuchtungsfarben",
+      "en": "Invalid lighting color count",
+      "ru": "Недопустимое количество цветов подсветки"
+    },
+    "Invalid mixer control": {
+      "de": "Ungültiger Audioregler",
+      "en": "Invalid mixer control",
+      "ru": "Недопустимый элемент управления звуком"
+    },
+    "Invalid or duplicate assignment input": {
+      "de": "Ungültiger oder doppelter Zuweisungseingang",
+      "en": "Invalid or duplicate assignment input",
+      "ru": "Недопустимый или повторный вход назначения"
+    },
+    "Invalid or duplicate lighting zone": {
+      "de": "Ungültige oder doppelte Beleuchtungszone",
+      "en": "Invalid or duplicate lighting zone",
+      "ru": "Недопустимая или повторная зона подсветки"
+    },
+    "Invalid original device manifest": {
+      "de": "Ungültige Original-Gerätedefinition",
+      "en": "Invalid original device manifest",
+      "ru": "Недопустимое исходное описание устройства"
+    },
+    "Invalid saved tilt angles": {
+      "de": "Ungültige gespeicherte Neigungswinkel",
+      "en": "Invalid saved tilt angles",
+      "ru": "Недопустимые сохранённые углы наклона"
+    },
+    "Lighting layer count exceeds device capability": {
+      "de": "Zu viele Beleuchtungsebenen für dieses Gerät",
+      "en": "Lighting layer count exceeds device capability",
+      "ru": "Количество слоёв подсветки превышает возможности устройства"
+    },
+    "Lighting layer requires an object": {
+      "de": "Eine Beleuchtungsebene benötigt ein Objekt",
+      "en": "Lighting layer requires an object",
+      "ru": "Слой подсветки должен быть объектом"
+    },
+    "Lighting type is not supported by this device": {
+      "de": "Dieser Beleuchtungstyp wird vom Gerät nicht unterstützt",
+      "en": "Lighting type is not supported by this device",
+      "ru": "Этот тип подсветки не поддерживается устройством"
+    },
+    "Mixer has no adjustable volume range": {
+      "de": "Der Audioregler hat keinen einstellbaren Lautstärkebereich",
+      "en": "Mixer has no adjustable volume range",
+      "ru": "У элемента звукового управления нет регулируемого диапазона громкости"
+    },
+    "OpenQUI is already running in this session; D-Bus service name is owned": {
+      "de": "OpenQUI läuft bereits in dieser Sitzung; der D-Bus-Dienst ist belegt",
+      "en": "OpenQUI is already running in this session; D-Bus service name is owned",
+      "ru": "OpenQUI уже запущен в этой сессии; служба D-Bus занята"
+    },
+    "Original device RCC cannot be registered": {
+      "de": "Original-Geräteressourcen können nicht registriert werden",
+      "en": "Original device RCC cannot be registered",
+      "ru": "Не удалось зарегистрировать исходные ресурсы устройства"
+    },
+    "Original device RCC is missing": {
+      "de": "Original-Geräteressourcen fehlen",
+      "en": "Original device RCC is missing",
+      "ru": "Исходные ресурсы устройства отсутствуют"
+    },
+    "Original device manifest is missing": {
+      "de": "Original-Gerätedefinition fehlt",
+      "en": "Original device manifest is missing",
+      "ru": "Исходное описание устройства отсутствует"
+    },
+    "Profile XML is nested too deeply": {
+      "de": "Profil-XML ist zu tief verschachtelt",
+      "en": "Profile XML is nested too deeply",
+      "ru": "Слишком большая глубина вложенности XML-профиля"
+    },
+    "Profile does not exist": {
+      "de": "Das Profil existiert nicht",
+      "en": "Profile does not exist",
+      "ru": "Профиль не существует"
+    },
+    "Profile limit reached": {
+      "de": "Das Profillimit wurde erreicht",
+      "en": "Profile limit reached",
+      "ru": "Достигнут лимит профилей"
+    },
+    "Profile name must contain 1–128 characters": {
+      "de": "Der Profilname muss 1–128 Zeichen enthalten",
+      "en": "Profile name must contain 1–128 characters",
+      "ru": "Название профиля должно содержать от 1 до 128 символов"
+    },
+    "Random lighting mode requires a boolean": {
+      "de": "Zufällige Beleuchtung benötigt einen booleschen Wert",
+      "en": "Random lighting mode requires a boolean",
+      "ru": "Для случайных цветов нужно логическое значение"
+    },
+    "Selected EQ preset is unavailable": {
+      "de": "Gewählte EQ-Voreinstellung ist nicht verfügbar",
+      "en": "Selected EQ preset is unavailable",
+      "ru": "Выбранная предустановка EQ недоступна"
+    },
+    "Selected audio output is no longer available": {
+      "de": "Gewählter Audioausgang ist nicht mehr verfügbar",
+      "en": "Selected audio output is no longer available",
+      "ru": "Выбранный аудиовыход больше недоступен"
+    },
+    "Session D-Bus is unavailable": {
+      "de": "Sitzungs-D-Bus ist nicht verfügbar",
+      "en": "Session D-Bus is unavailable",
+      "ru": "D-Bus пользовательской сессии недоступен"
+    },
+    "The last profile cannot be removed": {
+      "de": "Das letzte Profil kann nicht gelöscht werden",
+      "en": "The last profile cannot be removed",
+      "ru": "Нельзя удалить последний профиль"
+    },
+    "The requested mixer control is unavailable": {
+      "de": "Der angeforderte Audioregler ist nicht verfügbar",
+      "en": "The requested mixer control is unavailable",
+      "ru": "Запрошенный элемент управления звуком недоступен"
+    },
+    "The selected USB headset has no ALSA mixer card": {
+      "de": "Das gewählte USB-Headset hat keine ALSA-Mixerkarte",
+      "en": "The selected USB headset has no ALSA mixer card",
+      "ru": "У выбранной USB-гарнитуры нет звуковой карты ALSA"
+    },
+    "Three indicator colors are required": {
+      "de": "Drei Anzeigefarben sind erforderlich",
+      "en": "Three indicator colors are required",
+      "ru": "Нужны три цвета индикаторов"
+    },
+    "Tilt angles use 10 degree steps between 10 and 80": {
+      "de": "Neigungswinkel benötigen 10-Grad-Schritte zwischen 10 und 80",
+      "en": "Tilt angles use 10 degree steps between 10 and 80",
+      "ru": "Угол наклона задаётся от 10° до 80° с шагом 10°"
+    },
+    "USB enumeration failed": {
+      "de": "USB-Erkennung fehlgeschlagen",
+      "en": "USB enumeration failed",
+      "ru": "Не удалось обнаружить USB-устройства"
+    },
+    "USB child enumeration failed": {
+      "de": "USB-Schnittstellen können nicht gelesen werden",
+      "en": "USB child enumeration failed",
+      "ru": "Не удалось прочитать USB-интерфейсы"
+    },
+    "USB sysfs path is unavailable": {
+      "de": "USB-sysfs-Pfad ist nicht verfügbar",
+      "en": "USB sysfs path is unavailable",
+      "ru": "Путь USB в sysfs недоступен"
+    },
+    "Unknown DPI field": {
+      "de": "Unbekanntes DPI-Feld",
+      "en": "Unknown DPI field",
+      "ru": "Неизвестное поле DPI"
+    },
+    "Unknown DPI preset": {
+      "de": "Unbekannte DPI-Voreinstellung",
+      "en": "Unknown DPI preset",
+      "ru": "Неизвестная предустановка DPI"
+    },
+    "Unknown DPI stage": {
+      "de": "Unbekannte DPI-Stufe",
+      "en": "Unknown DPI stage",
+      "ru": "Неизвестная ступень DPI"
+    },
+    "Unknown EQ preset": {
+      "de": "Unbekannte EQ-Voreinstellung",
+      "en": "Unknown EQ preset",
+      "ru": "Неизвестная предустановка EQ"
+    },
+    "Unknown assignment category": {
+      "de": "Unbekannte Zuweisungskategorie",
+      "en": "Unknown assignment category",
+      "ru": "Неизвестная категория назначения"
+    },
+    "Unknown device model": {
+      "de": "Unbekanntes Gerätemodell",
+      "en": "Unknown device model",
+      "ru": "Неизвестная модель устройства"
+    },
+    "Unknown virtual keyboard key": {
+      "de": "Unbekannte virtuelle Taste",
+      "en": "Unknown virtual keyboard key",
+      "ru": "Неизвестная клавиша виртуальной клавиатуры"
+    },
+    "Unsupported D-Bus container; use av or a{sv}": {
+      "de": "Nicht unterstützter D-Bus-Container; av oder a{sv} verwenden",
+      "en": "Unsupported D-Bus container; use av or a{sv}",
+      "ru": "Неподдерживаемый контейнер D-Bus; используйте av или a{sv}"
+    },
+    "Unsupported document field": {
+      "de": "Nicht unterstütztes Profilfeld",
+      "en": "Unsupported document field",
+      "ru": "Неподдерживаемое поле профиля"
+    },
+    "Workspace exceeds size limit": {
+      "de": "Profile überschreiten die Größenbegrenzung",
+      "en": "Workspace exceeds size limit",
+      "ru": "Размер данных профилей превышает лимит"
+    },
+    "Workspace is invalid; preserved without overwriting": {
+      "de": "Profildaten sind ungültig; Original wurde nicht überschrieben",
+      "en": "Workspace is invalid; preserved without overwriting",
+      "ru": "Данные профилей повреждены; исходный файл сохранён без перезаписи"
+    },
+    "Workspace is locked by another process": {
+      "de": "Profile sind durch einen anderen Prozess gesperrt",
+      "en": "Workspace is locked by another process",
+      "ru": "Профили заблокированы другим процессом"
+    },
+    "libudev context cannot be created": {
+      "de": "libudev-Kontext kann nicht erstellt werden",
+      "en": "libudev context cannot be created",
+      "ru": "Не удалось создать контекст libudev"
+    },
+    "Cannot read UI language settings": {
+      "de": "Spracheinstellungen können nicht gelesen werden",
+      "en": "Cannot read UI language settings",
+      "ru": "Не удалось прочитать настройки языка"
+    },
+    "UI language settings are invalid; the original file was preserved": {
+      "de": "Spracheinstellungen sind ungültig; Originaldatei wurde erhalten",
+      "en": "UI language settings are invalid; the original file was preserved",
+      "ru": "Настройки языка повреждены; исходный файл сохранён"
+    },
+    "Choose German, English or Russian": {
+      "de": "Deutsch, Englisch oder Russisch auswählen",
+      "en": "Choose German, English or Russian",
+      "ru": "Выберите немецкий, английский или русский язык"
+    },
+    "The requested translation is unavailable": {
+      "de": "Die angeforderte Übersetzung ist nicht verfügbar",
+      "en": "The requested translation is unavailable",
+      "ru": "Запрошенный перевод недоступен"
+    },
+    "Cannot save UI language settings": {
+      "de": "Spracheinstellungen können nicht gespeichert werden",
+      "en": "Cannot save UI language settings",
+      "ru": "Не удалось сохранить настройки языка"
+    },
+    "Deutsch (ISO)": {
+      "de": "Deutsch (ISO)",
+      "en": "German (ISO)",
+      "ru": "Немецкая (ISO)"
+    },
+    "Strg": {
+      "de": "Strg",
+      "en": "Ctrl",
+      "ru": "Ctrl"
+    },
+    "Strg rechts": {
+      "de": "Strg rechts",
+      "en": "Right Ctrl",
+      "ru": "Ctrl справа"
+    },
+    "Shift rechts": {
+      "de": "Shift rechts",
+      "en": "Right Shift",
+      "ru": "Shift справа"
+    },
+    "Leertaste": {
+      "de": "Leertaste",
+      "en": "Space",
+      "ru": "Пробел"
+    },
+    "Druck": {
+      "de": "Druck",
+      "en": "PrtSc",
+      "ru": "PrtSc"
+    },
+    "Einfg": {
+      "de": "Einfg",
+      "en": "Insert",
+      "ru": "Insert"
+    },
+    "Entf": {
+      "de": "Entf",
+      "en": "Delete",
+      "ru": "Delete"
+    },
+    "Pos1": {
+      "de": "Pos1",
+      "en": "Home",
+      "ru": "Home"
+    },
+    "Ende": {
+      "de": "Ende",
+      "en": "End",
+      "ru": "End"
+    },
+    "Bild ↑": {
+      "de": "Bild ↑",
+      "en": "PgUp",
+      "ru": "PgUp"
+    },
+    "Bild ↓": {
+      "de": "Bild ↓",
+      "en": "PgDn",
+      "ru": "PgDn"
+    },
+    "Rollen": {
+      "de": "Rollen",
+      "en": "Scroll",
+      "ru": "Scroll"
+    },
+    "Menü": {
+      "de": "Menü",
+      "en": "Menu",
+      "ru": "Меню"
+    },
+    "keyDown": {
+      "de": "Taste gedrückt",
+      "en": "Key down",
+      "ru": "Нажатие"
+    },
+    "keyUp": {
+      "de": "Taste losgelassen",
+      "en": "Key up",
+      "ru": "Отпускание"
+    },
+    "Automatische\nAudio-Neupositionierung": {
+      "de": "Automatische\nAudio-Neupositionierung",
+      "en": "Automatic audio\nrepositioning",
+      "ru": "Автоматическое\nпозиционирование звука"
+    },
+    "Linux-Audioausgang": {
+      "de": "Linux-Audioausgang",
+      "en": "Linux audio output",
+      "ru": "Аудиовыход Linux"
+    },
+    "Invalid lighting speed": {
+      "de": "Ungültige Beleuchtungseinstellung: Geschwindigkeit",
+      "en": "Invalid lighting speed",
+      "ru": "Недопустимое значение скорости подсветки"
+    },
+    "Invalid lighting duration": {
+      "de": "Ungültige Beleuchtungseinstellung: Dauer",
+      "en": "Invalid lighting duration",
+      "ru": "Недопустимое значение длительности подсветки"
+    },
+    "Invalid lighting opacity": {
+      "de": "Ungültige Beleuchtungseinstellung: Deckkraft",
+      "en": "Invalid lighting opacity",
+      "ru": "Недопустимое значение непрозрачности подсветки"
+    },
+    "Invalid lighting direction": {
+      "de": "Ungültige Beleuchtungseinstellung: Richtung",
+      "en": "Invalid lighting direction",
+      "ru": "Недопустимое значение направления подсветки"
+    },
+    "Sekunden": {
+      "de": "Sekunden",
+      "en": "Seconds",
+      "ru": "Секунды"
+    },
+    "Flat": {
+      "de": "Neutral",
+      "en": "Flat",
+      "ru": "Без коррекции"
+    },
+    "Bass Boost": {
+      "de": "Bassverstärkung",
+      "en": "Bass Boost",
+      "ru": "Усиление баса"
+    },
+    "Voice Focus": {
+      "de": "Stimmenfokus",
+      "en": "Voice Focus",
+      "ru": "Акцент на голосе"
+    },
+    "Bright": {
+      "de": "Hell",
+      "en": "Bright",
+      "ru": "Яркий звук"
+    },
+    "Balanced": {
+      "de": "Ausgewogen",
+      "en": "Balanced",
+      "ru": "Сбалансированный"
+    },
+    "Open device catalog is missing": {
+      "de": "Der offene Gerätekatalog fehlt",
+      "en": "Open device catalog is missing",
+      "ru": "Открытый каталог устройств отсутствует"
+    },
+    "Open device catalog is invalid": {
+      "de": "Der offene Gerätekatalog ist ungültig",
+      "en": "Open device catalog is invalid",
+      "ru": "Открытый каталог устройств повреждён"
+    },
+    "Darkstar über 2,4 GHz verbunden": {
+      "de": "Darkstar über 2,4 GHz verbunden",
+      "en": "Darkstar connected over 2.4 GHz",
+      "ru": "Darkstar подключена по 2,4 ГГц"
+    },
+    "Empfänger antwortet; keine Darkstar-Funkverbindung": {
+      "de": "Empfänger antwortet; keine Darkstar-Funkverbindung",
+      "en": "Receiver responds; no Darkstar radio link",
+      "ru": "Ресивер отвечает; радиосвязи с Darkstar нет"
+    },
+    "Ziel: separater SLIPSTREAM-Empfänger 1b1c:1bdc. Der Virtuoso-Empfänger wird nicht neu gekoppelt.": {
+      "de": "Ziel: separater SLIPSTREAM-Empfänger 1b1c:1bdc. Der Virtuoso-Empfänger wird nicht neu gekoppelt.",
+      "en": "Target: separate SLIPSTREAM receiver 1b1c:1bdc. Virtuoso pairing stays unchanged.",
+      "ru": "Цель: отдельный ресивер SLIPSTREAM 1b1c:1bdc. Привязка Virtuoso сохраняется."
+    },
+    "Maus per Kabel und Empfänger gleichzeitig anschließen. Nach bestätigter Übertragung das Kabel entfernen und 2,4 GHz testen.": {
+      "de": "Maus per Kabel und Empfänger gleichzeitig anschließen. Nach bestätigter Übertragung das Kabel entfernen und 2,4 GHz testen.",
+      "en": "Connect the mouse by cable and the receiver together. After confirmed transfer, remove the cable and test 2.4 GHz.",
+      "ru": "Подключите мышь кабелем и ресивер одновременно. После подтверждения записи снимите кабель и проверьте 2,4 ГГц."
+    },
+    "Kopplung und Hardwarestatus": {
+      "de": "Kopplung und Hardwarestatus",
+      "en": "Pairing and hardware status",
+      "ru": "Сопряжение и состояние устройств"
+    },
+    "2. Geräte koppeln drücken. Die App prüft Antworten und liest den Kopplungsbezeichner zurück.": {
+      "de": "2. Geräte koppeln drücken. Die App prüft Antworten und liest den Kopplungsbezeichner zurück.",
+      "en": "2. Press Pair devices. The app checks acknowledgements and reads the pairing identifier back.",
+      "ru": "2. Нажмите «Сопряжение устройств». Приложение проверит ответы и прочитает идентификатор привязки обратно."
+    },
+    "Hardwarestatus aktualisieren": {
+      "de": "Hardwarestatus aktualisieren",
+      "en": "Refresh hardware status",
+      "ru": "Обновить состояние устройств"
+    },
+    "Software-Beleuchtung stoppen": {
+      "de": "Software-Beleuchtung stoppen",
+      "en": "Stop software lighting",
+      "ru": "Остановить программную подсветку"
+    },
+    "Kopplungsdaten bestätigt. USB-Kabel entfernen und 2,4 GHz testen.": {
+      "de": "Kopplungsdaten bestätigt. USB-Kabel entfernen und 2,4 GHz testen.",
+      "en": "Pairing data confirmed. Remove the USB cable and test 2.4 GHz.",
+      "ru": "Данные привязки подтверждены. Снимите USB-кабель и проверьте 2,4 ГГц."
+    },
+    "RGB-Daten vom Gerät bestätigt. Software-Beleuchtung aktiv.": {
+      "de": "RGB-Daten vom Gerät bestätigt. Software-Beleuchtung aktiv.",
+      "en": "RGB data acknowledged by device. Software lighting active.",
+      "ru": "Устройство подтвердило RGB-данные. Программная подсветка включена."
+    },
+    "Fenster öffnen": {
+      "de": "Fenster öffnen",
+      "en": "Open window",
+      "ru": "Открыть окно"
+    },
+    "Beenden": {
+      "de": "Beenden",
+      "en": "Quit",
+      "ru": "Выход"
+    },
+    "Wird geladen": {
+      "de": "Wird geladen",
+      "en": "Charging",
+      "ru": "Заряжается"
+    },
+    "7.1 Surround (MIT KEMAR)": {
+      "de": "7.1 Surround (MIT KEMAR)",
+      "en": "7.1 Surround (MIT KEMAR)",
+      "ru": "Объёмный звук 7.1 (MIT KEMAR)"
+    },
+    "Hardware access is disabled in this session": {
+      "en": "Hardware access is disabled in this session",
+      "de": "Hardwarezugriff ist in dieser Sitzung deaktiviert",
+      "ru": "Доступ к устройствам отключён в этом сеансе"
+    },
+    "Hardware operation unavailable or busy": {
+      "en": "Hardware operation unavailable or busy",
+      "de": "Hardwarevorgang nicht verfügbar oder beschäftigt",
+      "ru": "Операция с устройством недоступна или уже выполняется"
+    },
+    "Add a lighting layer before applying it": {
+      "en": "Add a lighting layer before applying it",
+      "de": "Vor dem Anwenden eine Beleuchtungsebene hinzufügen",
+      "ru": "Добавьте слой подсветки перед применением"
+    },
+    "Hardware lighting is not supported for this model": {
+      "en": "Hardware lighting is not supported for this model",
+      "de": "Hardware-Beleuchtung für dieses Modell nicht unterstützt",
+      "ru": "Подсветка этого устройства ещё не поддерживается"
+    },
+    "This effect needs an input or audio trigger and is not implemented for hardware": {
+      "en": "This effect needs an input or audio trigger and is not implemented for hardware",
+      "de": "Dieser Effekt benötigt Eingabe- oder Audioereignisse und ist für die Hardware noch nicht implementiert",
+      "ru": "Этот эффект требует событий ввода или аудио и ещё не реализован для устройства"
+    },
+    "Darkstar ist bereits mit diesem Empfänger verbunden.": {
+      "de": "Darkstar ist bereits mit diesem Empfänger verbunden.",
+      "en": "Darkstar is already paired with this receiver.",
+      "ru": "Darkstar уже сопряжена с этим ресивером."
+    },
+    "Beleuchtung anwenden": {
+      "de": "Beleuchtung anwenden",
+      "en": "Apply lighting",
+      "ru": "Применить подсветку"
+    },
+    "Malformed HID response": {
+      "de": "Ungültige HID-Antwort",
+      "en": "Malformed HID response",
+      "ru": "Некорректный ответ HID"
+    },
+    "Invalid Bragi packet arguments": {
+      "de": "Ungültige Bragi-Paketparameter",
+      "en": "Invalid Bragi packet arguments",
+      "ru": "Некорректные параметры пакета Bragi"
+    },
+    "HID identity, descriptor or exclusive-lock check failed": {
+      "de": "HID-Identität, Deskriptor oder exklusive Sperre konnte nicht bestätigt werden",
+      "en": "HID identity, descriptor or exclusive-lock check failed",
+      "ru": "Не пройдена проверка устройства HID, дескриптора или блокировки"
+    },
+    "A report transport is required": {
+      "de": "Ein Report-Transport ist erforderlich",
+      "en": "A report transport is required",
+      "ru": "Не задан транспорт HID-отчётов"
+    },
+    "Unexpected HID transport response": {
+      "de": "Unerwartete HID-Transportantwort",
+      "en": "Unexpected HID transport response",
+      "ru": "Неожиданный ответ транспорта HID"
+    },
+    "Incomplete HID write or disconnected device": {
+      "de": "HID-Daten unvollständig geschrieben oder Gerät getrennt",
+      "en": "Incomplete HID write or disconnected device",
+      "ru": "Неполная запись HID или устройство отключено"
+    },
+    "HID command interface disconnected": {
+      "de": "HID-Befehlsschnittstelle getrennt",
+      "en": "HID command interface disconnected",
+      "ru": "Командный интерфейс HID отключён"
+    },
+    "HID response read failed": {
+      "de": "HID-Antwort konnte nicht gelesen werden",
+      "en": "HID response read failed",
+      "ru": "Не удалось прочитать ответ HID"
+    },
+    "HID response timeout": {
+      "de": "Zeitüberschreitung bei der HID-Antwort",
+      "en": "HID response timeout",
+      "ru": "Устройство не ответило на HID-команду вовремя"
+    },
+    "Unknown firmware control mode": {
+      "de": "Unbekannter Firmware-Steuerungsmodus",
+      "en": "Unknown firmware control mode",
+      "ru": "Неизвестный режим управления прошивкой"
+    },
+    "Firmware mode restoration failed": {
+      "de": "Firmware-Modus konnte nicht wiederhergestellt werden",
+      "en": "Firmware mode restoration failed",
+      "ru": "Не удалось восстановить режим устройства"
+    },
+    "Unexpected pairing resource length": {
+      "de": "Unerwartete Länge der Kopplungsdaten",
+      "en": "Unexpected pairing resource length",
+      "ru": "Неожиданная длина данных сопряжения"
+    },
+    "Invalid HID resource write size": {
+      "de": "Ungültige Größe der HID-Ressourcendaten",
+      "en": "Invalid HID resource write size",
+      "ru": "Некорректный размер записываемого ресурса HID"
+    },
+    "Invalid V2W request": {
+      "de": "Ungültige V2W-Anfrage",
+      "en": "Invalid V2W request",
+      "ru": "Некорректный запрос V2W"
+    },
+    "Connect exactly one supported mouse and one selected receiver": {
+      "de": "Genau eine unterstützte Maus und einen passenden Empfänger anschließen",
+      "en": "Connect exactly one supported mouse and one selected receiver",
+      "ru": "Подключите одну поддерживаемую мышь и один выбранный ресивер"
+    },
+    "Cannot save the private pairing recovery journal": {
+      "de": "Privates Kopplungsprotokoll kann nicht gespeichert werden",
+      "en": "Cannot save the private pairing recovery journal",
+      "ru": "Не удалось сохранить приватный журнал восстановления сопряжения"
+    },
+    "Headset battery query rejected": {
+      "de": "Batterieabfrage des Headsets abgelehnt",
+      "en": "Headset battery query rejected",
+      "ru": "Гарнитура отклонила запрос заряда"
+    },
+    "Headset charge query rejected": {
+      "de": "Ladestatusabfrage des Headsets abgelehnt",
+      "en": "Headset charge query rejected",
+      "ru": "Гарнитура отклонила запрос состояния зарядки"
+    },
+    "Invalid hardware battery telemetry": {
+      "de": "Ungültige Batteriedaten vom Gerät",
+      "en": "Invalid hardware battery telemetry",
+      "ru": "Устройство вернуло некорректные данные заряда"
+    },
+    "Receiver firmware query rejected": {
+      "de": "Firmware-Abfrage des Empfängers abgelehnt",
+      "en": "Receiver firmware query rejected",
+      "ru": "Ресивер отклонил запрос версии прошивки"
+    },
+    "USB and protocol identities disagree": {
+      "de": "USB- und Protokollidentität stimmen nicht überein",
+      "en": "USB and protocol identities disagree",
+      "ru": "USB-идентификатор не совпадает с ответом устройства"
+    },
+    "Pairing requires stable USB serial numbers for recovery": {
+      "de": "Für die Kopplung sind stabile USB-Seriennummern erforderlich",
+      "en": "Pairing requires stable USB serial numbers for recovery",
+      "ru": "Для восстановления сопряжения нужны постоянные USB-серийные номера"
+    },
+    "Cannot create pairing recovery directory": {
+      "de": "Verzeichnis zur Kopplungswiederherstellung kann nicht erstellt werden",
+      "en": "Cannot create pairing recovery directory",
+      "ru": "Не удалось создать каталог восстановления сопряжения"
+    },
+    "Another pairing operation is running": {
+      "de": "Ein anderer Kopplungsvorgang läuft bereits",
+      "en": "Another pairing operation is running",
+      "ru": "Уже выполняется другая операция сопряжения"
+    },
+    "Pairing protocol identity check failed": {
+      "de": "Geräteidentität für die Kopplung konnte nicht bestätigt werden",
+      "en": "Pairing protocol identity check failed",
+      "ru": "Не пройдена проверка устройств перед сопряжением"
+    },
+    "Selected receiver already has a live radio device; disconnect it before pairing": {
+      "de": "Der gewählte Empfänger hat eine aktive Funkverbindung; Gerät vor der Kopplung trennen",
+      "en": "Selected receiver already has a live radio device; disconnect it before pairing",
+      "ru": "К ресиверу уже подключено другое беспроводное устройство; отключите его перед сопряжением"
+    },
+    "The live radio device belongs to a different wired mouse": {
+      "de": "Das Funkgerät gehört zu einer anderen kabelgebundenen Maus",
+      "en": "The live radio device belongs to a different wired mouse",
+      "ru": "Радиоустройство не соответствует подключённой по кабелю мыши"
+    },
+    "Pairing journal ownership or permissions are invalid": {
+      "de": "Besitzer oder Zugriffsrechte des Kopplungsprotokolls sind ungültig",
+      "en": "Pairing journal ownership or permissions are invalid",
+      "ru": "Некорректный владелец или права доступа к журналу сопряжения"
+    },
+    "Recovery journal belongs to different physical devices": {
+      "de": "Das Wiederherstellungsprotokoll gehört zu anderen Geräten",
+      "en": "Recovery journal belongs to different physical devices",
+      "ru": "Журнал восстановления относится к другим физическим устройствам"
+    },
+    "Pairing recovery material has invalid lengths": {
+      "de": "Ungültige Länge der Kopplungsdaten zur Wiederherstellung",
+      "en": "Pairing recovery material has invalid lengths",
+      "ru": "Некорректная длина данных восстановления сопряжения"
+    },
+    "Pairing identifier readback failed": {
+      "de": "Kopplungsbezeichner konnte nicht bestätigt werden",
+      "en": "Pairing identifier readback failed",
+      "ru": "Повторное чтение идентификатора сопряжения не подтвердило запись"
+    },
+    "Headset receiver identity check failed": {
+      "de": "Identität des Headset-Empfängers konnte nicht bestätigt werden",
+      "en": "Headset receiver identity check failed",
+      "ru": "Не удалось подтвердить идентификатор ресивера гарнитуры"
+    },
+    "Lighting identity check failed": {
+      "de": "Geräteidentität für die Beleuchtung konnte nicht bestätigt werden",
+      "en": "Lighting identity check failed",
+      "ru": "Не пройдена проверка устройства перед записью подсветки"
+    },
+    "Wireless mouse lighting identity check failed": {
+      "de": "Identität der Funkmaus für die Beleuchtung konnte nicht bestätigt werden",
+      "en": "Wireless mouse lighting identity check failed",
+      "ru": "Не пройдена проверка беспроводной мыши перед записью подсветки"
+    },
+    "Headset lighting endpoint rejected firmware-mode control": {
+      "de": "Headset-Beleuchtung lehnt die Steuerung im Firmware-Modus ab",
+      "en": "Headset lighting endpoint rejected firmware-mode control",
+      "ru": "Гарнитура отклонила управление подсветкой в аппаратном режиме"
+    },
+    "Headset rejected the RGB frame": {
+      "de": "Headset hat die RGB-Daten abgelehnt",
+      "en": "Headset rejected the RGB frame",
+      "ru": "Гарнитура отклонила RGB-данные"
+    },
+    "Headset lighting handle close failed": {
+      "de": "Headset-Beleuchtungssitzung konnte nicht geschlossen werden",
+      "en": "Headset lighting handle close failed",
+      "ru": "Не удалось закрыть сеанс подсветки гарнитуры"
+    },
+    "Pairing journal schema is invalid": {
+      "de": "Ungültiges Format des Kopplungsprotokolls",
+      "en": "Pairing journal schema is invalid",
+      "ru": "Некорректный формат журнала сопряжения"
+    },
+    "Pairing recovery control mode is invalid": {
+      "de": "Ungültiger Steuerungsmodus im Wiederherstellungsprotokoll",
+      "en": "Pairing recovery control mode is invalid",
+      "ru": "Некорректный режим управления в журнале восстановления"
+    },
+    "The selected USB headset has no accessible ALSA mixer card": {
+      "de": "Für das gewählte USB-Headset ist keine zugängliche ALSA-Mixerkarte vorhanden",
+      "en": "The selected USB headset has no accessible ALSA mixer card",
+      "ru": "Для выбранной USB-гарнитуры недоступен микшер ALSA"
+    },
+    "EQ-Ausgang erstellt. In Plasma den Ausgang „OpenQUI Equalizer“ wählen.": {
+      "de": "Audio-Ausgang erstellt. Im Systemmixer den passenden OpenQUI-Ausgang wählen.",
+      "en": "Audio output created. Select the matching OpenQUI output in your system mixer.",
+      "ru": "Аудиовыход создан. Выберите соответствующий выход OpenQUI в системном микшере."
+    },
+    "Aktiver DPI-Wert vom Gerät bestätigt und zurückgelesen.": {
+      "de": "Aktiver DPI-Wert vom Gerät bestätigt und zurückgelesen.",
+      "en": "Active DPI acknowledged and read back from the device.",
+      "ru": "Активный DPI подтверждён и прочитан обратно из устройства."
+    },
+    "This device uses one DPI value for both axes": {
+      "de": "Dieses Gerät verwendet einen DPI-Wert für beide Achsen",
+      "en": "This device uses one DPI value for both axes",
+      "ru": "Это устройство использует общий DPI для обеих осей"
+    },
+    "Connect Darkstar with its USB cable to apply DPI": {
+      "de": "Darkstar per USB-Kabel anschließen, um DPI anzuwenden",
+      "en": "Connect Darkstar with its USB cable to apply DPI",
+      "ru": "Подключите Darkstar USB-кабелем для применения DPI"
+    },
+    "Enable the selected DPI stage before applying it": {
+      "de": "Die ausgewählte DPI-Stufe vor dem Anwenden aktivieren",
+      "en": "Enable the selected DPI stage before applying it",
+      "ru": "Включите выбранную ступень DPI перед применением"
+    },
+    "Aktiven DPI-Wert anwenden": {
+      "de": "Aktiven DPI-Wert anwenden",
+      "en": "Apply active DPI",
+      "ru": "Применить активный DPI"
+    },
+    "Wendet den aktiven Wert über USB an. DPI-Stufen bleiben im lokalen Profil.": {
+      "de": "Wendet den aktiven Wert über USB an. DPI-Stufen bleiben im lokalen Profil.",
+      "en": "Applies the active value over USB. DPI stages remain in the local profile.",
+      "ru": "Применяет активное значение через USB. Ступени DPI сохраняются в локальном профиле."
+    },
+    "Darkstar per USB-Kabel anschließen, um DPI anzuwenden.": {
+      "de": "Darkstar per USB-Kabel anschließen, um DPI anzuwenden.",
+      "en": "Connect Darkstar via USB to apply DPI.",
+      "ru": "Подключите Darkstar USB-кабелем для применения DPI."
+    },
+    "Bestätigter DPI-Wert: %1": {
+      "de": "Bestätigter DPI-Wert: %1",
+      "en": "Acknowledged DPI: %1",
+      "ru": "Подтверждённый DPI: %1"
+    },
+    "Software-Steuerung beenden": {
+      "de": "Software-Steuerung beenden",
+      "en": "Release software control",
+      "ru": "Завершить программное управление"
+    },
+    "Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.": {
+      "de": "Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.",
+      "en": "Profile imported: %1 lighting layers converted; %2 preserved in the original XML. Not applied to the device yet.",
+      "ru": "Профиль импортирован: преобразовано слоёв подсветки — %1; сохранено в оригинальном XML — %2. К устройству ещё не применено."
+    },
+    "Beenden gibt die gemeinsame DPI- und RGB-Steuerung frei.": {
+      "de": "Beenden gibt die gemeinsame DPI- und RGB-Steuerung frei.",
+      "en": "Releasing control ends software DPI and RGB together.",
+      "ru": "Завершение освобождает общее программное управление DPI и RGB."
+    },
+    "Hardware control release failed": {
+      "de": "Die Gerätesteuerung konnte nicht freigegeben werden",
+      "en": "Hardware control release failed",
+      "ru": "Не удалось завершить управление устройством"
+    },
+    "This device requires equal X and Y DPI": {
+      "de": "Dieses Gerät erfordert gleiche DPI-Werte für X und Y",
+      "en": "This device requires equal X and Y DPI",
+      "ru": "Это устройство требует одинаковый DPI по X и Y"
+    },
+    "Übergänge (% der Dauer)": {
+      "de": "Übergänge (% der Dauer)",
+      "en": "Transitions (% of duration)",
+      "ru": "Переходы (% длительности)"
+    },
+    "An accessible absolute KEMAR HRIR path is required": {
+      "de": "Ein zugänglicher absoluter KEMAR-HRIR-Pfad ist erforderlich",
+      "en": "An accessible absolute KEMAR HRIR path is required",
+      "ru": "Требуется доступный абсолютный путь к HRIR KEMAR"
+    },
+    "Cannot create audio state directory": {
+      "de": "Das Audio-Verzeichnis konnte nicht erstellt werden",
+      "en": "Cannot create audio state directory",
+      "ru": "Не удалось создать каталог аудиосостояния"
+    },
+    "Cannot export the KEMAR HRIR bank": {
+      "de": "Die KEMAR-HRIR-Daten konnten nicht exportiert werden",
+      "en": "Cannot export the KEMAR HRIR bank",
+      "ru": "Не удалось экспортировать банк HRIR KEMAR"
+    },
+    "Embedded KEMAR HRIR is unavailable": {
+      "de": "Die eingebetteten KEMAR-HRIR-Daten sind nicht verfügbar",
+      "en": "Embedded KEMAR HRIR is unavailable",
+      "ru": "Встроенные данные HRIR KEMAR недоступны"
+    },
+    "HRIR state file must not be a symbolic link": {
+      "de": "Die HRIR-Datei darf keine symbolische Verknüpfung sein",
+      "en": "HRIR state file must not be a symbolic link",
+      "ru": "Файл HRIR не должен быть символической ссылкой"
+    },
+    "KEMAR HRIR integrity check failed": {
+      "de": "Die Integritätsprüfung der KEMAR-HRIR-Daten ist fehlgeschlagen",
+      "en": "KEMAR HRIR integrity check failed",
+      "ru": "Проверка целостности HRIR KEMAR не пройдена"
+    },
+    "A lighting timeline requires a gradient effect": {
+      "de": "Eine Beleuchtungszeitleiste erfordert einen Gradient-Effekt",
+      "en": "A lighting timeline requires a gradient effect",
+      "ru": "Для временной шкалы подсветки требуется градиент"
+    },
+    "DPI protocol identity check failed": {
+      "de": "Die Geräteidentität für das DPI-Protokoll konnte nicht bestätigt werden",
+      "en": "DPI protocol identity check failed",
+      "ru": "Не удалось подтвердить идентичность устройства для протокола DPI"
+    },
+    "Firmware DPI readback does not match the requested value": {
+      "de": "Der ausgelesene DPI-Wert entspricht nicht dem angeforderten Wert",
+      "en": "Firmware DPI readback does not match the requested value",
+      "ru": "Считанный DPI не совпадает с запрошенным значением"
+    },
+    "Firmware changed the active DPI index unexpectedly": {
+      "de": "Die Firmware hat den aktiven DPI-Index unerwartet geändert",
+      "en": "Firmware changed the active DPI index unexpectedly",
+      "ru": "Прошивка неожиданно изменила индекс активной ступени DPI"
+    },
+    "Firmware did not enter software mode for DPI": {
+      "de": "Die Firmware hat den Software-Modus für DPI nicht aktiviert",
+      "en": "Firmware did not enter software mode for DPI",
+      "ru": "Прошивка не перешла в программный режим DPI"
+    },
+    "Firmware returned an invalid active DPI value": {
+      "de": "Die Firmware hat einen ungültigen aktiven DPI-Wert zurückgegeben",
+      "en": "Firmware returned an invalid active DPI value",
+      "ru": "Прошивка вернула недопустимый активный DPI"
+    },
+    "Hardware DPI is not supported for this model": {
+      "de": "DPI-Gerätesteuerung wird für dieses Modell nicht unterstützt",
+      "en": "Hardware DPI is not supported for this model",
+      "ru": "Управление DPI на устройстве этой модели не поддерживается"
+    },
+    "Invalid continuous lighting timeline": {
+      "de": "Ungültige Zeitleiste für kontinuierliche Beleuchtung",
+      "en": "Invalid continuous lighting timeline",
+      "ru": "Недопустимая временная шкала непрерывной подсветки"
+    },
+    "Invalid lighting transition": {
+      "de": "Ungültiger Beleuchtungsübergang",
+      "en": "Invalid lighting transition",
+      "ru": "Недопустимый переход подсветки"
+    },
+    "Lighting phase is outside its timeline": {
+      "de": "Die Beleuchtungsphase liegt außerhalb der Zeitleiste",
+      "en": "Lighting phase is outside its timeline",
+      "ru": "Фаза подсветки находится за пределами временной шкалы"
+    },
+    "Lighting transitions must span the complete timeline": {
+      "de": "Beleuchtungsübergänge müssen die gesamte Zeitleiste abdecken",
+      "en": "Lighting transitions must span the complete timeline",
+      "ru": "Переходы подсветки должны охватывать всю временную шкалу"
+    },
+    "Previous DPI readback does not match": {
+      "de": "Der ausgelesene vorherige DPI-Wert stimmt nicht überein",
+      "en": "Previous DPI readback does not match",
+      "ru": "Считанный предыдущий DPI не совпадает"
+    },
+    "Selected receiver has no connected Darkstar mouse": {
+      "de": "Mit dem ausgewählten Empfänger ist keine Darkstar verbunden",
+      "en": "Selected receiver has no connected Darkstar mouse",
+      "ru": "К выбранному ресиверу не подключена мышь Darkstar"
+    },
+    "Invalid test color": {
+      "de": "Ungültige Testfarbe",
+      "en": "Invalid test color",
+      "ru": "Недопустимый тестовый цвет"
+    },
+    "Multiple Cereal profiles are not accepted": {
+      "de": "Mehrere Cereal-Profile in einer Datei werden nicht akzeptiert",
+      "en": "Multiple Cereal profiles are not accepted",
+      "ru": "Несколько профилей Cereal в одном файле не допускаются"
+    },
+    "Profile XML exceeds structural limits": {
+      "de": "Die XML-Profilstruktur überschreitet die zulässigen Grenzen",
+      "en": "Profile XML exceeds structural limits",
+      "ru": "Структура XML-профиля превышает допустимые пределы"
+    },
+    "Profile grew beyond size limit while reading": {
+      "de": "Das Profil hat beim Lesen die Größenbeschränkung überschritten",
+      "en": "Profile grew beyond size limit while reading",
+      "ru": "Во время чтения профиль превысил допустимый размер"
+    },
+    "DPI rollback failed: %1": {
+      "de": "DPI-Rollback fehlgeschlagen: %1",
+      "en": "DPI rollback failed: %1",
+      "ru": "Не удалось восстановить предыдущий DPI: %1"
+    },
+    "mode restoration failed: %1": {
+      "de": "Wiederherstellung des Steuerungsmodus fehlgeschlagen: %1",
+      "en": "mode restoration failed: %1",
+      "ru": "Не удалось восстановить режим управления: %1"
+    },
+    "HID command %1 rejected: status %2": {
+      "de": "HID-Befehl %1 abgelehnt: Status %2",
+      "en": "HID command %1 rejected: status %2",
+      "ru": "Команда HID %1 отклонена: статус %2"
+    },
+    "Kein USB-Gerät für %1 erkannt": {
+      "de": "Kein USB-Gerät für %1 erkannt",
+      "en": "No USB device detected for %1",
+      "ru": "USB-устройство для %1 не обнаружено"
+    },
+    "Empfänger: %1": {
+      "de": "Empfänger: %1",
+      "en": "Receiver: %1",
+      "ru": "Ресивер: %1"
+    },
+    "Gerät antwortet": {
+      "de": "Gerät antwortet",
+      "en": "Device is responding",
+      "ru": "Устройство отвечает"
+    },
+    "Akkustand: %1 %": {
+      "de": "Akkustand: %1 %",
+      "en": "Battery: %1 %",
+      "ru": "Заряд: %1 %"
+    },
+    "Beleuchtung wird live aktualisiert": {
+      "de": "Beleuchtung wird live aktualisiert",
+      "en": "Lighting updates live",
+      "ru": "Подсветка обновляется в реальном времени"
+    },
+    "Originale Sprachansage ist nicht verfügbar.": {
+      "de": "Originale Sprachansage ist nicht verfügbar.",
+      "en": "Original voice prompt is unavailable.",
+      "ru": "Оригинальное голосовое уведомление недоступно."
+    },
+    "Sprachansage konnte nicht gestartet werden.": {
+      "de": "Sprachansage konnte nicht gestartet werden.",
+      "en": "Cannot play the voice prompt.",
+      "ru": "Не удалось воспроизвести голосовое уведомление."
+    },
+    "Audio auf Virtuoso aktiviert.": {
+      "de": "Audio auf Virtuoso aktiviert.",
+      "en": "Audio enabled on Virtuoso.",
+      "ru": "Звук включён на Virtuoso."
+    },
+    "PipeWire command timed out": {
+      "de": "Zeitüberschreitung beim PipeWire-Befehl",
+      "en": "PipeWire command timed out",
+      "ru": "Истекло время ожидания команды PipeWire"
+    },
+    "PipeWire command failed": {
+      "de": "PipeWire-Befehl fehlgeschlagen",
+      "en": "PipeWire command failed",
+      "ru": "Ошибка команды PipeWire"
+    },
+    "Invalid PipeWire graph": {
+      "de": "Ungültiger PipeWire-Graph",
+      "en": "Invalid PipeWire graph",
+      "ru": "Некорректные данные аудиоустройств PipeWire"
+    },
+    "Selected headset audio route is unavailable": {
+      "de": "Audioverbindung des ausgewählten Headsets ist nicht verfügbar",
+      "en": "Selected headset audio route is unavailable",
+      "ru": "Аудиоподключение выбранной гарнитуры недоступно"
+    },
+    "Cannot restore the previous headset audio route": {
+      "de": "Vorherige Headset-Audioverbindung konnte nicht wiederhergestellt werden",
+      "en": "Cannot restore the previous headset audio route",
+      "ru": "Не удалось восстановить предыдущее аудиоподключение гарнитуры"
+    },
+    "Selected Virtuoso audio output is unavailable": {
+      "de": "Audioausgang des ausgewählten Virtuoso ist nicht verfügbar",
+      "en": "Selected Virtuoso audio output is unavailable",
+      "ru": "Аудиовыход выбранного Virtuoso недоступен"
+    },
+    "K70 keyboard input is unavailable": {
+      "en": "K70 keyboard input is unavailable",
+      "de": "Der Tastatureingang der K70 ist nicht verfügbar",
+      "ru": "Ввод клавиатуры K70 недоступен"
+    },
+    "K70 keyboard input disconnected": {
+      "en": "K70 keyboard input disconnected",
+      "de": "Der Tastatureingang der K70 wurde getrennt",
+      "ru": "Ввод клавиатуры K70 отключён"
+    },
+    "Invalid lighting input timestamp": {
+      "en": "Invalid lighting input timestamp",
+      "de": "Ungültiger Zeitstempel für den Beleuchtungseingang",
+      "ru": "Недопустимое время события подсветки"
+    }
+  }
+}

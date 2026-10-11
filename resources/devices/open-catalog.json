@@ -1,0 +1,6400 @@
+{
+  "schemaVersion": 1,
+  "models": {
+    "slipstream_wireless_dongle_ss": {
+      "UserModelName": "SLIPSTREAM WIRELESS USB Receiver",
+      "DeviceType": "Dongle",
+      "UsbIds": [
+        {
+          "vid": 6940,
+          "pid": 7132
+        }
+      ],
+      "SubScreensListData": [
+        {
+          "type": "Connections"
+        }
+      ],
+      "DeviceIcon": {
+        "Black": ":/app/devices/slipstream_wireless_dongle_ss-0.svg"
+      },
+      "ImageSize": {
+        "width": 320,
+        "height": 360
+      },
+      "Layouts": {
+        "US": {
+          "layoutImages": {
+            "default": {
+              "Black": [
+                ":/app/devices/slipstream_wireless_dongle_ss-0.svg"
+              ]
+            }
+          },
+          "keyItems": []
+        }
+      },
+      "StaticGeometryMap": {
+        "RegularStatic": {}
+      },
+      "SvgStaticGeometryMap": {
+        "RegularStatic": {}
+      },
+      "SupportedLightingTypes": {
+        "LocalPreview": {
+          "Software": [
+            "RainbowLightingTypeData.lightings.cue.corsair.com",
+            "ColorPulseLightingTypeData.lightings.cue.corsair.com",
+            "ColorShiftLightingTypeData.lightings.cue.corsair.com",
+            "StaticCustomLightingTypeData.lightings.cue.corsair.com",
+            "SolidLightingTypeData.lightings.cue.corsair.com",
+            "GradientLightingTypeData.lightings.cue.corsair.com",
+            "RainbowWaveLightingTypeData.lightings.cue.corsair.com",
+            "SpiralRainbowLightingTypeData.lightings.cue.corsair.com",
+            "TypeLightingTypeData.lightings.cue.corsair.com",
+            "WaveLightingTypeData.lightings.cue.corsair.com",
+            "VisorLightingTypeData.lightings.cue.corsair.com",
+            "RainLightingTypeData.lightings.cue.corsair.com",
+            "ColorWaveLightingTypeData.lightings.cue.corsair.com",
+            "RippleLightingTypeData.lightings.cue.corsair.com"
+          ]
+        }
+      }
+    },
+    "virtuoso_black_dongle": {
+      "UserModelName": "VIRTUOSO WIRELESS RECEIVER",
+      "DeviceType": "Dongle",
+      "UsbIds": [
+        {
+          "vid": 6940,
+          "pid": 2626
+        },
+        {
+          "vid": 6940,
+          "pid": 2634
+        }
+      ],
+      "SubScreensListData": [
+        {
+          "type": "Connections"
+        }
+      ],
+      "DeviceIcon": {
+        "Black": ":/app/devices/virtuoso_black_dongle-0.svg"
+      },
+      "ImageSize": {
+        "width": 320,
+        "height": 360
+      },
+      "Layouts": {
+        "US": {
+          "layoutImages": {
+            "default": {
+              "Black": [
+                ":/app/devices/virtuoso_black_dongle-0.svg"
+              ]
+            }
+          },
+          "keyItems": []
+        }
+      },
+      "StaticGeometryMap": {
+        "RegularStatic": {}
+      },
+      "SvgStaticGeometryMap": {
+        "RegularStatic": {}
+      },
+      "SupportedLightingTypes": {
+        "LocalPreview": {
+          "Software": [
+            "RainbowLightingTypeData.lightings.cue.corsair.com",
+            "ColorPulseLightingTypeData.lightings.cue.corsair.com",
+            "ColorShiftLightingTypeData.lightings.cue.corsair.com",
+            "StaticCustomLightingTypeData.lightings.cue.corsair.com",
+            "SolidLightingTypeData.lightings.cue.corsair.com",
+            "GradientLightingTypeData.lightings.cue.corsair.com",
+            "RainbowWaveLightingTypeData.lightings.cue.corsair.com",
+            "SpiralRainbowLightingTypeData.lightings.cue.corsair.com",
+            "TypeLightingTypeData.lightings.cue.corsair.com",
+            "WaveLightingTypeData.lightings.cue.corsair.com",
+            "VisorLightingTypeData.lightings.cue.corsair.com",
+            "RainLightingTypeData.lightings.cue.corsair.com",
+            "ColorWaveLightingTypeData.lightings.cue.corsair.com",
+            "RippleLightingTypeData.lightings.cue.corsair.com"
+          ]
+        }
+      }
+    },
+    "darkstar_wireless": {
+      "UserModelName": "DARKSTAR WIRELESS",
+      "DeviceType": "Mouse",
+      "UsbIds": [
+        {
+          "vid": 6940,
+          "pid": 7090
+        }
+      ],
+      "SubScreensListData": [
+        {
+          "type": "Lightings"
+        },
+        {
+          "type": "Assignments"
+        },
+        {
+          "type": "Gestures"
+        },
+        {
+          "type": "Dpi"
+        },
+        {
+          "type": "SurfaceCalibration"
+        }
+      ],
+      "DeviceIcon": {
+        "Black": ":/app/devices/darkstar_wireless-0.svg"
+      },
+      "ImageSize": {
+        "width": 640,
+        "height": 360
+      },
+      "Layouts": {
+        "US": {
+          "layoutImages": {
+            "default": {
+              "Black": [
+                ":/app/devices/darkstar_wireless-0.svg",
+                ":/app/devices/darkstar_wireless-1.svg"
+              ]
+            }
+          },
+          "keyItems": [
+            {
+              "id": "Mouse1",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Mouse1-shape"
+              }
+            },
+            {
+              "id": "Mouse2",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Mouse2-shape"
+              }
+            },
+            {
+              "id": "Mouse3",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Mouse3-shape"
+              }
+            },
+            {
+              "id": "MouseWheelTiltLeft",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseWheelTiltLeft-shape"
+              }
+            },
+            {
+              "id": "MouseWheelTiltRight",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseWheelTiltRight-shape"
+              }
+            },
+            {
+              "id": "Mouse6",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Mouse6-shape"
+              }
+            },
+            {
+              "id": "Mouse7",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Mouse7-shape"
+              }
+            },
+            {
+              "id": "MouseProfileUp",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseProfileUp-shape"
+              }
+            },
+            {
+              "id": "MouseProfileDown",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseProfileDown-shape"
+              }
+            },
+            {
+              "id": "Mouse4",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",Mouse4-shape"
+              }
+            },
+            {
+              "id": "Mouse5",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",Mouse5-shape"
+              }
+            },
+            {
+              "id": "MouseSideFront1",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseSideFront1-shape"
+              }
+            },
+            {
+              "id": "MouseSideFront2",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseSideFront2-shape"
+              }
+            },
+            {
+              "id": "MouseSideBack1",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseSideBack1-shape"
+              }
+            },
+            {
+              "id": "MouseSideBack2",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseSideBack2-shape"
+              }
+            },
+            {
+              "id": "Gesture_TiltLeft",
+              "type": "Key",
+              "geometryIndex": {
+                "Black": ""
+              }
+            },
+            {
+              "id": "Gesture_TiltRight",
+              "type": "Key",
+              "geometryIndex": {
+                "Black": ""
+              }
+            },
+            {
+              "id": "Gesture_TiltForward",
+              "type": "Key",
+              "geometryIndex": {
+                "Black": ""
+              }
+            },
+            {
+              "id": "Gesture_TiltBackward",
+              "type": "Key",
+              "geometryIndex": {
+                "Black": ""
+              }
+            },
+            {
+              "id": "MouseLogoLed",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseLogoLed-shape"
+              }
+            },
+            {
+              "id": "MouseScrollLed",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseScrollLed-shape"
+              }
+            },
+            {
+              "id": "MouseFrontLeft",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseFrontLeft-shape"
+              }
+            },
+            {
+              "id": "MouseFrontRight",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseFrontRight-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow3Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseTopPalmGlow3Led-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow4Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseTopPalmGlow4Led-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow5Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseTopPalmGlow5Led-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow6Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MouseTopPalmGlow6Led-shape"
+              }
+            },
+            {
+              "id": "MouseDpiIndicator1",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseDpiIndicator1-shape"
+              }
+            },
+            {
+              "id": "MouseDpiIndicator2",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseDpiIndicator2-shape"
+              }
+            },
+            {
+              "id": "MouseDpiIndicator3",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseDpiIndicator3-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow1Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseTopPalmGlow1Led-shape"
+              }
+            },
+            {
+              "id": "MouseTopPalmGlow2Led",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 1,
+              "geometryIndex": {
+                "Black": ",MouseTopPalmGlow2Led-shape"
+              }
+            }
+          ]
+        }
+      },
+      "StaticGeometryMap": {
+        "RegularStatic": {
+          "Mouse1-shape": [
+            {
+              "x": 180,
+              "y": 55
+            },
+            {
+              "x": 270,
+              "y": 55
+            },
+            {
+              "x": 270,
+              "y": 170
+            },
+            {
+              "x": 180,
+              "y": 170
+            }
+          ],
+          "Mouse2-shape": [
+            {
+              "x": 370,
+              "y": 55
+            },
+            {
+              "x": 460,
+              "y": 55
+            },
+            {
+              "x": 460,
+              "y": 170
+            },
+            {
+              "x": 370,
+              "y": 170
+            }
+          ],
+          "Mouse3-shape": [
+            {
+              "x": 305,
+              "y": 65
+            },
+            {
+              "x": 335,
+              "y": 65
+            },
+            {
+              "x": 335,
+              "y": 127
+            },
+            {
+              "x": 305,
+              "y": 127
+            }
+          ],
+          "MouseWheelTiltLeft-shape": [
+            {
+              "x": 275,
+              "y": 82
+            },
+            {
+              "x": 299,
+              "y": 82
+            },
+            {
+              "x": 299,
+              "y": 117
+            },
+            {
+              "x": 275,
+              "y": 117
+            }
+          ],
+          "MouseWheelTiltRight-shape": [
+            {
+              "x": 345,
+              "y": 82
+            },
+            {
+              "x": 369,
+              "y": 82
+            },
+            {
+              "x": 369,
+              "y": 117
+            },
+            {
+              "x": 345,
+              "y": 117
+            }
+          ],
+          "Mouse6-shape": [
+            {
+              "x": 300,
+              "y": 145
+            },
+            {
+              "x": 340,
+              "y": 145
+            },
+            {
+              "x": 340,
+              "y": 169
+            },
+            {
+              "x": 300,
+              "y": 169
+            }
+          ],
+          "Mouse7-shape": [
+            {
+              "x": 300,
+              "y": 177
+            },
+            {
+              "x": 340,
+              "y": 177
+            },
+            {
+              "x": 340,
+              "y": 201
+            },
+            {
+              "x": 300,
+              "y": 201
+            }
+          ],
+          "MouseProfileUp-shape": [
+            {
+              "x": 300,
+              "y": 222
+            },
+            {
+              "x": 340,
+              "y": 222
+            },
+            {
+              "x": 340,
+              "y": 246
+            },
+            {
+              "x": 300,
+              "y": 246
+            }
+          ],
+          "MouseProfileDown-shape": [
+            {
+              "x": 300,
+              "y": 254
+            },
+            {
+              "x": 340,
+              "y": 254
+            },
+            {
+              "x": 340,
+              "y": 278
+            },
+            {
+              "x": 300,
+              "y": 278
+            }
+          ],
+          "Mouse4-shape": [
+            {
+              "x": 125,
+              "y": 142
+            },
+            {
+              "x": 229,
+              "y": 142
+            },
+            {
+              "x": 229,
+              "y": 186
+            },
+            {
+              "x": 125,
+              "y": 186
+            }
+          ],
+          "Mouse5-shape": [
+            {
+              "x": 250,
+              "y": 142
+            },
+            {
+              "x": 354,
+              "y": 142
+            },
+            {
+              "x": 354,
+              "y": 186
+            },
+            {
+              "x": 250,
+              "y": 186
+            }
+          ],
+          "MouseSideFront1-shape": [
+            {
+              "x": 375,
+              "y": 142
+            },
+            {
+              "x": 479,
+              "y": 142
+            },
+            {
+              "x": 479,
+              "y": 186
+            },
+            {
+              "x": 375,
+              "y": 186
+            }
+          ],
+          "MouseSideFront2-shape": [
+            {
+              "x": 125,
+              "y": 205
+            },
+            {
+              "x": 229,
+              "y": 205
+            },
+            {
+              "x": 229,
+              "y": 249
+            },
+            {
+              "x": 125,
+              "y": 249
+            }
+          ],
+          "MouseSideBack1-shape": [
+            {
+              "x": 250,
+              "y": 205
+            },
+            {
+              "x": 354,
+              "y": 205
+            },
+            {
+              "x": 354,
+              "y": 249
+            },
+            {
+              "x": 250,
+              "y": 249
+            }
+          ],
+          "MouseSideBack2-shape": [
+            {
+              "x": 375,
+              "y": 205
+            },
+            {
+              "x": 479,
+              "y": 205
+            },
+            {
+              "x": 479,
+              "y": 249
+            },
+            {
+              "x": 375,
+              "y": 249
+            }
+          ],
+          "MouseLogoLed-shape": [
+            {
+              "x": 235,
+              "y": 282
+            },
+            {
+              "x": 385,
+              "y": 282
+            },
+            {
+              "x": 385,
+              "y": 296
+            },
+            {
+              "x": 235,
+              "y": 296
+            }
+          ],
+          "MouseScrollLed-shape": [
+            {
+              "x": 307,
+              "y": 60
+            },
+            {
+              "x": 333,
+              "y": 60
+            },
+            {
+              "x": 333,
+              "y": 69
+            },
+            {
+              "x": 307,
+              "y": 69
+            }
+          ],
+          "MouseFrontLeft-shape": [
+            {
+              "x": 155,
+              "y": 285
+            },
+            {
+              "x": 187,
+              "y": 285
+            },
+            {
+              "x": 187,
+              "y": 297
+            },
+            {
+              "x": 155,
+              "y": 297
+            }
+          ],
+          "MouseFrontRight-shape": [
+            {
+              "x": 440,
+              "y": 285
+            },
+            {
+              "x": 472,
+              "y": 285
+            },
+            {
+              "x": 472,
+              "y": 297
+            },
+            {
+              "x": 440,
+              "y": 297
+            }
+          ],
+          "MouseTopPalmGlow3Led-shape": [
+            {
+              "x": 180,
+              "y": 316
+            },
+            {
+              "x": 235,
+              "y": 316
+            },
+            {
+              "x": 235,
+              "y": 328
+            },
+            {
+              "x": 180,
+              "y": 328
+            }
+          ],
+          "MouseTopPalmGlow4Led-shape": [
+            {
+              "x": 260,
+              "y": 316
+            },
+            {
+              "x": 315,
+              "y": 316
+            },
+            {
+              "x": 315,
+              "y": 328
+            },
+            {
+              "x": 260,
+              "y": 328
+            }
+          ],
+          "MouseTopPalmGlow5Led-shape": [
+            {
+              "x": 340,
+              "y": 316
+            },
+            {
+              "x": 395,
+              "y": 316
+            },
+            {
+              "x": 395,
+              "y": 328
+            },
+            {
+              "x": 340,
+              "y": 328
+            }
+          ],
+          "MouseTopPalmGlow6Led-shape": [
+            {
+              "x": 420,
+              "y": 316
+            },
+            {
+              "x": 475,
+              "y": 316
+            },
+            {
+              "x": 475,
+              "y": 328
+            },
+            {
+              "x": 420,
+              "y": 328
+            }
+          ],
+          "MouseDpiIndicator1-shape": [
+            {
+              "x": 145,
+              "y": 113
+            },
+            {
+              "x": 163,
+              "y": 113
+            },
+            {
+              "x": 163,
+              "y": 125
+            },
+            {
+              "x": 145,
+              "y": 125
+            }
+          ],
+          "MouseDpiIndicator2-shape": [
+            {
+              "x": 177,
+              "y": 113
+            },
+            {
+              "x": 195,
+              "y": 113
+            },
+            {
+              "x": 195,
+              "y": 125
+            },
+            {
+              "x": 177,
+              "y": 125
+            }
+          ],
+          "MouseDpiIndicator3-shape": [
+            {
+              "x": 209,
+              "y": 113
+            },
+            {
+              "x": 227,
+              "y": 113
+            },
+            {
+              "x": 227,
+              "y": 125
+            },
+            {
+              "x": 209,
+              "y": 125
+            }
+          ],
+          "MouseTopPalmGlow1Led-shape": [
+            {
+              "x": 375,
+              "y": 113
+            },
+            {
+              "x": 430,
+              "y": 113
+            },
+            {
+              "x": 430,
+              "y": 125
+            },
+            {
+              "x": 375,
+              "y": 125
+            }
+          ],
+          "MouseTopPalmGlow2Led-shape": [
+            {
+              "x": 445,
+              "y": 113
+            },
+            {
+              "x": 500,
+              "y": 113
+            },
+            {
+              "x": 500,
+              "y": 125
+            },
+            {
+              "x": 445,
+              "y": 125
+            }
+          ]
+        }
+      },
+      "SvgStaticGeometryMap": {
+        "RegularStatic": {
+          "Mouse1-shape": {
+            "type": "rectangle",
+            "x": 180,
+            "y": 55,
+            "width": 90,
+            "height": 115,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse2-shape": {
+            "type": "rectangle",
+            "x": 370,
+            "y": 55,
+            "width": 90,
+            "height": 115,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse3-shape": {
+            "type": "rectangle",
+            "x": 305,
+            "y": 65,
+            "width": 30,
+            "height": 62,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseWheelTiltLeft-shape": {
+            "type": "rectangle",
+            "x": 275,
+            "y": 82,
+            "width": 24,
+            "height": 35,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseWheelTiltRight-shape": {
+            "type": "rectangle",
+            "x": 345,
+            "y": 82,
+            "width": 24,
+            "height": 35,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse6-shape": {
+            "type": "rectangle",
+            "x": 300,
+            "y": 145,
+            "width": 40,
+            "height": 24,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse7-shape": {
+            "type": "rectangle",
+            "x": 300,
+            "y": 177,
+            "width": 40,
+            "height": 24,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseProfileUp-shape": {
+            "type": "rectangle",
+            "x": 300,
+            "y": 222,
+            "width": 40,
+            "height": 24,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseProfileDown-shape": {
+            "type": "rectangle",
+            "x": 300,
+            "y": 254,
+            "width": 40,
+            "height": 24,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse4-shape": {
+            "type": "rectangle",
+            "x": 125,
+            "y": 142,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "Mouse5-shape": {
+            "type": "rectangle",
+            "x": 250,
+            "y": 142,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseSideFront1-shape": {
+            "type": "rectangle",
+            "x": 375,
+            "y": 142,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseSideFront2-shape": {
+            "type": "rectangle",
+            "x": 125,
+            "y": 205,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseSideBack1-shape": {
+            "type": "rectangle",
+            "x": 250,
+            "y": 205,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseSideBack2-shape": {
+            "type": "rectangle",
+            "x": 375,
+            "y": 205,
+            "width": 104,
+            "height": 44,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseLogoLed-shape": {
+            "type": "rectangle",
+            "x": 235,
+            "y": 282,
+            "width": 150,
+            "height": 14,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseScrollLed-shape": {
+            "type": "rectangle",
+            "x": 307,
+            "y": 60,
+            "width": 26,
+            "height": 9,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseFrontLeft-shape": {
+            "type": "rectangle",
+            "x": 155,
+            "y": 285,
+            "width": 32,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseFrontRight-shape": {
+            "type": "rectangle",
+            "x": 440,
+            "y": 285,
+            "width": 32,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow3Led-shape": {
+            "type": "rectangle",
+            "x": 180,
+            "y": 316,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow4Led-shape": {
+            "type": "rectangle",
+            "x": 260,
+            "y": 316,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow5Led-shape": {
+            "type": "rectangle",
+            "x": 340,
+            "y": 316,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow6Led-shape": {
+            "type": "rectangle",
+            "x": 420,
+            "y": 316,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseDpiIndicator1-shape": {
+            "type": "rectangle",
+            "x": 145,
+            "y": 113,
+            "width": 18,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseDpiIndicator2-shape": {
+            "type": "rectangle",
+            "x": 177,
+            "y": 113,
+            "width": 18,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseDpiIndicator3-shape": {
+            "type": "rectangle",
+            "x": 209,
+            "y": 113,
+            "width": 18,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow1Led-shape": {
+            "type": "rectangle",
+            "x": 375,
+            "y": 113,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          },
+          "MouseTopPalmGlow2Led-shape": {
+            "type": "rectangle",
+            "x": 445,
+            "y": 113,
+            "width": 55,
+            "height": 12,
+            "rx": 6,
+            "ry": 6
+          }
+        }
+      },
+      "SupportedLightingTypes": {
+        "LocalPreview": {
+          "Software": [
+            "RainbowLightingTypeData.lightings.cue.corsair.com",
+            "ColorPulseLightingTypeData.lightings.cue.corsair.com",
+            "ColorShiftLightingTypeData.lightings.cue.corsair.com",
+            "StaticCustomLightingTypeData.lightings.cue.corsair.com",
+            "SolidLightingTypeData.lightings.cue.corsair.com",
+            "GradientLightingTypeData.lightings.cue.corsair.com",
+            "RainbowWaveLightingTypeData.lightings.cue.corsair.com",
+            "SpiralRainbowLightingTypeData.lightings.cue.corsair.com",
+            "TypeLightingTypeData.lightings.cue.corsair.com",
+            "WaveLightingTypeData.lightings.cue.corsair.com",
+            "VisorLightingTypeData.lightings.cue.corsair.com",
+            "RainLightingTypeData.lightings.cue.corsair.com",
+            "ColorWaveLightingTypeData.lightings.cue.corsair.com",
+            "RippleLightingTypeData.lightings.cue.corsair.com"
+          ]
+        }
+      },
+      "MinDpi": 100,
+      "MaxDpi": 26000,
+      "MaxSupportedPollingRates": {
+        "defaultDevice": "PR_1000Hz"
+      },
+      "Performances": [
+        {
+          "defaultDpi": {
+            "settings": {
+              "Dpi1": {
+                "dpiX": 400,
+                "dpiY": 400,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              },
+              "Dpi2": {
+                "dpiX": 800,
+                "dpiY": 800,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              },
+              "Dpi3": {
+                "dpiX": 1200,
+                "dpiY": 1200,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              },
+              "Dpi4": {
+                "dpiX": 1600,
+                "dpiY": 1600,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              },
+              "Dpi5": {
+                "dpiX": 3200,
+                "dpiY": 3200,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              },
+              "SniperDpi": {
+                "dpiX": 400,
+                "dpiY": 400,
+                "independentXY": false,
+                "enabled": true,
+                "color": "#00bfff"
+              }
+            }
+          }
+        }
+      ],
+      "TiltGesturesCapabilities": {
+        "horizontalSetupTiltImage": ":/app/devices/darkstar_wireless-0.svg",
+        "verticalSetupTiltImage": ":/app/devices/darkstar_wireless-1.svg"
+      }
+    },
+    "virtuoso_black": {
+      "UserModelName": "VIRTUOSO",
+      "DeviceType": "Headset",
+      "UsbIds": [
+        {
+          "vid": 6940,
+          "pid": 2625
+        }
+      ],
+      "SubScreensListData": [
+        {
+          "type": "Lightings"
+        },
+        {
+          "type": "Assignments"
+        },
+        {
+          "type": "Equalizer"
+        }
+      ],
+      "DeviceIcon": {
+        "Black": ":/app/devices/virtuoso_black-0.svg"
+      },
+      "ImageSize": {
+        "width": 640,
+        "height": 360
+      },
+      "Layouts": {
+        "US": {
+          "layoutImages": {
+            "default": {
+              "Black": [
+                ":/app/devices/virtuoso_black-0.svg"
+              ]
+            }
+          },
+          "keyItems": [
+            {
+              "id": "Headset_Mic",
+              "displayName": "",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Headset_Mic-shape"
+              }
+            },
+            {
+              "id": "Led_HeadsetLogo",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Led_HeadsetLogo-shape"
+              }
+            },
+            {
+              "id": "Led_HeadsetStatus",
+              "displayName": "",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Led_HeadsetStatus-shape"
+              }
+            }
+          ]
+        }
+      },
+      "StaticGeometryMap": {
+        "RegularStatic": {
+          "Headset_Mic-shape": [
+            {
+              "x": 65,
+              "y": 285
+            },
+            {
+              "x": 185,
+              "y": 285
+            },
+            {
+              "x": 185,
+              "y": 335
+            },
+            {
+              "x": 65,
+              "y": 335
+            }
+          ],
+          "Led_HeadsetLogo-shape": [
+            {
+              "x": 135,
+              "y": 205
+            },
+            {
+              "x": 170,
+              "y": 205
+            },
+            {
+              "x": 170,
+              "y": 255
+            },
+            {
+              "x": 135,
+              "y": 255
+            }
+          ],
+          "Led_HeadsetStatus-shape": [
+            {
+              "x": 480,
+              "y": 205
+            },
+            {
+              "x": 515,
+              "y": 205
+            },
+            {
+              "x": 515,
+              "y": 255
+            },
+            {
+              "x": 480,
+              "y": 255
+            }
+          ]
+        }
+      },
+      "SvgStaticGeometryMap": {
+        "RegularStatic": {
+          "Headset_Mic-shape": {
+            "type": "rectangle",
+            "x": 65,
+            "y": 285,
+            "width": 120,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Led_HeadsetLogo-shape": {
+            "type": "rectangle",
+            "x": 135,
+            "y": 205,
+            "width": 35,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Led_HeadsetStatus-shape": {
+            "type": "rectangle",
+            "x": 480,
+            "y": 205,
+            "width": 35,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          }
+        }
+      },
+      "SupportedLightingTypes": {
+        "LocalPreview": {
+          "Software": [
+            "RainbowLightingTypeData.lightings.cue.corsair.com",
+            "ColorPulseLightingTypeData.lightings.cue.corsair.com",
+            "ColorShiftLightingTypeData.lightings.cue.corsair.com",
+            "StaticCustomLightingTypeData.lightings.cue.corsair.com",
+            "SolidLightingTypeData.lightings.cue.corsair.com",
+            "GradientLightingTypeData.lightings.cue.corsair.com",
+            "RainbowWaveLightingTypeData.lightings.cue.corsair.com",
+            "SpiralRainbowLightingTypeData.lightings.cue.corsair.com",
+            "TypeLightingTypeData.lightings.cue.corsair.com",
+            "WaveLightingTypeData.lightings.cue.corsair.com",
+            "VisorLightingTypeData.lightings.cue.corsair.com",
+            "RainLightingTypeData.lightings.cue.corsair.com",
+            "ColorWaveLightingTypeData.lightings.cue.corsair.com",
+            "RippleLightingTypeData.lightings.cue.corsair.com"
+          ]
+        }
+      }
+    },
+    "k70_core_rgb": {
+      "UserModelName": "K70 CORE RGB",
+      "DeviceType": "Keyboard",
+      "UsbIds": [
+        {
+          "vid": 6940,
+          "pid": 7165
+        }
+      ],
+      "SubScreensListData": [
+        {
+          "type": "Lightings"
+        },
+        {
+          "type": "Assignments"
+        }
+      ],
+      "DeviceIcon": {
+        "Black": ":/app/devices/k70_core_rgb-0.svg"
+      },
+      "ImageSize": {
+        "width": 1400,
+        "height": 440
+      },
+      "Layouts": {
+        "US": {
+          "layoutImages": {
+            "default": {
+              "Black": [
+                ":/app/devices/k70_core_rgb-0.svg"
+              ]
+            }
+          },
+          "keyItems": [
+            {
+              "id": "Escape",
+              "displayName": "Esc",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Escape-shape"
+              }
+            },
+            {
+              "id": "Escape",
+              "displayName": "Esc",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Escape-shape"
+              }
+            },
+            {
+              "id": "F1",
+              "displayName": "F1",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F1-shape"
+              }
+            },
+            {
+              "id": "F1",
+              "displayName": "F1",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F1-shape"
+              }
+            },
+            {
+              "id": "F2",
+              "displayName": "F2",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F2-shape"
+              }
+            },
+            {
+              "id": "F2",
+              "displayName": "F2",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F2-shape"
+              }
+            },
+            {
+              "id": "F3",
+              "displayName": "F3",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F3-shape"
+              }
+            },
+            {
+              "id": "F3",
+              "displayName": "F3",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F3-shape"
+              }
+            },
+            {
+              "id": "F4",
+              "displayName": "F4",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F4-shape"
+              }
+            },
+            {
+              "id": "F4",
+              "displayName": "F4",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F4-shape"
+              }
+            },
+            {
+              "id": "F5",
+              "displayName": "F5",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F5-shape"
+              }
+            },
+            {
+              "id": "F5",
+              "displayName": "F5",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F5-shape"
+              }
+            },
+            {
+              "id": "F6",
+              "displayName": "F6",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F6-shape"
+              }
+            },
+            {
+              "id": "F6",
+              "displayName": "F6",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F6-shape"
+              }
+            },
+            {
+              "id": "F7",
+              "displayName": "F7",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F7-shape"
+              }
+            },
+            {
+              "id": "F7",
+              "displayName": "F7",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F7-shape"
+              }
+            },
+            {
+              "id": "F8",
+              "displayName": "F8",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F8-shape"
+              }
+            },
+            {
+              "id": "F8",
+              "displayName": "F8",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F8-shape"
+              }
+            },
+            {
+              "id": "F9",
+              "displayName": "F9",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F9-shape"
+              }
+            },
+            {
+              "id": "F9",
+              "displayName": "F9",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F9-shape"
+              }
+            },
+            {
+              "id": "F10",
+              "displayName": "F10",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F10-shape"
+              }
+            },
+            {
+              "id": "F10",
+              "displayName": "F10",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F10-shape"
+              }
+            },
+            {
+              "id": "F11",
+              "displayName": "F11",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F11-shape"
+              }
+            },
+            {
+              "id": "F11",
+              "displayName": "F11",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F11-shape"
+              }
+            },
+            {
+              "id": "F12",
+              "displayName": "F12",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F12-shape"
+              }
+            },
+            {
+              "id": "F12",
+              "displayName": "F12",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F12-shape"
+              }
+            },
+            {
+              "id": "GraveAccentAndTilde",
+              "displayName": "^ °",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "GraveAccentAndTilde-shape"
+              }
+            },
+            {
+              "id": "GraveAccentAndTilde",
+              "displayName": "^ °",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "GraveAccentAndTilde-shape"
+              }
+            },
+            {
+              "id": "1",
+              "displayName": "1",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "1-shape"
+              }
+            },
+            {
+              "id": "1",
+              "displayName": "1",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "1-shape"
+              }
+            },
+            {
+              "id": "2",
+              "displayName": "2",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "2-shape"
+              }
+            },
+            {
+              "id": "2",
+              "displayName": "2",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "2-shape"
+              }
+            },
+            {
+              "id": "3",
+              "displayName": "3",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "3-shape"
+              }
+            },
+            {
+              "id": "3",
+              "displayName": "3",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "3-shape"
+              }
+            },
+            {
+              "id": "4",
+              "displayName": "4",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "4-shape"
+              }
+            },
+            {
+              "id": "4",
+              "displayName": "4",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "4-shape"
+              }
+            },
+            {
+              "id": "5",
+              "displayName": "5",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "5-shape"
+              }
+            },
+            {
+              "id": "5",
+              "displayName": "5",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "5-shape"
+              }
+            },
+            {
+              "id": "6",
+              "displayName": "6",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "6-shape"
+              }
+            },
+            {
+              "id": "6",
+              "displayName": "6",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "6-shape"
+              }
+            },
+            {
+              "id": "7",
+              "displayName": "7",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "7-shape"
+              }
+            },
+            {
+              "id": "7",
+              "displayName": "7",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "7-shape"
+              }
+            },
+            {
+              "id": "8",
+              "displayName": "8",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "8-shape"
+              }
+            },
+            {
+              "id": "8",
+              "displayName": "8",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "8-shape"
+              }
+            },
+            {
+              "id": "9",
+              "displayName": "9",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "9-shape"
+              }
+            },
+            {
+              "id": "9",
+              "displayName": "9",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "9-shape"
+              }
+            },
+            {
+              "id": "0",
+              "displayName": "0",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "0-shape"
+              }
+            },
+            {
+              "id": "0",
+              "displayName": "0",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "0-shape"
+              }
+            },
+            {
+              "id": "MinusAndUnderscore",
+              "displayName": "ß ?",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MinusAndUnderscore-shape"
+              }
+            },
+            {
+              "id": "MinusAndUnderscore",
+              "displayName": "ß ?",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "MinusAndUnderscore-shape"
+              }
+            },
+            {
+              "id": "EqualsAndPlus",
+              "displayName": "´ `",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "EqualsAndPlus-shape"
+              }
+            },
+            {
+              "id": "EqualsAndPlus",
+              "displayName": "´ `",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "EqualsAndPlus-shape"
+              }
+            },
+            {
+              "id": "Backspace",
+              "displayName": "⌫",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Backspace-shape"
+              }
+            },
+            {
+              "id": "Backspace",
+              "displayName": "⌫",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Backspace-shape"
+              }
+            },
+            {
+              "id": "Tab",
+              "displayName": "Tab",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Tab-shape"
+              }
+            },
+            {
+              "id": "Tab",
+              "displayName": "Tab",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Tab-shape"
+              }
+            },
+            {
+              "id": "Q",
+              "displayName": "Q",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Q-shape"
+              }
+            },
+            {
+              "id": "Q",
+              "displayName": "Q",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Q-shape"
+              }
+            },
+            {
+              "id": "W",
+              "displayName": "W",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "W-shape"
+              }
+            },
+            {
+              "id": "W",
+              "displayName": "W",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "W-shape"
+              }
+            },
+            {
+              "id": "E",
+              "displayName": "E",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "E-shape"
+              }
+            },
+            {
+              "id": "E",
+              "displayName": "E",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "E-shape"
+              }
+            },
+            {
+              "id": "R",
+              "displayName": "R",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "R-shape"
+              }
+            },
+            {
+              "id": "R",
+              "displayName": "R",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "R-shape"
+              }
+            },
+            {
+              "id": "T",
+              "displayName": "T",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "T-shape"
+              }
+            },
+            {
+              "id": "T",
+              "displayName": "T",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "T-shape"
+              }
+            },
+            {
+              "id": "Z",
+              "displayName": "Z",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Z-shape"
+              }
+            },
+            {
+              "id": "Z",
+              "displayName": "Z",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Z-shape"
+              }
+            },
+            {
+              "id": "U",
+              "displayName": "U",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "U-shape"
+              }
+            },
+            {
+              "id": "U",
+              "displayName": "U",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "U-shape"
+              }
+            },
+            {
+              "id": "I",
+              "displayName": "I",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "I-shape"
+              }
+            },
+            {
+              "id": "I",
+              "displayName": "I",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "I-shape"
+              }
+            },
+            {
+              "id": "O",
+              "displayName": "O",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "O-shape"
+              }
+            },
+            {
+              "id": "O",
+              "displayName": "O",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "O-shape"
+              }
+            },
+            {
+              "id": "P",
+              "displayName": "P",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "P-shape"
+              }
+            },
+            {
+              "id": "P",
+              "displayName": "P",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "P-shape"
+              }
+            },
+            {
+              "id": "BracketLeft",
+              "displayName": "Ü",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "BracketLeft-shape"
+              }
+            },
+            {
+              "id": "BracketLeft",
+              "displayName": "Ü",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "BracketLeft-shape"
+              }
+            },
+            {
+              "id": "BracketRight",
+              "displayName": "+ *",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "BracketRight-shape"
+              }
+            },
+            {
+              "id": "BracketRight",
+              "displayName": "+ *",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "BracketRight-shape"
+              }
+            },
+            {
+              "id": "Enter",
+              "displayName": "Enter",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Enter-shape"
+              }
+            },
+            {
+              "id": "Enter",
+              "displayName": "Enter",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Enter-shape"
+              }
+            },
+            {
+              "id": "CapsLock",
+              "displayName": "Caps",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "CapsLock-shape"
+              }
+            },
+            {
+              "id": "CapsLock",
+              "displayName": "Caps",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "CapsLock-shape"
+              }
+            },
+            {
+              "id": "A",
+              "displayName": "A",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "A-shape"
+              }
+            },
+            {
+              "id": "A",
+              "displayName": "A",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "A-shape"
+              }
+            },
+            {
+              "id": "S",
+              "displayName": "S",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "S-shape"
+              }
+            },
+            {
+              "id": "S",
+              "displayName": "S",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "S-shape"
+              }
+            },
+            {
+              "id": "D",
+              "displayName": "D",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "D-shape"
+              }
+            },
+            {
+              "id": "D",
+              "displayName": "D",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "D-shape"
+              }
+            },
+            {
+              "id": "F",
+              "displayName": "F",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F-shape"
+              }
+            },
+            {
+              "id": "F",
+              "displayName": "F",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "F-shape"
+              }
+            },
+            {
+              "id": "G",
+              "displayName": "G",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "G-shape"
+              }
+            },
+            {
+              "id": "G",
+              "displayName": "G",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "G-shape"
+              }
+            },
+            {
+              "id": "H",
+              "displayName": "H",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "H-shape"
+              }
+            },
+            {
+              "id": "H",
+              "displayName": "H",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "H-shape"
+              }
+            },
+            {
+              "id": "J",
+              "displayName": "J",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "J-shape"
+              }
+            },
+            {
+              "id": "J",
+              "displayName": "J",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "J-shape"
+              }
+            },
+            {
+              "id": "K",
+              "displayName": "K",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "K-shape"
+              }
+            },
+            {
+              "id": "K",
+              "displayName": "K",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "K-shape"
+              }
+            },
+            {
+              "id": "L",
+              "displayName": "L",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "L-shape"
+              }
+            },
+            {
+              "id": "L",
+              "displayName": "L",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "L-shape"
+              }
+            },
+            {
+              "id": "SemicolonAndColon",
+              "displayName": "Ö",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "SemicolonAndColon-shape"
+              }
+            },
+            {
+              "id": "SemicolonAndColon",
+              "displayName": "Ö",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "SemicolonAndColon-shape"
+              }
+            },
+            {
+              "id": "ApostropheAndDoubleQuote",
+              "displayName": "Ä",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "ApostropheAndDoubleQuote-shape"
+              }
+            },
+            {
+              "id": "ApostropheAndDoubleQuote",
+              "displayName": "Ä",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "ApostropheAndDoubleQuote-shape"
+              }
+            },
+            {
+              "id": "Backslash",
+              "displayName": "#",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Backslash-shape"
+              }
+            },
+            {
+              "id": "Backslash",
+              "displayName": "#",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Backslash-shape"
+              }
+            },
+            {
+              "id": "PlayPause",
+              "displayName": "▶ / Ⅱ",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PlayPause-shape"
+              }
+            },
+            {
+              "id": "PlayPause",
+              "displayName": "▶ / Ⅱ",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PlayPause-shape"
+              }
+            },
+            {
+              "id": "LeftShift",
+              "displayName": "Shift",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftShift-shape"
+              }
+            },
+            {
+              "id": "LeftShift",
+              "displayName": "Shift",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftShift-shape"
+              }
+            },
+            {
+              "id": "NonUsBackslash",
+              "displayName": "< >",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "NonUsBackslash-shape"
+              }
+            },
+            {
+              "id": "NonUsBackslash",
+              "displayName": "< >",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "NonUsBackslash-shape"
+              }
+            },
+            {
+              "id": "Y",
+              "displayName": "Y",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Y-shape"
+              }
+            },
+            {
+              "id": "Y",
+              "displayName": "Y",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Y-shape"
+              }
+            },
+            {
+              "id": "X",
+              "displayName": "X",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "X-shape"
+              }
+            },
+            {
+              "id": "X",
+              "displayName": "X",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "X-shape"
+              }
+            },
+            {
+              "id": "C",
+              "displayName": "C",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "C-shape"
+              }
+            },
+            {
+              "id": "C",
+              "displayName": "C",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "C-shape"
+              }
+            },
+            {
+              "id": "V",
+              "displayName": "V",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "V-shape"
+              }
+            },
+            {
+              "id": "V",
+              "displayName": "V",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "V-shape"
+              }
+            },
+            {
+              "id": "B",
+              "displayName": "B",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "B-shape"
+              }
+            },
+            {
+              "id": "B",
+              "displayName": "B",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "B-shape"
+              }
+            },
+            {
+              "id": "N",
+              "displayName": "N",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "N-shape"
+              }
+            },
+            {
+              "id": "N",
+              "displayName": "N",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "N-shape"
+              }
+            },
+            {
+              "id": "M",
+              "displayName": "M",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "M-shape"
+              }
+            },
+            {
+              "id": "M",
+              "displayName": "M",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "M-shape"
+              }
+            },
+            {
+              "id": "CommaAndLessThan",
+              "displayName": ",",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "CommaAndLessThan-shape"
+              }
+            },
+            {
+              "id": "CommaAndLessThan",
+              "displayName": ",",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "CommaAndLessThan-shape"
+              }
+            },
+            {
+              "id": "PeriodAndBiggerThan",
+              "displayName": ".",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PeriodAndBiggerThan-shape"
+              }
+            },
+            {
+              "id": "PeriodAndBiggerThan",
+              "displayName": ".",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PeriodAndBiggerThan-shape"
+              }
+            },
+            {
+              "id": "SlashAndQuestionMark",
+              "displayName": "- _",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "SlashAndQuestionMark-shape"
+              }
+            },
+            {
+              "id": "SlashAndQuestionMark",
+              "displayName": "- _",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "SlashAndQuestionMark-shape"
+              }
+            },
+            {
+              "id": "RightShift",
+              "displayName": "Shift rechts",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightShift-shape"
+              }
+            },
+            {
+              "id": "RightShift",
+              "displayName": "Shift rechts",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightShift-shape"
+              }
+            },
+            {
+              "id": "LeftCtrl",
+              "displayName": "Strg",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftCtrl-shape"
+              }
+            },
+            {
+              "id": "LeftCtrl",
+              "displayName": "Strg",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftCtrl-shape"
+              }
+            },
+            {
+              "id": "LeftGui",
+              "displayName": "Win",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftGui-shape"
+              }
+            },
+            {
+              "id": "LeftGui",
+              "displayName": "Win",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftGui-shape"
+              }
+            },
+            {
+              "id": "LeftAlt",
+              "displayName": "Alt",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftAlt-shape"
+              }
+            },
+            {
+              "id": "LeftAlt",
+              "displayName": "Alt",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftAlt-shape"
+              }
+            },
+            {
+              "id": "Space",
+              "displayName": "Leertaste",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Space-shape"
+              }
+            },
+            {
+              "id": "Space",
+              "displayName": "Leertaste",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Space-shape"
+              }
+            },
+            {
+              "id": "RightAlt",
+              "displayName": "AltGr",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightAlt-shape"
+              }
+            },
+            {
+              "id": "RightAlt",
+              "displayName": "AltGr",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightAlt-shape"
+              }
+            },
+            {
+              "id": "Fn",
+              "displayName": "Fn",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Fn-shape"
+              }
+            },
+            {
+              "id": "Fn",
+              "displayName": "Fn",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Fn-shape"
+              }
+            },
+            {
+              "id": "Application",
+              "displayName": "Menü",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Application-shape"
+              }
+            },
+            {
+              "id": "Application",
+              "displayName": "Menü",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Application-shape"
+              }
+            },
+            {
+              "id": "RightCtrl",
+              "displayName": "Strg rechts",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightCtrl-shape"
+              }
+            },
+            {
+              "id": "RightCtrl",
+              "displayName": "Strg rechts",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightCtrl-shape"
+              }
+            },
+            {
+              "id": "PrintScreen",
+              "displayName": "Druck",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PrintScreen-shape"
+              }
+            },
+            {
+              "id": "PrintScreen",
+              "displayName": "Druck",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PrintScreen-shape"
+              }
+            },
+            {
+              "id": "ScrollLock",
+              "displayName": "Rollen",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "ScrollLock-shape"
+              }
+            },
+            {
+              "id": "ScrollLock",
+              "displayName": "Rollen",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "ScrollLock-shape"
+              }
+            },
+            {
+              "id": "PauseBreak",
+              "displayName": "Pause",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PauseBreak-shape"
+              }
+            },
+            {
+              "id": "PauseBreak",
+              "displayName": "Pause",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PauseBreak-shape"
+              }
+            },
+            {
+              "id": "Insert",
+              "displayName": "Einfg",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Insert-shape"
+              }
+            },
+            {
+              "id": "Insert",
+              "displayName": "Einfg",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Insert-shape"
+              }
+            },
+            {
+              "id": "Home",
+              "displayName": "Pos1",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Home-shape"
+              }
+            },
+            {
+              "id": "Home",
+              "displayName": "Pos1",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Home-shape"
+              }
+            },
+            {
+              "id": "PageUp",
+              "displayName": "Bild ↑",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PageUp-shape"
+              }
+            },
+            {
+              "id": "PageUp",
+              "displayName": "Bild ↑",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PageUp-shape"
+              }
+            },
+            {
+              "id": "Delete",
+              "displayName": "Entf",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Delete-shape"
+              }
+            },
+            {
+              "id": "Delete",
+              "displayName": "Entf",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Delete-shape"
+              }
+            },
+            {
+              "id": "End",
+              "displayName": "Ende",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "End-shape"
+              }
+            },
+            {
+              "id": "End",
+              "displayName": "Ende",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "End-shape"
+              }
+            },
+            {
+              "id": "PageDown",
+              "displayName": "Bild ↓",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PageDown-shape"
+              }
+            },
+            {
+              "id": "PageDown",
+              "displayName": "Bild ↓",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "PageDown-shape"
+              }
+            },
+            {
+              "id": "UpArrow",
+              "displayName": "↑",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "UpArrow-shape"
+              }
+            },
+            {
+              "id": "UpArrow",
+              "displayName": "↑",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "UpArrow-shape"
+              }
+            },
+            {
+              "id": "LeftArrow",
+              "displayName": "←",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftArrow-shape"
+              }
+            },
+            {
+              "id": "LeftArrow",
+              "displayName": "←",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "LeftArrow-shape"
+              }
+            },
+            {
+              "id": "DownArrow",
+              "displayName": "↓",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "DownArrow-shape"
+              }
+            },
+            {
+              "id": "DownArrow",
+              "displayName": "↓",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "DownArrow-shape"
+              }
+            },
+            {
+              "id": "RightArrow",
+              "displayName": "→",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightArrow-shape"
+              }
+            },
+            {
+              "id": "RightArrow",
+              "displayName": "→",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "RightArrow-shape"
+              }
+            },
+            {
+              "id": "NumLock",
+              "displayName": "Num",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "NumLock-shape"
+              }
+            },
+            {
+              "id": "NumLock",
+              "displayName": "Num",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "NumLock-shape"
+              }
+            },
+            {
+              "id": "KeypadSlash",
+              "displayName": "/",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadSlash-shape"
+              }
+            },
+            {
+              "id": "KeypadSlash",
+              "displayName": "/",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadSlash-shape"
+              }
+            },
+            {
+              "id": "KeypadAsterisk",
+              "displayName": "*",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadAsterisk-shape"
+              }
+            },
+            {
+              "id": "KeypadAsterisk",
+              "displayName": "*",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadAsterisk-shape"
+              }
+            },
+            {
+              "id": "KeypadMinus",
+              "displayName": "−",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadMinus-shape"
+              }
+            },
+            {
+              "id": "KeypadMinus",
+              "displayName": "−",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadMinus-shape"
+              }
+            },
+            {
+              "id": "Keypad7",
+              "displayName": "7",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad7-shape"
+              }
+            },
+            {
+              "id": "Keypad7",
+              "displayName": "7",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad7-shape"
+              }
+            },
+            {
+              "id": "Keypad8",
+              "displayName": "8",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad8-shape"
+              }
+            },
+            {
+              "id": "Keypad8",
+              "displayName": "8",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad8-shape"
+              }
+            },
+            {
+              "id": "Keypad9",
+              "displayName": "9",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad9-shape"
+              }
+            },
+            {
+              "id": "Keypad9",
+              "displayName": "9",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad9-shape"
+              }
+            },
+            {
+              "id": "KeypadPlus",
+              "displayName": "+",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadPlus-shape"
+              }
+            },
+            {
+              "id": "KeypadPlus",
+              "displayName": "+",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadPlus-shape"
+              }
+            },
+            {
+              "id": "Keypad4",
+              "displayName": "4",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad4-shape"
+              }
+            },
+            {
+              "id": "Keypad4",
+              "displayName": "4",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad4-shape"
+              }
+            },
+            {
+              "id": "Keypad5",
+              "displayName": "5",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad5-shape"
+              }
+            },
+            {
+              "id": "Keypad5",
+              "displayName": "5",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad5-shape"
+              }
+            },
+            {
+              "id": "Keypad6",
+              "displayName": "6",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad6-shape"
+              }
+            },
+            {
+              "id": "Keypad6",
+              "displayName": "6",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad6-shape"
+              }
+            },
+            {
+              "id": "Keypad1",
+              "displayName": "1",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad1-shape"
+              }
+            },
+            {
+              "id": "Keypad1",
+              "displayName": "1",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad1-shape"
+              }
+            },
+            {
+              "id": "Keypad2",
+              "displayName": "2",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad2-shape"
+              }
+            },
+            {
+              "id": "Keypad2",
+              "displayName": "2",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad2-shape"
+              }
+            },
+            {
+              "id": "Keypad3",
+              "displayName": "3",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad3-shape"
+              }
+            },
+            {
+              "id": "Keypad3",
+              "displayName": "3",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad3-shape"
+              }
+            },
+            {
+              "id": "Keypad0",
+              "displayName": "0",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad0-shape"
+              }
+            },
+            {
+              "id": "Keypad0",
+              "displayName": "0",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "Keypad0-shape"
+              }
+            },
+            {
+              "id": "KeypadPeriodAndDelete",
+              "displayName": ",",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadPeriodAndDelete-shape"
+              }
+            },
+            {
+              "id": "KeypadPeriodAndDelete",
+              "displayName": ",",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadPeriodAndDelete-shape"
+              }
+            },
+            {
+              "id": "KeypadEnter",
+              "displayName": "Enter",
+              "type": "Key",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadEnter-shape"
+              }
+            },
+            {
+              "id": "KeypadEnter",
+              "displayName": "Enter",
+              "type": "Led",
+              "viewIndex": 0,
+              "geometryIndex": {
+                "Black": "KeypadEnter-shape"
+              }
+            }
+          ]
+        }
+      },
+      "StaticGeometryMap": {
+        "RegularStatic": {
+          "Escape-shape": [
+            {
+              "x": 30,
+              "y": 25
+            },
+            {
+              "x": 79.0,
+              "y": 25
+            },
+            {
+              "x": 79.0,
+              "y": 75
+            },
+            {
+              "x": 30,
+              "y": 75
+            }
+          ],
+          "F1-shape": [
+            {
+              "x": 84.0,
+              "y": 25
+            },
+            {
+              "x": 133.0,
+              "y": 25
+            },
+            {
+              "x": 133.0,
+              "y": 75
+            },
+            {
+              "x": 84.0,
+              "y": 75
+            }
+          ],
+          "F2-shape": [
+            {
+              "x": 138.0,
+              "y": 25
+            },
+            {
+              "x": 187.0,
+              "y": 25
+            },
+            {
+              "x": 187.0,
+              "y": 75
+            },
+            {
+              "x": 138.0,
+              "y": 75
+            }
+          ],
+          "F3-shape": [
+            {
+              "x": 192.0,
+              "y": 25
+            },
+            {
+              "x": 241.0,
+              "y": 25
+            },
+            {
+              "x": 241.0,
+              "y": 75
+            },
+            {
+              "x": 192.0,
+              "y": 75
+            }
+          ],
+          "F4-shape": [
+            {
+              "x": 246.0,
+              "y": 25
+            },
+            {
+              "x": 295.0,
+              "y": 25
+            },
+            {
+              "x": 295.0,
+              "y": 75
+            },
+            {
+              "x": 246.0,
+              "y": 75
+            }
+          ],
+          "F5-shape": [
+            {
+              "x": 300.0,
+              "y": 25
+            },
+            {
+              "x": 349.0,
+              "y": 25
+            },
+            {
+              "x": 349.0,
+              "y": 75
+            },
+            {
+              "x": 300.0,
+              "y": 75
+            }
+          ],
+          "F6-shape": [
+            {
+              "x": 354.0,
+              "y": 25
+            },
+            {
+              "x": 403.0,
+              "y": 25
+            },
+            {
+              "x": 403.0,
+              "y": 75
+            },
+            {
+              "x": 354.0,
+              "y": 75
+            }
+          ],
+          "F7-shape": [
+            {
+              "x": 408.0,
+              "y": 25
+            },
+            {
+              "x": 457.0,
+              "y": 25
+            },
+            {
+              "x": 457.0,
+              "y": 75
+            },
+            {
+              "x": 408.0,
+              "y": 75
+            }
+          ],
+          "F8-shape": [
+            {
+              "x": 462.0,
+              "y": 25
+            },
+            {
+              "x": 511.0,
+              "y": 25
+            },
+            {
+              "x": 511.0,
+              "y": 75
+            },
+            {
+              "x": 462.0,
+              "y": 75
+            }
+          ],
+          "F9-shape": [
+            {
+              "x": 516.0,
+              "y": 25
+            },
+            {
+              "x": 565.0,
+              "y": 25
+            },
+            {
+              "x": 565.0,
+              "y": 75
+            },
+            {
+              "x": 516.0,
+              "y": 75
+            }
+          ],
+          "F10-shape": [
+            {
+              "x": 570.0,
+              "y": 25
+            },
+            {
+              "x": 619.0,
+              "y": 25
+            },
+            {
+              "x": 619.0,
+              "y": 75
+            },
+            {
+              "x": 570.0,
+              "y": 75
+            }
+          ],
+          "F11-shape": [
+            {
+              "x": 624.0,
+              "y": 25
+            },
+            {
+              "x": 673.0,
+              "y": 25
+            },
+            {
+              "x": 673.0,
+              "y": 75
+            },
+            {
+              "x": 624.0,
+              "y": 75
+            }
+          ],
+          "F12-shape": [
+            {
+              "x": 678.0,
+              "y": 25
+            },
+            {
+              "x": 727.0,
+              "y": 25
+            },
+            {
+              "x": 727.0,
+              "y": 75
+            },
+            {
+              "x": 678.0,
+              "y": 75
+            }
+          ],
+          "GraveAccentAndTilde-shape": [
+            {
+              "x": 30,
+              "y": 88
+            },
+            {
+              "x": 79.0,
+              "y": 88
+            },
+            {
+              "x": 79.0,
+              "y": 138
+            },
+            {
+              "x": 30,
+              "y": 138
+            }
+          ],
+          "1-shape": [
+            {
+              "x": 84.0,
+              "y": 88
+            },
+            {
+              "x": 133.0,
+              "y": 88
+            },
+            {
+              "x": 133.0,
+              "y": 138
+            },
+            {
+              "x": 84.0,
+              "y": 138
+            }
+          ],
+          "2-shape": [
+            {
+              "x": 138.0,
+              "y": 88
+            },
+            {
+              "x": 187.0,
+              "y": 88
+            },
+            {
+              "x": 187.0,
+              "y": 138
+            },
+            {
+              "x": 138.0,
+              "y": 138
+            }
+          ],
+          "3-shape": [
+            {
+              "x": 192.0,
+              "y": 88
+            },
+            {
+              "x": 241.0,
+              "y": 88
+            },
+            {
+              "x": 241.0,
+              "y": 138
+            },
+            {
+              "x": 192.0,
+              "y": 138
+            }
+          ],
+          "4-shape": [
+            {
+              "x": 246.0,
+              "y": 88
+            },
+            {
+              "x": 295.0,
+              "y": 88
+            },
+            {
+              "x": 295.0,
+              "y": 138
+            },
+            {
+              "x": 246.0,
+              "y": 138
+            }
+          ],
+          "5-shape": [
+            {
+              "x": 300.0,
+              "y": 88
+            },
+            {
+              "x": 349.0,
+              "y": 88
+            },
+            {
+              "x": 349.0,
+              "y": 138
+            },
+            {
+              "x": 300.0,
+              "y": 138
+            }
+          ],
+          "6-shape": [
+            {
+              "x": 354.0,
+              "y": 88
+            },
+            {
+              "x": 403.0,
+              "y": 88
+            },
+            {
+              "x": 403.0,
+              "y": 138
+            },
+            {
+              "x": 354.0,
+              "y": 138
+            }
+          ],
+          "7-shape": [
+            {
+              "x": 408.0,
+              "y": 88
+            },
+            {
+              "x": 457.0,
+              "y": 88
+            },
+            {
+              "x": 457.0,
+              "y": 138
+            },
+            {
+              "x": 408.0,
+              "y": 138
+            }
+          ],
+          "8-shape": [
+            {
+              "x": 462.0,
+              "y": 88
+            },
+            {
+              "x": 511.0,
+              "y": 88
+            },
+            {
+              "x": 511.0,
+              "y": 138
+            },
+            {
+              "x": 462.0,
+              "y": 138
+            }
+          ],
+          "9-shape": [
+            {
+              "x": 516.0,
+              "y": 88
+            },
+            {
+              "x": 565.0,
+              "y": 88
+            },
+            {
+              "x": 565.0,
+              "y": 138
+            },
+            {
+              "x": 516.0,
+              "y": 138
+            }
+          ],
+          "0-shape": [
+            {
+              "x": 570.0,
+              "y": 88
+            },
+            {
+              "x": 619.0,
+              "y": 88
+            },
+            {
+              "x": 619.0,
+              "y": 138
+            },
+            {
+              "x": 570.0,
+              "y": 138
+            }
+          ],
+          "MinusAndUnderscore-shape": [
+            {
+              "x": 624.0,
+              "y": 88
+            },
+            {
+              "x": 673.0,
+              "y": 88
+            },
+            {
+              "x": 673.0,
+              "y": 138
+            },
+            {
+              "x": 624.0,
+              "y": 138
+            }
+          ],
+          "EqualsAndPlus-shape": [
+            {
+              "x": 678.0,
+              "y": 88
+            },
+            {
+              "x": 727.0,
+              "y": 88
+            },
+            {
+              "x": 727.0,
+              "y": 138
+            },
+            {
+              "x": 678.0,
+              "y": 138
+            }
+          ],
+          "Backspace-shape": [
+            {
+              "x": 732.0,
+              "y": 88
+            },
+            {
+              "x": 821.5,
+              "y": 88
+            },
+            {
+              "x": 821.5,
+              "y": 138
+            },
+            {
+              "x": 732.0,
+              "y": 138
+            }
+          ],
+          "Tab-shape": [
+            {
+              "x": 30,
+              "y": 151
+            },
+            {
+              "x": 100.6,
+              "y": 151
+            },
+            {
+              "x": 100.6,
+              "y": 201
+            },
+            {
+              "x": 30,
+              "y": 201
+            }
+          ],
+          "Q-shape": [
+            {
+              "x": 105.6,
+              "y": 151
+            },
+            {
+              "x": 154.6,
+              "y": 151
+            },
+            {
+              "x": 154.6,
+              "y": 201
+            },
+            {
+              "x": 105.6,
+              "y": 201
+            }
+          ],
+          "W-shape": [
+            {
+              "x": 159.6,
+              "y": 151
+            },
+            {
+              "x": 208.6,
+              "y": 151
+            },
+            {
+              "x": 208.6,
+              "y": 201
+            },
+            {
+              "x": 159.6,
+              "y": 201
+            }
+          ],
+          "E-shape": [
+            {
+              "x": 213.6,
+              "y": 151
+            },
+            {
+              "x": 262.6,
+              "y": 151
+            },
+            {
+              "x": 262.6,
+              "y": 201
+            },
+            {
+              "x": 213.6,
+              "y": 201
+            }
+          ],
+          "R-shape": [
+            {
+              "x": 267.6,
+              "y": 151
+            },
+            {
+              "x": 316.6,
+              "y": 151
+            },
+            {
+              "x": 316.6,
+              "y": 201
+            },
+            {
+              "x": 267.6,
+              "y": 201
+            }
+          ],
+          "T-shape": [
+            {
+              "x": 321.6,
+              "y": 151
+            },
+            {
+              "x": 370.6,
+              "y": 151
+            },
+            {
+              "x": 370.6,
+              "y": 201
+            },
+            {
+              "x": 321.6,
+              "y": 201
+            }
+          ],
+          "Z-shape": [
+            {
+              "x": 375.6,
+              "y": 151
+            },
+            {
+              "x": 424.6,
+              "y": 151
+            },
+            {
+              "x": 424.6,
+              "y": 201
+            },
+            {
+              "x": 375.6,
+              "y": 201
+            }
+          ],
+          "U-shape": [
+            {
+              "x": 429.6,
+              "y": 151
+            },
+            {
+              "x": 478.6,
+              "y": 151
+            },
+            {
+              "x": 478.6,
+              "y": 201
+            },
+            {
+              "x": 429.6,
+              "y": 201
+            }
+          ],
+          "I-shape": [
+            {
+              "x": 483.6,
+              "y": 151
+            },
+            {
+              "x": 532.6,
+              "y": 151
+            },
+            {
+              "x": 532.6,
+              "y": 201
+            },
+            {
+              "x": 483.6,
+              "y": 201
+            }
+          ],
+          "O-shape": [
+            {
+              "x": 537.6,
+              "y": 151
+            },
+            {
+              "x": 586.6,
+              "y": 151
+            },
+            {
+              "x": 586.6,
+              "y": 201
+            },
+            {
+              "x": 537.6,
+              "y": 201
+            }
+          ],
+          "P-shape": [
+            {
+              "x": 591.6,
+              "y": 151
+            },
+            {
+              "x": 640.6,
+              "y": 151
+            },
+            {
+              "x": 640.6,
+              "y": 201
+            },
+            {
+              "x": 591.6,
+              "y": 201
+            }
+          ],
+          "BracketLeft-shape": [
+            {
+              "x": 645.6,
+              "y": 151
+            },
+            {
+              "x": 694.6,
+              "y": 151
+            },
+            {
+              "x": 694.6,
+              "y": 201
+            },
+            {
+              "x": 645.6,
+              "y": 201
+            }
+          ],
+          "BracketRight-shape": [
+            {
+              "x": 699.6,
+              "y": 151
+            },
+            {
+              "x": 748.6,
+              "y": 151
+            },
+            {
+              "x": 748.6,
+              "y": 201
+            },
+            {
+              "x": 699.6,
+              "y": 201
+            }
+          ],
+          "Enter-shape": [
+            {
+              "x": 753.6,
+              "y": 151
+            },
+            {
+              "x": 821.5,
+              "y": 151
+            },
+            {
+              "x": 821.5,
+              "y": 201
+            },
+            {
+              "x": 753.6,
+              "y": 201
+            }
+          ],
+          "CapsLock-shape": [
+            {
+              "x": 30,
+              "y": 214
+            },
+            {
+              "x": 116.8,
+              "y": 214
+            },
+            {
+              "x": 116.8,
+              "y": 264
+            },
+            {
+              "x": 30,
+              "y": 264
+            }
+          ],
+          "A-shape": [
+            {
+              "x": 121.8,
+              "y": 214
+            },
+            {
+              "x": 170.8,
+              "y": 214
+            },
+            {
+              "x": 170.8,
+              "y": 264
+            },
+            {
+              "x": 121.8,
+              "y": 264
+            }
+          ],
+          "S-shape": [
+            {
+              "x": 175.8,
+              "y": 214
+            },
+            {
+              "x": 224.8,
+              "y": 214
+            },
+            {
+              "x": 224.8,
+              "y": 264
+            },
+            {
+              "x": 175.8,
+              "y": 264
+            }
+          ],
+          "D-shape": [
+            {
+              "x": 229.8,
+              "y": 214
+            },
+            {
+              "x": 278.8,
+              "y": 214
+            },
+            {
+              "x": 278.8,
+              "y": 264
+            },
+            {
+              "x": 229.8,
+              "y": 264
+            }
+          ],
+          "F-shape": [
+            {
+              "x": 283.8,
+              "y": 214
+            },
+            {
+              "x": 332.8,
+              "y": 214
+            },
+            {
+              "x": 332.8,
+              "y": 264
+            },
+            {
+              "x": 283.8,
+              "y": 264
+            }
+          ],
+          "G-shape": [
+            {
+              "x": 337.8,
+              "y": 214
+            },
+            {
+              "x": 386.8,
+              "y": 214
+            },
+            {
+              "x": 386.8,
+              "y": 264
+            },
+            {
+              "x": 337.8,
+              "y": 264
+            }
+          ],
+          "H-shape": [
+            {
+              "x": 391.8,
+              "y": 214
+            },
+            {
+              "x": 440.8,
+              "y": 214
+            },
+            {
+              "x": 440.8,
+              "y": 264
+            },
+            {
+              "x": 391.8,
+              "y": 264
+            }
+          ],
+          "J-shape": [
+            {
+              "x": 445.8,
+              "y": 214
+            },
+            {
+              "x": 494.8,
+              "y": 214
+            },
+            {
+              "x": 494.8,
+              "y": 264
+            },
+            {
+              "x": 445.8,
+              "y": 264
+            }
+          ],
+          "K-shape": [
+            {
+              "x": 499.8,
+              "y": 214
+            },
+            {
+              "x": 548.8,
+              "y": 214
+            },
+            {
+              "x": 548.8,
+              "y": 264
+            },
+            {
+              "x": 499.8,
+              "y": 264
+            }
+          ],
+          "L-shape": [
+            {
+              "x": 553.8,
+              "y": 214
+            },
+            {
+              "x": 602.8,
+              "y": 214
+            },
+            {
+              "x": 602.8,
+              "y": 264
+            },
+            {
+              "x": 553.8,
+              "y": 264
+            }
+          ],
+          "SemicolonAndColon-shape": [
+            {
+              "x": 607.8,
+              "y": 214
+            },
+            {
+              "x": 656.8,
+              "y": 214
+            },
+            {
+              "x": 656.8,
+              "y": 264
+            },
+            {
+              "x": 607.8,
+              "y": 264
+            }
+          ],
+          "ApostropheAndDoubleQuote-shape": [
+            {
+              "x": 661.8,
+              "y": 214
+            },
+            {
+              "x": 710.8,
+              "y": 214
+            },
+            {
+              "x": 710.8,
+              "y": 264
+            },
+            {
+              "x": 661.8,
+              "y": 264
+            }
+          ],
+          "Backslash-shape": [
+            {
+              "x": 715.8,
+              "y": 214
+            },
+            {
+              "x": 764.8,
+              "y": 214
+            },
+            {
+              "x": 764.8,
+              "y": 264
+            },
+            {
+              "x": 715.8,
+              "y": 264
+            }
+          ],
+          "PlayPause-shape": [
+            {
+              "x": 769.8,
+              "y": 214
+            },
+            {
+              "x": 821.5,
+              "y": 214
+            },
+            {
+              "x": 821.5,
+              "y": 264
+            },
+            {
+              "x": 769.8,
+              "y": 264
+            }
+          ],
+          "LeftShift-shape": [
+            {
+              "x": 30,
+              "y": 277
+            },
+            {
+              "x": 100.6,
+              "y": 277
+            },
+            {
+              "x": 100.6,
+              "y": 327
+            },
+            {
+              "x": 30,
+              "y": 327
+            }
+          ],
+          "NonUsBackslash-shape": [
+            {
+              "x": 105.6,
+              "y": 277
+            },
+            {
+              "x": 154.6,
+              "y": 277
+            },
+            {
+              "x": 154.6,
+              "y": 327
+            },
+            {
+              "x": 105.6,
+              "y": 327
+            }
+          ],
+          "Y-shape": [
+            {
+              "x": 159.6,
+              "y": 277
+            },
+            {
+              "x": 208.6,
+              "y": 277
+            },
+            {
+              "x": 208.6,
+              "y": 327
+            },
+            {
+              "x": 159.6,
+              "y": 327
+            }
+          ],
+          "X-shape": [
+            {
+              "x": 213.6,
+              "y": 277
+            },
+            {
+              "x": 262.6,
+              "y": 277
+            },
+            {
+              "x": 262.6,
+              "y": 327
+            },
+            {
+              "x": 213.6,
+              "y": 327
+            }
+          ],
+          "C-shape": [
+            {
+              "x": 267.6,
+              "y": 277
+            },
+            {
+              "x": 316.6,
+              "y": 277
+            },
+            {
+              "x": 316.6,
+              "y": 327
+            },
+            {
+              "x": 267.6,
+              "y": 327
+            }
+          ],
+          "V-shape": [
+            {
+              "x": 321.6,
+              "y": 277
+            },
+            {
+              "x": 370.6,
+              "y": 277
+            },
+            {
+              "x": 370.6,
+              "y": 327
+            },
+            {
+              "x": 321.6,
+              "y": 327
+            }
+          ],
+          "B-shape": [
+            {
+              "x": 375.6,
+              "y": 277
+            },
+            {
+              "x": 424.6,
+              "y": 277
+            },
+            {
+              "x": 424.6,
+              "y": 327
+            },
+            {
+              "x": 375.6,
+              "y": 327
+            }
+          ],
+          "N-shape": [
+            {
+              "x": 429.6,
+              "y": 277
+            },
+            {
+              "x": 478.6,
+              "y": 277
+            },
+            {
+              "x": 478.6,
+              "y": 327
+            },
+            {
+              "x": 429.6,
+              "y": 327
+            }
+          ],
+          "M-shape": [
+            {
+              "x": 483.6,
+              "y": 277
+            },
+            {
+              "x": 532.6,
+              "y": 277
+            },
+            {
+              "x": 532.6,
+              "y": 327
+            },
+            {
+              "x": 483.6,
+              "y": 327
+            }
+          ],
+          "CommaAndLessThan-shape": [
+            {
+              "x": 537.6,
+              "y": 277
+            },
+            {
+              "x": 586.6,
+              "y": 277
+            },
+            {
+              "x": 586.6,
+              "y": 327
+            },
+            {
+              "x": 537.6,
+              "y": 327
+            }
+          ],
+          "PeriodAndBiggerThan-shape": [
+            {
+              "x": 591.6,
+              "y": 277
+            },
+            {
+              "x": 640.6,
+              "y": 277
+            },
+            {
+              "x": 640.6,
+              "y": 327
+            },
+            {
+              "x": 591.6,
+              "y": 327
+            }
+          ],
+          "SlashAndQuestionMark-shape": [
+            {
+              "x": 645.6,
+              "y": 277
+            },
+            {
+              "x": 694.6,
+              "y": 277
+            },
+            {
+              "x": 694.6,
+              "y": 327
+            },
+            {
+              "x": 645.6,
+              "y": 327
+            }
+          ],
+          "RightShift-shape": [
+            {
+              "x": 699.6,
+              "y": 277
+            },
+            {
+              "x": 835.0,
+              "y": 277
+            },
+            {
+              "x": 835.0,
+              "y": 327
+            },
+            {
+              "x": 699.6,
+              "y": 327
+            }
+          ],
+          "LeftCtrl-shape": [
+            {
+              "x": 30,
+              "y": 340
+            },
+            {
+              "x": 95.2,
+              "y": 340
+            },
+            {
+              "x": 95.2,
+              "y": 390
+            },
+            {
+              "x": 30,
+              "y": 390
+            }
+          ],
+          "LeftGui-shape": [
+            {
+              "x": 100.2,
+              "y": 340
+            },
+            {
+              "x": 160.0,
+              "y": 340
+            },
+            {
+              "x": 160.0,
+              "y": 390
+            },
+            {
+              "x": 100.2,
+              "y": 390
+            }
+          ],
+          "LeftAlt-shape": [
+            {
+              "x": 165.0,
+              "y": 340
+            },
+            {
+              "x": 224.8,
+              "y": 340
+            },
+            {
+              "x": 224.8,
+              "y": 390
+            },
+            {
+              "x": 165.0,
+              "y": 390
+            }
+          ],
+          "Space-shape": [
+            {
+              "x": 229.8,
+              "y": 340
+            },
+            {
+              "x": 538.0,
+              "y": 340
+            },
+            {
+              "x": 538.0,
+              "y": 390
+            },
+            {
+              "x": 229.8,
+              "y": 390
+            }
+          ],
+          "RightAlt-shape": [
+            {
+              "x": 543.0,
+              "y": 340
+            },
+            {
+              "x": 602.8,
+              "y": 340
+            },
+            {
+              "x": 602.8,
+              "y": 390
+            },
+            {
+              "x": 543.0,
+              "y": 390
+            }
+          ],
+          "Fn-shape": [
+            {
+              "x": 607.8,
+              "y": 340
+            },
+            {
+              "x": 656.8,
+              "y": 340
+            },
+            {
+              "x": 656.8,
+              "y": 390
+            },
+            {
+              "x": 607.8,
+              "y": 390
+            }
+          ],
+          "Application-shape": [
+            {
+              "x": 661.8,
+              "y": 340
+            },
+            {
+              "x": 721.5999999999999,
+              "y": 340
+            },
+            {
+              "x": 721.5999999999999,
+              "y": 390
+            },
+            {
+              "x": 661.8,
+              "y": 390
+            }
+          ],
+          "RightCtrl-shape": [
+            {
+              "x": 726.5999999999999,
+              "y": 340
+            },
+            {
+              "x": 810.6999999999999,
+              "y": 340
+            },
+            {
+              "x": 810.6999999999999,
+              "y": 390
+            },
+            {
+              "x": 726.5999999999999,
+              "y": 390
+            }
+          ],
+          "PrintScreen-shape": [
+            {
+              "x": 960,
+              "y": 25
+            },
+            {
+              "x": 1009.0,
+              "y": 25
+            },
+            {
+              "x": 1009.0,
+              "y": 75
+            },
+            {
+              "x": 960,
+              "y": 75
+            }
+          ],
+          "ScrollLock-shape": [
+            {
+              "x": 1014.0,
+              "y": 25
+            },
+            {
+              "x": 1063.0,
+              "y": 25
+            },
+            {
+              "x": 1063.0,
+              "y": 75
+            },
+            {
+              "x": 1014.0,
+              "y": 75
+            }
+          ],
+          "PauseBreak-shape": [
+            {
+              "x": 1068.0,
+              "y": 25
+            },
+            {
+              "x": 1117.0,
+              "y": 25
+            },
+            {
+              "x": 1117.0,
+              "y": 75
+            },
+            {
+              "x": 1068.0,
+              "y": 75
+            }
+          ],
+          "Insert-shape": [
+            {
+              "x": 960,
+              "y": 88
+            },
+            {
+              "x": 1009.0,
+              "y": 88
+            },
+            {
+              "x": 1009.0,
+              "y": 138
+            },
+            {
+              "x": 960,
+              "y": 138
+            }
+          ],
+          "Home-shape": [
+            {
+              "x": 1014.0,
+              "y": 88
+            },
+            {
+              "x": 1063.0,
+              "y": 88
+            },
+            {
+              "x": 1063.0,
+              "y": 138
+            },
+            {
+              "x": 1014.0,
+              "y": 138
+            }
+          ],
+          "PageUp-shape": [
+            {
+              "x": 1068.0,
+              "y": 88
+            },
+            {
+              "x": 1117.0,
+              "y": 88
+            },
+            {
+              "x": 1117.0,
+              "y": 138
+            },
+            {
+              "x": 1068.0,
+              "y": 138
+            }
+          ],
+          "Delete-shape": [
+            {
+              "x": 960,
+              "y": 151
+            },
+            {
+              "x": 1009.0,
+              "y": 151
+            },
+            {
+              "x": 1009.0,
+              "y": 201
+            },
+            {
+              "x": 960,
+              "y": 201
+            }
+          ],
+          "End-shape": [
+            {
+              "x": 1014.0,
+              "y": 151
+            },
+            {
+              "x": 1063.0,
+              "y": 151
+            },
+            {
+              "x": 1063.0,
+              "y": 201
+            },
+            {
+              "x": 1014.0,
+              "y": 201
+            }
+          ],
+          "PageDown-shape": [
+            {
+              "x": 1068.0,
+              "y": 151
+            },
+            {
+              "x": 1117.0,
+              "y": 151
+            },
+            {
+              "x": 1117.0,
+              "y": 201
+            },
+            {
+              "x": 1068.0,
+              "y": 201
+            }
+          ],
+          "UpArrow-shape": [
+            {
+              "x": 960,
+              "y": 277
+            },
+            {
+              "x": 1009.0,
+              "y": 277
+            },
+            {
+              "x": 1009.0,
+              "y": 327
+            },
+            {
+              "x": 960,
+              "y": 327
+            }
+          ],
+          "LeftArrow-shape": [
+            {
+              "x": 960,
+              "y": 340
+            },
+            {
+              "x": 1009.0,
+              "y": 340
+            },
+            {
+              "x": 1009.0,
+              "y": 390
+            },
+            {
+              "x": 960,
+              "y": 390
+            }
+          ],
+          "DownArrow-shape": [
+            {
+              "x": 1014.0,
+              "y": 340
+            },
+            {
+              "x": 1063.0,
+              "y": 340
+            },
+            {
+              "x": 1063.0,
+              "y": 390
+            },
+            {
+              "x": 1014.0,
+              "y": 390
+            }
+          ],
+          "RightArrow-shape": [
+            {
+              "x": 1068.0,
+              "y": 340
+            },
+            {
+              "x": 1117.0,
+              "y": 340
+            },
+            {
+              "x": 1117.0,
+              "y": 390
+            },
+            {
+              "x": 1068.0,
+              "y": 390
+            }
+          ],
+          "NumLock-shape": [
+            {
+              "x": 1160,
+              "y": 88
+            },
+            {
+              "x": 1209.0,
+              "y": 88
+            },
+            {
+              "x": 1209.0,
+              "y": 138
+            },
+            {
+              "x": 1160,
+              "y": 138
+            }
+          ],
+          "KeypadSlash-shape": [
+            {
+              "x": 1214.0,
+              "y": 88
+            },
+            {
+              "x": 1263.0,
+              "y": 88
+            },
+            {
+              "x": 1263.0,
+              "y": 138
+            },
+            {
+              "x": 1214.0,
+              "y": 138
+            }
+          ],
+          "KeypadAsterisk-shape": [
+            {
+              "x": 1268.0,
+              "y": 88
+            },
+            {
+              "x": 1317.0,
+              "y": 88
+            },
+            {
+              "x": 1317.0,
+              "y": 138
+            },
+            {
+              "x": 1268.0,
+              "y": 138
+            }
+          ],
+          "KeypadMinus-shape": [
+            {
+              "x": 1322.0,
+              "y": 88
+            },
+            {
+              "x": 1371.0,
+              "y": 88
+            },
+            {
+              "x": 1371.0,
+              "y": 138
+            },
+            {
+              "x": 1322.0,
+              "y": 138
+            }
+          ],
+          "Keypad7-shape": [
+            {
+              "x": 1160,
+              "y": 151
+            },
+            {
+              "x": 1209.0,
+              "y": 151
+            },
+            {
+              "x": 1209.0,
+              "y": 201
+            },
+            {
+              "x": 1160,
+              "y": 201
+            }
+          ],
+          "Keypad8-shape": [
+            {
+              "x": 1214.0,
+              "y": 151
+            },
+            {
+              "x": 1263.0,
+              "y": 151
+            },
+            {
+              "x": 1263.0,
+              "y": 201
+            },
+            {
+              "x": 1214.0,
+              "y": 201
+            }
+          ],
+          "Keypad9-shape": [
+            {
+              "x": 1268.0,
+              "y": 151
+            },
+            {
+              "x": 1317.0,
+              "y": 151
+            },
+            {
+              "x": 1317.0,
+              "y": 201
+            },
+            {
+              "x": 1268.0,
+              "y": 201
+            }
+          ],
+          "KeypadPlus-shape": [
+            {
+              "x": 1322.0,
+              "y": 151
+            },
+            {
+              "x": 1371.0,
+              "y": 151
+            },
+            {
+              "x": 1371.0,
+              "y": 201
+            },
+            {
+              "x": 1322.0,
+              "y": 201
+            }
+          ],
+          "Keypad4-shape": [
+            {
+              "x": 1160,
+              "y": 214
+            },
+            {
+              "x": 1209.0,
+              "y": 214
+            },
+            {
+              "x": 1209.0,
+              "y": 264
+            },
+            {
+              "x": 1160,
+              "y": 264
+            }
+          ],
+          "Keypad5-shape": [
+            {
+              "x": 1214.0,
+              "y": 214
+            },
+            {
+              "x": 1263.0,
+              "y": 214
+            },
+            {
+              "x": 1263.0,
+              "y": 264
+            },
+            {
+              "x": 1214.0,
+              "y": 264
+            }
+          ],
+          "Keypad6-shape": [
+            {
+              "x": 1268.0,
+              "y": 214
+            },
+            {
+              "x": 1317.0,
+              "y": 214
+            },
+            {
+              "x": 1317.0,
+              "y": 264
+            },
+            {
+              "x": 1268.0,
+              "y": 264
+            }
+          ],
+          "Keypad1-shape": [
+            {
+              "x": 1160,
+              "y": 277
+            },
+            {
+              "x": 1209.0,
+              "y": 277
+            },
+            {
+              "x": 1209.0,
+              "y": 327
+            },
+            {
+              "x": 1160,
+              "y": 327
+            }
+          ],
+          "Keypad2-shape": [
+            {
+              "x": 1214.0,
+              "y": 277
+            },
+            {
+              "x": 1263.0,
+              "y": 277
+            },
+            {
+              "x": 1263.0,
+              "y": 327
+            },
+            {
+              "x": 1214.0,
+              "y": 327
+            }
+          ],
+          "Keypad3-shape": [
+            {
+              "x": 1268.0,
+              "y": 277
+            },
+            {
+              "x": 1317.0,
+              "y": 277
+            },
+            {
+              "x": 1317.0,
+              "y": 327
+            },
+            {
+              "x": 1268.0,
+              "y": 327
+            }
+          ],
+          "Keypad0-shape": [
+            {
+              "x": 1160,
+              "y": 340
+            },
+            {
+              "x": 1263.0,
+              "y": 340
+            },
+            {
+              "x": 1263.0,
+              "y": 390
+            },
+            {
+              "x": 1160,
+              "y": 390
+            }
+          ],
+          "KeypadPeriodAndDelete-shape": [
+            {
+              "x": 1268.0,
+              "y": 340
+            },
+            {
+              "x": 1317.0,
+              "y": 340
+            },
+            {
+              "x": 1317.0,
+              "y": 390
+            },
+            {
+              "x": 1268.0,
+              "y": 390
+            }
+          ],
+          "KeypadEnter-shape": [
+            {
+              "x": 1322.0,
+              "y": 340
+            },
+            {
+              "x": 1371.0,
+              "y": 340
+            },
+            {
+              "x": 1371.0,
+              "y": 390
+            },
+            {
+              "x": 1322.0,
+              "y": 390
+            }
+          ]
+        }
+      },
+      "SvgStaticGeometryMap": {
+        "RegularStatic": {
+          "Escape-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F1-shape": {
+            "type": "rectangle",
+            "x": 84.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F2-shape": {
+            "type": "rectangle",
+            "x": 138.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F3-shape": {
+            "type": "rectangle",
+            "x": 192.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F4-shape": {
+            "type": "rectangle",
+            "x": 246.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F5-shape": {
+            "type": "rectangle",
+            "x": 300.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F6-shape": {
+            "type": "rectangle",
+            "x": 354.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F7-shape": {
+            "type": "rectangle",
+            "x": 408.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F8-shape": {
+            "type": "rectangle",
+            "x": 462.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F9-shape": {
+            "type": "rectangle",
+            "x": 516.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F10-shape": {
+            "type": "rectangle",
+            "x": 570.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F11-shape": {
+            "type": "rectangle",
+            "x": 624.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F12-shape": {
+            "type": "rectangle",
+            "x": 678.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "GraveAccentAndTilde-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "1-shape": {
+            "type": "rectangle",
+            "x": 84.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "2-shape": {
+            "type": "rectangle",
+            "x": 138.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "3-shape": {
+            "type": "rectangle",
+            "x": 192.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "4-shape": {
+            "type": "rectangle",
+            "x": 246.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "5-shape": {
+            "type": "rectangle",
+            "x": 300.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "6-shape": {
+            "type": "rectangle",
+            "x": 354.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "7-shape": {
+            "type": "rectangle",
+            "x": 408.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "8-shape": {
+            "type": "rectangle",
+            "x": 462.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "9-shape": {
+            "type": "rectangle",
+            "x": 516.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "0-shape": {
+            "type": "rectangle",
+            "x": 570.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "MinusAndUnderscore-shape": {
+            "type": "rectangle",
+            "x": 624.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "EqualsAndPlus-shape": {
+            "type": "rectangle",
+            "x": 678.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Backspace-shape": {
+            "type": "rectangle",
+            "x": 732.0,
+            "y": 88,
+            "width": 89.5,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Tab-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 151,
+            "width": 70.6,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Q-shape": {
+            "type": "rectangle",
+            "x": 105.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "W-shape": {
+            "type": "rectangle",
+            "x": 159.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "E-shape": {
+            "type": "rectangle",
+            "x": 213.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "R-shape": {
+            "type": "rectangle",
+            "x": 267.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "T-shape": {
+            "type": "rectangle",
+            "x": 321.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Z-shape": {
+            "type": "rectangle",
+            "x": 375.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "U-shape": {
+            "type": "rectangle",
+            "x": 429.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "I-shape": {
+            "type": "rectangle",
+            "x": 483.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "O-shape": {
+            "type": "rectangle",
+            "x": 537.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "P-shape": {
+            "type": "rectangle",
+            "x": 591.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "BracketLeft-shape": {
+            "type": "rectangle",
+            "x": 645.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "BracketRight-shape": {
+            "type": "rectangle",
+            "x": 699.6,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Enter-shape": {
+            "type": "rectangle",
+            "x": 753.6,
+            "y": 151,
+            "width": 67.9,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "CapsLock-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 214,
+            "width": 86.8,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "A-shape": {
+            "type": "rectangle",
+            "x": 121.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "S-shape": {
+            "type": "rectangle",
+            "x": 175.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "D-shape": {
+            "type": "rectangle",
+            "x": 229.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "F-shape": {
+            "type": "rectangle",
+            "x": 283.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "G-shape": {
+            "type": "rectangle",
+            "x": 337.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "H-shape": {
+            "type": "rectangle",
+            "x": 391.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "J-shape": {
+            "type": "rectangle",
+            "x": 445.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "K-shape": {
+            "type": "rectangle",
+            "x": 499.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "L-shape": {
+            "type": "rectangle",
+            "x": 553.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "SemicolonAndColon-shape": {
+            "type": "rectangle",
+            "x": 607.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "ApostropheAndDoubleQuote-shape": {
+            "type": "rectangle",
+            "x": 661.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Backslash-shape": {
+            "type": "rectangle",
+            "x": 715.8,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PlayPause-shape": {
+            "type": "rectangle",
+            "x": 769.8,
+            "y": 214,
+            "width": 51.7,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "LeftShift-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 277,
+            "width": 70.6,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "NonUsBackslash-shape": {
+            "type": "rectangle",
+            "x": 105.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Y-shape": {
+            "type": "rectangle",
+            "x": 159.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "X-shape": {
+            "type": "rectangle",
+            "x": 213.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "C-shape": {
+            "type": "rectangle",
+            "x": 267.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "V-shape": {
+            "type": "rectangle",
+            "x": 321.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "B-shape": {
+            "type": "rectangle",
+            "x": 375.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "N-shape": {
+            "type": "rectangle",
+            "x": 429.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "M-shape": {
+            "type": "rectangle",
+            "x": 483.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "CommaAndLessThan-shape": {
+            "type": "rectangle",
+            "x": 537.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PeriodAndBiggerThan-shape": {
+            "type": "rectangle",
+            "x": 591.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "SlashAndQuestionMark-shape": {
+            "type": "rectangle",
+            "x": 645.6,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "RightShift-shape": {
+            "type": "rectangle",
+            "x": 699.6,
+            "y": 277,
+            "width": 135.4,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "LeftCtrl-shape": {
+            "type": "rectangle",
+            "x": 30,
+            "y": 340,
+            "width": 65.2,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "LeftGui-shape": {
+            "type": "rectangle",
+            "x": 100.2,
+            "y": 340,
+            "width": 59.8,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "LeftAlt-shape": {
+            "type": "rectangle",
+            "x": 165.0,
+            "y": 340,
+            "width": 59.8,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Space-shape": {
+            "type": "rectangle",
+            "x": 229.8,
+            "y": 340,
+            "width": 308.2,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "RightAlt-shape": {
+            "type": "rectangle",
+            "x": 543.0,
+            "y": 340,
+            "width": 59.8,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Fn-shape": {
+            "type": "rectangle",
+            "x": 607.8,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Application-shape": {
+            "type": "rectangle",
+            "x": 661.8,
+            "y": 340,
+            "width": 59.8,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "RightCtrl-shape": {
+            "type": "rectangle",
+            "x": 726.5999999999999,
+            "y": 340,
+            "width": 84.1,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PrintScreen-shape": {
+            "type": "rectangle",
+            "x": 960,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "ScrollLock-shape": {
+            "type": "rectangle",
+            "x": 1014.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PauseBreak-shape": {
+            "type": "rectangle",
+            "x": 1068.0,
+            "y": 25,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Insert-shape": {
+            "type": "rectangle",
+            "x": 960,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Home-shape": {
+            "type": "rectangle",
+            "x": 1014.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PageUp-shape": {
+            "type": "rectangle",
+            "x": 1068.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Delete-shape": {
+            "type": "rectangle",
+            "x": 960,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "End-shape": {
+            "type": "rectangle",
+            "x": 1014.0,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "PageDown-shape": {
+            "type": "rectangle",
+            "x": 1068.0,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "UpArrow-shape": {
+            "type": "rectangle",
+            "x": 960,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "LeftArrow-shape": {
+            "type": "rectangle",
+            "x": 960,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "DownArrow-shape": {
+            "type": "rectangle",
+            "x": 1014.0,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "RightArrow-shape": {
+            "type": "rectangle",
+            "x": 1068.0,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "NumLock-shape": {
+            "type": "rectangle",
+            "x": 1160,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadSlash-shape": {
+            "type": "rectangle",
+            "x": 1214.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadAsterisk-shape": {
+            "type": "rectangle",
+            "x": 1268.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadMinus-shape": {
+            "type": "rectangle",
+            "x": 1322.0,
+            "y": 88,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad7-shape": {
+            "type": "rectangle",
+            "x": 1160,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad8-shape": {
+            "type": "rectangle",
+            "x": 1214.0,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad9-shape": {
+            "type": "rectangle",
+            "x": 1268.0,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadPlus-shape": {
+            "type": "rectangle",
+            "x": 1322.0,
+            "y": 151,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad4-shape": {
+            "type": "rectangle",
+            "x": 1160,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad5-shape": {
+            "type": "rectangle",
+            "x": 1214.0,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad6-shape": {
+            "type": "rectangle",
+            "x": 1268.0,
+            "y": 214,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad1-shape": {
+            "type": "rectangle",
+            "x": 1160,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad2-shape": {
+            "type": "rectangle",
+            "x": 1214.0,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad3-shape": {
+            "type": "rectangle",
+            "x": 1268.0,
+            "y": 277,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "Keypad0-shape": {
+            "type": "rectangle",
+            "x": 1160,
+            "y": 340,
+            "width": 103.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadPeriodAndDelete-shape": {
+            "type": "rectangle",
+            "x": 1268.0,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          },
+          "KeypadEnter-shape": {
+            "type": "rectangle",
+            "x": 1322.0,
+            "y": 340,
+            "width": 49.0,
+            "height": 50,
+            "rx": 6,
+            "ry": 6
+          }
+        }
+      },
+      "SupportedLightingTypes": {
+        "LocalPreview": {
+          "Software": [
+            "RainbowLightingTypeData.lightings.cue.corsair.com",
+            "ColorPulseLightingTypeData.lightings.cue.corsair.com",
+            "ColorShiftLightingTypeData.lightings.cue.corsair.com",
+            "StaticCustomLightingTypeData.lightings.cue.corsair.com",
+            "SolidLightingTypeData.lightings.cue.corsair.com",
+            "GradientLightingTypeData.lightings.cue.corsair.com",
+            "RainbowWaveLightingTypeData.lightings.cue.corsair.com",
+            "SpiralRainbowLightingTypeData.lightings.cue.corsair.com",
+            "TypeLightingTypeData.lightings.cue.corsair.com",
+            "WaveLightingTypeData.lightings.cue.corsair.com",
+            "VisorLightingTypeData.lightings.cue.corsair.com",
+            "RainLightingTypeData.lightings.cue.corsair.com",
+            "ColorWaveLightingTypeData.lightings.cue.corsair.com",
+            "RippleLightingTypeData.lightings.cue.corsair.com"
+          ]
+        }
+      }
+    }
+  },
+  "eqPresets": [
+    {
+      "id": "flat",
+      "name": "Flat",
+      "isFactory": true,
+      "gains": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bass",
+      "name": "Bass Boost",
+      "isFactory": true,
+      "gains": [
+        3,
+        3,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Voice Focus",
+      "isFactory": true,
+      "gains": [
+        -2,
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bright",
+      "name": "Bright",
+      "isFactory": true,
+      "gains": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "balanced",
+      "name": "Balanced",
+      "isFactory": true,
+      "gains": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}
