@@ -105,7 +105,20 @@ OpenQUI uses the supported vendor command interfaces through `/dev/hidraw`.
 Enumeration does not prove write access, a linked RF child or protocol support.
 An access error should be diagnosed against the matching VID:PID and HID
 interface. Do not run the entire GUI as root or make every hidraw node writable.
-The prototype does not currently ship a persistent udev access policy.
+A scoped template is provided in `packaging/udev/70-openqui.rules` for the
+four supported command-device USB IDs. It grants access to the active local
+session through `uaccess` on systems using logind. Neither CMake nor the user
+installer installs it automatically. To install it deliberately:
+
+```sh
+sudo install -m 0644 packaging/udev/70-openqui.rules /etc/udev/rules.d/70-openqui.rules
+sudo udevadm control --reload-rules
+```
+
+Reconnect only the relevant device after loading the rule. Permissions do not
+enable an unsupported protocol or prove a wireless connection. Distribution
+packagers should validate their session access behavior; installation of this
+template was not exercised during repository preparation.
 
 Only one session owner may use `org.kde.cyberdeck.icue`. Exit an older Open-iCUE
 process before launching OpenQUI normally. The D-Bus name, `open_icue` C++

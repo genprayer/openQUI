@@ -23,13 +23,12 @@ The workspace uses QLockFile and QSaveFile. Import rejects DTD and entity
 references and preserves the source XML bytes. Supported continuous static and
 gradient layers map to known device zones; warnings retain conversion boundaries.
 The preview and hardware renderer share normalized gradient interpolation.
-UI preferences use a separate
-atomic file; changing language does not rename profiles or alter key bindings.
+UI preferences use a separate atomic file; changing language does not rename profiles or alter key bindings.
 
 The source-only catalog and diagrams are independent application resources.
 The explicit local-assets preset selects locally supplied original
-device images, masks and metadata. The native preset uses authored resources. This local-resource build does
-not establish permission to redistribute them. Neither catalog proves that
+device images, masks and metadata. The native preset uses authored resources. The local-resource build does not
+establish permission to redistribute them. Neither catalog proves that
 hardware settings can be applied.
 
 Device discovery reads USB descriptors, bound drivers, input-interface names
