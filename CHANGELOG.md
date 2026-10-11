@@ -2,6 +2,7 @@
 
 ## Unreleased — OpenQUI repository
 
+- Use `openQUI` as the repository name and directory.
 - Add a Russian VS Code setup/troubleshooting guide and preset-based Build/Test tasks.
 - Associate Qt translation catalogs with XML in VS Code; provide a Qt/C++ development container and isolated editor preset.
 

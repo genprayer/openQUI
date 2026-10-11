@@ -1,7 +1,7 @@
 # OpenQUI
 
 Native C++20 / Qt Quick application for Corsair peripherals on Linux.
-The repository is `open-cue-gui`; the executable is `open-cue-gui`.
+The repository is `openQUI`; the executable is `open-cue-gui`.
 English, German and Russian interfaces are included. Device names stay unchanged.
 
 OpenQUI provides live layered RGB editing, click/Shift/rectangle LED selection,
