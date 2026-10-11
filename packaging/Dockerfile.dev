@@ -1,0 +1,16 @@
+FROM debian:13-slim@sha256:a29215f6a35e51e22adffa17f89e9d2ef06214e64a2bad10d765c46aea49f11f
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    ca-certificates git build-essential cmake ninja-build pkg-config python3 \
+    clang-format-19 gdb qt6-base-dev qt6-declarative-dev qt6-svg-dev qt6-svg-plugins \
+    qt6-tools-dev qt6-tools-dev-tools qt6-wayland libudev-dev libasound2-dev libxkbcommon-dev \
+    dbus-daemon pipewire-bin jq fonts-dejavu-core \
+    qml6-module-qtquick qml6-module-qtquick-controls qml6-module-qtquick-layouts \
+    qml6-module-qtquick-dialogs qml6-module-qtqml-workerscript \
+    qml6-module-qtquick-templates qml6-module-qtquick-window && \
+    rm -rf /var/lib/apt/lists/*
+ARG DEV_UID=1000
+ARG DEV_GID=1000
+RUN groupadd --gid "$DEV_GID" developer && \
+    useradd --uid "$DEV_UID" --gid "$DEV_GID" --create-home --shell /bin/bash developer
+USER developer
+WORKDIR /workspace

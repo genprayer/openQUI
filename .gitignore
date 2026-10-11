@@ -6,7 +6,9 @@
 /compile_commands.json
 /.cache/
 /.idea/
-/.vscode/
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/extensions.json
 /.codex/
 /.gemini/
 .DS_Store

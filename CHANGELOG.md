@@ -2,6 +2,8 @@
 
 ## Unreleased — OpenQUI repository
 
+- Associate Qt translation catalogs with XML in VS Code; provide a Qt/C++ development container and isolated editor preset.
+
 - Rename the application presentation and launcher to OpenQUI / open-cue-gui.
 - Keep profile, D-Bus and PipeWire identifiers compatible with existing installations.
 - Separate native and optional original-resource build presets.

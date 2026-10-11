@@ -41,6 +41,35 @@ ownership, RAII for file descriptors and resource registrations, scoped locks,
 immutable constants and small functions. Preserve bounds and rollback paths.
 Avoid unrelated framework rewrites to fix a single device operation.
 
+## VS Code development container
+
+Open `OpenQUI.code-workspace` from this repository, then run **Dev Containers:
+Reopen in Container** from the command palette. Open the project itself rather
+than the parent directory containing unrelated repositories. The tracked
+`.vscode/settings.json` associates only this project's Qt translation catalogs
+with XML, so they are not parsed as TypeScript.
+
+The development image includes GCC, Qt headers, CMake, Ninja, clang-format 19
+and the test dependencies. It uses a normal `developer` account and configures
+the `editor` preset in `build/editor`. Inside the container, `/workspace` paths
+in `compile_commands.json` refer to the actual source and installed headers.
+No host package installation, USB-device mount or desktop audio connection is
+required for editing and deterministic tests.
+
+```sh
+cmake --build --preset editor --parallel 2
+ctest --preset editor
+```
+
+The container uses offscreen software rendering for the GUI tests. Run the
+application normally on the host for physical peripheral use. The development
+container does not supply host HID access or validate real device operations.
+
+For native editing instead, first install the distribution's dependencies in
+[getting-started.md](getting-started.md), then configure a new build directory
+on the host. Do not point a host C/C++ extension at a Docker-generated database
+whose compiler and header paths exist only in the container.
+
 ## Formatting
 
 C++ formatting is pinned to clang-format 19 and `.clang-format`:

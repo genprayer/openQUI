@@ -24,3 +24,12 @@ The asset index contains eight model/integration manifests and 2,697 local file
 entries, including runtime aliases. It is an inventory of the supplied iCUE
 5.52.93 snapshot, not the complete product catalog. Only the two public README
 preview images are tracked; local vendor files and research artifacts are not.
+
+## VS Code environment
+
+The development container was created with the installed Dev Containers CLI.
+The `editor` preset configured successfully, the `open-cue-gui` target built,
+and the existing asset-import suite passed (1/1). The generated compilation
+database resolves Qt headers and source files within the container. All three
+Qt TS catalogs parsed as XML. These checks validate the environment; the live
+VS Code Problems panel still requires opening this project in that container.

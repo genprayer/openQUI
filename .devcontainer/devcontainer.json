@@ -1,0 +1,30 @@
+{
+  "name": "OpenQUI C++ / Qt",
+  "build": {
+    "dockerfile": "../packaging/Dockerfile.dev",
+    "context": "../packaging"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "developer",
+  "containerUser": "developer",
+  "containerEnv": {
+    "QT_QPA_PLATFORM": "offscreen",
+    "QT_QUICK_BACKEND": "software",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ],
+      "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/g++",
+        "C_Cpp.default.compileCommands": "${workspaceFolder}/build/editor/compile_commands.json"
+      }
+    }
+  },
+  "postCreateCommand": "cmake --preset editor"
+}

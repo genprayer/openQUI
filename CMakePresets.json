@@ -20,6 +20,12 @@
       "cacheVariables": {
         "OPENQUI_USE_LOCAL_CORSAIR_RESOURCES": "ON"
       }
+    },
+    {
+      "name": "editor",
+      "displayName": "VS Code development container",
+      "inherits": "native",
+      "binaryDir": "${sourceDir}/build/editor"
     }
   ],
   "buildPresets": [
@@ -30,6 +36,10 @@
     {
       "name": "local-assets",
       "configurePreset": "local-assets"
+    },
+    {
+      "name": "editor",
+      "configurePreset": "editor"
     }
   ],
   "testPresets": [
@@ -57,6 +67,20 @@
         "QT_QUICK_BACKEND": "software",
         "LANG": "C.UTF-8",
         "LC_ALL": "C.UTF-8"
+      }
+    },
+    {
+      "name": "editor",
+      "configurePreset": "editor",
+      "inheritConfigureEnvironment": true,
+      "environment": {
+        "QT_QPA_PLATFORM": "offscreen",
+        "QT_QUICK_BACKEND": "software",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8"
+      },
+      "output": {
+        "outputOnFailure": true
       }
     }
   ]

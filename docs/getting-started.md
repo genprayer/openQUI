@@ -35,6 +35,11 @@ the CMake minimum does not make unsupported APIs work.
 
 ## Native workflow
 
+Run the commands from the repository root, after installing the development
+packages above. A successful Docker build does not install headers, compilers
+or CMake on the host. For editing without those host packages, use the
+[VS Code development container](development.md#vs-code-development-container).
+
 ```sh
 cmake --preset native
 cmake --build --preset native --parallel 2
@@ -84,6 +89,8 @@ Variables are `OPENQUI_BUILD_DIRECTORY`, `OPENQUI_BUILD_JOBS`,
 carry label `org.open-cue-gui.purpose=native-build` and mount this checkout at
 `/workspace`. Do not reuse a build tree from another checkout or Qt version.
 Container-built executables still require matching runtime libraries on the host.
+The generated compilation database uses container paths such as `/workspace`;
+use it inside that container, not as a host IntelliSense configuration.
 
 ## Preview without touching hardware
 
