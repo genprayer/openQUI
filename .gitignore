@@ -9,6 +9,7 @@
 /.vscode/*
 !/.vscode/settings.json
 !/.vscode/extensions.json
+!/.vscode/tasks.json
 /.codex/
 /.gemini/
 .DS_Store

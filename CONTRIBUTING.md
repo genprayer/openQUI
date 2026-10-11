@@ -19,6 +19,8 @@ Separate functional fixes from broad formatting or architectural changes.
 Read [development.md](docs/development.md) for module ownership and style,
 [testing.md](docs/testing.md) for relevant test commands and
 [adding-devices.md](docs/adding-devices.md) before proposing new hardware writes.
+The [VS Code guide](docs/vscode-guide.ru.md) provides the repeatable editor setup
+and the supplied configure/build/test tasks.
 Public interfaces and modules need concise documentation. Update the support
 matrix when a verified capability changes.
 

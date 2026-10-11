@@ -1,6 +1,6 @@
 {
   "files.associations": {
-    "**/translations/open-icue_*.ts": "xml"
+    "**/translations/*.ts": "xml"
   },
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "cmake.sourceDirectory": "${workspaceFolder}",

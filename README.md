@@ -47,6 +47,8 @@ ctest --preset native
 
 [Getting started](docs/getting-started.md) includes Fedora and Debian packages,
 Docker builds, user installation, HID permissions and isolated UI preview.
+For VS Code, use the [Russian setup and troubleshooting guide](docs/vscode-guide.ru.md),
+the repository's Dev Container and the supplied Build/Test tasks.
 Fedora 44 and Debian 13 source builds are exercised locally. Other distributions
 need the same dependencies and their own validation. A Fedora executable is not
 an all-distribution binary; AppImage/Flatpak packages are not provided yet.

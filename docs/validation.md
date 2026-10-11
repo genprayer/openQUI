@@ -33,3 +33,9 @@ and the existing asset-import suite passed (1/1). The generated compilation
 database resolves Qt headers and source files within the container. All three
 Qt TS catalogs parsed as XML. These checks validate the environment; the live
 VS Code Problems panel still requires opening this project in that container.
+
+The supplied VS Code task definitions were subsequently executed in dependency
+order: Configure, Build, Test and Translations. The editor preset passed all
+10 CTest groups; the 447-message language catalog passed. This verifies the
+commands from tasks.json, not a replay of VS Code keyboard shortcuts. The
+Russian guide and local documentation links were also checked.

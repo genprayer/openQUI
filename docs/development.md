@@ -43,32 +43,16 @@ Avoid unrelated framework rewrites to fix a single device operation.
 
 ## VS Code development container
 
-Open `OpenQUI.code-workspace` from this repository, then run **Dev Containers:
-Reopen in Container** from the command palette. Open the project itself rather
-than the parent directory containing unrelated repositories. The tracked
-`.vscode/settings.json` associates only this project's Qt translation catalogs
-with XML, so they are not parsed as TypeScript.
+The complete setup and troubleshooting procedure is in the
+[VS Code guide in Russian](vscode-guide.ru.md). Open `OpenQUI.code-workspace`,
+reopen it in the Dev Container and use the `editor` preset. `Ctrl+Shift+B`
+executes the supplied **OpenQUI: Build** task; **OpenQUI: Test** first builds
+and then runs the tests. Qt translation catalogs are associated with XML.
 
-The development image includes GCC, Qt headers, CMake, Ninja, clang-format 19
-and the test dependencies. It uses a normal `developer` account and configures
-the `editor` preset in `build/editor`. Inside the container, `/workspace` paths
-in `compile_commands.json` refer to the actual source and installed headers.
-No host package installation, USB-device mount or desktop audio connection is
-required for editing and deterministic tests.
-
-```sh
-cmake --build --preset editor --parallel 2
-ctest --preset editor
-```
-
-The container uses offscreen software rendering for the GUI tests. Run the
-application normally on the host for physical peripheral use. The development
-container does not supply host HID access or validate real device operations.
-
-For native editing instead, first install the distribution's dependencies in
-[getting-started.md](getting-started.md), then configure a new build directory
-on the host. Do not point a host C/C++ extension at a Docker-generated database
-whose compiler and header paths exist only in the container.
+Dependencies, language associations and commands belong to the project's
+Dockerfile, presets and `.vscode` configuration. The guide references those
+files instead of duplicating dependency versions. Host and container builds
+must use separate directories and matching compiler/header paths.
 
 ## Formatting
 

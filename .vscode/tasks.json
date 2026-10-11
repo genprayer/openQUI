@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}",
+    "env": {
+      "CMAKE_BUILD_PARALLEL_LEVEL": "2"
+    }
+  },
+  "tasks": [
+    {
+      "label": "OpenQUI: Configure",
+      "type": "process",
+      "command": "cmake",
+      "args": ["--preset", "editor"],
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    },
+    {
+      "label": "OpenQUI: Build",
+      "type": "process",
+      "command": "cmake",
+      "args": ["--build", "--preset", "editor"],
+      "dependsOn": "OpenQUI: Configure",
+      "dependsOrder": "sequence",
+      "problemMatcher": ["$gcc"],
+      "group": {"kind": "build", "isDefault": true},
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    },
+    {
+      "label": "OpenQUI: Test",
+      "type": "process",
+      "command": "ctest",
+      "args": ["--preset", "editor"],
+      "dependsOn": "OpenQUI: Build",
+      "dependsOrder": "sequence",
+      "problemMatcher": [],
+      "group": "test",
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    },
+    {
+      "label": "OpenQUI: Translations",
+      "type": "process",
+      "command": "python3",
+      "args": ["tools/localization/update_catalog.py", "--check"],
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    }
+  ]
+}

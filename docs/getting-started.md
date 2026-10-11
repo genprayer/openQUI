@@ -39,6 +39,8 @@ Run the commands from the repository root, after installing the development
 packages above. A successful Docker build does not install headers, compilers
 or CMake on the host. For editing without those host packages, use the
 [VS Code development container](development.md#vs-code-development-container).
+The [VS Code guide in Russian](vscode-guide.ru.md) covers setup, built-in tasks,
+IntelliSense, translation file types and recovery after environment changes.
 
 ```sh
 cmake --preset native
