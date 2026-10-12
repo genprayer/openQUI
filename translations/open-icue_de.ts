@@ -823,6 +823,14 @@ Rückkehr in die neutrale Position.</translation>
       <translation>Ungültige Beleuchtungseinstellung: Dauer</translation>
     </message>
     <message>
+      <source>Invalid lighting frame timestamp</source>
+      <translation>Ungültiger Zeitstempel des Beleuchtungsbildes</translation>
+    </message>
+    <message>
+      <source>Invalid lighting geometry</source>
+      <translation>Ungültige Beleuchtungsgeometrie</translation>
+    </message>
+    <message>
       <source>Invalid lighting input timestamp</source>
       <translation>Ungültiger Zeitstempel für den Beleuchtungseingang</translation>
     </message>
@@ -857,6 +865,10 @@ Rückkehr in die neutrale Position.</translation>
     <message>
       <source>Invalid saved tilt angles</source>
       <translation>Ungültige gespeicherte Neigungswinkel</translation>
+    </message>
+    <message>
+      <source>Invalid spatial lighting parameter</source>
+      <translation>Ungültiger Parameter für räumliche Beleuchtung</translation>
     </message>
     <message>
       <source>Invalid test color</source>

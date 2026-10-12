@@ -2266,6 +2266,21 @@
       "de": "Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.",
       "en": "Profile imported: %1 lighting layers converted; %2 preserved in the original XML. Live preview in the lighting editor.",
       "ru": "Профиль импортирован: преобразовано слоёв подсветки: %1; сохранено в исходном XML: %2. Предпросмотр в редакторе подсветки."
+    },
+    "Invalid spatial lighting parameter": {
+      "de": "Ungültiger Parameter für räumliche Beleuchtung",
+      "en": "Invalid spatial lighting parameter",
+      "ru": "Недопустимый параметр пространственной подсветки"
+    },
+    "Invalid lighting geometry": {
+      "de": "Ungültige Beleuchtungsgeometrie",
+      "en": "Invalid lighting geometry",
+      "ru": "Недопустимая геометрия подсветки"
+    },
+    "Invalid lighting frame timestamp": {
+      "de": "Ungültiger Zeitstempel des Beleuchtungsbildes",
+      "en": "Invalid lighting frame timestamp",
+      "ru": "Недопустимое время кадра подсветки"
     }
   }
 }

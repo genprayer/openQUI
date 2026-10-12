@@ -41,11 +41,27 @@ struct GuiDpiPeer {
     bool shouldRejectRelease = false;
     QMutex rgbMutex;
     QByteArray rgb;
+    QList<QByteArray> completedFrames;
     int rgbSize = 39;
     bool shouldRejectRgb = false;
     QByteArray lightingPayload() {
         QMutexLocker lock(&rgbMutex);
         return rgb;
+    }
+    bool hasRedFrame(int slot, int lowerBound) {
+        QMutexLocker lock(&rgbMutex);
+        return std::any_of(completedFrames.cbegin(), completedFrames.cend(),
+                           [slot, lowerBound](const auto& frame) {
+                               return frame.size() == 369 && quint8(frame[slot]) > lowerBound;
+                           });
+    }
+    void recordFrame() {
+        if (rgb.size() != rgbSize)
+            return;
+        completedFrames.append(rgb);
+        constexpr qsizetype MAX_RECORDED_FRAMES = 64;
+        if (completedFrames.size() > MAX_RECORDED_FRAMES)
+            completedFrames.removeFirst();
     }
     QByteArray exchange(const QByteArray& request) {
         if (product == open_icue::VIRTUOSO_RECEIVER_PRODUCT_ID) {
@@ -115,10 +131,12 @@ struct GuiDpiPeer {
             else {
                 rgbSize = int(qFromLittleEndian<quint32>(request.constData() + 4));
                 rgb = request.mid(8, std::min(57, rgbSize));
+                recordFrame();
             }
         } else if (command == 7) {
             QMutexLocker lock(&rgbMutex);
             rgb += request.mid(4, std::min(61, rgbSize - int(rgb.size())));
+            recordFrame();
         } else if (command != 0x0d && command != 5)
             throw std::runtime_error("Unexpected GUI DPI command");
         return response;
@@ -203,8 +221,8 @@ class NativeGuiTest : public QObject {
     QStringList zones() const {
         return item("lightingPanel")->property("selectedZoneIds").toStringList();
     }
-    bool chooseStaticColor(const QString& color) {
-        if (!click("lighting-color-0"))
+    bool chooseStaticColor(const QString& color, int index = 0) {
+        if (!click("lighting-color-" + QString::number(index)))
             return false;
         if (!QTest::qWaitFor(
                 [this] { return item("color-confirm") && item("color-confirm")->isVisible(); },
@@ -603,7 +621,60 @@ class NativeGuiTest : public QObject {
         model_->setLightingEditorActive(false);
         QTRY_VERIFY_WITH_TIMEOUT(!model_->isHardwareLightingActive(), GUI_TIMEOUT_MS);
     }
+    void rainColorAndOpacityEditsReachTheOutgoingFrame() {
+        QVERIFY(open("k70_core_rgb", "Lightings"));
+        auto peer = std::make_shared<GuiDpiPeer>();
+        peer->product = open_icue::K70_CORE_PRODUCT_ID;
+        const open_icue::HidEndpoint endpoint{
+            "rain-keyboard", {}, "rain-serial", open_icue::K70_CORE_PRODUCT_ID, {}, false};
+        auto backend = std::make_shared<open_icue::HardwareBackend>(
+            state_->path(), [endpoint] { return QList{endpoint}; },
+            [peer](const auto& device) {
+                return std::make_unique<open_icue::HidSession>(
+                    device, [peer](const QByteArray& request) { return peer->exchange(request); });
+            });
+        model_->enableHardware(backend);
+        QTRY_VERIFY_WITH_TIMEOUT(model_->device().value("isConnected").toBool(), GUI_TIMEOUT_MS);
+        QVERIFY(click("lighting-add"));
+        QVERIFY(chooseLightingType("Rain"));
+        QVERIFY(click("lighting-fixed-colors"));
+        QVERIFY(chooseStaticColor("00ff00"));
+        QVERIFY(chooseStaticColor("00ff00", 1));
+        QTRY_VERIFY2_WITH_TIMEOUT(model_->isHardwareLightingActive(), qPrintable(model_->notice()),
+                                  GUI_TIMEOUT_MS);
+        const auto maximum = [peer](int channel) {
+            const auto bytes = peer->lightingPayload();
+            int result = 0;
+            if (bytes.size() != 369)
+                return result;
+            for (int slot = 0; slot < 123; ++slot)
+                result = std::max(result, int(quint8(bytes[slot + channel * 123])));
+            return result;
+        };
+        QTRY_VERIFY_WITH_TIMEOUT(maximum(1) > 100, GUI_TIMEOUT_MS);
+        QTRY_COMPARE_WITH_TIMEOUT(maximum(0), 0, GUI_TIMEOUT_MS);
+        QTRY_COMPARE_WITH_TIMEOUT(maximum(2), 0, GUI_TIMEOUT_MS);
+        QVERIFY(item("lighting-opacity")->isVisible());
+        auto* opacity = item("lighting-opacity");
+        QVERIFY(click("lighting-opacity", QPointF(opacity->width() * 0.15, opacity->height() / 2)));
+        QTRY_VERIFY_WITH_TIMEOUT(model_->document()
+                                         .value("lightingLayers")
+                                         .toList()
+                                         .first()
+                                         .toMap()
+                                         .value("opacity")
+                                         .toInt() < 30,
+                                 GUI_TIMEOUT_MS);
+        QTRY_VERIFY_WITH_TIMEOUT(maximum(1) <= 77, GUI_TIMEOUT_MS);
+        QVERIFY(capture("rain-visible-color-opacity"));
+    }
+    void keyboardTriggersUseIncomingFramesInDevicePreview_data() {
+        QTest::addColumn<QString>("effect");
+        QTest::newRow("per-key-flash") << QString("Type");
+        QTest::newRow("ripple-from-key") << QString("Ripple");
+    }
     void keyboardTriggersUseIncomingFramesInDevicePreview() {
+        QFETCH(QString, effect);
         QVERIFY(open("k70_core_rgb", "Lightings"));
         auto peer = std::make_shared<GuiDpiPeer>();
         peer->product = open_icue::K70_CORE_PRODUCT_ID;
@@ -636,13 +707,15 @@ class NativeGuiTest : public QObject {
             }
             return QString();
         };
-        const auto staticType = typeId("StaticCustom"), triggerType = typeId("Type");
+        const auto staticType = typeId("StaticCustom"), triggerType = typeId(effect);
         QVERIFY(!staticType.isEmpty() && !triggerType.isEmpty());
         const QVariantList layers{QVariantMap{{"id", "base"},
+                                              {"name", "Background"},
                                               {"type", staticType},
                                               {"zones", QStringList{"A", "B"}},
                                               {"colors", QVariantList{"#0000ff"}}},
                                   QVariantMap{{"id", "trigger"},
+                                              {"name", "Key reaction"},
                                               {"type", triggerType},
                                               {"zones", QStringList{"A", "B"}},
                                               {"colors", QVariantList{"#ff0000"}},
@@ -652,6 +725,7 @@ class NativeGuiTest : public QObject {
                                   GUI_TIMEOUT_MS);
         QTRY_COMPARE_WITH_TIMEOUT(selection()->previewColor("A"), QColor("#0000ff"),
                                   GUI_TIMEOUT_MS);
+        QVERIFY(!peer->hasRedFrame(4, 230));
         QByteArray down(15, 0);
         down[0] = 8;
         down[2] = 4;
@@ -661,13 +735,11 @@ class NativeGuiTest : public QObject {
         }
         QTRY_COMPARE_WITH_TIMEOUT(model_->lightingState().value("reactiveEventCount").toULongLong(),
                                   quint64(1), GUI_TIMEOUT_MS);
-        QTRY_VERIFY_WITH_TIMEOUT(selection()->previewColor("A").red() > 230, GUI_TIMEOUT_MS);
+        QTRY_VERIFY_WITH_TIMEOUT(selection()->previewColor("A").red() > 100, GUI_TIMEOUT_MS);
         QCOMPARE(selection()->previewColor("B"), QColor("#0000ff"));
-        QTRY_VERIFY_WITH_TIMEOUT(peer->lightingPayload().size() > 4 &&
-                                     quint8(peer->lightingPayload()[4]) > 230,
-                                 GUI_TIMEOUT_MS);
+        QTRY_VERIFY_WITH_TIMEOUT(peer->hasRedFrame(4, 230), GUI_TIMEOUT_MS);
         QVERIFY(!model_->lightingState().contains("previewColors"));
-        QVERIFY(capture("keyboard-triggered-frame"));
+        QVERIFY(capture("keyboard-triggered-frame-" + effect));
         QVERIFY(click("navigation-Assignments"));
         QTRY_VERIFY_WITH_TIMEOUT(!model_->isHardwareLightingActive(), GUI_TIMEOUT_MS);
         QVERIFY(model_->hardwarePreviewColors().isEmpty());

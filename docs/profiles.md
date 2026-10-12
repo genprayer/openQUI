@@ -31,12 +31,21 @@ as supported hardware.
 | Continuous GradientLighting | Uneven transition times, RGBA, duration and loop |
 | Continuous WaveLighting | Transition curve, selected zones, velocity, tail length, angle and two-sided flag; independent native spatial replay |
 | Continuous ColorPulseLighting | Both ARGB colors, random flag, speed and duration |
+| Continuous RainLighting | Both ARGB colors, random flag, opacity and speed; independent spatial replay |
 | GradientLighting on a key, PlayOnKeyCenter, one iteration | Native Type effect on K70; samples the original curve using that key's press age |
-| Other triggers, Rain, Ripple, audio-reactive or unknown effects | Preserved in XML; omitted from native playback with conversion warnings |
+| GradientLighting on any key, Standard, one iteration | Native global flash on the selected K70 zones, using the original curve |
+| RippleLighting, PlayFromKeyCenter, one iteration | Native K70 ring from each recorded physical key; overlapping presses retained |
+| Continuous RippleLighting, Standard | Native ring from the device center |
+| Other triggers, automatic ripple duration/spread modes, audio-reactive or unknown effects | Preserved in XML; omitted from native playback with conversion warnings |
 
-The wave replay is independently implemented using the model's extracted LED
+The wave, rain and ripple replay is independently implemented using the model's extracted LED
 geometry. Its visual timing has **not been calibrated against Windows iCUE**;
-preserved parameters do not prove identical physical output. Conversion v2
+preserved parameters do not prove identical physical output. Rain's original
+numeric direction is retained as `sourceDirection`; its enum mapping has not
+been verified, so imported rain starts downward with an explicit conversion
+warning. The direction control can select any of the four native directions.
+Ripple preserves velocity, tail length and the supported `OnlyBetweenFronts`
+mode with fixed duration; its spatial replay remains approximate. Conversion v3
 reverses iCUE's top-first layer order for the native bottom-first compositor.
 Unknown zones, such as macro keys absent on K70 CORE, are reported rather than
 redirected to unrelated LEDs.
@@ -58,16 +67,18 @@ document untouched. It does not silently replace your lighting or assignments.
 ## Developer checks
 
 The 2026-10-12 local snapshot was checked through the native importer with
-hardware disabled: **82/82 files parsed; 80 contained at least one convertible
-route** for the current three peripherals. `Mushroom Cloud` and `Rainbow Vertical`
-contain no convertible route under the current effect/execution rules; their
-original bytes remain available. This count does not mean full playback of 80
+hardware disabled: **82/82 files parsed; 81 contained at least one convertible
+route** for the current three peripherals. `Mushroom Cloud`
+contains no convertible route under the current effect/execution rules; its
+original bytes remain available. This count does not mean full playback of 81
 profiles.
 
-`DOOM-TheDarkAges` converted into **10 K70, 4 Darkstar and 1 Virtuoso layers**.
-Its K70 black background is below the waves and per-key overlay. Rain and other
-unimplemented triggers remain in the source XML. The library audit and
-deterministic three-device replay do not constitute new physical acceptance.
+`DOOM-TheDarkAges` converted into **13 K70, 4 Darkstar and 1 Virtuoso layers**.
+Its K70 black background is below the waves, two rain layers and per-key/global
+press overlays. Unimplemented trigger modes remain in the source XML. The library audit and
+deterministic three-device replay do not constitute physical acceptance. The
+separate user-confirmed K70/VIRTUOSO observations are recorded in
+[validation.md](validation.md#local-installation-and-physical-observations).
 
 `src/profiles/cereal.cpp` parses and converts; `src/core/workspace.cpp` owns
 atomic persistence and import identity; `qml/ProfileSidebar.qml` owns the list

@@ -79,6 +79,27 @@ class NativeKeyboardInputTests final : public QObject {
         QCOMPARE(input.eventCount(), quint64(0));
         QVERIFY(input.poll("selected-usb", 0).isEmpty());
     }
+    void repeatedPressesRetainBoundedRippleHistory() {
+        bool hasPressed = false;
+        open_icue::KeyboardLightingInput input([&] {
+            hasPressed = !hasPressed;
+            return QList<QByteArray>{arrayReport(hasPressed ? 4 : 0)};
+        });
+        (void)input.poll({}, 1);
+        (void)input.poll({}, 1.1);
+        (void)input.poll({}, 1.2);
+        QCOMPARE(input.recentPresses().size(), 2);
+        QCOMPARE(input.recentPresses().first().slot, 4);
+        QCOMPARE(input.recentPresses().first().seconds, 1.0);
+        QCOMPARE(input.recentPresses().last().seconds, 1.2);
+        for (int tick = 0; tick < 1200; ++tick)
+            (void)input.poll({}, 2.0 + tick / 100.0);
+        QCOMPARE(input.recentPresses().size(), 512);
+        (void)input.poll({}, 100);
+        QVERIFY(input.recentPresses().size() <= 1);
+        input.close();
+        QVERIFY(input.recentPresses().isEmpty());
+    }
     void invalidTimeDoesNotConsumeReports() {
         int reads = 0;
         open_icue::KeyboardLightingInput input([&] {

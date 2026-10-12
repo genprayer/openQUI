@@ -51,6 +51,7 @@ void DeviceSelection::setEntries(const QVariantList& value) {
     if (entries_ == value)
         return;
     entries_ = value;
+    spatialEffects_.emplace(entries_);
     rebuildContours();
     emit entriesChanged();
 }
@@ -311,6 +312,7 @@ QColor DeviceSelection::colorFor(const Contour& contour) const {
             color = QColor::fromHsvF(std::fmod(phase * 0.15 + position, 1.0), 0.9, 1);
         std::optional<QColor> timeline;
         try {
+            validateSpatialEffect(layer);
             timeline = lightingTimelineColor(layer, seconds);
         } catch (const std::exception& error) {
             qWarning("Lighting preview: %s", error.what());
@@ -334,10 +336,22 @@ QColor DeviceSelection::colorFor(const Contour& contour) const {
                                      color.greenF() * (1 - weight) + next.greenF() * weight,
                                      color.blueF() * (1 - weight) + next.blueF() * weight);
         }
+        if ((type == "Rain" || type == "Ripple") && spatialEffects_) {
+            qsizetype index = 0;
+            while (index < entries_.size() &&
+                   entries_[index].toMap().value("id").toString() != contour.id)
+                ++index;
+            if (index == entries_.size())
+                continue;
+            if (type == "Rain")
+                color = spatialEffects_->rain(layer, index, seconds);
+            else if (!lightingNeedsKeyInput(layer))
+                color = spatialEffects_->ripple(layer, index, seconds, nullptr);
+        }
         double alpha = color.alphaF() * layer.value("opacity", 100).toDouble() / 100.0;
-        if (type == "ColorPulse" || type == "Wave" || type == "Visor" || type == "Rain")
+        if (type == "ColorPulse" || type == "Wave" || type == "Visor")
             alpha *= 0.15 + 0.85 * (std::sin((phase + position) * 2 * std::numbers::pi) + 1) / 2;
-        if (type == "Type" || type == "Ripple")
+        if (lightingNeedsKeyInput(layer))
             continue;
         if (type == "Solid")
             alpha *= std::max(0.0, 1 - seconds / duration);

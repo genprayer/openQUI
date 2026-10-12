@@ -823,6 +823,14 @@ return to the neutral position.</translation>
       <translation>Invalid lighting duration</translation>
     </message>
     <message>
+      <source>Invalid lighting frame timestamp</source>
+      <translation>Invalid lighting frame timestamp</translation>
+    </message>
+    <message>
+      <source>Invalid lighting geometry</source>
+      <translation>Invalid lighting geometry</translation>
+    </message>
+    <message>
       <source>Invalid lighting input timestamp</source>
       <translation>Invalid lighting input timestamp</translation>
     </message>
@@ -857,6 +865,10 @@ return to the neutral position.</translation>
     <message>
       <source>Invalid saved tilt angles</source>
       <translation>Invalid saved tilt angles</translation>
+    </message>
+    <message>
+      <source>Invalid spatial lighting parameter</source>
+      <translation>Invalid spatial lighting parameter</translation>
     </message>
     <message>
       <source>Invalid test color</source>

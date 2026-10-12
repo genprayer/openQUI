@@ -44,6 +44,11 @@ RowLayout {
             delete item.waveTailLength;
             delete item.waveAngle;
             delete item.isWaveDoublesided;
+            delete item.rippleVelocity;
+            delete item.rippleTailLength;
+            delete item.sourceWaveSpread;
+            delete item.isKeyTriggered;
+            delete item.sourceDirection;
         }
         if (field === "direction" && item.waveAngle !== undefined)
             item.waveAngle = [90, 270, 0, 180][value];
@@ -462,7 +467,7 @@ RowLayout {
                     font.pixelSize: 11
                 }
                 ColumnLayout {
-                    visible: root.effect.key === "StaticCustom"
+                    visible: root.hasControl("opacity")
                     Layout.fillWidth: true
                     Text {
                         text: qsTranslate("OpenICUE", "Deckkraft")

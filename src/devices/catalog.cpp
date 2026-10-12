@@ -367,12 +367,12 @@ QVariantList Catalog::lightingTypes(const QString& id) const {
             QStringList controls{"colors"};
             if (key != "StaticCustom" && key != "FrequencyVisualizer")
                 controls.append("speed");
-            if (key == "StaticCustom")
+            if (key == "StaticCustom" || key == "Rain")
                 controls.append("opacity");
             if (QStringList{"Gradient", "Solid", "Ripple", "Type"}.contains(key))
                 controls.append("duration");
             if (QStringList{"RainbowWave", "SpiralRainbow", "ColorWave", "Visor", "Gradient",
-                            "Wave"}
+                            "Wave", "Rain"}
                     .contains(key))
                 controls.append("direction");
             if (QStringList{"ColorPulse", "ColorShift", "ColorWave", "Visor", "Rain", "Type",

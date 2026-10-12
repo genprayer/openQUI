@@ -1,4 +1,6 @@
 #pragma once
+#include "devices/spatial_effects.h"
+#include <optional>
 
 #include <QElapsedTimer>
 #include <QImage>
@@ -104,6 +106,7 @@ class DeviceSelection : public QQuickPaintedItem {
     [[nodiscard]] QStringList rectangleIds() const;
     [[nodiscard]] QColor colorFor(const Contour& contour) const;
     QVariantList entries_, previewLayers_;
+    std::optional<SpatialEffects> spatialEffects_;
     QVariantMap frameColors_;
     QList<Contour> contours_;
     QSizeF canvasSize_{2956, 1120};

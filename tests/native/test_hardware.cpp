@@ -3,6 +3,7 @@
 #include <QtEndian>
 #include <QtTest>
 #include <algorithm>
+#include <limits>
 #include <stdexcept>
 
 namespace {
@@ -441,6 +442,122 @@ class NativeHardwareTests final : public QObject {
         QVERIFY_EXCEPTION_THROWN(open_icue::lightingFrame(layers, {QVariantMap{{"id", "A"}}}, 0),
                                  std::runtime_error);
     }
+    void rainIsDeterministicMovesAndRespectsLayerMask() {
+        const QVariantList zones{
+            QVariantMap{{"id", "A"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"y", 0}, {"width", 1}}}}},
+            QVariantMap{{"id", "B"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"y", 1}, {"width", 1}}}}},
+            QVariantMap{{"id", "C"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"y", 2}, {"width", 1}}}}}};
+        const QVariantMap base{{"type", "StaticCustomLightingTypeData"},
+                               {"zones", QStringList{"all"}},
+                               {"colors", QVariantList{"#0000ff"}}};
+        QVariantMap rain{{"type", "RainLightingTypeData"},
+                         {"zones", QStringList{"A", "B"}},
+                         {"colors", QVariantList{"#ff0000", "#00ff00"}},
+                         {"name", "Rain test"},
+                         {"direction", 2},
+                         {"speed", 1},
+                         {"duration", 1},
+                         {"isRandom", false}};
+        QSet<QRgb> observed;
+        for (int tick = 0; tick < 40; ++tick) {
+            const double time = tick / 10.0;
+            const auto frame = lightingFrame({base, rain}, zones, time);
+            QCOMPARE(frame, lightingFrame({base, rain}, zones, time));
+            QCOMPARE(frame[2], qRgb(0, 0, 255));
+            observed.insert(frame[0]);
+        }
+        QVERIFY(observed.size() > 3);
+        rain["direction"] = 0.5;
+        QVERIFY_EXCEPTION_THROWN(lightingFrame({rain}, zones, 0), std::invalid_argument);
+    }
+    void rippleSpreadsFromRealKeysAndRetainsTheBackground() {
+        const QVariantList zones{
+            QVariantMap{{"id", "A"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"width", 1}}}}},
+            QVariantMap{{"id", "B"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 1}, {"width", 1}}}}},
+            QVariantMap{{"id", "C"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 2}, {"width", 1}}}}}};
+        const QVariantMap base{{"type", "StaticCustomLightingTypeData"},
+                               {"zones", QStringList{"all"}},
+                               {"colors", QVariantList{"#0000ff"}}};
+        const QVariantMap ripple{{"type", "RippleLightingTypeData"},
+                                 {"zones", QStringList{"A", "B"}},
+                                 {"colors", QVariantList{"#ff0000"}},
+                                 {"duration", 2},
+                                 {"rippleVelocity", 1},
+                                 {"rippleTailLength", 1},
+                                 {"speed", 1.5}};
+        QMap<int, double> presses;
+        QCOMPARE(lightingFrame({base, ripple}, zones, 10, &presses),
+                 (QList<QRgb>{qRgb(0, 0, 255), qRgb(0, 0, 255), qRgb(0, 0, 255)}));
+        presses[k70LedIndex("A")] = 10;
+        const auto origin = lightingFrame({base, ripple}, zones, 10, &presses);
+        QCOMPARE(origin[0], qRgb(255, 0, 0));
+        QCOMPARE(origin[1], qRgb(0, 0, 255));
+        const auto propagated = lightingFrame({base, ripple}, zones, 11, &presses);
+        QCOMPARE(propagated[0], qRgb(0, 0, 255));
+        QCOMPARE(propagated[1], qRgb(255, 0, 0));
+        QCOMPARE(propagated[2], qRgb(0, 0, 255));
+        QCOMPARE(lightingFrame({base, ripple}, zones, 12, &presses),
+                 (QList<QRgb>{qRgb(0, 0, 255), qRgb(0, 0, 255), qRgb(0, 0, 255)}));
+    }
+    void rippleHistoryKeepsTwoWavesFromTheSameKey() {
+        const QVariantList zones{
+            QVariantMap{{"id", "A"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"width", 1}}}}},
+            QVariantMap{{"id", "B"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 1}, {"width", 1}}}}}};
+        const QVariantMap ripple{{"type", "RippleLightingTypeData"},
+                                 {"zones", QStringList{"all"}},
+                                 {"colors", QVariantList{"#ff0000"}},
+                                 {"duration", 2},
+                                 {"speed", 1.5},
+                                 {"rippleVelocity", 1},
+                                 {"rippleTailLength", 0.5}};
+        QMap<int, double> latest{{k70LedIndex("A"), 10.8}};
+        const QList<LightingKeyPress> history{{k70LedIndex("A"), 10.0}, {k70LedIndex("A"), 10.8}};
+        QCOMPARE(lightingFrame({ripple}, zones, 11, &latest)[1], qRgb(0, 0, 0));
+        QCOMPARE(lightingFrame({ripple}, zones, 11, &latest, &history)[1], qRgb(255, 0, 0));
+    }
+    void invalidSpatialParametersFailBeforeDeviceOrKeyInputDiscovery() {
+        int discoveries = 0, reads = 0;
+        auto input = std::make_shared<KeyboardLightingInput>([&] {
+            ++reads;
+            return QList<QByteArray>{};
+        });
+        HardwareBackend backend(
+            {},
+            [&] {
+                ++discoveries;
+                return QList<HidEndpoint>{};
+            },
+            {}, input);
+        QVariantMap ripple{{"type", "RippleLightingTypeData"},
+                           {"zones", QStringList{"all"}},
+                           {"colors", QVariantList{"#ff0000"}},
+                           {"rippleVelocity", 0}};
+        QVERIFY_EXCEPTION_THROWN(
+            backend.applyLighting("k70_core_rgb", {ripple}, {QVariantMap{{"id", "A"}}}),
+            std::invalid_argument);
+        QCOMPARE(discoveries, 0);
+        QCOMPARE(reads, 0);
+        ripple["rippleVelocity"] = 1;
+        QVERIFY_EXCEPTION_THROWN(
+            lightingFrame({ripple}, {}, std::numeric_limits<double>::infinity()),
+            std::invalid_argument);
+        const QVariantMap missingCurve{{"type", "SolidLightingTypeData"},
+                                       {"zones", QStringList{"all"}},
+                                       {"isKeyTriggered", true}};
+        QVERIFY_EXCEPTION_THROWN(
+            backend.applyLighting("k70_core_rgb", {missingCurve}, {QVariantMap{{"id", "A"}}}),
+            std::invalid_argument);
+        QCOMPARE(discoveries, 0);
+        QCOMPARE(reads, 0);
+    }
     void keyTriggerPreservesOtherLayersAndUsesOnlyActualPresses() {
         const QVariantList zones{QVariantMap{{"id", "A"}}, QVariantMap{{"id", "B"}}};
         const QVariantMap base{{"type", "StaticCustomLightingTypeData"},
@@ -558,6 +675,25 @@ class NativeHardwareTests final : public QObject {
         QVERIFY(std::abs(qBlue(middle[0]) - 48) <= 1);
         QCOMPARE(qRed(middle[0]), 0);
         QCOMPARE(lightingFrame({timeline}, zones, 4), start);
+    }
+    void importedGlobalKeyGradientTriggersOnlyAfterRealInput() {
+        const QVariantMap layer{
+            {"type", "SolidLightingTypeData"},
+            {"zones", QStringList{"all"}},
+            {"isKeyTriggered", true},
+            {"isLooping", false},
+            {"duration", 2},
+            {"transitions", QVariantList{QVariantMap{{"time", 0.0}, {"color", "#ffff0000"}},
+                                         QVariantMap{{"time", 1.0}, {"color", "#00ff0000"}}}}};
+        const QVariantList zones{QVariantMap{{"id", "A"}}, QVariantMap{{"id", "B"}}};
+        QMap<int, double> presses;
+        QCOMPARE(lightingFrame({layer}, zones, 10, &presses),
+                 (QList<QRgb>{qRgb(0, 0, 0), qRgb(0, 0, 0)}));
+        presses[k70LedIndex("C")] = 10;
+        QCOMPARE(lightingFrame({layer}, zones, 10, &presses),
+                 (QList<QRgb>{qRgb(255, 0, 0), qRgb(255, 0, 0)}));
+        QCOMPARE(lightingFrame({layer}, zones, 12, &presses),
+                 (QList<QRgb>{qRgb(0, 0, 0), qRgb(0, 0, 0)}));
     }
     void importedPerKeyTimelineUsesPressAgeAndPreservesOtherKeys() {
         const QVariantMap base{{"type", "StaticCustomLightingTypeData"},

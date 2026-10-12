@@ -7,7 +7,7 @@ effect IDs stay independent of translated labels.
 | Directory | Responsibility |
 | --- | --- |
 | `src/core` | Workspace locking and atomic JSON persistence |
-| `src/devices` | Device catalog, libudev inventory and verified hidraw protocol operations |
+| `src/devices` | Device catalog, libudev inventory, spatial RGB effects and verified hidraw protocol operations |
 | `src/profiles` | Bounded Cereal XML import, partial native lighting conversion and original-byte preservation |
 | `src/audio` | ALSA mixer, stereo EQ, measured binaural 7.1 and scoped PipeWire routing |
 | `src/gui` | Qt controller, serialized hardware worker, selection geometry, providers, translations and tray |
@@ -22,7 +22,7 @@ effect IDs stay independent of translated labels.
 
 The workspace uses QLockFile and QSaveFile. Import rejects DTD and entity
 references and preserves the source XML bytes. Supported static, gradient, wave,
-pulse and per-key gradient layers map to known device zones; warnings retain
+pulse, rain, ripple and key-triggered gradient layers map to known device zones; warnings retain
 conversion boundaries. See [profiles.md](profiles.md) for execution limits.
 The preview and hardware renderer share normalized gradient interpolation.
 UI preferences use a separate atomic file; changing language does not rename profiles or alter key bindings.

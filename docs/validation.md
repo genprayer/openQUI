@@ -1,6 +1,6 @@
 # Validation snapshot
 
-Checked on 2026-10-12 during preparation of the OpenQUI source repository.
+Checked on 2026-10-12–13 during preparation and local installation of OpenQUI.
 
 | Configuration | Toolchain / scope | Result |
 | --- | --- | --- |
@@ -8,19 +8,21 @@ Checked on 2026-10-12 during preparation of the OpenQUI source repository.
 | Debian 13, authored resources | GCC 14.2.0 / Qt 6.8.2; includes private PipeWire signal test | 10/10 passed |
 | Debian 13, original local resources | All eight imported device/integration RCCs; same suites | 10/10 passed |
 | Final original-resource profile changes | Sidebar input, three-device replay, importer v2, wave/per-key curves, translations | 10/10 passed |
-| Official-gallery library | 82 publisher files downloaded and SHA-256 verified; native import with HID disabled | 82 parsed; 80 with convertible layers |
+| Native rain/ripple changes | Original-resource build; GUI edits, RGB payloads, K70 trigger/history and import v3 | 10/10 passed |
+| Source-only rain/ripple checks | Fallback resources; core, hardware, keyboard input and translations, then complete GUI suite after correcting transient-frame assertions | 5/5 groups passed across the two runs |
+| Official-gallery library | 82 publisher files downloaded and SHA-256 verified; native import v3 with HID disabled | 82 parsed; 81 with convertible layers |
 | Final Debian targeted checks | Core, translations, D-Bus and asset importer after test path fixes | 4/4 passed |
 | Asset importer contracts | Six synthetic tests, no Windows execution | Passed |
-| UI catalogs | 452 complete messages in German, English and Russian | Passed |
+| UI catalogs | 455 complete messages in German, English and Russian | Passed |
 | C++ formatting | clang-format 19, committed style | Passed |
 | Shell syntax, local documentation links and Git whitespace | Source maintenance checks | Passed |
 | Fedora host preview | Offscreen software rendering, isolated D-Bus, no HID; existing profile path | Passed |
 
-These checks do not establish additional hardware support. No live HID writes,
-pairing operation or audible/spatial acceptance test was performed for this
-repository preparation. Existing physical observations are identified separately
-in [compatibility.md](compatibility.md). GitHub CI is configured but has not been
-run on GitHub. Raw build/test logs and captures are kept in ignored `artifacts/`.
+The deterministic checks do not establish additional hardware support. Physical
+observations are recorded below and in [compatibility.md](compatibility.md).
+No pairing operation or audible/spatial acceptance test was performed in this
+profile-replay work. GitHub CI is configured but has not been run on GitHub.
+Raw build/test logs and captures are kept in ignored `artifacts/`.
 
 The asset index contains eight model/integration manifests and 2,697 local file
 entries, including runtime aliases. It is an inventory of the supplied iCUE
@@ -36,11 +38,37 @@ translations and GUI (4/4). Explicit `ON` with missing bundles failed during
 configuration. This checks both distribution modes rather than treating a
 local-asset build as proof of a clean checkout.
 
-Profile v2 tests include independent multi-device duplication, safe reimport
+Profile tests include independent multi-device duplication, safe reimport
 across converter versions, layer order, recorded wave parameters, per-key
 transition sampling and three different device RGB payloads in one active
 profile. Hardware tests also cover keeping keyboard press state between
-frames for other devices. No physical HID was opened by these tests.
+frames for other devices. Rain is deterministic and respects selected zones;
+ripple samples preserved curves and uses bounded press history, including two
+overlapping presses of one key. GUI tests exercise rain palette/opacity edits
+and Type/Ripple key reports through outgoing RGB payloads. No physical HID was
+opened by these deterministic tests.
+
+## Local installation and physical observations
+
+The tested native binary was installed as `~/.local/bin/open-cue-gui` and the
+previous process was stopped after releasing its lighting sessions. The two
+existing profile records remained identical. Explicitly reimporting the same
+official DOOM bytes created a separate converter-v3 profile with 13 K70 layers,
+4 Darkstar layers and 1 VIRTUOSO layer; the old profile was retained.
+
+On the Fedora KDE/Wayland desktop, all three peripherals acknowledged RGB
+frames. VIRTUOSO, switched to 2.4 GHz, answered battery queries with 24% charge
+after the first restart. A later poll again timed out on the headset query;
+receiver RGB acknowledgements alone do not prove a current radio link. The
+timeout's cause remains unverified. The user
+confirmed changing illumination on both K70 and VIRTUOSO and keyboard flashes
+on physical key presses. Exact animation equivalence with Windows remains
+unverified, including imported rain direction and spatial timing.
+
+The legacy `open-icue.desktop` and executable were backed up outside the source
+checkout. Only the OpenQUI desktop entry remains; the old command name forwards
+to the new executable for existing launchers. This local migration is separate
+from the install script's normal file replacement.
 
 ## VS Code environment
 

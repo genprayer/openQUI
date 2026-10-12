@@ -17,6 +17,8 @@ namespace open_icue {
 namespace {
 constexpr int MAX_INPUT_REPORTS = 64;
 constexpr int MAX_INPUT_REPORT_BYTES = 64;
+constexpr qsizetype MAX_RECENT_PRESSES = 512;
+constexpr double MAX_PRESS_AGE_SECONDS = 60;
 constexpr auto HID_SYS_DIRECTORY = "/sys/class/hidraw";
 constexpr auto HID_DEV_DIRECTORY = "/dev";
 int ledSlot(int usage) {
@@ -74,6 +76,7 @@ void KeyboardLightingInput::close() {
     usbPath_.clear();
     held_.clear();
     presses_.clear();
+    recentPresses_.clear();
     eventCount_ = 0;
 }
 void KeyboardLightingInput::openForUsb(const QString& usbPath) {
@@ -152,6 +155,9 @@ QMap<int, double> KeyboardLightingInput::poll(const QString& usbPath, double sec
         for (const int key : *keys)
             if (!held_.contains(key)) {
                 presses_[key] = seconds;
+                recentPresses_.append({key, seconds});
+                if (recentPresses_.size() > MAX_RECENT_PRESSES)
+                    recentPresses_.removeFirst();
                 ++eventCount_;
             }
         held_ = *keys;
@@ -162,6 +168,9 @@ QMap<int, double> KeyboardLightingInput::poll(const QString& usbPath, double sec
         else
             ++it;
     }
+    recentPresses_.removeIf([seconds](const auto& event) {
+        return seconds < event.seconds || seconds - event.seconds >= MAX_PRESS_AGE_SECONDS;
+    });
     return presses_;
 }
 } // namespace open_icue

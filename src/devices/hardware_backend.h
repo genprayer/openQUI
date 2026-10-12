@@ -47,7 +47,10 @@ class HardwareBackend {
 int k70LedIndex(const QString& id);
 /** Render continuous layers and real per-key triggers into physical LED colors. */
 QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones, double seconds,
-                          const QMap<int, double>* presses = nullptr);
+                          const QMap<int, double>* presses = nullptr,
+                          const QList<LightingKeyPress>* history = nullptr);
 /** Validate and evaluate an imported looping RGBA timeline; absent timelines return nullopt. */
 [[nodiscard]] std::optional<QColor> lightingTimelineColor(const QVariantMap& layer, double seconds);
+/** Return whether a layer requires the verified K70 keyboard input stream. */
+[[nodiscard]] bool lightingNeedsKeyInput(const QVariantMap& layer);
 } // namespace open_icue

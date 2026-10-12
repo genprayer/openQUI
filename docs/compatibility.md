@@ -8,7 +8,7 @@ a Wayland session. Package commands are in [getting-started.md](getting-started.
 
 | Platform | Validation boundary |
 | --- | --- |
-| Fedora 44, x86-64 | Native source build and deterministic test suites; predecessor physically exercised on the user's KDE/Wayland desktop |
+| Fedora 44, x86-64 | Native source build and deterministic test suites; current OpenQUI installed and RGB exercised on the user's KDE/Wayland desktop |
 | Debian 13, x86-64 | Source build, GUI contracts, D-Bus and private PipeWire signal tests; physical Debian desktop/device use not validated |
 | Other distributions with Qt 6.8+ | Source-build candidates; not yet tested as release targets |
 | Older Qt or other operating systems | Outside the current build contract |
@@ -44,15 +44,16 @@ of OpenQUI's vendor configuration support.
 | Feature | Current behavior and acceptance boundary |
 | --- | --- |
 | Local profiles | Locked atomic persistence; sidebar add and right-click rename/duplicate/delete; independent profile and language settings |
-| iCUE import | Static/gradient/wave/pulse and the recorded K70 per-key gradient mode converted; source XML retained; profile activation replays each connected supported peripheral while a lighting editor is open; see [limits](profiles.md) |
+| iCUE import | Static/gradient/wave/pulse/rain, supported ripple modes and K70 press curves converted; source XML retained; profile activation replays each connected supported peripheral while a lighting editor is open; see [limits](profiles.md) |
 | LED selection | Click, Shift/Ctrl, drag rectangle; per-layer zone selection |
 | Live RGB | Sends frames only while a lighting editor is active; profile activation includes each connected supported peripheral; coalesces edits; picker previews before OK and Cancel restores the previous color |
 | K70 Type effect | Real descriptor-verified key input, fading and composition with continuous layers; physical reaction confirmed by the user |
-| Other reactive lighting | Ripple/Rain and audio-reactive effects are not implemented; editor presence does not establish hardware execution |
+| Rain/Ripple | Independent spatial rendering, selected zones, rain palette/opacity/direction and K70 ripple input/history; source timing/direction limitations in [profiles.md](profiles.md) |
+| Audio-reactive lighting | Not implemented |
 | Mouse assignment editor | Fifteen physical inputs and a virtual keyboard with F1–F24; profile storage only |
 | Active Darkstar DPI | Guarded wired operation, identity/ACK/value/index readback and rollback tests; physical pointer measurement pending |
 | DPI stage/Sniper tables, gesture execution and surface calibration | Editors/local state do not yet implement full hardware behavior |
-| RGB hardware writes | Transport acknowledgements on K70, wired/wireless Darkstar and VIRTUOSO/0a42; exact colors require physical observation |
+| RGB hardware writes | Transport acknowledgements on K70, wired/wireless Darkstar and VIRTUOSO/0a42; user confirmed current DOOM illumination on K70/VIRTUOSO and K70 press flashes; exact animation equivalence remains unverified |
 | Battery | Verified Darkstar and VIRTUOSO/0a42 queries; tray display; no UPower provider |
 | SLIPSTREAM pairing | Darkstar + separate `1bdc` receiver only; writes/identifier readback implemented; cable-removal RF acceptance pending |
 | Full Multipoint | Not implemented; the VIRTUOSO receiver is not used for Darkstar pairing by this implementation |

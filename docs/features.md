@@ -28,7 +28,7 @@ open-cue-gui --no-hardware --import-profile /path/to/profile.cueprofile --dump-s
 ```
 
 The C++ Cereal importer preserves the original bytes and their SHA-256. It converts
-enabled static layers and continuously repeating gradients for matching device
+enabled static, gradient, wave, pulse, rain and supported ripple layers for matching device
 categories and supported USB IDs. Generic keyboard, mouse and headset routes can
 map to the corresponding supported model. Receiver entries are not lighting targets.
 Known keys and LEDs retain their zones; unknown zones are reported and skipped.
@@ -46,8 +46,10 @@ Original files can contain profiles for hundreds of devices; the source count
 includes all those routes. It is not a
 count of effect types supported by the renderer.
 
-Triggered playback, unsupported effects and assignments remain in the preserved
-XML. Gradients without an explicit complete continuous timeline are not guessed.
+Supported K70 single-key and global press curves use actual input reports;
+ripples retain a bounded history of overlapping presses. Other trigger modes,
+unsupported effects and assignments remain in the preserved XML. Gradients
+without an explicit complete timeline are not guessed.
 The importer reports partial conversion rather than silently turning such content
 into a different effect. Reimporting the same bytes does not overwrite edited
 native layers. Importing from a headless or inactive editor performs no HID writes.

@@ -1,5 +1,6 @@
 #include "hardware_backend.h"
 #include "catalog.h"
+#include "spatial_effects.h"
 #include <QColor>
 #include <QDateTime>
 #include <QDir>
@@ -33,8 +34,8 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
     if (!layer.contains("transitions"))
         return std::nullopt;
     const auto type = layer.value("type").toString().section("LightingTypeData", 0, 0);
-    const bool isPerKey = type == "Type";
-    if (!QStringList{"Gradient", "Wave", "Type"}.contains(type))
+    const bool isTriggered = lightingNeedsKeyInput(layer);
+    if (!QStringList{"Gradient", "Wave", "Type", "Ripple", "Solid"}.contains(type))
         throw std::invalid_argument("A lighting timeline requires a gradient effect");
     bool isDurationValid = false;
     const auto duration = layer.value("duration").toDouble(&isDurationValid);
@@ -42,7 +43,7 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
     if (!isDurationValid || !std::isfinite(duration) || duration <= 0 || !std::isfinite(seconds) ||
         seconds < 0 || transitions.size() < 2 || transitions.size() > MAX_LIGHTING_TRANSITIONS ||
         layer.value("isLooping").metaType().id() != QMetaType::Bool ||
-        layer.value("isLooping").toBool() == isPerKey)
+        layer.value("isLooping").toBool() == isTriggered)
         throw std::invalid_argument("Invalid continuous lighting timeline");
     QList<double> times;
     QList<QColor> colors;
@@ -60,7 +61,7 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
     if (times.first() != 0 || times.last() != 1)
         throw std::invalid_argument("Lighting transitions must span the complete timeline");
     const double phase =
-        isPerKey ? std::min(seconds / duration, 1.0) : std::fmod(seconds / duration, 1.0);
+        isTriggered ? std::min(seconds / duration, 1.0) : std::fmod(seconds / duration, 1.0);
     for (qsizetype index = 1; index < times.size(); ++index) {
         if (phase > times[index])
             continue;
@@ -188,6 +189,12 @@ QVariantMap battery(HidSession& session, quint8 endpoint, bool isV2w) {
 
 std::optional<QColor> lightingTimelineColor(const QVariantMap& layer, double seconds) {
     return validatedTimelineColor(layer, seconds);
+}
+
+bool lightingNeedsKeyInput(const QVariantMap& layer) {
+    const auto type = layer.value("type").toString().section("LightingTypeData", 0, 0);
+    return type == "Type" || (type == "Ripple" && layer.value("isKeyTriggered", true).toBool()) ||
+           layer.value("isKeyTriggered").toBool();
 }
 
 HardwareBackend::HardwareBackend(QString stateDirectory, EndpointDiscovery discovery,
@@ -498,13 +505,21 @@ int k70LedIndex(const QString& id) {
 }
 
 QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones, double seconds,
-                          const QMap<int, double>* presses) {
+                          const QMap<int, double>* presses,
+                          const QList<LightingKeyPress>* history) {
     QList<QRgb> frame;
+    if (!std::isfinite(seconds) || seconds < 0)
+        throw std::invalid_argument("Invalid lighting frame timestamp");
     QList<std::optional<QColor>> timelineColors;
     for (const auto& layer : layers) {
         validateWaveParameters(layer.toMap());
+        validateSpatialEffect(layer.toMap());
+        if (lightingNeedsKeyInput(layer.toMap()) && !presses)
+            throw std::runtime_error("This effect needs an input or audio trigger and is not "
+                                     "implemented for hardware");
         timelineColors.append(lightingTimelineColor(layer.toMap(), seconds));
     }
+    const SpatialEffects spatial(zones);
     for (int index = 0; index < zones.size(); ++index) {
         const auto zone = zones[index].toMap();
         QColor color(Qt::black);
@@ -516,7 +531,7 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
             const auto type = layer.value("type").toString().section("LightingTypeData", 0, 0);
             if (!QStringList{"StaticCustom", "Solid", "ColorPulse", "ColorShift", "Rainbow",
                              "RainbowWave", "ColorWave", "Gradient", "Wave", "Visor",
-                             "SpiralRainbow"}
+                             "SpiralRainbow", "Rain", "Ripple"}
                      .contains(type) &&
                 !(type == "Type" && presses))
                 throw std::runtime_error("This effect needs an input or audio trigger and is not "
@@ -532,7 +547,11 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
                 layer.value("isRandom").toBool() &&
                 QStringList{"ColorPulse", "ColorShift", "ColorWave", "Visor"}.contains(type);
             QColor next(colors.isEmpty() ? "#ffffff" : colors.first().toString());
-            if (type == "Wave" && layer.contains("waveVelocity"))
+            if (type == "Rain")
+                next = spatial.rain(layer, index, seconds);
+            else if (type == "Ripple")
+                next = spatial.ripple(layer, index, seconds, presses, history);
+            else if (type == "Wave" && layer.contains("waveVelocity"))
                 next = waveTimelineColor(layer, zone, seconds);
             else if (timelineColors[layerIndex])
                 next = *timelineColors[layerIndex];
@@ -582,6 +601,15 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
                         std::fmod(press.value() * 0.61803398875 + press.key() * 0.38196601125, 1.0),
                         1, 1);
             }
+            if (type == "Solid" && layer.value("isKeyTriggered").toBool()) {
+                const auto started = std::max_element(presses->cbegin(), presses->cend());
+                const double age = started == presses->cend() ? -1 : seconds - *started;
+                const double duration = layer.value("duration", 1).toDouble();
+                next = age >= 0 && age < duration ? *lightingTimelineColor(layer, age)
+                                                  : QColor(Qt::transparent);
+                opacity = std::clamp(layer.value("opacity", 100).toDouble() / 100.0, 0.0, 1.0) *
+                          next.alphaF();
+            }
             color = QColor::fromRgbF(next.redF() * opacity + color.redF() * (1 - opacity),
                                      next.greenF() * opacity + color.greenF() * (1 - opacity),
                                      next.blueF() * opacity + color.blueF() * (1 - opacity));
@@ -620,7 +648,7 @@ QVariantMap HardwareBackend::applyLighting(const QString& model, const QVariantL
         throw std::runtime_error("Hardware lighting is not supported for this model");
     // An empty edited layer stack clears every LED instead of retaining the previous frame.
     const bool hasKeyTrigger = std::any_of(layers.cbegin(), layers.cend(), [](const auto& value) {
-        return value.toMap().value("type").toString().startsWith("TypeLightingTypeData");
+        return lightingNeedsKeyInput(value.toMap());
     });
     if (hasKeyTrigger && (!isKeyboard || !keyboardInput_))
         throw std::runtime_error("This effect needs an input or audio trigger and is not "
@@ -639,7 +667,7 @@ QVariantMap HardwareBackend::applyLighting(const QString& model, const QVariantL
                                                                        : DARKSTAR_PRODUCT_ID);
     if (hasKeyTrigger) {
         presses = keyboardInput_->poll(endpoint.sysPath, seconds);
-        colors = lightingFrame(layers, zones, seconds, &presses);
+        colors = lightingFrame(layers, zones, seconds, &presses, &keyboardInput_->recentPresses());
     } else if (isKeyboard && keyboardInput_)
         keyboardInput_->close();
     const int ledCount = isKeyboard ? K70_LED_COUNT : isHeadset ? 3 : 13;

@@ -20,6 +20,7 @@ add_library(open_icue_core STATIC
     src/devices/hid_transport.cpp src/devices/hid_transport.h
     src/devices/hardware_backend.cpp src/devices/hardware_backend.h
     src/devices/keyboard_input.cpp src/devices/keyboard_input.h
+    src/devices/spatial_effects.cpp src/devices/spatial_effects.h
     src/profiles/cereal.cpp src/profiles/cereal.h
     src/audio/filter_chain.cpp src/audio/filter_chain.h
     src/audio/alsa_mixer.cpp src/audio/alsa_mixer.h

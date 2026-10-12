@@ -2,6 +2,7 @@
 #include "audio/alsa_mixer.h"
 #include "audio/filter_chain.h"
 #include "devices/inventory.h"
+#include "devices/spatial_effects.h"
 #include "translation_manager.h"
 #include <QColor>
 #include <QCoreApplication>
@@ -647,6 +648,7 @@ void ApplicationModel::validateLightingLayers(const QVariantList& layers) const 
             throw std::invalid_argument("Random lighting mode requires a boolean");
         if (map.contains("transitions"))
             (void)lightingTimelineColor(map, 0);
+        validateSpatialEffect(map);
     }
 }
 void ApplicationModel::validateAssignments(const QVariantList& assignments) const {

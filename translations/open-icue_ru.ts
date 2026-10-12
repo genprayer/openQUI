@@ -823,6 +823,14 @@ Rückkehr in die neutrale Position.</source>
       <translation>Недопустимое значение длительности подсветки</translation>
     </message>
     <message>
+      <source>Invalid lighting frame timestamp</source>
+      <translation>Недопустимое время кадра подсветки</translation>
+    </message>
+    <message>
+      <source>Invalid lighting geometry</source>
+      <translation>Недопустимая геометрия подсветки</translation>
+    </message>
+    <message>
       <source>Invalid lighting input timestamp</source>
       <translation>Недопустимое время события подсветки</translation>
     </message>
@@ -857,6 +865,10 @@ Rückkehr in die neutrale Position.</source>
     <message>
       <source>Invalid saved tilt angles</source>
       <translation>Недопустимые сохранённые углы наклона</translation>
+    </message>
+    <message>
+      <source>Invalid spatial lighting parameter</source>
+      <translation>Недопустимый параметр пространственной подсветки</translation>
     </message>
     <message>
       <source>Invalid test color</source>

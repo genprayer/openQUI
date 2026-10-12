@@ -332,6 +332,42 @@ class NativeCoreTests : public QObject {
         QVERIFY(warnings.contains("unsupported-transition-boundaries"));
         QVERIFY(warnings.contains("unsupported-lighting-effect"));
     }
+    void rainAndRippleImportPreservesOriginalParameters() {
+        const auto rain = cerealLightingLayer(
+            "RainLighting", "Rain", {},
+            "<base><duration>1000</duration><brightness>10</brightness></base>"
+            "<colors><first>4294901760</first><second>4278255360</second></colors>"
+            "<random>false</random><opacity>128</opacity><speed>1</speed><direction>4</direction>");
+        auto ripple = cerealLightingLayer(
+            "RippleLighting", "Ripple", {},
+            "<base><base><duration>3000</duration><brightness>10</brightness></base>"
+            "<transitions><value0><time>0</time><color>#ffff0000</color></value0>"
+            "<value1><time>1</time><color>#00ff0000</color></value1></transitions></base>"
+            "<velocity>400</velocity><tailLength>200</tailLength><autoDuration>false</autoDuration>"
+            "<waveSpread>OnlyBetweenFronts</waveSpread>",
+            false);
+        ripple.replace("<playOption>Standard</playOption>",
+                       "<playOption>PlayFromKeyCenter</playOption>");
+        QTemporaryDir directory;
+        QFile file(directory.filePath("spatial.cueprofile"));
+        QVERIFY(file.open(QIODevice::WriteOnly));
+        file.write(
+            cerealProfile(cerealLightingCategory("Keyboard", cerealLightingRoute(rain + ripple))));
+        file.close();
+        const auto parsed = open_icue::readCerealProfile(file.fileName());
+        const auto layers =
+            parsed.devices.value("k70_core_rgb").toMap().value("lightingLayers").toList();
+        QCOMPARE(layers.size(), 2);
+        const auto importedRipple = layers.first().toMap(), importedRain = layers.last().toMap();
+        QVERIFY(importedRipple.value("type").toString().startsWith("RippleLightingTypeData"));
+        QVERIFY(importedRipple.value("isKeyTriggered").toBool());
+        QVERIFY(!importedRipple.value("isLooping").toBool());
+        QCOMPARE(importedRipple.value("rippleVelocity").toDouble(), 400.0);
+        QCOMPARE(importedRipple.value("rippleTailLength").toDouble(), 200.0);
+        QCOMPARE(importedRain.value("sourceDirection").toInt(), 4);
+        QCOMPARE(importedRain.value("opacity").toDouble(), 128 * 100.0 / 255);
+        QCOMPARE(importedRain.value("colors").toList(), (QVariantList{"#ffff0000", "#ff00ff00"}));
+    }
     void importedMovingAndPerKeyEffectsTargetAllThreePeripherals() {
         const QByteArray timeline =
             "<base><base><duration>2000</duration><brightness>10</brightness></base>"
@@ -380,7 +416,7 @@ class NativeCoreTests : public QObject {
                      .toList(),
                  (QVariantList{"#ffff0000", "#ff00ff00"}));
         const auto conversion = parsed.metadata.value("conversion").toMap();
-        QCOMPARE(conversion.value("version").toInt(), 2);
+        QCOMPARE(conversion.value("version").toInt(), 3);
         QVERIFY(conversion.value("isPartial").toBool());
     }
     void converterUpgradePreservesEarlierImportedProfileEdits() {
