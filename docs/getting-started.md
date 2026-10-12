@@ -49,8 +49,9 @@ ctest --preset native
 ./build/native/open-cue-gui
 ```
 
-The default preset selects authored resources even if a local vendor directory
-exists. Import optional original resources using [assets.md](assets.md), then:
+The default preset selects original device renderings automatically when all
+required bundles are present. Otherwise it uses authored fallback drawings.
+Import original resources using [assets.md](assets.md), then force that mode with:
 
 ```sh
 cmake --preset local-assets
@@ -58,6 +59,17 @@ cmake --build --preset local-assets --parallel 2
 ctest --preset local-assets
 ./build/local-assets/open-cue-gui
 ```
+
+For a build that deliberately uses only the fallback resources:
+
+```sh
+cmake --preset source-only
+cmake --build --preset source-only --parallel 2
+```
+
+`OPENQUI_USE_LOCAL_CORSAIR_RESOURCES` accepts `AUTO` (default), `ON` (all required
+bundles must be present) or `OFF` (fallback drawings). The build scripts follow
+the same default. Reconfigure and rebuild existing binaries to change the mode.
 
 To install in the current user's prefix:
 

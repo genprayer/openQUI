@@ -1,0 +1,1968 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-12",
+  "isCompleteAllTimeCorsairCatalog": false,
+  "sources": {
+    "registry": "https://www.corsair.com/us/en/s/icue/icue-apps-beta",
+    "legacy": "https://help.corsair.com/hc/en-us/articles/360058142592-iCUE-iCUE-4-compatibility-list"
+  },
+  "corsairRegistryRecordCount": 104,
+  "corsairRegistryModelIdCount": 102,
+  "legacyModelCount": 168,
+  "registryEntries": [
+    {
+      "device_id": "corsair-1b1c-0c56",
+      "device_model": "commander_duo",
+      "device_name": "COMMANDER DUO",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x0C56",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b80",
+      "device_model": "dark_core_pro",
+      "device_name": "Dark Core PRO",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B80",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b7e",
+      "device_model": "dark_core_pro_se",
+      "device_name": "Dark Core PRO SE",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B7E",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bb2",
+      "device_model": "darkstar_wireless",
+      "device_name": "DARKSTAR WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BB2",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0404",
+      "device_model": "dominator_platinum_rgb",
+      "device_name": "DOMINATOR PLATINUM RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0404",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0408",
+      "device_model": "dominator_platinum_rgb_ddr5",
+      "device_name": "DOMINATOR PLATINUM RGB DDR5",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0408",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-040b",
+      "device_model": "dominator_titanium",
+      "device_name": "DOMINATOR TITANIUM",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x040B",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b5e",
+      "device_model": "harpoon_rgb_wireless",
+      "device_name": "Harpoon RGB Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B5E",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b2e",
+      "device_model": "harpoon_v2_wireless",
+      "device_name": "HARPOON v2 WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B2E",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b33",
+      "device_model": "harpoon_wired_v2",
+      "device_name": "HARPOON WIRED v2",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B33",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0205",
+      "device_model": "icue_link_5000t_rgb",
+      "device_name": "iCUE LINK 5000T RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0205",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0105",
+      "device_model": "icue_link_9000d_rgb_airflow",
+      "device_name": "iCUE LINK 9000D RGB AIRFLOW",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0105",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0005",
+      "device_model": "icue_link_adapter",
+      "device_name": "iCUE LINK ADAPTER",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0005",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-000d",
+      "device_model": "icue_link_gpu_rgb",
+      "device_name": "iCUE LINK GPU RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x000D",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0407",
+      "device_model": "icue_link_h100i_rgb",
+      "device_name": "iCUE LINK H100i RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0407",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0207",
+      "device_model": "icue_link_h150i_rgb",
+      "device_name": "iCUE LINK H150i RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0207",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0507",
+      "device_model": "icue_link_h150i_rgb",
+      "device_name": "iCUE LINK H150i RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0507",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0307",
+      "device_model": "icue_link_h170i_rgb",
+      "device_name": "iCUE LINK H170i RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0307",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0002",
+      "device_model": "icue_link_lx_rgb",
+      "device_name": "iCUE LINK LX RGB",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0002",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0001",
+      "device_model": "icue_link_qx_rgb",
+      "device_name": "iCUE LINK QX RGB",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0001",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0013",
+      "device_model": "icue_link_rx",
+      "device_name": "iCUE LINK RX",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0013",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0004",
+      "device_model": "icue_link_rx_max",
+      "device_name": "iCUE LINK RX MAX",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0004",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-000f",
+      "device_model": "icue_link_rx_rgb",
+      "device_name": "iCUE LINK RX RGB",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x000F",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0003",
+      "device_model": "icue_link_rx_rgb_max",
+      "device_name": "iCUE LINK RX RGB MAX",
+      "device_type_name": "Fan",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0003",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-0c3f",
+      "device_model": "icue_link_system_hub",
+      "device_name": "iCUE LINK System Hub",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x0C3F",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0011",
+      "device_model": "icue_link_titan_240",
+      "device_name": "iCUE LINK TITAN 240",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0011",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0111",
+      "device_model": "icue_link_titan_280",
+      "device_name": "iCUE LINK TITAN 280",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0111",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0211",
+      "device_model": "icue_link_titan_360",
+      "device_name": "iCUE LINK TITAN 360",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0211",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0311",
+      "device_model": "icue_link_titan_420",
+      "device_name": "iCUE LINK TITAN 420",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0311",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0009",
+      "device_model": "icue_link_xc7_elite",
+      "device_name": "iCUE LINK XC7 ELITE",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0009",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-000c",
+      "device_model": "icue_link_xd5_elite",
+      "device_name": "iCUE LINK XD5 ELITE",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x000C",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0019",
+      "device_model": "icue_link_xd6_elite",
+      "device_name": "iCUE LINK XD6 ELITE",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0019",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-000a",
+      "device_model": "icue_link_xg3_hybrid",
+      "device_name": "iCUE LINK XG3 HYBRID",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x000A",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b4c",
+      "device_model": "ironclaw_rgb_wireless",
+      "device_name": "Ironclaw RGB Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B4C",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b32",
+      "device_model": "ironclaw_wireless_se",
+      "device_name": "IRONCLAW WIRELESS SE",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B32",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b7c",
+      "device_model": "k100_rgb",
+      "device_name": "K100 RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B7C",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bab",
+      "device_model": "k100_rgb_air_wireless",
+      "device_name": "K100 RGB Air Wireless",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BAB",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b05",
+      "device_model": "k55_core_rgb",
+      "device_name": "K55 CORE RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B05",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b20",
+      "device_model": "k55_core_rgb_tkl",
+      "device_name": "K55 CORE RGB TKL",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B20",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1ba4",
+      "device_model": "k55_rgb_pro",
+      "device_name": "K55 RGB PRO",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BA4",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1ba1",
+      "device_model": "k55_rgb_pro_xt",
+      "device_name": "K55 RGB PRO XT",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BA1",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bb0",
+      "device_model": "k57_harpoon_rgb_wireless_bundle",
+      "device_name": "K57 Harpoon RGB Wireless Bundle",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BB0",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b6e",
+      "device_model": "k57_rgb_wireless",
+      "device_name": "K57 RGB Wireless",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B6E",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b83",
+      "device_model": "k60_pro",
+      "device_name": "K60 PRO",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B83",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bc7",
+      "device_model": "k60_pro_tkl_rgb",
+      "device_name": "K60 PRO TKL RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BC7",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1ba0",
+      "device_model": "k60_rgb_pro",
+      "device_name": "K60 RGB PRO",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BA0",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bad",
+      "device_model": "k60_rgb_pro_lp",
+      "device_name": "K60 RGB PRO LP",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BAD",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b8d",
+      "device_model": "k60_rgb_pro_se",
+      "device_name": "K60 RGB PRO SE",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B8D",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b37",
+      "device_model": "k65_plus_wireless",
+      "device_name": "K65 PLUS WIRELESS",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B37",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bd7",
+      "device_model": "k65_pro_mini",
+      "device_name": "K65 PRO MINI",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BD7",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bc3",
+      "device_model": "k65_rgb_mini",
+      "device_name": "K65 RGB Mini",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BC3",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bff",
+      "device_model": "k70_core_rgb",
+      "device_name": "K70 CORE RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BFF",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b0a",
+      "device_model": "k70_core_rgb",
+      "device_name": "K70 CORE RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B0A",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b01",
+      "device_model": "k70_core_rgb_tkl",
+      "device_name": "K70 CORE RGB TKL",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B01",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b02",
+      "device_model": "k70_core_rgb_tkl_wireless",
+      "device_name": "K70 CORE RGB TKL WIRELESS",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B02",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b09",
+      "device_model": "k70_core_se_rgb",
+      "device_name": "K70 CORE SE RGB",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B09",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bc0",
+      "device_model": "k70_max",
+      "device_name": "K70 MAX",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BC0",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b14",
+      "device_model": "k70_pro_rgb_tkl",
+      "device_name": "K70 PRO RGB TKL",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B14",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bd4",
+      "device_model": "k70_rgb_pro",
+      "device_name": "K70 RGB PRO",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BD4",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bd3",
+      "device_model": "k70_rgb_pro_mini_wireless",
+      "device_name": "K70 RGB PRO Mini Wireless",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BD3",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bb9",
+      "device_model": "k70_rgb_tkl_champion_series",
+      "device_name": "K70 RGB TKL Champion Series",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BB9",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b89",
+      "device_model": "k95_rgb_platinum_xt",
+      "device_name": "K95 RGB Platinum XT",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B89",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bba",
+      "device_model": "katar_elite_wireless",
+      "device_name": "KATAR ELITE Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BBA",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b93",
+      "device_model": "katar_pro",
+      "device_name": "Katar PRO",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B93",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bae",
+      "device_model": "katar_pro_wireless",
+      "device_name": "Katar PRO Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BAE",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bac",
+      "device_model": "katar_pro_xt",
+      "device_name": "Katar PRO XT",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BAC",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b03",
+      "device_model": "m55",
+      "device_name": "M55",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B03",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b70",
+      "device_model": "m55_rgb_pro",
+      "device_name": "M55 RGB PRO",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B70",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bfb",
+      "device_model": "m55_wireless",
+      "device_name": "M55 WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BFB",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bef",
+      "device_model": "m65_rgb_ultra",
+      "device_name": "M65 RGB Ultra",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BEF",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bd6",
+      "device_model": "m65_rgb_ultra_wireless",
+      "device_name": "M65 RGB Ultra Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BD6",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bf0",
+      "device_model": "m75",
+      "device_name": "M75",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BF0",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bf2",
+      "device_model": "m75_air_wireless",
+      "device_name": "M75 AIR WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BF2",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b08",
+      "device_model": "m75_wireless",
+      "device_name": "M75 WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B08",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b04",
+      "device_model": "makr_75",
+      "device_name": "MAKR 75",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B04",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b1a",
+      "device_model": "makr_pro_75",
+      "device_name": "MAKR PRO 75",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B1A",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-0c55",
+      "device_model": "nautilus_lcd_cap",
+      "device_name": "Nautilus LCD Cap",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x0C55",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-0c57",
+      "device_model": "nautilys_lcd_cap",
+      "device_name": "Nautilys LCD Cap",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x0C57",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bb8",
+      "device_model": "nightsabre_wireless",
+      "device_name": "NIGHTSABRE WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BB8",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b1c",
+      "device_model": "nightsword_v2_sd",
+      "device_name": "NIGHTSWORD v2 SD",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B1C",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b7a",
+      "device_model": "sabre_pro_champion_series",
+      "device_name": "Sabre PRO Champion Series",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B7A",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b79",
+      "device_model": "sabre_rgb_pro_champion_series",
+      "device_name": "Sabre RGB PRO Champion Series",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B79",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1b98",
+      "device_model": "sabre_rgb_pro_wireless",
+      "device_name": "Sabre RGB PRO Wireless",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1B98",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b22",
+      "device_model": "scimitar_elite_wireless_se",
+      "device_name": "SCIMITAR ELITE WIRELESS SE",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B22",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1be3",
+      "device_model": "scimitar_rgb_elite",
+      "device_name": "SCIMITAR RGB ELITE",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BE3",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bdb",
+      "device_model": "scimitar_rgb_elite_wireless",
+      "device_name": "SCIMITAR RGB ELITE WIRELESS",
+      "device_type_name": "Mouse",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BDB",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0a01",
+      "device_model": "shugo_series_ddr5",
+      "device_name": "SHUGO SERIES DDR5",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0A01",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b1b",
+      "device_model": "slipstream_v2_wireless_usb_receiver",
+      "device_name": "SLIPSTREAM v2 WIRELESS USB Receiver",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B1B",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-1bdc",
+      "device_model": "slipstream_wireless_usb_receiver",
+      "device_name": "SLIPSTREAM WIRELESS USB Receiver",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x1BDC",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b0d",
+      "device_model": "vanguard_96",
+      "device_name": "VANGUARD 96",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B0D",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b0f",
+      "device_model": "vanguard_96_wireless",
+      "device_name": "VANGUARD 96 WIRELESS",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B0F",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b21",
+      "device_model": "vanguard_air_99",
+      "device_name": "VANGUARD AIR 99",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B21",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2b0e",
+      "device_model": "vanguard_pro_96",
+      "device_name": "VANGUARD PRO 96",
+      "device_type_name": "Keyboard",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2B0E",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0409",
+      "device_model": "vengeance_ddr5",
+      "device_name": "VENGEANCE DDR5",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0409",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0401",
+      "device_model": "vengeance_led",
+      "device_name": "VENGEANCE LED",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0401",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0402",
+      "device_model": "vengeance_rgb",
+      "device_name": "VENGEANCE RGB",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0402",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-040a",
+      "device_model": "vengeance_rgb_ddr5",
+      "device_name": "VENGEANCE RGB DDR5",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x040A",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0403",
+      "device_model": "vengeance_rgb_pro",
+      "device_name": "VENGEANCE RGB PRO",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0403",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0405",
+      "device_model": "vengeance_rgb_pro_sl",
+      "device_name": "VENGEANCE RGB PRO SL",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0405",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0406",
+      "device_model": "vengeance_rgb_rs",
+      "device_name": "VENGEANCE RGB RS",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0406",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0b00",
+      "device_model": "vengeance_rgb_rs_ddr5",
+      "device_name": "VENGEANCE RGB RS DDR5",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0B00",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c00-0407",
+      "device_model": "vengeance_rgb_rt",
+      "device_name": "VENGEANCE RGB RT",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C00",
+      "usb_pid": "0x0407",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1b1c-2a15",
+      "device_model": "voxara",
+      "device_name": "VOXARA",
+      "device_type_name": "Other",
+      "usb_vid": "0x1B1C",
+      "usb_pid": "0x2A15",
+      "release_date": "2026-09-21",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    },
+    {
+      "device_id": "corsair-1c01-0010",
+      "device_model": "vrm_cooler_module",
+      "device_name": "VRM Cooler Module",
+      "device_type_name": "Other",
+      "usb_vid": "0x1C01",
+      "usb_pid": "0x0010",
+      "release_date": "2026-11-01",
+      "discontinued": false,
+      "product_url": null,
+      "manual_url": null
+    }
+  ],
+  "legacyEntries": [
+    {
+      "category": "Keyboards",
+      "name": "K100 RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K100 AIR"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K95"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K95 RGB Platinum"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K95 RGB Platinum SE"
+    },
+    {
+      "category": "Keyboards",
+      "name": "and K95 RGB Platinum XT"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB TKL"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB MK.2"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 MK.2 LP"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 MK.2 SE"
+    },
+    {
+      "category": "Keyboards",
+      "name": "and K70 RGB MK.2 IG"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K65 RGB Mini"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K83 Wireless"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB PRO"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 Lux RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB Rapidfire"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 RGB SE Rapidfire"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 Lux"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 Rapidfire"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K70 PRO MINI"
+    },
+    {
+      "category": "Keyboards",
+      "name": "Strafe"
+    },
+    {
+      "category": "Keyboards",
+      "name": "Strafe RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "and Strafe MX"
+    },
+    {
+      "category": "Keyboards",
+      "name": "Strafe RGB MK.2"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K68"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K68 RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "and K68 SE"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K66"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K65 RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K65 Lux RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K65 RGB Rapidfire"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K63"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K63 Wireless"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K60 PRO"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K60 RGB PRO"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K60 RGB PRO SE"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K60 RGB PRO LP"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K60 PRO TKL RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K57 RGB Wireless"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K55 RGB"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K55 RGB PRO"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K55 RGB PRO XT"
+    },
+    {
+      "category": "Keyboards",
+      "name": "K55 RGB PRO LITE"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre RGB Optical"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre RGB Laser"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre Pro Champion"
+    },
+    {
+      "category": "Mice",
+      "name": "Sabre RGB Pro Champion"
+    },
+    {
+      "category": "Mice",
+      "name": "Scimitar RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Scimitar RGB Pro"
+    },
+    {
+      "category": "Mice",
+      "name": "Scimitar RGB Elite"
+    },
+    {
+      "category": "Mice",
+      "name": "Glaive RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Glaive RGB PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "Dark Core RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Dark Core SE"
+    },
+    {
+      "category": "Mice",
+      "name": "Dark Core PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "Dark Core PRO SE"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB Elite"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB Elite IG"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB ULTRA"
+    },
+    {
+      "category": "Mice",
+      "name": "M65 RGB ULTRA WIRELESS"
+    },
+    {
+      "category": "Mice",
+      "name": "Ironclaw RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Ironclaw RGB Wireless"
+    },
+    {
+      "category": "Mice",
+      "name": "Nightsword RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Harpoon RGB"
+    },
+    {
+      "category": "Mice",
+      "name": "Harpoon RGB Wireless"
+    },
+    {
+      "category": "Mice",
+      "name": "Harpoon RGB PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "M55 RGB PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "Katar"
+    },
+    {
+      "category": "Mice",
+      "name": "Katar PRO"
+    },
+    {
+      "category": "Mice",
+      "name": "Katar PRO Wireless"
+    },
+    {
+      "category": "Mice",
+      "name": "Katar PRO XT"
+    },
+    {
+      "category": "Mice",
+      "name": "Katar RGB"
+    },
+    {
+      "category": "Mouse mats",
+      "name": "MM800 RGB Polaris"
+    },
+    {
+      "category": "Mouse mats",
+      "name": "MM700 RGB"
+    },
+    {
+      "category": "Headsets",
+      "name": "Virtuoso RGB Wireless XT"
+    },
+    {
+      "category": "Headsets",
+      "name": "Virtuoso SE"
+    },
+    {
+      "category": "Headsets",
+      "name": "Virtuoso"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void USB"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void PRO USB"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void PRO Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void PRO Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void Elite USB"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void Elite Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "Void Elite Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS70 Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS70 PRO Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS70 Bluetooth"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS45 Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS55 Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS60 Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS60 PRO Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS65 Surround"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS60 Haptic"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS75XB Wireless"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS80 RGB"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS80 RGB Wireless"
+    },
+    {
+      "category": "Headset stands",
+      "name": "ST100 RGB"
+    },
+    {
+      "category": "Power supply units",
+      "name": "AX760i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "AX860i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "AX1200i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "AX1500i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "AX1600i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "HX750i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "HX850i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "HX1000i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "HX1200i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "HX1500i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "RM650i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "RM750i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "RM850i"
+    },
+    {
+      "category": "Power supply units",
+      "name": "RM1000i"
+    },
+    {
+      "category": "Cases",
+      "name": "Obsidian 1000D"
+    },
+    {
+      "category": "Cases",
+      "name": "Spec - Omega RGB"
+    },
+    {
+      "category": "PC fan accessories",
+      "name": "Commander PRO"
+    },
+    {
+      "category": "PC fan accessories",
+      "name": "Commander CORE"
+    },
+    {
+      "category": "PC fan accessories",
+      "name": "Commander CORE XT"
+    },
+    {
+      "category": "PC fan accessories",
+      "name": "Lighting Node PRO"
+    },
+    {
+      "category": "PC fan accessories",
+      "name": "Lighting Node CORE"
+    },
+    {
+      "category": "Ambient lighting",
+      "name": "LS100 Starter Kit"
+    },
+    {
+      "category": "Ambient lighting",
+      "name": "LT100 Starter Kit"
+    },
+    {
+      "category": "Ambient lighting",
+      "name": "LC100 Starter Kit"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i ELITE CAPELLIX"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i ELITE CAPELLIX"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H150i ELITE CAPELLIX"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i ELITE LCD"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H150i ELITE LCD"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H170i ELITE LCD"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i RGB ELITE"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i RGB ELITE"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H150i RGB ELITE"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i PLATINUM"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i PLATINUM"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i PLATINUM SE"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i RGB PRO XT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i RGB PRO XT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H150i RGB PRO XT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H60i RGB PRO XT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i PRO"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H150i PRO"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i PRO"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H80i v2"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H80iGT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100i v2"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H100iGTX"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H110i"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H110iGT"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i"
+    },
+    {
+      "category": "AIO coolers",
+      "name": "H115i GTX"
+    },
+    {
+      "category": "DRAM",
+      "name": "Dominator Platinum RGB"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance LED"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance RGB"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance RGB PRO"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance RGB PRO SL"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance RGB RT"
+    },
+    {
+      "category": "DRAM",
+      "name": "Vengeance RGB RS"
+    },
+    {
+      "category": "Systems",
+      "name": "CORSAIR ONE"
+    },
+    {
+      "category": "Systems",
+      "name": "CORSAIR ONE PRO"
+    },
+    {
+      "category": "Systems",
+      "name": "Voyager a1600"
+    },
+    {
+      "category": "Monitors",
+      "name": "XENEON 32UHD144"
+    },
+    {
+      "category": "Monitors",
+      "name": "XENEON 32QHD240"
+    },
+    {
+      "category": "Monitors",
+      "name": "XENEON 32QHD165"
+    }
+  ],
+  "additionalHeadsets": [
+    {
+      "category": "Headsets",
+      "name": "HS55 WIRELESS",
+      "source": "https://ir.corsair.com/news-releases/news-release-details/play-your-own-beat-corsair-launches-new-hs65-and-hs55-wireless/"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS65 WIRELESS",
+      "source": "https://ir.corsair.com/news-releases/news-release-details/play-your-own-beat-corsair-launches-new-hs65-and-hs55-wireless/"
+    },
+    {
+      "category": "Headsets",
+      "name": "HS80 MAX WIRELESS",
+      "source": "https://help.corsair.com/hc/en-us/articles/19508600234637-HS80-HS80-MAX-Headset-FAQ"
+    },
+    {
+      "category": "Headsets",
+      "name": "VIRTUOSO MAX WIRELESS",
+      "source": "https://help.corsair.com/hc/en-us/articles/17101051641357-iCUE-5-Patch-Notes"
+    },
+    {
+      "category": "Headsets",
+      "name": "VOID WIRELESS V2",
+      "source": "https://help.corsair.com/hc/en-us/articles/17101051641357-iCUE-5-Patch-Notes"
+    },
+    {
+      "category": "Headsets",
+      "name": "VOID v2 MAX WIRELESS",
+      "source": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011388-ww/void-v2-max-wireless-gaming-headset-carbon-ca-9011388-ww"
+    }
+  ]
+}

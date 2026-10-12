@@ -7,9 +7,11 @@ Checked on 2026-10-12 during preparation of the OpenQUI source repository.
 | Fedora 44, authored resources | GCC 16.2.1 / Qt 6.11.2; deterministic CTest groups | 9/9 passed |
 | Debian 13, authored resources | GCC 14.2.0 / Qt 6.8.2; includes private PipeWire signal test | 10/10 passed |
 | Debian 13, original local resources | All eight imported device/integration RCCs; same suites | 10/10 passed |
+| Final original-resource profile changes | Sidebar input, three-device replay, importer v2, wave/per-key curves, translations | 10/10 passed |
+| Official-gallery library | 82 publisher files downloaded and SHA-256 verified; native import with HID disabled | 82 parsed; 80 with convertible layers |
 | Final Debian targeted checks | Core, translations, D-Bus and asset importer after test path fixes | 4/4 passed |
 | Asset importer contracts | Six synthetic tests, no Windows execution | Passed |
-| UI catalogs | 447 complete messages in German, English and Russian | Passed |
+| UI catalogs | 452 complete messages in German, English and Russian | Passed |
 | C++ formatting | clang-format 19, committed style | Passed |
 | Shell syntax, local documentation links and Git whitespace | Source maintenance checks | Passed |
 | Fedora host preview | Offscreen software rendering, isolated D-Bus, no HID; existing profile path | Passed |
@@ -24,6 +26,21 @@ The asset index contains eight model/integration manifests and 2,697 local file
 entries, including runtime aliases. It is an inventory of the supplied iCUE
 5.52.93 snapshot, not the complete product catalog. Only the two public README
 preview images are tracked; local vendor files and research artifacts are not.
+
+## Current profile/resource checks
+
+The `native` and `editor` presets selected local original resources through
+`AUTO`. A copied source checkout without `resources/vendor/` selected fallback
+resources through the same `AUTO` setting and passed core, hardware,
+translations and GUI (4/4). Explicit `ON` with missing bundles failed during
+configuration. This checks both distribution modes rather than treating a
+local-asset build as proof of a clean checkout.
+
+Profile v2 tests include independent multi-device duplication, safe reimport
+across converter versions, layer order, recorded wave parameters, per-key
+transition sampling and three different device RGB payloads in one active
+profile. Hardware tests also cover keeping keyboard press state between
+frames for other devices. No physical HID was opened by these tests.
 
 ## VS Code environment
 

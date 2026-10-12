@@ -23,8 +23,16 @@ The optional local-resource build accepts files from a user's own Windows iCUE
 installation. Those files, including RCC, fonts, images, factory EQ XML and
 decompiled material, are **not covered by this project's MIT license** and are
 excluded from the public source package. A license for our code does not grant
-permission to redistribute them. The default CMake build uses OpenQUI's
-independent schematics and starter EQ presets.
+permission to redistribute them. The default CMake build selects local original
+resources when all required bundles are present and otherwise uses independent
+schematics and starter EQ presets. The `source-only` preset always uses authored
+fallback resources. README previews show locally supplied original device
+renderings and are not a grant to relicense those renderings.
+
+Official `.cueprofile` downloads under `Profiles/downloads/` remain publisher
+content and are not covered by this project's MIT license. Their publisher URLs
+and byte digests are recorded in `Profiles/catalog.json`. The download directory
+is preserved locally and excluded from the public source package.
 
 `resources/audio/kemar-7.1.wav` is derived from measurements by Bill Gardner
 and Keith Martin, MIT Media Lab, copyright 1994 MIT Media Laboratory. Their

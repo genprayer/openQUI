@@ -2,6 +2,12 @@
 
 ## Unreleased — OpenQUI repository
 
+- Add the official-gallery profile catalog/downloader and retain 82 local original downloads.
+- Move profile creation below the list and add right-click rename, duplicate and delete.
+- Replay activated profiles on each connected supported peripheral while the lighting editor is open; preserve iCUE layer order and convert moving waves, pulse colors and K70 per-key gradient curves.
+- Preserve previous converter versions and local edits when explicitly reimporting a profile.
+- Automatically select complete local original resource sets and show original device views in README previews.
+- Document the sourced Corsair model backlog separately from verified Linux support.
 - Use `openQUI` as the repository name and directory.
 - Add a Russian VS Code setup/troubleshooting guide and preset-based Build/Test tasks.
 - Associate Qt translation catalogs with XML in VS Code; provide a Qt/C++ development container and isolated editor preset.

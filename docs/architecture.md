@@ -15,19 +15,23 @@ effect IDs stay independent of translated labels.
 | `qml` | Device screens and common controls |
 | `resources/devices` | Authored device SVG drawings and catalog data |
 | `resources/icons` | SVG icons with semantic color roles |
+| `Profiles` | Official-gallery catalog and local downloads; independent of user's active workspace |
 | `translations` | Authored language catalog and generated Qt TS sources |
 | `tests` | Core, GUI, D-Bus, translation and isolated audio checks |
 | `packaging` | Build image, desktop entry and integration templates |
 
 The workspace uses QLockFile and QSaveFile. Import rejects DTD and entity
-references and preserves the source XML bytes. Supported continuous static and
-gradient layers map to known device zones; warnings retain conversion boundaries.
+references and preserves the source XML bytes. Supported static, gradient, wave,
+pulse and per-key gradient layers map to known device zones; warnings retain
+conversion boundaries. See [profiles.md](profiles.md) for execution limits.
 The preview and hardware renderer share normalized gradient interpolation.
 UI preferences use a separate atomic file; changing language does not rename profiles or alter key bindings.
 
 The source-only catalog and diagrams are independent application resources.
-The explicit local-assets preset selects locally supplied original
-device images, masks and metadata. The native preset uses authored resources. The local-resource build does not
+The native/editor presets automatically select locally supplied original
+device images, masks and metadata when all required bundles exist. The
+local-assets preset requires them; source-only explicitly selects fallback
+drawings. The local-resource build does not
 establish permission to redistribute them. Neither catalog proves that
 hardware settings can be applied.
 
@@ -51,8 +55,10 @@ The controller serializes hardware jobs through one QtConcurrent worker and
 reports pending operations separately from acknowledged writes. A 30-second
 telemetry timer updates device state; software RGB frames run at up to 20 Hz.
 Layer edits replace the pending frame while a transaction is in flight. Only
-the selected active lighting editor sends frames; leaving it restores owned
-firmware control. An empty layer stack sends black rather than retaining old RGB.
+the active lighting editor sends frames; profile activation replays separate
+routes for every connected supported peripheral in the same worker. Leaving
+the editor restores owned firmware control for the whole group. An empty layer
+stack sends black rather than retaining old RGB.
 Active Darkstar DPI shares the RGB command session and requires identity,
 acknowledgement, exact value readback and an unchanged active stage index.
 Editing local stage presets does not schedule device writes. Rollback attempts

@@ -63,8 +63,10 @@ loader registers all imported device bundles. The editor/hardware catalog still
 has explicit supported entries, described in [adding-devices.md](adding-devices.md).
 Required editor manifests must be present for the local-assets preset; importing
 only unrelated devices cannot replace them. Missing optional factory EQ data
-uses authored presets. The default `native` preset remains reproducible without
-vendor files.
+uses authored presets. The default `native` and `editor` presets use `AUTO`:
+original renderings when the five required editor bundles are available, fallback
+drawings otherwise. `source-only` explicitly selects the fallback; `local-assets`
+requires the original resources. A clean checkout remains buildable without vendor files.
 
 ## Actual catalog boundary
 
@@ -87,7 +89,8 @@ The resource inventory contains renders and masks, but no GLB, GLTF, FBX, OBJ,
 DAE or mesh files. Keep original renderings locally; the missing 3D source data
 cannot be reconstructed merely by renaming raster files.
 
-The repository tracks two screenshots of the authored-resource build for the
-README. Diagnostic captures belong in ignored `artifacts/` or the existing
+The repository tracks two README screenshots showing original device renderings
+from the supplied snapshot. They are UI previews, not a license grant for the
+underlying Corsair artwork. Diagnostic captures belong in ignored `artifacts/` or the existing
 private verification archive. New screenshots should illustrate a distinct
 feature and stay small enough for a useful source checkout.

@@ -30,6 +30,8 @@ own compile and hardware validation.
 | VIRTUOSO receiver | `1b1c:0a42`; `0a4a` is a catalog ID only | `0a42` transport/audio tested; `0a4a` not accepted by the current command allowlist |
 
 There are **three peripheral implementations and two receiver editor entries**.
+The [device backlog](corsair-device-backlog.md) inventories the broader Corsair
+product range and records the models/variants with pending Linux support.
 The only headset implementation currently verified is the VIRTUOSO path through
 `0a42`. VIRTUOSO XT, PRO, MAX, HS-series and other headset revisions are not
 implicitly supported. The `0a41` catalog entry does not prove wired RGB control.
@@ -41,10 +43,10 @@ of OpenQUI's vendor configuration support.
 
 | Feature | Current behavior and acceptance boundary |
 | --- | --- |
-| Local profiles | Locked atomic persistence; independent profile and language settings |
-| iCUE import | Supported continuous static/gradient layers converted for known devices; unsupported XML retained; assignments not uploaded |
+| Local profiles | Locked atomic persistence; sidebar add and right-click rename/duplicate/delete; independent profile and language settings |
+| iCUE import | Static/gradient/wave/pulse and the recorded K70 per-key gradient mode converted; source XML retained; profile activation replays each connected supported peripheral while a lighting editor is open; see [limits](profiles.md) |
 | LED selection | Click, Shift/Ctrl, drag rectangle; per-layer zone selection |
-| Live RGB | Sends frames only while the selected lighting editor is active; coalesces edits; picker previews before OK and Cancel restores the previous color |
+| Live RGB | Sends frames only while a lighting editor is active; profile activation includes each connected supported peripheral; coalesces edits; picker previews before OK and Cancel restores the previous color |
 | K70 Type effect | Real descriptor-verified key input, fading and composition with continuous layers; physical reaction confirmed by the user |
 | Other reactive lighting | Ripple/Rain and audio-reactive effects are not implemented; editor presence does not establish hardware execution |
 | Mouse assignment editor | Fifteen physical inputs and a virtual keyboard with F1–F24; profile storage only |
