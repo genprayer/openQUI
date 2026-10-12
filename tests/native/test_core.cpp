@@ -4,6 +4,7 @@
 #include "gui/application_model.h"
 #include "profiles/cereal.h"
 #include <QFile>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QSet>
 #include <QTemporaryDir>
@@ -102,6 +103,17 @@ class NativeCoreTests : public QObject {
     void selectedAssetModeIsSelfContained() {
         open_icue::Catalog catalog;
         if (catalog.isUsingLocalCorsairResources()) {
+            for (const auto& value : catalog.models()) {
+                const auto model = value.toMap();
+                const auto id = model.value("id").toString();
+                const auto bodies = model.value("bodies").toStringList();
+                QVERIFY(!bodies.isEmpty());
+                for (const auto& body : bodies) {
+                    QVERIFY(body.startsWith("qrc:/" + id + "/"));
+                    QVERIFY(QFile::exists(body.mid(3)));
+                    QVERIFY(!body.startsWith("qrc:/app/devices/"));
+                }
+            }
             QVERIFY(QFile::exists(":/vendor/darkstar_wireless.rcc") ||
                     QFile::exists(":/vendor/library/bundles/darkstar_wireless.rcc"));
             for (const auto& id : {QString("govee"), QString("nanoleaf"), QString("philips_hue")}) {
@@ -160,6 +172,26 @@ class NativeCoreTests : public QObject {
         QVERIFY(file.open(QIODevice::ReadOnly));
         QCOMPARE(file.readAll(), corrupt);
     }
+    void duplicatedProfilesKeepAllDevicesAndIndependentEdits() {
+        QTemporaryDir directory;
+        open_icue::Workspace workspace(directory.path());
+        const auto original = workspace.snapshot().value("activeProfileId").toString();
+        workspace.updateDevice("k70_core_rgb", "lightingLayers", QVariantList{"keyboard"}, {});
+        workspace.updateDevice("darkstar_wireless", "lightingLayers", QVariantList{"mouse"}, {});
+        workspace.updateDevice("virtuoso_black", "eqPresets", QVariantList{"headset"}, {});
+        workspace.duplicateProfile(original, "Copy");
+        const auto duplicate = workspace.snapshot().value("activeProfileId").toString();
+        QVERIFY(original != duplicate);
+        QCOMPARE(workspace.device("virtuoso_black", {}).value("eqPresets").toList(),
+                 QVariantList{"headset"});
+        workspace.updateDevice("k70_core_rgb", "lightingLayers", QVariantList{"edited"}, {});
+        workspace.selectProfile(original);
+        QCOMPARE(workspace.device("k70_core_rgb", {}).value("lightingLayers").toList(),
+                 QVariantList{"keyboard"});
+        workspace.selectProfile(duplicate);
+        QCOMPARE(workspace.device("darkstar_wireless", {}).value("lightingLayers").toList(),
+                 QVariantList{"mouse"});
+    }
     void cerealImportIsIdempotent() {
         const QString source =
             QString::fromUtf8(OPENQUI_SOURCE_DIR) + "/tests/fixtures/minimal.cueprofile";
@@ -213,11 +245,11 @@ class NativeCoreTests : public QObject {
         const auto layers =
             parsed.devices.value("k70_core_rgb").toMap().value("lightingLayers").toList();
         QCOMPARE(layers.size(), 2);
-        QCOMPARE(layers.first().toMap().value("name").toString(), QString("Named static"));
-        QCOMPARE(layers.first().toMap().value("zones").toStringList(), QStringList{"A"});
-        QCOMPARE(layers.first().toMap().value("colors").toList(), QVariantList{"#80ff0000"});
-        QCOMPARE(layers.first().toMap().value("opacity").toDouble(), 128 * 100.0 / 255);
-        const auto importedGradient = layers.last().toMap();
+        QCOMPARE(layers.last().toMap().value("name").toString(), QString("Named static"));
+        QCOMPARE(layers.last().toMap().value("zones").toStringList(), QStringList{"A"});
+        QCOMPARE(layers.last().toMap().value("colors").toList(), QVariantList{"#80ff0000"});
+        QCOMPARE(layers.last().toMap().value("opacity").toDouble(), 128 * 100.0 / 255);
+        const auto importedGradient = layers.first().toMap();
         QCOMPARE(importedGradient.value("duration").toDouble(), 2.0);
         QCOMPARE(importedGradient.value("transitions").toList().size(), 3);
         QCOMPARE(
@@ -299,6 +331,94 @@ class NativeCoreTests : public QObject {
         const auto warnings = summary.value("warnings").toStringList();
         QVERIFY(warnings.contains("unsupported-transition-boundaries"));
         QVERIFY(warnings.contains("unsupported-lighting-effect"));
+    }
+    void importedMovingAndPerKeyEffectsTargetAllThreePeripherals() {
+        const QByteArray timeline =
+            "<base><base><duration>2000</duration><brightness>10</brightness></base>"
+            "<transitions><value0><time>0</time><color>#ffff0000</color></value0>"
+            "<value1><time>1</time><color>#00000000</color></value1></transitions></base>";
+        auto reactive = cerealLightingLayer("GradientLighting", "Per key", {}, timeline, false);
+        reactive.replace("<playOption>Standard</playOption>",
+                         "<playOption>PlayOnKeyCenter</playOption>");
+        const auto wave = cerealLightingLayer(
+            "WaveLighting", "Wave", "<value0>A</value0><value1>G18</value1>",
+            timeline + "<velocity>80</velocity><tailLength>300</tailLength>"
+                       "<angle>135</angle><isDoublesided>false</isDoublesided>");
+        const auto background = cerealLightingLayer("StaticLighting", "Background", {},
+                                                    staticCerealEffect("#ff000000"));
+        const auto pulse = cerealLightingLayer(
+            "ColorPulseLighting", "Pulse", {},
+            "<base><duration>1000</duration><brightness>10</brightness></base>"
+            "<colors><first>4294901760</first><second>4278255360</second></colors>"
+            "<random>false</random><speed>2</speed>");
+        const auto bytes = cerealProfile(
+            cerealLightingCategory("Keyboard", cerealLightingRoute(reactive + wave + background)) +
+            cerealLightingCategory("Mouse", cerealLightingRoute(pulse)) +
+            cerealLightingCategory("Headset", cerealLightingRoute(pulse, 0, 0, "Virtuoso")));
+        QTemporaryDir directory;
+        QFile source(directory.filePath("multi-device.cueprofile"));
+        QVERIFY(source.open(QIODevice::WriteOnly));
+        source.write(bytes);
+        source.close();
+        const auto parsed = open_icue::readCerealProfile(source.fileName());
+        QCOMPARE(parsed.devices.size(), 3);
+        const auto layers =
+            parsed.devices.value("k70_core_rgb").toMap().value("lightingLayers").toList();
+        QCOMPARE(layers.size(), 3);
+        QCOMPARE(layers.first().toMap().value("name").toString(), QString("Background"));
+        QCOMPARE(layers.at(1).toMap().value("waveAngle").toDouble(), 135.0);
+        QCOMPARE(layers.at(1).toMap().value("zones").toStringList(), QStringList{"A"});
+        QVERIFY(layers.last().toMap().value("type").toString().startsWith("TypeLightingTypeData"));
+        QVERIFY(!layers.last().toMap().value("isLooping").toBool());
+        QCOMPARE(parsed.devices.value("virtuoso_black")
+                     .toMap()
+                     .value("lightingLayers")
+                     .toList()
+                     .first()
+                     .toMap()
+                     .value("colors")
+                     .toList(),
+                 (QVariantList{"#ffff0000", "#ff00ff00"}));
+        const auto conversion = parsed.metadata.value("conversion").toMap();
+        QCOMPARE(conversion.value("version").toInt(), 2);
+        QVERIFY(conversion.value("isPartial").toBool());
+    }
+    void converterUpgradePreservesEarlierImportedProfileEdits() {
+        QTemporaryDir directory;
+        open_icue::Workspace workspace(directory.path());
+        const auto source =
+            QString::fromUtf8(OPENQUI_SOURCE_DIR) + "/tests/fixtures/minimal.cueprofile";
+        workspace.importProfile(source);
+        const auto firstId = workspace.snapshot().value("activeProfileId").toString();
+        workspace.updateDevice("k70_core_rgb", "settings", QVariantMap{{"edited", true}}, {});
+        const auto path = directory.filePath("workspace.json");
+        QFile file(path);
+        QVERIFY(file.open(QIODevice::ReadOnly));
+        auto saved = QJsonDocument::fromJson(file.readAll()).object();
+        file.close();
+        auto profiles = saved.value("profiles").toArray();
+        auto earlier = profiles.last().toObject();
+        auto metadata = earlier.value("sourceMetadata").toObject();
+        auto conversion = metadata.value("conversion").toObject();
+        conversion["version"] = 1;
+        metadata["conversion"] = conversion;
+        earlier["sourceMetadata"] = metadata;
+        profiles[profiles.size() - 1] = earlier;
+        saved["profiles"] = profiles;
+        QVERIFY(file.open(QIODevice::WriteOnly | QIODevice::Truncate));
+        file.write(QJsonDocument(saved).toJson());
+        file.close();
+        workspace.importProfile(source);
+        QVERIFY(workspace.snapshot().value("activeProfileId").toString() != firstId);
+        QCOMPARE(workspace.snapshot().value("profiles").toList().size(), 3);
+        workspace.importProfile(source);
+        QCOMPARE(workspace.snapshot().value("profiles").toList().size(), 3);
+        workspace.selectProfile(firstId);
+        QVERIFY(workspace.device("k70_core_rgb", {})
+                    .value("settings")
+                    .toMap()
+                    .value("edited")
+                    .toBool());
     }
     void equalizerGraphAndBounds() {
         QList<double> gains(10, 0.0);

@@ -27,11 +27,14 @@ constexpr int K70_LED_COUNT = 123;
 constexpr quint8 BRAGI_ACTIVE_DPI = 0x20;
 constexpr quint8 BRAGI_ACTIVE_DPI_INDEX = 0x1e;
 constexpr int MAX_LIGHTING_TRANSITIONS = 256;
+constexpr double MAX_WAVE_PARAMETER = 10000.0;
 
 std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double seconds) {
     if (!layer.contains("transitions"))
         return std::nullopt;
-    if (!layer.value("type").toString().startsWith("GradientLightingTypeData"))
+    const auto type = layer.value("type").toString().section("LightingTypeData", 0, 0);
+    const bool isPerKey = type == "Type";
+    if (!QStringList{"Gradient", "Wave", "Type"}.contains(type))
         throw std::invalid_argument("A lighting timeline requires a gradient effect");
     bool isDurationValid = false;
     const auto duration = layer.value("duration").toDouble(&isDurationValid);
@@ -39,7 +42,7 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
     if (!isDurationValid || !std::isfinite(duration) || duration <= 0 || !std::isfinite(seconds) ||
         seconds < 0 || transitions.size() < 2 || transitions.size() > MAX_LIGHTING_TRANSITIONS ||
         layer.value("isLooping").metaType().id() != QMetaType::Bool ||
-        !layer.value("isLooping").toBool())
+        layer.value("isLooping").toBool() == isPerKey)
         throw std::invalid_argument("Invalid continuous lighting timeline");
     QList<double> times;
     QList<QColor> colors;
@@ -56,7 +59,8 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
     }
     if (times.first() != 0 || times.last() != 1)
         throw std::invalid_argument("Lighting transitions must span the complete timeline");
-    const double phase = std::fmod(seconds / duration, 1.0);
+    const double phase =
+        isPerKey ? std::min(seconds / duration, 1.0) : std::fmod(seconds / duration, 1.0);
     for (qsizetype index = 1; index < times.size(); ++index) {
         if (phase > times[index])
             continue;
@@ -69,6 +73,48 @@ std::optional<QColor> validatedTimelineColor(const QVariantMap& layer, double se
                                 first.alphaF() * (1 - blend) + last.alphaF() * blend);
     }
     throw std::invalid_argument("Lighting phase is outside its timeline");
+}
+
+/** Sample an imported moving wave in the device's extracted two-dimensional LED geometry. */
+QColor waveTimelineColor(const QVariantMap& layer, const QVariantMap& zone, double seconds) {
+    const double velocity = layer.value("waveVelocity").toDouble() *
+                            (0.25 + layer.value("speed", 1.5).toDouble() * 0.5);
+    const double tail = layer.value("waveTailLength").toDouble();
+    const double angle = layer.value("waveAngle").toDouble() * std::numbers::pi / 180;
+    const auto geometry = zone.value("geometry").toList();
+    const auto bounds = geometry.isEmpty() ? QVariantMap{} : geometry.first().toMap();
+    const double x = bounds.value("x").toDouble() + bounds.value("width").toDouble() / 2;
+    const double y = bounds.value("y").toDouble() + bounds.value("height").toDouble() / 2;
+    const double projected = x * std::sin(angle) + y * std::cos(angle);
+    const double distance =
+        layer.value("isWaveDoublesided").toBool() ? std::abs(projected) : projected;
+    const double phase = std::fmod(seconds / layer.value("duration").toDouble() -
+                                       distance / velocity / layer.value("duration").toDouble(),
+                                   1.0);
+    // The original wave curve describes the tail; stretch its clock by the recorded tail length.
+    const double localPhase =
+        (phase < 0 ? phase + 1 : phase) * layer.value("duration").toDouble() * velocity / tail;
+    if (localPhase > 1)
+        return QColor(Qt::transparent);
+    return *validatedTimelineColor(layer, localPhase * layer.value("duration").toDouble());
+}
+
+void validateWaveParameters(const QVariantMap& layer) {
+    if (!layer.contains("waveVelocity"))
+        return;
+    for (const auto& field :
+         {QString("waveVelocity"), QString("waveTailLength"), QString("waveAngle")}) {
+        bool isNumber = false;
+        const double value = layer.value(field).toDouble(&isNumber);
+        if (!isNumber || !std::isfinite(value) || value < 0 ||
+            value > (field == "waveAngle" ? 360.0 : MAX_WAVE_PARAMETER) ||
+            (field != "waveAngle" && value == 0))
+            throw std::invalid_argument("Invalid imported wave parameters");
+    }
+    if (layer.value("isWaveDoublesided").metaType().id() != QMetaType::Bool ||
+        !layer.value("type").toString().startsWith("WaveLightingTypeData") ||
+        !layer.contains("transitions"))
+        throw std::invalid_argument("Invalid imported wave parameters");
 }
 QByteArray randomBytes(int length) {
     QByteArray bytes(length, 0);
@@ -455,8 +501,10 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
                           const QMap<int, double>* presses) {
     QList<QRgb> frame;
     QList<std::optional<QColor>> timelineColors;
-    for (const auto& layer : layers)
+    for (const auto& layer : layers) {
+        validateWaveParameters(layer.toMap());
         timelineColors.append(lightingTimelineColor(layer.toMap(), seconds));
+    }
     for (int index = 0; index < zones.size(); ++index) {
         const auto zone = zones[index].toMap();
         QColor color(Qt::black);
@@ -484,7 +532,9 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
                 layer.value("isRandom").toBool() &&
                 QStringList{"ColorPulse", "ColorShift", "ColorWave", "Visor"}.contains(type);
             QColor next(colors.isEmpty() ? "#ffffff" : colors.first().toString());
-            if (timelineColors[layerIndex])
+            if (type == "Wave" && layer.contains("waveVelocity"))
+                next = waveTimelineColor(layer, zone, seconds);
+            else if (timelineColors[layerIndex])
                 next = *timelineColors[layerIndex];
             else if (isRandom)
                 next = QColor::fromHsvF(std::fmod(phase * 0.15 + position, 1.0), 0.9, 1);
@@ -505,15 +555,28 @@ QList<QRgb> lightingFrame(const QVariantList& layers, const QVariantList& zones,
                                         next.greenF() * (1 - weight) + last.greenF() * weight,
                                         next.blueF() * (1 - weight) + last.blueF() * weight);
             }
+            if (type == "ColorPulse" && !isRandom && !colors.isEmpty())
+                next = QColor(colors.at(static_cast<qsizetype>(std::floor(phase)) % colors.size())
+                                  .toString());
             double opacity = std::clamp(layer.value("opacity", 100).toDouble() / 100.0, 0.0, 1.0) *
                              next.alphaF();
-            if (type == "ColorPulse" || type == "Wave" || type == "Visor")
-                opacity *= (std::sin((phase + position) * 2 * std::numbers::pi) + 1) / 2;
+            if (type == "ColorPulse" || (type == "Wave" && !layer.contains("transitions")) ||
+                type == "Visor")
+                opacity *= (std::sin((phase + (type == "ColorPulse" ? 0 : position)) * 2 *
+                                     std::numbers::pi) +
+                            1) /
+                           2;
             if (type == "Type") {
                 const auto press = presses->constFind(k70LedIndex(zone.value("id").toString()));
                 const double age = press == presses->cend() ? -1 : seconds - press.value();
                 const double duration = std::max(0.1, layer.value("duration", 1).toDouble());
-                opacity *= age >= 0 ? std::max(0.0, 1 - age / duration) : 0;
+                if (layer.contains("transitions")) {
+                    next = age >= 0 && age < duration ? *lightingTimelineColor(layer, age)
+                                                      : QColor(Qt::transparent);
+                    opacity = std::clamp(layer.value("opacity", 100).toDouble() / 100.0, 0.0, 1.0) *
+                              next.alphaF();
+                } else
+                    opacity *= age >= 0 ? std::max(0.0, 1 - age / duration) : 0;
                 if (age >= 0 && layer.value("isRandom").toBool())
                     next = QColor::fromHsvF(
                         std::fmod(press.value() * 0.61803398875 + press.key() * 0.38196601125, 1.0),
@@ -577,7 +640,7 @@ QVariantMap HardwareBackend::applyLighting(const QString& model, const QVariantL
     if (hasKeyTrigger) {
         presses = keyboardInput_->poll(endpoint.sysPath, seconds);
         colors = lightingFrame(layers, zones, seconds, &presses);
-    } else if (keyboardInput_)
+    } else if (isKeyboard && keyboardInput_)
         keyboardInput_->close();
     const int ledCount = isKeyboard ? K70_LED_COUNT : isHeadset ? 3 : 13;
     static const QStringList mouseSlots{

@@ -7,6 +7,10 @@
       <translation>%1 Kopie</translation>
     </message>
     <message>
+      <source>%1 — Kopie</source>
+      <translation>%1 — Kopie</translation>
+    </message>
+    <message>
       <source>1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.</source>
       <translation>1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.</translation>
     </message>
@@ -453,6 +457,10 @@ Audio-Neupositionierung</translation>
       <translation>Druck</translation>
     </message>
     <message>
+      <source>Duplizieren</source>
+      <translation>Duplizieren</translation>
+    </message>
+    <message>
       <source>EQ aktivieren</source>
       <translation>EQ aktivieren</translation>
     </message>
@@ -789,6 +797,10 @@ Rückkehr in die neutrale Position.</translation>
     <message>
       <source>Invalid hardware battery telemetry</source>
       <translation>Ungültige Batteriedaten vom Gerät</translation>
+    </message>
+    <message>
+      <source>Invalid imported wave parameters</source>
+      <translation>Ungültige Parameter der importierten Welle</translation>
     </message>
     <message>
       <source>Invalid indicator color</source>
@@ -1179,6 +1191,10 @@ Rückkehr in die neutrale Position.</translation>
       <translation>Profil importiert. Original-XML erhalten; Gerätezuordnung noch nicht portiert.</translation>
     </message>
     <message>
+      <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.</source>
+      <translation>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.</translation>
+    </message>
+    <message>
       <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.</source>
       <translation>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.</translation>
     </message>
@@ -1557,6 +1573,10 @@ Rückkehr in die neutrale Position.</translation>
     <message>
       <source>USB-Verbindung</source>
       <translation>USB-Verbindung</translation>
+    </message>
+    <message>
+      <source>Umbenennen</source>
+      <translation>Umbenennen</translation>
     </message>
     <message>
       <source>Umschalten</source>

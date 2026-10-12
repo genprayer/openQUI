@@ -48,6 +48,22 @@ struct GuiDpiPeer {
         return rgb;
     }
     QByteArray exchange(const QByteArray& request) {
+        if (product == open_icue::VIRTUOSO_RECEIVER_PRODUCT_ID) {
+            QByteArray response(64, 0);
+            response[0] = 1;
+            response[1] = char(quint8(request[1]) & 7);
+            response[2] = request[2];
+            const auto command = quint8(request[2]);
+            if (command == 2) {
+                const auto property = quint8(request[3]);
+                qToLittleEndian<quint16>(property == 0x0f ? 950 : 2, response.data() + 4);
+            } else if (command == 6) {
+                QMutexLocker lock(&rgbMutex);
+                rgb = request.mid(8, 9);
+            } else if (command != 0x0d && command != 5)
+                throw std::runtime_error("Unexpected GUI headset command");
+            return response;
+        }
         QByteArray response(64, 0);
         response[1] = request[2];
         const auto command = quint8(request[2]), property = quint8(request[3]);
@@ -677,6 +693,113 @@ class NativeGuiTest : public QObject {
         for (const auto& usb : model_->usbInventory())
             QCOMPARE(usb.toMap().value("modelId").toString(), QString("virtuoso_black_dongle"));
         QVERIFY(capture("virtuoso-receiver-scoped"));
+    }
+    void profileActivationSendsEachConnectedPeripheralItsOwnLayers() {
+        QVERIFY(open("darkstar_wireless", "Lightings"));
+        const QStringList ids{"darkstar_wireless", "k70_core_rgb", "virtuoso_black"};
+        const QStringList colors{"#ff0000", "#00ff00", "#0000ff"};
+        model_->createProfile("Whole profile");
+        for (int index = 0; index < ids.size(); ++index) {
+            model_->selectDevice(ids[index]);
+            model_->setDocumentValue(
+                "lightingLayers",
+                QVariantList{
+                    QVariantMap{{"name", "Distinct device color"},
+                                {"type", "StaticCustomLightingTypeData.lightings.cue.corsair.com"},
+                                {"zones", QStringList{"all"}},
+                                {"colors", QVariantList{colors[index]}}}});
+            QVERIFY(model_->lastOperation().value("isOk").toBool());
+        }
+        model_->selectDevice(ids.first());
+        auto mouse = std::make_shared<GuiDpiPeer>();
+        auto keyboard = std::make_shared<GuiDpiPeer>();
+        keyboard->product = open_icue::K70_CORE_PRODUCT_ID;
+        auto headset = std::make_shared<GuiDpiPeer>();
+        headset->product = open_icue::VIRTUOSO_RECEIVER_PRODUCT_ID;
+        const QList<open_icue::HidEndpoint> endpoints{
+            {"profile-mouse", {}, "mouse", open_icue::DARKSTAR_PRODUCT_ID, {}, false},
+            {"profile-keyboard", {}, "keyboard", open_icue::K70_CORE_PRODUCT_ID, {}, false},
+            {"profile-headset", {}, "headset", open_icue::VIRTUOSO_RECEIVER_PRODUCT_ID, {}, true}};
+        auto backend = std::make_shared<open_icue::HardwareBackend>(
+            state_->path(), [endpoints] { return endpoints; },
+            [mouse, keyboard, headset](const open_icue::HidEndpoint& endpoint) {
+                auto peer = endpoint.product == open_icue::DARKSTAR_PRODUCT_ID   ? mouse
+                            : endpoint.product == open_icue::K70_CORE_PRODUCT_ID ? keyboard
+                                                                                 : headset;
+                return std::make_unique<open_icue::HidSession>(
+                    endpoint,
+                    [peer](const QByteArray& request) { return peer->exchange(request); });
+            });
+        model_->enableHardware(backend);
+        QTRY_COMPARE_WITH_TIMEOUT(
+            model_->lightingState().value("profileDeviceResults").toList().size(), 3,
+            GUI_TIMEOUT_MS);
+        QTRY_COMPARE_WITH_TIMEOUT(mouse->lightingPayload().size(), 39, GUI_TIMEOUT_MS);
+        QTRY_COMPARE_WITH_TIMEOUT(keyboard->lightingPayload().size(), 369, GUI_TIMEOUT_MS);
+        QTRY_COMPARE_WITH_TIMEOUT(headset->lightingPayload().size(), 9, GUI_TIMEOUT_MS);
+        QCOMPARE(quint8(mouse->lightingPayload()[9]), quint8(255));
+        QCOMPARE(quint8(keyboard->lightingPayload()[open_icue::k70LedIndex("A") + 123]),
+                 quint8(255));
+        QCOMPARE(quint8(headset->lightingPayload()[6]), quint8(255));
+        QVERIFY(capture("profile-three-device-replay"));
+        QVERIFY(click("navigation-Dpi"));
+        QTRY_VERIFY_WITH_TIMEOUT(!model_->isHardwareLightingActive() && !model_->isHardwareBusy(),
+                                 GUI_TIMEOUT_MS);
+        QCOMPARE(mouse->mode, 1U);
+        QCOMPARE(keyboard->mode, 1U);
+    }
+    void profileSidebarAddsBelowListAndOffersRightClickActions() {
+        QVERIFY(open("k70_core_rgb", "Lightings"));
+        const auto originalId = model_->activeProfileId();
+        QVERIFY(click("profiles-toggle"));
+        QTRY_VERIFY_WITH_TIMEOUT(item("profile-add") && item("profile-add")->isVisible(),
+                                 GUI_TIMEOUT_MS);
+        const auto listBottom =
+            item("profile-list")->mapToScene(QPointF(0, item("profile-list")->height())).y();
+        QVERIFY(item("profile-add")->mapToScene(QPointF()).y() >= listBottom);
+        QVERIFY(click("profile-add"));
+        auto* createDialog =
+            engine_->rootObjects().first()->findChild<QObject*>("profileCreateDialog");
+        QVERIFY(createDialog);
+        QVERIFY(QMetaObject::invokeMethod(createDialog, "accept"));
+        QTRY_COMPARE_WITH_TIMEOUT(model_->profiles().size(), 2, GUI_TIMEOUT_MS);
+        const auto createdId = model_->activeProfileId();
+        QVERIFY(createdId != originalId);
+        const auto openContextMenu = [this](const QString& id) {
+            window_->grabWindow();
+            auto* row = item("profile-row-" + id);
+            if (!row)
+                return false;
+            QTest::mouseClick(window_, Qt::RightButton, Qt::NoModifier,
+                              row->mapToScene(QPointF(24, row->height() / 2)).toPoint());
+            return QTest::qWaitFor(
+                [this] {
+                    return item("profile-duplicate") && item("profile-duplicate")->isVisible();
+                },
+                GUI_TIMEOUT_MS);
+        };
+        QVERIFY(openContextMenu(createdId));
+        QVERIFY(capture("profile-right-click-menu"));
+        QVERIFY(click("profile-duplicate"));
+        QTRY_COMPARE_WITH_TIMEOUT(model_->profiles().size(), 3, GUI_TIMEOUT_MS);
+        const auto duplicatedId = model_->activeProfileId();
+        QVERIFY(duplicatedId != createdId);
+        QVERIFY(openContextMenu(duplicatedId));
+        QVERIFY(click("profile-rename"));
+        QTRY_VERIFY_WITH_TIMEOUT(item("profile-rename-name") &&
+                                     item("profile-rename-name")->isVisible(),
+                                 GUI_TIMEOUT_MS);
+        item("profile-rename-name")->setProperty("text", "Renamed from menu");
+        auto* renameDialog =
+            engine_->rootObjects().first()->findChild<QObject*>("profileRenameDialog");
+        QVERIFY(renameDialog);
+        QVERIFY(QMetaObject::invokeMethod(renameDialog, "accept"));
+        QTRY_COMPARE_WITH_TIMEOUT(model_->profiles().last().toMap().value("name").toString(),
+                                  QString("Renamed from menu"), GUI_TIMEOUT_MS);
+        QVERIFY(openContextMenu(duplicatedId));
+        QVERIFY(click("profile-delete"));
+        QTRY_COMPARE_WITH_TIMEOUT(model_->profiles().size(), 2, GUI_TIMEOUT_MS);
+        QVERIFY(capture("profiles-after-actions"));
     }
     void assignmentKeyboard() {
         QVERIFY(open("darkstar_wireless", "Assignments"));

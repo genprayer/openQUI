@@ -3,7 +3,7 @@ set -euo pipefail
 PROJECT_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 BUILD_DIRECTORY="${OPENQUI_BUILD_DIRECTORY:-build/native}"
 BUILD_JOBS="${OPENQUI_BUILD_JOBS:-4}"
-LOCAL_RESOURCES="${OPENQUI_USE_LOCAL_CORSAIR_RESOURCES:-OFF}"
+LOCAL_RESOURCES="${OPENQUI_USE_LOCAL_CORSAIR_RESOURCES:-AUTO}"
 if command -v cmake >/dev/null && pkg-config --atleast-version=6.8 Qt6Quick && pkg-config --exists alsa libudev; then
     cmake -S "$PROJECT_ROOT" -B "$PROJECT_ROOT/$BUILD_DIRECTORY" -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DOPENQUI_USE_LOCAL_CORSAIR_RESOURCES="$LOCAL_RESOURCES"
     cmake --build "$PROJECT_ROOT/$BUILD_DIRECTORY" -j "$BUILD_JOBS"

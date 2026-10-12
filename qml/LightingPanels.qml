@@ -40,7 +40,13 @@ RowLayout {
         } else if (field === "type" && value !== selectedLayer.type) {
             delete item.transitions;
             delete item.isLooping;
+            delete item.waveVelocity;
+            delete item.waveTailLength;
+            delete item.waveAngle;
+            delete item.isWaveDoublesided;
         }
+        if (field === "direction" && item.waveAngle !== undefined)
+            item.waveAngle = [90, 270, 0, 180][value];
         values[layerIndex] = item;
         icue.setDocumentValue("lightingLayers", values);
     }

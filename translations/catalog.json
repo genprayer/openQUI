@@ -2241,6 +2241,31 @@
       "en": "Invalid lighting input timestamp",
       "de": "Ungültiger Zeitstempel für den Beleuchtungseingang",
       "ru": "Недопустимое время события подсветки"
+    },
+    "Umbenennen": {
+      "de": "Umbenennen",
+      "en": "Rename",
+      "ru": "Переименовать"
+    },
+    "Duplizieren": {
+      "de": "Duplizieren",
+      "en": "Duplicate",
+      "ru": "Дублировать"
+    },
+    "%1 — Kopie": {
+      "de": "%1 — Kopie",
+      "en": "%1 — Copy",
+      "ru": "%1 — Копия"
+    },
+    "Invalid imported wave parameters": {
+      "de": "Ungültige Parameter der importierten Welle",
+      "en": "Invalid imported wave parameters",
+      "ru": "Недопустимые параметры импортированной волны"
+    },
+    "Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.": {
+      "de": "Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.",
+      "en": "Profile imported: %1 lighting layers converted; %2 preserved in the original XML. Live preview in the lighting editor.",
+      "ru": "Профиль импортирован: преобразовано слоёв подсветки: %1; сохранено в исходном XML: %2. Предпросмотр в редакторе подсветки."
     }
   }
 }

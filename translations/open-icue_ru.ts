@@ -7,6 +7,10 @@
       <translation>%1 — копия</translation>
     </message>
     <message>
+      <source>%1 — Kopie</source>
+      <translation>%1 — Копия</translation>
+    </message>
+    <message>
       <source>1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.</source>
       <translation>1. Включите режим 2,4 ГГц. Подключите мышь кабелем USB и нужный ресивер напрямую к компьютеру.</translation>
     </message>
@@ -453,6 +457,10 @@ Audio-Neupositionierung</source>
       <translation>PrtSc</translation>
     </message>
     <message>
+      <source>Duplizieren</source>
+      <translation>Дублировать</translation>
+    </message>
+    <message>
       <source>EQ aktivieren</source>
       <translation>Включить EQ</translation>
     </message>
@@ -789,6 +797,10 @@ Rückkehr in die neutrale Position.</source>
     <message>
       <source>Invalid hardware battery telemetry</source>
       <translation>Устройство вернуло некорректные данные заряда</translation>
+    </message>
+    <message>
+      <source>Invalid imported wave parameters</source>
+      <translation>Недопустимые параметры импортированной волны</translation>
     </message>
     <message>
       <source>Invalid indicator color</source>
@@ -1179,6 +1191,10 @@ Rückkehr in die neutrale Position.</source>
       <translation>Профиль импортирован. Исходный XML сохранён; преобразование настроек для устройства пока не реализовано.</translation>
     </message>
     <message>
+      <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.</source>
+      <translation>Профиль импортирован: преобразовано слоёв подсветки: %1; сохранено в исходном XML: %2. Предпросмотр в редакторе подсветки.</translation>
+    </message>
+    <message>
       <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.</source>
       <translation>Профиль импортирован: преобразовано слоёв подсветки — %1; сохранено в оригинальном XML — %2. К устройству ещё не применено.</translation>
     </message>
@@ -1557,6 +1573,10 @@ Rückkehr in die neutrale Position.</source>
     <message>
       <source>USB-Verbindung</source>
       <translation>USB-подключение</translation>
+    </message>
+    <message>
+      <source>Umbenennen</source>
+      <translation>Переименовать</translation>
     </message>
     <message>
       <source>Umschalten</source>

@@ -70,6 +70,7 @@ ApplicationWindow {
     }
     Dialog {
         id: profileDialog
+        objectName: "profileCreateDialog"
         title: qsTranslate("OpenICUE", "Profil erstellen")
         anchors.centerIn: parent
         modal: true
@@ -80,76 +81,43 @@ ApplicationWindow {
         }
         contentItem: CueField {
             id: profileName
+            objectName: "profile-create-name"
             placeholderText: qsTranslate("OpenICUE", "Profilname")
             text: qsTranslate("OpenICUE", "Neues Profil")
             implicitWidth: 260
         }
         onAccepted: icue.createProfile(profileName.text)
     }
-    Popup {
+    ProfileSidebar {
         id: profilesPopup
         x: 80
         y: 112
-        width: 304
-        height: 410
-        modal: false
-        background: Rectangle {
-            color: Theme.panel
-            radius: 4
-            border.color: "#333333"
+        height: root.height - y
+        onCreateRequested: {
+            profileName.text = qsTranslate("OpenICUE", "Neues Profil");
+            profileDialog.open();
         }
-        ColumnLayout {
-            anchors.fill: parent
-            spacing: 8
-            RowLayout {
-                Text {
-                    text: qsTranslate("OpenICUE", "PROFILE")
-                    color: Theme.text
-                    Layout.fillWidth: true
-                }
-                CueButton {
-                    text: "+"
-                    isAccent: true
-                    onClicked: profileDialog.open()
-                }
-                CueButton {
-                    text: qsTranslate("OpenICUE", "Importieren")
-                    onClicked: importDialog.open()
-                }
-            }
-            ListView {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                model: icue.profiles
-                clip: true
-                delegate: Rectangle {
-                    required property var modelData
-                    width: ListView.view.width
-                    height: 40
-                    radius: 3
-                    color: modelData.id === icue.activeProfileId ? Theme.selected : "transparent"
-                    Text {
-                        x: 10
-                        anchors.verticalCenter: parent.verticalCenter
-                        text: modelData.name
-                        color: Theme.text
-                        font.pixelSize: 12
-                    }
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: icue.selectProfile(modelData.id)
-                    }
-                    CueButton {
-                        anchors.right: parent.right
-                        anchors.verticalCenter: parent.verticalCenter
-                        width: 26
-                        text: "×"
-                        enabled: icue.profiles.length > 1
-                        onClicked: icue.removeProfile(modelData.id)
-                    }
-                }
-            }
+        onImportRequested: importDialog.open()
+        onRenameRequested: function(profileId, profileName) {
+            renameProfileDialog.profileId = profileId;
+            renameProfileName.text = profileName;
+            renameProfileDialog.open();
         }
+    }
+    Dialog {
+        id: renameProfileDialog
+        objectName: "profileRenameDialog"
+        property string profileId: ""
+        title: qsTranslate("OpenICUE", "Umbenennen")
+        anchors.centerIn: parent
+        modal: true
+        footer: CueDialogButtons {}
+        contentItem: CueField {
+            id: renameProfileName
+            objectName: "profile-rename-name"
+            implicitWidth: 260
+        }
+        onAccepted: icue.renameProfile(profileId, renameProfileName.text)
     }
     Rectangle {
         id: titleBar
@@ -306,7 +274,8 @@ ApplicationWindow {
             height: 56
             text: "▤"
             font.pixelSize: 24
-            onClicked: profilesPopup.open()
+            objectName: "profiles-toggle"
+            onClicked: profilesPopup.visible ? profilesPopup.close() : profilesPopup.open()
         }
         Text {
             x: 8

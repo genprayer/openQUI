@@ -7,6 +7,10 @@
       <translation>%1 copy</translation>
     </message>
     <message>
+      <source>%1 — Kopie</source>
+      <translation>%1 — Copy</translation>
+    </message>
+    <message>
       <source>1. Maus auf 2,4 GHz stellen. Maus per USB-Kabel und den gewünschten Empfänger direkt an den PC anschließen.</source>
       <translation>1. Set the mouse to 2.4 GHz. Connect the mouse with a USB cable and the intended receiver directly to the PC.</translation>
     </message>
@@ -453,6 +457,10 @@ repositioning</translation>
       <translation>PrtSc</translation>
     </message>
     <message>
+      <source>Duplizieren</source>
+      <translation>Duplicate</translation>
+    </message>
+    <message>
       <source>EQ aktivieren</source>
       <translation>Start EQ</translation>
     </message>
@@ -789,6 +797,10 @@ return to the neutral position.</translation>
     <message>
       <source>Invalid hardware battery telemetry</source>
       <translation>Invalid hardware battery telemetry</translation>
+    </message>
+    <message>
+      <source>Invalid imported wave parameters</source>
+      <translation>Invalid imported wave parameters</translation>
     </message>
     <message>
       <source>Invalid indicator color</source>
@@ -1179,6 +1191,10 @@ return to the neutral position.</translation>
       <translation>Profile imported. Original XML preserved; hardware mapping is not implemented yet.</translation>
     </message>
     <message>
+      <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Live-Vorschau im Beleuchtungseditor.</source>
+      <translation>Profile imported: %1 lighting layers converted; %2 preserved in the original XML. Live preview in the lighting editor.</translation>
+    </message>
+    <message>
       <source>Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML erhalten. Noch nicht am Gerät angewendet.</source>
       <translation>Profile imported: %1 lighting layers converted; %2 preserved in the original XML. Not applied to the device yet.</translation>
     </message>
@@ -1557,6 +1573,10 @@ return to the neutral position.</translation>
     <message>
       <source>USB-Verbindung</source>
       <translation>USB connection</translation>
+    </message>
+    <message>
+      <source>Umbenennen</source>
+      <translation>Rename</translation>
     </message>
     <message>
       <source>Umschalten</source>

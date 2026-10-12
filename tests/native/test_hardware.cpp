@@ -507,6 +507,35 @@ class NativeHardwareTests final : public QObject {
         QCOMPARE(input->eventCount(), quint64(0));
         QCOMPARE(fixture.modes.value(8), quint32(1));
     }
+    void keyboardPressStateSurvivesFramesForOtherProfileDevices() {
+        DpiFixture fixture;
+        fixture.endpoints = {{"keyboard", {}, "keyboard-serial", K70_CORE_PRODUCT_ID, {}, false},
+                             {"mouse", {}, "mouse-serial", DARKSTAR_PRODUCT_ID, {}, false}};
+        QByteArray down(21, 0);
+        down[0] = 1;
+        down[2] = char(1 << 4);
+        auto input = std::make_shared<KeyboardLightingInput>([down] { return QList{down}; });
+        HardwareBackend backend(
+            {}, [&] { return fixture.endpoints; },
+            [&](const auto& endpoint) { return fixture.session(endpoint); }, input);
+        const QVariantList keyboardLayers{QVariantMap{{"type", "TypeLightingTypeData"},
+                                                      {"zones", QStringList{"all"}},
+                                                      {"colors", QVariantList{"#ff0000"}},
+                                                      {"duration", 2}}};
+        const QVariantList mouseLayers{QVariantMap{{"type", "StaticCustomLightingTypeData"},
+                                                   {"zones", QStringList{"all"}},
+                                                   {"colors", QVariantList{"#00ff00"}}}};
+        backend.applyLighting("k70_core_rgb", keyboardLayers, {QVariantMap{{"id", "A"}}}, 4);
+        QCOMPARE(input->eventCount(), quint64(1));
+        backend.applyLighting("darkstar_wireless", mouseLayers,
+                              {QVariantMap{{"id", "MouseLogoLed"}}}, 4);
+        const auto next =
+            backend.applyLighting("k70_core_rgb", keyboardLayers, {QVariantMap{{"id", "A"}}}, 5);
+        QCOMPARE(input->eventCount(), quint64(1));
+        const QColor color(next.value("previewColors").toMap().value("A").toString());
+        QVERIFY(std::abs(color.red() - 128) <= 1);
+        QCOMPARE(color.green(), 0);
+    }
     void importedGradientUsesUnevenTransitionTimesAndAlpha() {
         const QVariantList zones{QVariantMap{{"id", "A"}}, QVariantMap{{"id", "B"}}};
         const QVariantMap timeline{
@@ -529,6 +558,49 @@ class NativeHardwareTests final : public QObject {
         QVERIFY(std::abs(qBlue(middle[0]) - 48) <= 1);
         QCOMPARE(qRed(middle[0]), 0);
         QCOMPARE(lightingFrame({timeline}, zones, 4), start);
+    }
+    void importedPerKeyTimelineUsesPressAgeAndPreservesOtherKeys() {
+        const QVariantMap base{{"type", "StaticCustomLightingTypeData"},
+                               {"zones", QStringList{"all"}},
+                               {"colors", QVariantList{"#0000ff"}}};
+        const QVariantMap reactive{
+            {"type", "TypeLightingTypeData"},
+            {"zones", QStringList{"all"}},
+            {"duration", 2},
+            {"isLooping", false},
+            {"transitions", QVariantList{QVariantMap{{"time", 0.0}, {"color", "#ffff0000"}},
+                                         QVariantMap{{"time", 1.0}, {"color", "#00ff0000"}}}}};
+        const QVariantList zones{QVariantMap{{"id", "A"}}, QVariantMap{{"id", "B"}}};
+        QMap<int, double> presses{{k70LedIndex("A"), 10.0}};
+        QCOMPARE(lightingFrame({base, reactive}, zones, 10, &presses)[0], qRgb(255, 0, 0));
+        QCOMPARE(lightingFrame({base, reactive}, zones, 10, &presses)[1], qRgb(0, 0, 255));
+        const auto fading = lightingFrame({base, reactive}, zones, 11, &presses)[0];
+        QVERIFY(std::abs(qRed(fading) - 128) <= 1);
+        QVERIFY(std::abs(qBlue(fading) - 128) <= 1);
+        QCOMPARE(lightingFrame({base, reactive}, zones, 12, &presses)[0], qRgb(0, 0, 255));
+    }
+    void importedWaveHasSpatialPhaseAndRejectsInvalidParameters() {
+        QVariantMap wave{
+            {"type", "WaveLightingTypeData"},
+            {"zones", QStringList{"all"}},
+            {"duration", 2.0},
+            {"isLooping", true},
+            {"waveVelocity", 100},
+            {"waveTailLength", 200},
+            {"waveAngle", 90},
+            {"isWaveDoublesided", false},
+            {"transitions", QVariantList{QVariantMap{{"time", 0.0}, {"color", "#ffff0000"}},
+                                         QVariantMap{{"time", 1.0}, {"color", "#ff0000ff"}}}}};
+        const QVariantList zones{
+            QVariantMap{{"id", "A"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 0}, {"width", 0}}}}},
+            QVariantMap{{"id", "B"},
+                        {"geometry", QVariantList{QVariantMap{{"x", 100}, {"width", 0}}}}}};
+        const auto frame = lightingFrame({wave}, zones, 0.5);
+        QVERIFY(frame[0] != frame[1]);
+        QVERIFY(lightingFrame({wave}, zones, 1.0)[0] != frame[0]);
+        wave["waveVelocity"] = 0;
+        QVERIFY_EXCEPTION_THROWN(lightingFrame({wave}, zones, 0), std::invalid_argument);
     }
     void importedStaticColorPreservesAlpha() {
         const QVariantList layers{QVariantMap{{"type", "StaticCustomLightingTypeData"},

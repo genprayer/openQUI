@@ -149,6 +149,26 @@ void Workspace::renameProfile(const QString& id, const QString& name) {
     });
 }
 
+void Workspace::duplicateProfile(const QString& id, const QString& name) {
+    const auto validated = checkedName(name);
+    change([&](QJsonObject& state) {
+        auto profiles = state.value("profiles").toArray();
+        if (profiles.size() >= MAX_PROFILES)
+            throw std::runtime_error("Profile limit reached");
+        auto copy = profiles.at(profileIndex(profiles, id)).toObject();
+        const auto copyId = newId();
+        copy["id"] = copyId;
+        copy["name"] = validated;
+        // Import identity belongs to the original; importing again must not select this copy.
+        if (copy.contains("sourceSha256")) {
+            copy["originSourceSha256"] = copy.take("sourceSha256");
+        }
+        profiles.append(copy);
+        state["profiles"] = profiles;
+        state["activeProfileId"] = copyId;
+    });
+}
+
 void Workspace::removeProfile(const QString& id) {
     change([&](QJsonObject& state) {
         auto profiles = state.value("profiles").toArray();
@@ -174,6 +194,14 @@ void Workspace::importProfile(const QString& path) {
         for (qsizetype index = 0; index < profiles.size(); ++index) {
             auto profile = profiles.at(index).toObject();
             if (profile.value("sourceSha256").toString() == hash) {
+                const auto previousMetadata = profile.value("sourceMetadata").toObject();
+                const auto previousConversion = previousMetadata.value("conversion").toObject();
+                const auto currentConversion = parsed.metadata.value("conversion").toMap();
+                // Keep earlier conversions and their local edits. A newer converter imports
+                // into a separate document; subsequent imports select that version.
+                if (!previousConversion.isEmpty() && previousConversion.value("version").toInt() !=
+                                                         currentConversion.value("version").toInt())
+                    continue;
                 // Upgrade earlier byte-only imports without replacing locally edited devices.
                 if (profile.value("devices").toObject().isEmpty() &&
                     !profile.value("sourceMetadata").toObject().contains("conversion")) {

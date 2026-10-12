@@ -126,6 +126,7 @@ class ApplicationModel : public QObject {
     void selectProfile(const QString& id);
     void createProfile(const QString& name);
     void renameProfile(const QString& id, const QString& name);
+    void duplicateProfile(const QString& id, const QString& name);
     void removeProfile(const QString& id);
     void importProfile(const QString& path);
     void setDocumentValue(const QString& key, const QVariant& value);
@@ -147,7 +148,7 @@ class ApplicationModel : public QObject {
     void toggleSurround();
     void stopAudio();
     void applyHardware();
-    /** Live RGB edits are sent only while the selected lighting editor is active. */
+    /** Send live edits and activated profile routes only while a lighting editor is active. */
     void setLightingEditorActive(bool isActive);
     /** Apply the selected preset's active value; firmware stage storage is separate. */
     void applyDpiSettings();
@@ -200,9 +201,10 @@ class ApplicationModel : public QObject {
     QVariantMap dpiState_;
     QString hardwareAction_, lightingModel_;
     QString desiredLightingModel_, submittedLightingModel_;
-    QVariantList appliedLayers_, appliedZones_;
+    QVariantList appliedLightingFrames_;
     bool isHardwarePending_ = false;
     bool isLightingEditorActive_ = false, hasLightingUpdate_ = false;
+    bool isProfileLightingRequested_ = false;
     bool shouldReleaseControl_ = false;
     quint64 lightingRevision_ = 0, submittedLightingRevision_ = 0;
 };

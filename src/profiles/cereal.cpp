@@ -7,6 +7,7 @@
 #include <QRegularExpression>
 #include <QSet>
 #include <QXmlStreamReader>
+#include <algorithm>
 #include <cmath>
 #include <optional>
 #include <stdexcept>
@@ -22,6 +23,7 @@ constexpr double MAX_LIGHTING_DURATION = 60.0;
 constexpr double SOURCE_FULL_BRIGHTNESS = 10.0;
 constexpr double SOURCE_MAX_OPACITY = 255.0;
 constexpr double MILLISECONDS_PER_SECOND = 1000.0;
+constexpr double MAX_WAVE_PARAMETER = 10000.0;
 constexpr quint32 CEREAL_ID_MASK = 0x7fffffff;
 
 struct XmlNode {
@@ -167,6 +169,18 @@ bool isContinuousLayer(const ProfileXml& xml, int base) {
            xml.value(hints, "playOption") == "Standard";
 }
 
+/** Only this recorded execution mode has per-key semantics implemented by the K70 reader. */
+bool isPerKeyLayer(const ProfileXml& xml, int base, const QString& model) {
+    const int hints = xml.child(base, "executionHints");
+    return model == "k70_core_rgb" && xml.value(base, "enabled") == "true" &&
+           xml.value(hints, "startWithProfile") == "false" &&
+           xml.value(hints, "startOnKeyPress") == "true" &&
+           xml.value(hints, "stopOnKeyPress") == "false" &&
+           xml.value(hints, "stopOnKeyRelease") == "false" &&
+           xml.value(hints, "stopAfterTimes") == "1" &&
+           xml.value(hints, "playOption") == "PlayOnKeyCenter";
+}
+
 /** Rank routes without applying a profile for another model or a receiver. */
 int routeRank(const ProfileXml& xml, int key, const QString& category, const QString& model,
               const Catalog& catalog) {
@@ -209,18 +223,27 @@ std::optional<QVariantMap> convertLayer(const ProfileXml& xml, int entry, const 
                                         const Catalog& catalog, Conversion& summary) {
     const int data = xml.data(entry);
     const int base = xml.child(data, "base");
-    if (xml.type(entry) != "AdvancedLightingLayer" || !isContinuousLayer(xml, base)) {
+    const bool isPerKey = isPerKeyLayer(xml, base, model);
+    if (xml.type(entry) != "AdvancedLightingLayer" ||
+        (!isContinuousLayer(xml, base) && !isPerKey)) {
         summary.warnings.insert("unsupported-execution-or-layer");
         return std::nullopt;
     }
     const int lighting = xml.child(data, "lighting");
     const auto sourceType = xml.type(lighting);
     const bool isStatic = sourceType == "StaticLighting";
-    if (!isStatic && sourceType != "GradientLighting") {
+    const bool isWave = sourceType == "WaveLighting";
+    const bool isPulse = sourceType == "ColorPulseLighting";
+    if ((isPerKey && sourceType != "GradientLighting") ||
+        (!isStatic && !isWave && !isPulse && sourceType != "GradientLighting")) {
         summary.warnings.insert("unsupported-lighting-effect");
         return std::nullopt;
     }
-    const QString nativeType = QString(isStatic ? "StaticCustom" : "Gradient") +
+    const QString nativeType = QString(isPerKey   ? "Type"
+                                       : isStatic ? "StaticCustom"
+                                       : isWave   ? "Wave"
+                                       : isPulse  ? "ColorPulse"
+                                                  : "Gradient") +
                                "LightingTypeData.lightings.cue.corsair.com";
     bool isSupported = false;
     for (const auto& type : catalog.lightingTypes(model))
@@ -270,6 +293,52 @@ std::optional<QVariantMap> convertLayer(const ProfileXml& xml, int entry, const 
         summary.warnings.insert("unsupported-lighting-timing-or-brightness");
         return std::nullopt;
     }
+    QVariantMap parameters;
+    if (isWave) {
+        for (const auto& field : {QString("velocity"), QString("tailLength"), QString("angle")}) {
+            bool isNumber = false;
+            const double value = xml.value(effectData, field).toDouble(&isNumber);
+            if (!isNumber || !std::isfinite(value) || value < 0 ||
+                value > (field == "angle" ? 360.0 : MAX_WAVE_PARAMETER) ||
+                (field != "angle" && value == 0)) {
+                summary.warnings.insert("unsupported-wave-parameters");
+                return std::nullopt;
+            }
+            parameters.insert("wave" + field.left(1).toUpper() + field.mid(1), value);
+        }
+        const auto doublesided = xml.value(effectData, "isDoublesided");
+        if (doublesided != "true" && doublesided != "false")
+            return std::nullopt;
+        parameters.insert("isWaveDoublesided", doublesided == "true");
+    }
+    if (isPulse) {
+        QVariantList colors;
+        const int sourceColors = xml.child(effectData, "colors");
+        for (const auto& field : {QString("first"), QString("second")}) {
+            bool isColor = false;
+            const quint32 argb = xml.value(sourceColors, field).toUInt(&isColor);
+            if (!isColor)
+                return std::nullopt;
+            colors.append(QColor::fromRgba(argb).name(QColor::HexArgb));
+        }
+        const auto random = xml.value(effectData, "random");
+        bool isSpeed = false;
+        const double speed = xml.value(effectData, "speed").toDouble(&isSpeed);
+        if ((random != "true" && random != "false") || !isSpeed || !std::isfinite(speed) ||
+            speed < 0 || speed > 2)
+            return std::nullopt;
+        ++summary.convertedLayers;
+        return QVariantMap{{"name", xml.value(base, "name")},
+                           {"type", nativeType},
+                           {"zones", zones},
+                           {"colors", colors},
+                           {"duration", duration},
+                           {"speed", speed},
+                           {"isRandom", random == "true"},
+                           {"opacity", 100},
+                           {"sourceId", xml.value(base, "id")},
+                           {"sourceEffect", sourceType}};
+    }
     const int transitions = xml.inheritedField(effectData, "transitions");
     if (transitions < 0 || xml.nodes.at(transitions).children.isEmpty() ||
         xml.nodes.at(transitions).children.size() > MAX_LIGHTING_COLORS)
@@ -291,10 +360,26 @@ std::optional<QVariantMap> convertLayer(const ProfileXml& xml, int entry, const 
     }
     if ((isStatic &&
          (points.size() != 1 || points.first().toMap().value("time").toDouble() != 0)) ||
-        (!isStatic && (points.size() < 2 || points.first().toMap().value("time").toDouble() != 0 ||
-                       points.last().toMap().value("time").toDouble() != 1))) {
+        (!isStatic && !isWave &&
+         (points.size() < 2 || points.first().toMap().value("time").toDouble() != 0 ||
+          points.last().toMap().value("time").toDouble() != 1))) {
         summary.warnings.insert("unsupported-transition-boundaries");
         return std::nullopt;
+    }
+    // Wave editor timelines can omit transparent endpoints; hold the nearest source color.
+    if (isWave) {
+        if (points.first().toMap().value("time").toDouble() > 0) {
+            points.prepend(QVariantMap{{"time", 0.0}, {"color", colors.first()}});
+            colors.prepend(colors.first());
+        }
+        if (points.last().toMap().value("time").toDouble() < 1) {
+            points.append(QVariantMap{{"time", 1.0}, {"color", colors.last()}});
+            colors.append(colors.last());
+        }
+        if (points.size() > MAX_LIGHTING_COLORS) {
+            summary.warnings.insert("unsupported-wave-transition-count");
+            return std::nullopt;
+        }
     }
     double opacity = 100;
     if (isStatic) {
@@ -311,11 +396,14 @@ std::optional<QVariantMap> convertLayer(const ProfileXml& xml, int entry, const 
                        {"opacity", opacity},
                        {"sourceId", xml.value(base, "id")},
                        {"sourceEffect", sourceType}};
+    result.insert(parameters);
     if (!isStatic) {
         result.insert("duration", duration);
         result.insert("transitions", points);
-        result.insert("isLooping", true);
+        result.insert("isLooping", !isPerKey);
     }
+    if (isWave)
+        result.insert("speed", 1.5);
     ++summary.convertedLayers;
     return result;
 }
@@ -351,6 +439,8 @@ QVariantList convertRoute(const ProfileXml& xml, int route, const QString& model
             }
         }
     }
+    // iCUE serializes topmost first; the native compositor stores bottommost first.
+    std::reverse(result.begin(), result.end());
     return result;
 }
 
@@ -397,7 +487,7 @@ void convertLighting(CerealProfile& result, const ProfileXml& xml, int profile) 
     warnings.sort();
     const int preservedLayers = std::max(0, sourceLayers - summary.convertedLayers);
     result.metadata.insert("conversion",
-                           QVariantMap{{"version", 1},
+                           QVariantMap{{"version", 2},
                                        {"sourceLightingLayers", sourceLayers},
                                        {"convertedLightingLayers", summary.convertedLayers},
                                        {"preservedLightingLayers", preservedLayers},

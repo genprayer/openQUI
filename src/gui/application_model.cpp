@@ -44,6 +44,29 @@ constexpr double MAX_LIGHTING_OPACITY = 100.0;
 QByteArray json(const QVariant& value) {
     return QJsonDocument::fromVariant(value).toJson(QJsonDocument::Compact);
 }
+
+/** One serialized hardware transaction replays all connected routes of an active profile. */
+QVariantMap applyLightingFrames(const std::shared_ptr<HardwareBackend>& backend,
+                                const QVariantList& frames, const QString& selectedModel,
+                                double seconds) {
+    QVariantList results;
+    QVariantMap selected;
+    for (const auto& value : frames) {
+        const auto frame = value.toMap();
+        const auto model = frame.value("modelId").toString();
+        auto result = backend->applyLighting(model, frame.value("layers").toList(),
+                                             frame.value("zones").toList(), seconds);
+        if (!result.value("isOk").toBool())
+            return result;
+        results.append(result);
+        if (model == selectedModel)
+            selected = result;
+    }
+    selected.insert("isOk", true);
+    selected.insert("isLightingActive", !results.isEmpty());
+    selected.insert("profileDeviceResults", results);
+    return selected;
+}
 } // namespace
 
 ApplicationModel::ApplicationModel(const QString& stateDirectory, QObject* parent)
@@ -97,6 +120,11 @@ ApplicationModel::ApplicationModel(const QString& stateDirectory, QObject* paren
     });
 #endif
     refresh();
+    for (const auto& value : profiles()) {
+        const auto profile = value.toMap();
+        if (profile.value("id").toString() == activeProfileId())
+            isProfileLightingRequested_ = profile.value("devices").toMap().size() > 1;
+    }
     scanTimer_.start();
 }
 ApplicationModel::~ApplicationModel() {
@@ -188,10 +216,10 @@ void ApplicationModel::enableHardware(std::shared_ptr<HardwareBackend> injectedB
         }
         const auto backend = hardware_;
         const auto model = lightingModel_;
-        const auto layers = appliedLayers_, zones = appliedZones_;
+        const auto frames = appliedLightingFrames_;
         const double seconds = lightingClock_.elapsed() / 1000.0;
         scheduleHardware("frame",
-                         [=] { return backend->applyLighting(model, layers, zones, seconds); });
+                         [=] { return applyLightingFrames(backend, frames, model, seconds); });
     });
     const auto backend = hardware_;
     scheduleHardware("poll", [backend] {
@@ -261,13 +289,30 @@ void ApplicationModel::requestLiveLighting() {
         return;
     const auto layers = document().value("lightingLayers").toList();
     const auto selected = device();
-    const bool canSend = isLightingEditorActive_ && !selected.value("isReceiver").toBool() &&
-                         selected.value("isConnected").toBool() &&
-                         (!layers.isEmpty() || lightingModel_ == selectedModelId_ ||
-                          desiredLightingModel_ == selectedModelId_);
+    QVariantList frames;
+    if (isLightingEditorActive_ && !selected.value("isReceiver").toBool()) {
+        if (isProfileLightingRequested_) {
+            for (const auto& value : devices()) {
+                const auto entry = value.toMap();
+                if (entry.value("isReceiver").toBool() || !entry.value("isConnected").toBool())
+                    continue;
+                const auto id = entry.value("id").toString();
+                frames.append(QVariantMap{
+                    {"modelId", id},
+                    {"layers",
+                     workspace_.device(id, catalog_.initialDocument(id)).value("lightingLayers")},
+                    {"zones", catalog_.lightingKeys(id)}});
+            }
+        } else if (selected.value("isConnected").toBool() &&
+                   (!layers.isEmpty() || lightingModel_ == selectedModelId_ ||
+                    desiredLightingModel_ == selectedModelId_)) {
+            frames.append(QVariantMap{
+                {"modelId", selectedModelId_}, {"layers", layers}, {"zones", lightingKeys()}});
+        }
+    }
+    const bool canSend = !frames.isEmpty();
     desiredLightingModel_ = canSend ? selectedModelId_ : QString();
-    appliedLayers_ = layers;
-    appliedZones_ = lightingKeys();
+    appliedLightingFrames_ = frames;
     ++lightingRevision_;
     hasLightingUpdate_ = true;
     synchronizeLighting();
@@ -294,12 +339,12 @@ void ApplicationModel::synchronizeLighting() {
     if (!hasLightingUpdate_)
         return;
     const auto model = desiredLightingModel_;
-    const auto layers = appliedLayers_, zones = appliedZones_;
+    const auto frames = appliedLightingFrames_;
     const bool isFirstFrame = lightingModel_ != model;
     const double seconds = isFirstFrame ? 0.0 : lightingClock_.elapsed() / 1000.0;
     hasLightingUpdate_ = false;
     scheduleHardware(isFirstFrame ? "apply" : "frame",
-                     [=] { return backend->applyLighting(model, layers, zones, seconds); });
+                     [=] { return applyLightingFrames(backend, frames, model, seconds); });
 }
 
 QVariantList ApplicationModel::devices() const {
@@ -448,6 +493,8 @@ void ApplicationModel::selectDevice(const QString& id) {
 void ApplicationModel::selectProfile(const QString& id) {
     perform([&] {
         workspace_.selectProfile(id);
+        isProfileLightingRequested_ = true;
+        lightingClock_.restart();
         if (isAudioClientRunning())
             audioUpdateTimer_.start();
     });
@@ -467,17 +514,40 @@ QString ApplicationModel::iconSource(const QString& category, const QString& id,
                : fallback;
 }
 void ApplicationModel::createProfile(const QString& name) {
-    perform([&] { workspace_.createProfile(name); });
+    perform([&] {
+        workspace_.createProfile(name);
+        isProfileLightingRequested_ = true;
+        lightingClock_.restart();
+    });
+    if (lastOperation_.value("isOk").toBool())
+        requestLiveLighting();
 }
 void ApplicationModel::renameProfile(const QString& id, const QString& name) {
     perform([&] { workspace_.renameProfile(id, name); });
 }
 void ApplicationModel::removeProfile(const QString& id) {
-    perform([&] { workspace_.removeProfile(id); });
+    perform([&] {
+        workspace_.removeProfile(id);
+        isProfileLightingRequested_ = true;
+        lightingClock_.restart();
+    });
+    if (lastOperation_.value("isOk").toBool())
+        requestLiveLighting();
+}
+void ApplicationModel::duplicateProfile(const QString& id, const QString& name) {
+    perform([&] {
+        workspace_.duplicateProfile(id, name);
+        isProfileLightingRequested_ = true;
+        lightingClock_.restart();
+    });
+    if (lastOperation_.value("isOk").toBool())
+        requestLiveLighting();
 }
 void ApplicationModel::importProfile(const QString& path) {
     perform([&] {
         workspace_.importProfile(QUrl(path).isLocalFile() ? QUrl(path).toLocalFile() : path);
+        isProfileLightingRequested_ = true;
+        lightingClock_.restart();
         for (const auto& value : profiles()) {
             const auto profile = value.toMap();
             if (profile.value("id").toString() != activeProfileId())
@@ -485,11 +555,13 @@ void ApplicationModel::importProfile(const QString& path) {
             const auto summary =
                 profile.value("sourceMetadata").toMap().value("conversion").toMap();
             setNotice("Profil importiert: %1 Beleuchtungsebenen übernommen; %2 im Original-XML "
-                      "erhalten. Noch nicht am Gerät angewendet.",
+                      "erhalten. Live-Vorschau im Beleuchtungseditor.",
                       {QString::number(summary.value("convertedLightingLayers").toInt()),
                        QString::number(summary.value("preservedLightingLayers").toInt())});
         }
     });
+    if (lastOperation_.value("isOk").toBool())
+        requestLiveLighting();
 }
 void ApplicationModel::setDocumentValue(const QString& key, const QVariant& input) {
     perform([&] {
