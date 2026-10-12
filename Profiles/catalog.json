@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 1,
+  "source": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/",
+  "fetchedAtUtc": "2026-10-12T18:18:00.216845+00:00",
+  "pageCount": 82,
+  "totalBytes": 386667056,
+  "profiles": [
+    {
+      "name": "1Up",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/1-up/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/101/LG_1Up_ZSBkrXv.cueprofile",
+      "file": "downloads/1-up--LG_1Up_ZSBkrXv.cueprofile",
+      "bytes": 3632234,
+      "sha256": "15e72c8637b53d7fd332159a14418681ea1037871398eaf68f039a9f19871776",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "4th July",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/4thjuly/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/114/LG_4thJuly.cueprofile",
+      "file": "downloads/4thjuly--LG_4thJuly.cueprofile",
+      "bytes": 4039146,
+      "sha256": "5ea49a94f25c9d756b8c158ae5d22818520618598349a23d93bc0aa11d2655cf",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Apex Legends",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/apexlegends/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/102/LG_ApexLegends_CfydKi2.cueprofile",
+      "file": "downloads/apexlegends--LG_ApexLegends_CfydKi2.cueprofile",
+      "bytes": 3877220,
+      "sha256": "dbd9208b4dde90ca7449cf5ce51115d470d28e19c56428b6716e6d572d495eec",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "ARC Raiders",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/arcraiders/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/169/LG_ARCRaiders.cueprofile",
+      "file": "downloads/arcraiders--LG_ARCRaiders.cueprofile",
+      "bytes": 9075224,
+      "sha256": "0616665c3bbeb2041d44054d27fd15582afc2163f77087e358479b7989a284a1",
+      "exporterVersion": "5.31.112"
+    },
+    {
+      "name": "Autumn",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/autumn/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/24/LG_Autumn.cueprofile",
+      "file": "downloads/autumn--LG_Autumn.cueprofile",
+      "bytes": 6427654,
+      "sha256": "27d13c6102adde122c87a95f2c9753c91724cd356f855520ea4ef36903617f1c",
+      "exporterVersion": ""
+    },
+    {
+      "name": "AutumnLeaves",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/autumnleaves/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/138/LG_AutumnLeaves.cueprofile",
+      "file": "downloads/autumnleaves--LG_AutumnLeaves.cueprofile",
+      "bytes": 6967416,
+      "sha256": "adb9802ab80c8956057d6b255949b39be89cb85ca839bf7c73ddc51ecae47258",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Avengers Endgame",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/avengers-endgame/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/103/LG_AvengersEndgame_PsFIjRA.cueprofile",
+      "file": "downloads/avengers-endgame--LG_AvengersEndgame_PsFIjRA.cueprofile",
+      "bytes": 3874534,
+      "sha256": "8faed8088b1e38a2a27b944cd04101761e7ff59fbe00d9cc7eea5cba6d94b9db",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Battlefield",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/battlefield/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/105/LG_Battlefield_IwtlA1p.cueprofile",
+      "file": "downloads/battlefield--LG_Battlefield_IwtlA1p.cueprofile",
+      "bytes": 4058250,
+      "sha256": "e4e8a8f5035e6f0a3738063d045db91f0cf3cb5d9456b388bffd62e2db1d6b52",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "BO6_ThemeMain",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/blackops6/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/129/LG_BlackOps6-ThemeMain.cueprofile",
+      "file": "downloads/blackops6--LG_BlackOps6-ThemeMain.cueprofile",
+      "bytes": 4317363,
+      "sha256": "07aaffaf8073824341cac19803fa738760d44fb9896ff75c7068532fbbb0bab3",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "BO7_ThemeMain",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/blackops7/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/166/LG_BlackOps7.cueprofile",
+      "file": "downloads/blackops7--LG_BlackOps7.cueprofile",
+      "bytes": 9352311,
+      "sha256": "885901634e6c8c46cbbbcf33ba3e0afbbbca156e4152bddd0bfc22b553d86781",
+      "exporterVersion": "5.31.112"
+    },
+    {
+      "name": "Bob Ross Workshop",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/bob-ross-icue-workshop-profile/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/72/LG_BobRossWorkshop.cueprofile",
+      "file": "downloads/bob-ross-icue-workshop-profile--LG_BobRossWorkshop.cueprofile",
+      "bytes": 4369831,
+      "sha256": "718296e7e1f058331769380a621edc84b8adf46d25130154159153bde5677940",
+      "exporterVersion": "4.32.129"
+    },
+    {
+      "name": "Borderlands 4",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/borderlands4/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/163/LG_Borderlands4.cueprofile",
+      "file": "downloads/borderlands4--LG_Borderlands4.cueprofile",
+      "bytes": 3625685,
+      "sha256": "c34edbf7a5788c1a4bdd23036d4c3e2ea015caa06e1b2c2a286ba69270502da3",
+      "exporterVersion": "5.31.112"
+    },
+    {
+      "name": "Brimstone",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/brimstone/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/99/LG_Brimstone_lGoYlCr.cueprofile",
+      "file": "downloads/brimstone--LG_Brimstone_lGoYlCr.cueprofile",
+      "bytes": 5438724,
+      "sha256": "a8e3965e393636fd2245517a46a523f0df3f624db9baf72763350b81f965b9e1",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "CallOfDuty-ModernWarfareBlue",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/callofduty-modernwarfare-blue/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/100/LG_CallOfDuty-ModernWarfareBlue.cueprofile",
+      "file": "downloads/callofduty-modernwarfare-blue--LG_CallOfDuty-ModernWarfareBlue.cueprofile",
+      "bytes": 3561183,
+      "sha256": "56fe60815ba1fc8ce1ea40805190d28ee620d1536d89797671d55c2943828eea",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Carina Nebula",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/carinanebula/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/76/LG_CarinaNebula_VtcM7Am.cueprofile",
+      "file": "downloads/carinanebula--LG_CarinaNebula_VtcM7Am.cueprofile",
+      "bytes": 10315235,
+      "sha256": "29e6eb29e8c398f42ba2b2431da1ec94057300b1b67af0b957bbb634e7a0b718",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "CCL-Celestial",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-celestial/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/117/CCL-Celestial.cueprofile",
+      "file": "downloads/ccl-celestial--CCL-Celestial.cueprofile",
+      "bytes": 4080689,
+      "sha256": "e209e8ebd5f33bc8e14df5e334f2c51f0cddb1b18963a1cd8531dd234707b1ea",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Cherry Blossom",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-cherryblossom/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/118/CCL-CherryBlossom.cueprofile",
+      "file": "downloads/ccl-cherryblossom--CCL-CherryBlossom.cueprofile",
+      "bytes": 3921375,
+      "sha256": "55d48aa47f78e08200e13706ca4187f895f0f0a7d5c850f1cd98301fa6a3ab69",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Cherry Pink",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-cherrypink/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/119/CCL-CherryPink.cueprofile",
+      "file": "downloads/ccl-cherrypink--CCL-CherryPink.cueprofile",
+      "bytes": 3941108,
+      "sha256": "8a6dad3b3b96f058198f6c7a6a8864ed7a6416418af1c5547ba40fea7aa9658b",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Dark Cherry",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-darkcherry/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/128/CCL-DarkCherry.cueprofile",
+      "file": "downloads/ccl-darkcherry--CCL-DarkCherry.cueprofile",
+      "bytes": 3799514,
+      "sha256": "99d69842f724de58e4c420a1f49157029f1ec26edaba53e6e98c407c7fe302a5",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Dreamscape",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-dreamscape/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/121/CCL-Dreamscape.cueprofile",
+      "file": "downloads/ccl-dreamscape--CCL-Dreamscape.cueprofile",
+      "bytes": 8257587,
+      "sha256": "23af68977a8b81a4def94dd4cf0e60cc7ecd70c0803bc017ef3ee1d69e50c3ed",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Respawn",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-respawn/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/122/CCL-Respawn.cueprofile",
+      "file": "downloads/ccl-respawn--CCL-Respawn.cueprofile",
+      "bytes": 4353410,
+      "sha256": "9bc19c1ef9aa7be32fd7925ba845351187ec9409c8328aec98b6e4a9c75a369d",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Sci-fi Dark",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-scifidark/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/123/CCL-Sci-fiDark.cueprofile",
+      "file": "downloads/ccl-scifidark--CCL-Sci-fiDark.cueprofile",
+      "bytes": 4425120,
+      "sha256": "2ac4493a4c50d1cfc43aea63d47cbe26c36de7a049d8b524158229ea7e994e38",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Sci-fi Light",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-scifilight/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/124/CCL-Sci-fiLight.cueprofile",
+      "file": "downloads/ccl-scifilight--CCL-Sci-fiLight.cueprofile",
+      "bytes": 4418753,
+      "sha256": "d6d26fee1984c1f524166180c6d01e79f76ef44013c1a3cbd0103cd12b64fa8c",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Tigerstripe Red",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-tigerstripered/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/125/CCL-TigerstripeRed.cueprofile",
+      "file": "downloads/ccl-tigerstripered--CCL-TigerstripeRed.cueprofile",
+      "bytes": 2419138,
+      "sha256": "97f601c5556d5a521304d5baa65c2ade48562d17e75778163cfdc0c74b2a6a02",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Topograph",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-topograph/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/126/CCL-Topograph.cueprofile",
+      "file": "downloads/ccl-topograph--CCL-Topograph.cueprofile",
+      "bytes": 2434466,
+      "sha256": "2264af1e01908877a13a778cd33600d7c3200fde33add6ab2a169ef638034bc7",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "CCL-Velocity",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ccl-velocity/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/127/CCL-Velocity.cueprofile",
+      "file": "downloads/ccl-velocity--CCL-Velocity.cueprofile",
+      "bytes": 3840871,
+      "sha256": "57487a5157bf4afb921ae03650208a396fe135c5fd0868fc4c9f3f1135497736",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Christmas-Lights",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/christmas-lights/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/106/LG_Christmas-Lights.cueprofile",
+      "file": "downloads/christmas-lights--LG_Christmas-Lights.cueprofile",
+      "bytes": 9186244,
+      "sha256": "c69f3ac2de2899839df5c5d0d3c5e61fdd18f7fd7eee9ecd8d53d8b3dc734b3d",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Christmas-Theme",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/christmas-theme/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/104/LG_Christmas-Theme.cueprofile",
+      "file": "downloads/christmas-theme--LG_Christmas-Theme.cueprofile",
+      "bytes": 5598079,
+      "sha256": "c5d6b7d3aac7327fe7ba77371db7fc1264cbec3602d8caee760c51f989e05e1c",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Cobalt",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/cobalt/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/98/LG_Cobalt_DLyK76O.cueprofile",
+      "file": "downloads/cobalt--LG_Cobalt_DLyK76O.cueprofile",
+      "bytes": 6160898,
+      "sha256": "b0c4ea0db0a05462dacfc2382738cf8900b9ae47411b4a252ea7ce10c2b00cb7",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Corrosive",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/corrosive/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/97/LG_Corrosive_2hs9Tyy.cueprofile",
+      "file": "downloads/corrosive--LG_Corrosive_2hs9Tyy.cueprofile",
+      "bytes": 4933302,
+      "sha256": "216a0eecc58b668585eee45fb3d5795f3db2020d9a371bd825d35ac274417c6a",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Crimson",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/crimson/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/96/LG_Crimson_8q8B7RW.cueprofile",
+      "file": "downloads/crimson--LG_Crimson_8q8B7RW.cueprofile",
+      "bytes": 4464677,
+      "sha256": "56d06ae9079269d8e663857c8608733c7ffd97de45540a177d6b18bf7ca7f5c7",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "CS-Fade",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/cs-fade/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/95/LG_CS-Fade.cueprofile",
+      "file": "downloads/cs-fade--LG_CS-Fade.cueprofile",
+      "bytes": 6110288,
+      "sha256": "f9184c29a1ea074c78c211dbad911eb5aeeb26f326e6f2cafe13ec5a361cb8b9",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Cyberpunk",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/cyberpunk/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/82/LG_Cyberpunk_IRI5aDl.cueprofile",
+      "file": "downloads/cyberpunk--LG_Cyberpunk_IRI5aDl.cueprofile",
+      "bytes": 4318545,
+      "sha256": "d949939a68c68da12589aab0a27b39a05f0fa633b72391c15c9da51d1c00b194",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Cyberware",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/cyberware/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/81/LG_Cyberware_hibk7kd.cueprofile",
+      "file": "downloads/cyberware--LG_Cyberware_hibk7kd.cueprofile",
+      "bytes": 4856109,
+      "sha256": "a05b24f643dd9ee7aba46a3989a39349e70013f3b48eb694b29e68fa3c03591e",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Division2",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/division-2/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/94/LG_Division2_NOO5jB4.cueprofile",
+      "file": "downloads/division-2--LG_Division2_NOO5jB4.cueprofile",
+      "bytes": 4854940,
+      "sha256": "e7931a4298e0f56a7e41c514fe33db652599482eb43698920ab997e9f3d43112",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "DOOM-TheDarkAges",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/doom-thedarkages/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/143/DOOM-TheDarkAges.cueprofile",
+      "file": "downloads/doom-thedarkages--DOOM-TheDarkAges.cueprofile",
+      "bytes": 4904243,
+      "sha256": "8932ec41defe751dae46213f85dae00157fd04ae59f81f1ecaede3bb146e6438",
+      "exporterVersion": "5.26.97"
+    },
+    {
+      "name": "DOOM",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/doom/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/93/LG_DOOM_BkCIbSF.cueprofile",
+      "file": "downloads/doom--LG_DOOM_BkCIbSF.cueprofile",
+      "bytes": 5412397,
+      "sha256": "91ed4b32a6f763ae6e1203014474d5f5999eca1d784ac45f89429aa6a4662176",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Far Cry 5",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/farcry5/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/113/LG_FarCry5_2nuRygn.cueprofile",
+      "file": "downloads/farcry5--LG_FarCry5_2nuRygn.cueprofile",
+      "bytes": 5116640,
+      "sha256": "00dfdd4c82aaa7e04eecb719e7d2727e4a49ab7dba1f5a8586c06753ac66e50f",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Firestorm",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/firestorm/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/92/LG_Firestorm_xbxRaxk.cueprofile",
+      "file": "downloads/firestorm--LG_Firestorm_xbxRaxk.cueprofile",
+      "bytes": 6514320,
+      "sha256": "e85ce51ed3a4b639c35551b3606c90431f956c275bf9e2231930147f74030e8d",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Fireworks-Rainbow",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/fireworks-rainbow/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/115/LG_Fireworks-Rainbow.cueprofile",
+      "file": "downloads/fireworks-rainbow--LG_Fireworks-Rainbow.cueprofile",
+      "bytes": 4516507,
+      "sha256": "b19f25f9d172cb7349de7589969cec4c67ad5ed7e243156fa2cf6b84fcaa2a5f",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Fireworks-RedWhiteBlue",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/fireworks-redwhiteblue/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/116/LG_Fireworks-RedWhiteBlue.cueprofile",
+      "file": "downloads/fireworks-redwhiteblue--LG_Fireworks-RedWhiteBlue.cueprofile",
+      "bytes": 4470976,
+      "sha256": "3eb42ca3f1caba2a69c598ecb47c696870dedddaa934c9a7c38671795e71526f",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Fortnite",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/fortnite/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/108/LG_Fortnite_KVhS47C.cueprofile",
+      "file": "downloads/fortnite--LG_Fortnite_KVhS47C.cueprofile",
+      "bytes": 2702946,
+      "sha256": "e8cef7b0cdad224ce7bf80e8882a44d63a2598b722598e0be3cd27fc4d8590fc",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Halloween-Cauldron",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-cauldron/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/130/LG_Halloween-Cauldron.cueprofile",
+      "file": "downloads/halloween-cauldron--LG_Halloween-Cauldron.cueprofile",
+      "bytes": 8505942,
+      "sha256": "97f69582941cb731afc27a7ada28bc0adbe479b376d483e5b6f770a38462a78e",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halloween-Eyes",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-eyes/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/75/LG_Halloween-Eyes_DpKgUC4.cueprofile",
+      "file": "downloads/halloween-eyes--LG_Halloween-Eyes_DpKgUC4.cueprofile",
+      "bytes": 3483042,
+      "sha256": "d5379bfa0cd0386331b79cbe0b5b8b772d41075194f4f4647203c7736a8505b7",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Halloween-Ghosts",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-ghosts/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/133/LG_Halloween-Ghosts.cueprofile",
+      "file": "downloads/halloween-ghosts--LG_Halloween-Ghosts.cueprofile",
+      "bytes": 1777867,
+      "sha256": "5f7cc5112fa9c494b19f8975d21c658bda0e40bb89870288e9bd5b3f9ac3843d",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halloween-Pumpkin",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-pumpkin/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/74/LG_Halloween-Pumpkin_R1CjV3g.cueprofile",
+      "file": "downloads/halloween-pumpkin--LG_Halloween-Pumpkin_R1CjV3g.cueprofile",
+      "bytes": 2056600,
+      "sha256": "a23ea361a975875633fc41ba5bfac5ce6ccc0ef734f3afbfb4d2b08688150c94",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Halloween-Slaughter",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-slaughter/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/135/LG_Halloween-Slaughter.cueprofile",
+      "file": "downloads/halloween-slaughter--LG_Halloween-Slaughter.cueprofile",
+      "bytes": 3130692,
+      "sha256": "88a4b1e1e093a1533590a7c2882fee5473e21633603a29d6ded634cbb6fbd8cc",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halloween-Slime",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-slime/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/131/LG_Halloween-Slime.cueprofile",
+      "file": "downloads/halloween-slime--LG_Halloween-Slime.cueprofile",
+      "bytes": 3011521,
+      "sha256": "d9c1f5f6d6e9c9fe7334063f7020ac564e25a641837c74c3d65fee84ea8b5cf5",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halloween-TheDark",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-thedark/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/73/LG_Halloween-TheDark_BVorhk0.cueprofile",
+      "file": "downloads/halloween-thedark--LG_Halloween-TheDark_BVorhk0.cueprofile",
+      "bytes": 4218957,
+      "sha256": "66384add96d307b41a7b09279396405201ae003cc89b3d578395a56706007d7c",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Halloween-Vampire",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-vampire/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/132/LG_Halloween-Vampire.cueprofile",
+      "file": "downloads/halloween-vampire--LG_Halloween-Vampire.cueprofile",
+      "bytes": 8540828,
+      "sha256": "714fa2d39d80311c3bef1314b0de6a69a574663c8de8e34ad2baf2cb9eda3a55",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halloween-Werewolf",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halloween-werewolf/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/134/LG_Halloween-Werewolf.cueprofile",
+      "file": "downloads/halloween-werewolf--LG_Halloween-Werewolf.cueprofile",
+      "bytes": 7230335,
+      "sha256": "173432685d44341e74f3b48aa458dc75fd7745b5f5afe7cf19f0598723bcb354",
+      "exporterVersion": "5.18.106"
+    },
+    {
+      "name": "Halo-Infinite",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halo-infinite/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/78/LG_Halo-Infinite_np8Y4tC.cueprofile",
+      "file": "downloads/halo-infinite--LG_Halo-Infinite_np8Y4tC.cueprofile",
+      "bytes": 5242710,
+      "sha256": "46ffdcf2b53e819a0cfa494c661e7fd760b0019836962b9d2073fd477647be80",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Halo-MasterChief",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/halo-masterchief/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/77/LG_Halo-MasterChief_UDQ4lhx.cueprofile",
+      "file": "downloads/halo-masterchief--LG_Halo-MasterChief_UDQ4lhx.cueprofile",
+      "bytes": 2439108,
+      "sha256": "37d67a2aaafd05f1aecb461737b85759721de4d402d058b625fbd86335b0e971",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Helix",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/helix/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/91/LG_Helix_0Peftu1.cueprofile",
+      "file": "downloads/helix--LG_Helix_0Peftu1.cueprofile",
+      "bytes": 7158705,
+      "sha256": "27bcacf11d290b8ada38af7a6aab5d4faae6f50ad8543b4aa2ed224b6e37ff2d",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Helldivers",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/helldivers/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/112/Helldivers.cueprofile",
+      "file": "downloads/helldivers--Helldivers.cueprofile",
+      "bytes": 4814181,
+      "sha256": "bbeafb22136ade0b4e3d9e9753c98198a1b870d76bb37c6f7566474f7ac7e05d",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Ice",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/ice/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/90/LG_Ice_JGoY0Wy.cueprofile",
+      "file": "downloads/ice--LG_Ice_JGoY0Wy.cueprofile",
+      "bytes": 4919500,
+      "sha256": "bcf3bac196f055d4b3cc7de1ebbe9ea2e1ec9115494e69a17a80e4644cb476c9",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Knight Rider",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/knightrider/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/89/LG_KnightRider_smnczRS.cueprofile",
+      "file": "downloads/knightrider--LG_KnightRider_smnczRS.cueprofile",
+      "bytes": 6867680,
+      "sha256": "22fe405fd01a40680a4f5c38151fe8865f07ea8be5e5057d8d50ba46d9977d27",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Laser Raptor",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/laser-raptor/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/42/LG_LaserRaptor.cueprofile",
+      "file": "downloads/laser-raptor--LG_LaserRaptor.cueprofile",
+      "bytes": 3439636,
+      "sha256": "16ef7625bd020046a62f8978110a2e663dc2eab408c28eb867b9c1e37e933372",
+      "exporterVersion": ""
+    },
+    {
+      "name": "MarvelRivals",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/marvelrivals/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/141/LG_MarvelRivals.cueprofile",
+      "file": "downloads/marvelrivals--LG_MarvelRivals.cueprofile",
+      "bytes": 5791296,
+      "sha256": "46c4f431afe74bb7f1ed843ab31d790c9a5170e3e395ffbbc47ee5135ce2c501",
+      "exporterVersion": "5.21.107"
+    },
+    {
+      "name": "MushroomCloud",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/mushroom-cloud/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/43/LG_MushroomCloud.cueprofile",
+      "file": "downloads/mushroom-cloud--LG_MushroomCloud.cueprofile",
+      "bytes": 4379247,
+      "sha256": "f931225e9b3fbad88e6c69ef6ef3b4d3bbb9e3dd82e7fa51a2aaf7dedd8d9171",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Neon",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/neon/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/88/LG_Neon_9KoAmQU.cueprofile",
+      "file": "downloads/neon--LG_Neon_9KoAmQU.cueprofile",
+      "bytes": 4942083,
+      "sha256": "eff71cb575ff523d7c5acaf67919966f0de9383597900a03307267a1f28897ff",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Netrunner",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/netrunner/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/80/LG_Netrunner_FfRtRQg.cueprofile",
+      "file": "downloads/netrunner--LG_Netrunner_FfRtRQg.cueprofile",
+      "bytes": 3242550,
+      "sha256": "144e73082d4fd2b6dab4035ea6b2da0900325b313868aab7b54c8b074de352ae",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Nuclear",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/nuclear/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/87/LG_Nuclear_1hzuZIM.cueprofile",
+      "file": "downloads/nuclear--LG_Nuclear_1hzuZIM.cueprofile",
+      "bytes": 4613541,
+      "sha256": "f7a2b64db4ad8ce021af6643d0be77ffc4e8e0fad3020d45ea10acf7482b231a",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Overwatch",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/overwatch/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/46/LG_Overwatch.cueprofile",
+      "file": "downloads/overwatch--LG_Overwatch.cueprofile",
+      "bytes": 3026993,
+      "sha256": "a3d168cc836833f49aa7bffd659bc89d33803f664ade0d65148a3a6d2269079a",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Pac-Man",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/pac-man/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/47/LG_PacMan.cueprofile",
+      "file": "downloads/pac-man--LG_PacMan.cueprofile",
+      "bytes": 1438832,
+      "sha256": "b6d1dc24d991ff0c00bbaf5c212feb5ebdb53537195ab8fc17ac1627a2b1bbf1",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Payday 2",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/payday-2/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/48/LG_Payday2.cueprofile",
+      "file": "downloads/payday-2--LG_Payday2.cueprofile",
+      "bytes": 956475,
+      "sha256": "b55162707b8e64b2c9d6b102128a6b52125a3f63c4db5bfbdb19a9c356874eb0",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Poison",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/poison/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/86/LG_Poison_jbd8r7i.cueprofile",
+      "file": "downloads/poison--LG_Poison_jbd8r7i.cueprofile",
+      "bytes": 5448937,
+      "sha256": "7815b63dfab3b2ed4beb358c8c18cec9f63046c8ebaa89a40cb87729dec7eb43",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Rainbow Horizontal",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/rainbow-horizontal/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/51/LG_RainbowHorizontal.cueprofile",
+      "file": "downloads/rainbow-horizontal--LG_RainbowHorizontal.cueprofile",
+      "bytes": 1415462,
+      "sha256": "8bfa69e0de1eab641398bc7d021938c67be5d179289c3e7b4efd00d7ca15032c",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Rainbow Six Siege",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/rainbow-six-siege/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/52/LG_RainbowSixSiege.cueprofile",
+      "file": "downloads/rainbow-six-siege--LG_RainbowSixSiege.cueprofile",
+      "bytes": 1754458,
+      "sha256": "d1ffdc18e114241b5227bed3c49c517897cb2205f690d0179a5c5f10db5bf7fc",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Rainbow Vertical",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/rainbow-vertical/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/53/LG_RainbowVertical.cueprofile",
+      "file": "downloads/rainbow-vertical--LG_RainbowVertical.cueprofile",
+      "bytes": 1134712,
+      "sha256": "1e635d8064c142454dd2a0f45c4be51d73c6fe95ad773157d9b4fe75b5391ade",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Rainbow Fire",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/rainbowfire/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/85/LG_RainbowFire_Iie99ex.cueprofile",
+      "file": "downloads/rainbowfire--LG_RainbowFire_Iie99ex.cueprofile",
+      "bytes": 5278599,
+      "sha256": "caefbc9e3d108dad61605cc2125c1ebd31d9351c945b25b41d0ca2c5a5a3b574",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Starcraft II",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/starcraft-ii/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/54/LG_StarcraftII.cueprofile",
+      "file": "downloads/starcraft-ii--LG_StarcraftII.cueprofile",
+      "bytes": 1928643,
+      "sha256": "7e095f95843b5e1d43cf07f8cc7dd90f52cab4df3f037187ccc4e9dfd3de4aa9",
+      "exporterVersion": ""
+    },
+    {
+      "name": "StarWars-Duel",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/starwars-duel/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/84/LG_StarWars-Duel_G6jcjnf.cueprofile",
+      "file": "downloads/starwars-duel--LG_StarWars-Duel_G6jcjnf.cueprofile",
+      "bytes": 2496219,
+      "sha256": "547a60be921ad60b2b75413932ffa9457778767e0202beb3ee6bfc14568dd4da",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Stranger Things",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/strangerthings/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/170/LG_StrangerThings.cueprofile",
+      "file": "downloads/strangerthings--LG_StrangerThings.cueprofile",
+      "bytes": 6552594,
+      "sha256": "386cae44667a7d2580772aec991605e6ac40e1228896125e34119312d9c44351",
+      "exporterVersion": "5.38.86"
+    },
+    {
+      "name": "Summer",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/summer/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/56/LG_Summer.cueprofile",
+      "file": "downloads/summer--LG_Summer.cueprofile",
+      "bytes": 9644118,
+      "sha256": "1bab5ac2e37177a85b40a1f90f285cba22723f3cace4779b8ac93a3acede5413",
+      "exporterVersion": "4.20.169"
+    },
+    {
+      "name": "Super Saiyan",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/super-saiyan/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/57/LG_SuperSaiyan.cueprofile",
+      "file": "downloads/super-saiyan--LG_SuperSaiyan.cueprofile",
+      "bytes": 3322272,
+      "sha256": "f0bc6a6e63db7ae38b7b2972b6a023987ddc9b6cb403d689f699736b99140c30",
+      "exporterVersion": ""
+    },
+    {
+      "name": "Titanium",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/titanium/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/83/LG_Titanium_SFWczOF.cueprofile",
+      "file": "downloads/titanium--LG_Titanium_SFWczOF.cueprofile",
+      "bytes": 5645651,
+      "sha256": "dd410d0866432ae28366c214866beeaf2e4594f5844fb9cd089752617a8a3200",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Valentines",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/valentines/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/142/LG_Valentines.cueprofile",
+      "file": "downloads/valentines--LG_Valentines.cueprofile",
+      "bytes": 5482347,
+      "sha256": "10b44273c42852e2981991375fc833e1736c381334abb55f8992277faa4ae175",
+      "exporterVersion": "5.21.107"
+    },
+    {
+      "name": "Valorant",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/valorant/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/79/LG_Valorant_skv2HYS.cueprofile",
+      "file": "downloads/valorant--LG_Valorant_skv2HYS.cueprofile",
+      "bytes": 5429579,
+      "sha256": "ac200e86f4bcc163ea06141eb8e9912fe283e2e73e307d981159b18f8b5fa9b5",
+      "exporterVersion": "5.9.105"
+    },
+    {
+      "name": "Winter",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/winter/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/59/LG_Winter.cueprofile",
+      "file": "downloads/winter--LG_Winter.cueprofile",
+      "bytes": 9030008,
+      "sha256": "85d08d98a8182897ea5081ebb8fd2d97e29dfb142805c99613d2ccbf5cdc6fbb",
+      "exporterVersion": "4.20.169"
+    },
+    {
+      "name": "World Of Warcraft",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/world-of-warcraft/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/60/LG_WoW.cueprofile",
+      "file": "downloads/world-of-warcraft--LG_WoW.cueprofile",
+      "bytes": 2699628,
+      "sha256": "9aa2c0d7105407b0f447149e00f2f5a2ebbaddb00a719a32c502c37c058733c5",
+      "exporterVersion": ""
+    },
+    {
+      "name": "XCOM2",
+      "pageUrl": "https://www.corsair.com/us/en/explorer/icue/icue-profiles/xcom/",
+      "downloadUrl": "https://www.corsair.com/us/en/explorer/documents/61/LG_XCOM.cueprofile",
+      "file": "downloads/xcom--LG_XCOM.cueprofile",
+      "bytes": 1230356,
+      "sha256": "a2958e5675c18bfef6fd7836f38a7d79af5a30b48044e86e304f3793cfcaf8d0",
+      "exporterVersion": ""
+    }
+  ]
+}
