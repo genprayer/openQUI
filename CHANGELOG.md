@@ -5,6 +5,7 @@
 - Replay rain and supported ripple modes in native C++, including bounded history for overlapping K70 key presses.
 - Import global key-triggered gradient curves and retain source rain/ripple parameters with explicit approximation warnings.
 - Share rain/ripple geometry with the local preview; make rain opacity/direction controls live.
+- Allow user installation of an already tested binary with `--skip-build`.
 - Add the official-gallery profile catalog/downloader and retain 82 local original downloads.
 - Move profile creation below the list and add right-click rename, duplicate and delete.
 - Replay activated profiles on each connected supported peripheral while the lighting editor is open; preserve iCUE layer order and convert moving waves, pulse colors and K70 per-key gradient curves.

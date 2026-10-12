@@ -5,13 +5,22 @@ PROJECT_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 BUILD_DIRECTORY="${OPENQUI_BUILD_DIRECTORY:-build/native}"
 INSTALL_PREFIX="${OPENQUI_INSTALL_PREFIX:-$HOME/.local}"
 DATA_DIRECTORY="${OPENQUI_INSTALL_DATA_DIRECTORY:-$INSTALL_PREFIX/share}"
+SHOULD_BUILD=true
+if [[ "$#" == 1 && "$1" == --skip-build ]]; then
+    SHOULD_BUILD=false
+elif [[ "$#" != 0 ]]; then
+    printf 'Usage: %s [--skip-build]\n' "$0" >&2
+    exit 2
+fi
 for path in "$INSTALL_PREFIX" "$DATA_DIRECTORY"; do
     if [[ "$path" != /* || "$path" == *$'\n'* || "$path" == *$'\r'* ]]; then
         printf 'Installation directories must be absolute paths without line breaks.\n' >&2
         exit 1
     fi
 done
-"$PROJECT_ROOT/scripts/build.sh"
+if [[ "$SHOULD_BUILD" == true ]]; then
+    "$PROJECT_ROOT/scripts/build.sh"
+fi
 NATIVE_BINARY="$PROJECT_ROOT/$BUILD_DIRECTORY/open-cue-gui"
 if [[ ! -x "$NATIVE_BINARY" ]]; then
     printf 'Native build is missing: %s\n' "$NATIVE_BINARY" >&2

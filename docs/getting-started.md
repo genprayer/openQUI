@@ -75,6 +75,8 @@ To install in the current user's prefix:
 
 ```sh
 ./scripts/install-user.sh
+# Install a binary already built and tested in the development container:
+./scripts/install-user.sh --skip-build
 # For an already selected local-resource configuration:
 OPENQUI_BUILD_DIRECTORY=build/local-assets \
 OPENQUI_USE_LOCAL_CORSAIR_RESOURCES=ON ./scripts/install-user.sh
@@ -83,7 +85,9 @@ OPENQUI_USE_LOCAL_CORSAIR_RESOURCES=ON ./scripts/install-user.sh
 The installer validates the binary and desktop entry, uses an installation
 lock and preserves replaced files. It installs `open-cue-gui`, the OpenQUI
 launcher and its SVG icon. It does not install udev rules or restart PipeWire.
-It does not remove an older Open-iCUE installation automatically.
+It does not remove an older Open-iCUE installation automatically. `--skip-build`
+retains executable/runtime and desktop-entry validation; it only skips the
+build command. Use it for a tested build produced by the same checkout.
 
 ## Docker build
 
