@@ -97,3 +97,23 @@ staging prefix when packaging. The service file is a template; installing or
 starting it is an explicit distribution/user choice. CI builds Fedora/Debian
 from source, uses read-only GitHub permissions and does not publish artifacts
 or perform hardware writes.
+
+## OpenLinkHub as a reference
+
+[OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) is a separate Go
+service with a [documented HTTP API](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/api/README.md).
+Its [supported device list](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/docs/supported-devices.md)
+can guide protocol research; support there does not establish support in OpenQUI.
+
+A future native Qt client could use that service through an explicit backend
+adapter. The service would own the delegated HID devices; the native backend
+must release them first. The adapter would need device/capability mapping,
+connection/error handling and its own integration tests. Alternatively, verified
+protocol behavior can guide additional C++ implementations through the existing
+[device contribution workflow](adding-devices.md). Neither route is implemented.
+
+OpenLinkHub's source is [GPL-3.0](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/LICENSE).
+No upstream code or driver is copied, linked or bundled by this documentation
+change. Future source reuse must preserve the applicable license and notices;
+it cannot simply be relabeled as OpenQUI's MIT source. Adopting documentation
+navigation does not change the current runtime or supported-device allowlist.

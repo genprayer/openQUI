@@ -21,6 +21,10 @@ own compile and hardware validation.
 
 ## Device identities
 
+The [supported device list](supported-devices.md) groups the implemented models
+by category and links to the wider product backlog. This page records exact
+identity and capability boundaries.
+
 | Catalog entry | Identity | Evidence boundary |
 | --- | --- | --- |
 | K70 CORE RGB | `1b1c:1bfd` USB | RGB writes and real passive key reports; user confirmed Type flashes over a continuous wave |

@@ -21,8 +21,10 @@ Read [development.md](docs/development.md) for module ownership and style,
 [adding-devices.md](docs/adding-devices.md) before proposing new hardware writes.
 The [VS Code guide](docs/vscode-guide.ru.md) provides the repeatable editor setup
 and the supplied configure/build/test tasks.
-Public interfaces and modules need concise documentation. Update the support
-matrix when a verified capability changes.
+Public interfaces and modules need concise documentation. Update the
+[supported device list](docs/supported-devices.md) and support matrix when a
+verified capability changes. The [documentation index](docs/README.md) groups
+the user and developer guides.
 
 Code and comments are English. User interface messages use the existing German
 source keys and English/German/Russian translation catalogs. Preserve device

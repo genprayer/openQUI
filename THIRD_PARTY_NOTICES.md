@@ -45,3 +45,8 @@ protocol constants and published references. ckb-next and OpenRGB are research
 references, not linked or bundled drivers. V2W protocol behavior was cross-checked
 against VirtuosoControl by Alejandro Socas (MIT, copyright 2026). Its repository
 and all Windows research files stay outside this source distribution.
+
+The README navigation and separate supported-device page were inspired by
+[OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub). Its source uses
+[GPL-3.0](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/LICENSE);
+this documentation change does not copy or bundle its Go code or drivers.

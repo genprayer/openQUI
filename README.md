@@ -4,39 +4,31 @@ Native C++20 / Qt Quick application for Corsair peripherals on Linux.
 The repository is `openQUI`; the executable is `open-cue-gui`.
 English, German and Russian interfaces are included. Device names stay unchanged.
 
-OpenQUI provides live layered RGB editing, click/Shift/rectangle LED selection,
-iCUE profile import, headset EQ and a Linux binaural 7.1 renderer. It is an
-independent project with a deliberately small, verified hardware implementation.
-It does not yet replace every feature of Windows iCUE.
+OpenQUI is an independent project with partial support for the K70 CORE RGB,
+DARKSTAR WIRELESS and the tested VIRTUOSO receiver path. It does not yet replace
+every feature of Windows iCUE.
 
-![K70 CORE RGB lighting editor with WASD selected](docs/images/k70-core-lighting.png)
+## Features
 
-*K70 CORE RGB: original device rendering, separate WASD and ambient lighting layers.*
+- Live layered RGB editing and click, Shift or rectangle LED selection.
+- K70 lighting that reacts to physical key presses.
+- iCUE profile import and playback of supported layers across connected devices.
+- Ten-band headset EQ and independent binaural 7.1 rendering through PipeWire.
+- Battery queries and a system tray for the tested wireless device paths.
+- [Supported device list](docs/supported-devices.md).
+- [Lighting and DPI](docs/features.md).
+- [Profiles and import limits](docs/profiles.md).
+- [Audio and other feature status](docs/compatibility.md#capabilities).
+- [Linux compatibility](docs/compatibility.md#linux-build-contract).
+- [Documentation](docs/README.md).
 
-![VIRTUOSO equalizer with the Bass Boost preset](docs/images/virtuoso-equalizer.png)
+## Info
 
-*VIRTUOSO: original device rendering and the ten-band Bass Boost preset.*
-
-## Hardware support
-
-| Device | Tested connection | Available hardware implementation |
-| --- | --- | --- |
-| K70 CORE RGB | USB `1b1c:1bfd` | Per-key RGB; Type effect driven by verified keyboard input reports |
-| DARKSTAR WIRELESS | USB `1b1c:1bb2`; linked child of receiver `1b1c:1bdc` | RGB, battery and radio status; guarded wired active-DPI and pairing transactions |
-| VIRTUOSO | Headset through receiver `1b1c:0a42` | RGB, battery, receiver-specific audio routing, ten-band EQ and binaural 7.1 |
-
-There are **three peripheral implementations and two receiver UI entries**.
-The [Corsair device backlog](docs/corsair-device-backlog.md) lists the wider
-product inventory and the models whose Linux implementation is still pending.
-Only the VIRTUOSO command path through `0a42` has headset hardware evidence.
-Other VIRTUOSO variants, HS-series headsets and other Corsair keyboards/mice are
-not assumed compatible. DPI response validation and pairing readback are
-implemented; physical DPI measurement and pairing after cable removal remain
-separate acceptance checks. Fifteen mouse assignments and F1–F24 exist in the
-editor; global key replay, macros and hardware assignment upload are unfinished.
-
-See [the full support matrix](docs/compatibility.md) for features and USB-ID
-boundaries, and [adding a device](docs/adding-devices.md) for the contribution path.
+- This project was created out of necessity to control Corsair peripherals on workstations after switching to Linux.
+- I take no responsibility for this code at all. Use this at your own risk.
+- The devices listed as partially supported have been exercised on live hardware. Individual features still have separate testing limits; see [validation](docs/validation.md).
+- Take care and have fun!
+- This project is not an official Corsair product.
 
 ## Build and run
 
@@ -60,38 +52,6 @@ Fedora 44 and Debian 13 source builds are exercised locally. Other distributions
 need the same dependencies and their own validation. A Fedora executable is not
 an all-distribution binary; AppImage/Flatpak packages are not provided yet.
 
-## Profiles
-
-[Profiles/](Profiles/README.md) contains a sourced catalog and downloader for
-the official Corsair gallery; the local snapshot has 82 original profiles.
-The sidebar adds profiles below the list and offers right-click operations.
-Import converts supported layers for each known device and preserves the
-complete source XML. [Conversion and playback limits](docs/profiles.md)
-describe the effects and hardware behavior that still need implementation.
-
-## Resources and screenshots
-
-The default build automatically uses original iCUE device renderings when the
-required local bundles are present. The `local-assets` preset requires them
-explicitly; `source-only` selects authored fallback drawings. Without local
-bundles a clean source checkout uses the fallback. HID support does not depend
-on the pictures. Local imports are excluded from Git without deleting them.
-
-The [asset importer](docs/assets.md) reads **every available package** in a
-supplied installation. The audited iCUE 5.52.93 snapshot contains five Corsair
-device bundles and three partner-integration bundles, plus shared images,
-fonts and icons. It is not the full Corsair product catalog. Importing another
-model's images does not implement its driver. The [asset catalog](docs/asset-catalog.json)
-records the actual inventory. Original views in this snapshot are raster
-renders and masks; no GLB, FBX or OBJ model was found.
-
-The two README images show original K70 CORE and VIRTUOSO renderings from the
-locally supplied iCUE snapshot in isolated preview, with no real device writes.
-The Corsair renderings are not covered by the source code's MIT license.
-Historical diagnostic
-screenshots, Windows binaries, private profiles and pairing journals are not
-part of the source repository.
-
 ## Contributing
 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md), then use:
@@ -101,6 +61,7 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md), then use:
 - [Architecture](docs/architecture.md): ownership, persistence, hardware and audio boundaries.
 - [Validation](docs/validation.md): tested platforms, presets and acceptance boundaries.
 - [Adding devices](docs/adding-devices.md): metadata, transport evidence, fixtures and support gates.
+- [Supported devices](docs/supported-devices.md): available models, exact connections and limitations.
 - [Corsair device backlog](docs/corsair-device-backlog.md): sourced product lists and pending Linux support.
 - [Assets](docs/assets.md): importing optional resource packages and keeping provenance.
 - [Profiles](docs/profiles.md): official library, sidebar behavior and import limits.
@@ -109,6 +70,29 @@ Hardware reports should include model, VID:PID, firmware, connection type,
 HID descriptor and observed result. Do not include pairing keys or personal
 profiles. Unsupported devices must remain unavailable for writes until their
 protocol is verified.
+
+## Screenshots and resources
+
+![K70 CORE RGB lighting editor with WASD selected](docs/images/k70-core-lighting.png)
+
+*K70 CORE RGB: original device rendering, separate WASD and ambient lighting layers.*
+
+![VIRTUOSO equalizer with the Bass Boost preset](docs/images/virtuoso-equalizer.png)
+
+*VIRTUOSO: original device rendering and the ten-band Bass Boost preset.*
+
+These captures use the local original-resource build in isolated preview, with
+no device writes. The default build uses original images when the required local
+bundles exist; a clean source checkout uses authored fallback drawings. See
+[assets](docs/assets.md) for importing resources and [the inventory](docs/asset-catalog.json)
+for the supplied packages. Images do not establish device support.
+
+## Related projects
+
+[OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) inspired the README
+navigation and separate supported-device page. Its Go service is not an OpenQUI
+dependency. [Developer notes](docs/development.md#openlinkhub-as-a-reference)
+describe possible API integration and the boundary for reusing its support.
 
 ## License
 
