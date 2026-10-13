@@ -2,6 +2,7 @@
 
 ## Unreleased — OpenQUI repository
 
+- Refresh README captures from the original-resource build, showing selected WASD keys and the VIRTUOSO equalizer.
 - Replay rain and supported ripple modes in native C++, including bounded history for overlapping K70 key presses.
 - Import global key-triggered gradient curves and retain source rain/ripple parameters with explicit approximation warnings.
 - Share rain/ripple geometry with the local preview; make rain opacity/direction controls live.

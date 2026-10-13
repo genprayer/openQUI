@@ -9,8 +9,13 @@ iCUE profile import, headset EQ and a Linux binaural 7.1 renderer. It is an
 independent project with a deliberately small, verified hardware implementation.
 It does not yet replace every feature of Windows iCUE.
 
-![Keyboard lighting editor](docs/images/keyboard-lighting.png)
-![Headset equalizer](docs/images/headset-equalizer.png)
+![K70 CORE RGB lighting editor with WASD selected](docs/images/k70-core-lighting.png)
+
+*K70 CORE RGB: original device rendering, separate WASD and ambient lighting layers.*
+
+![VIRTUOSO equalizer with the Bass Boost preset](docs/images/virtuoso-equalizer.png)
+
+*VIRTUOSO: original device rendering and the ten-band Bass Boost preset.*
 
 ## Hardware support
 
