@@ -25,7 +25,7 @@ every feature of Windows iCUE.
 ## Info
 
 - This project was created out of necessity to control Corsair peripherals on workstations after switching to Linux.
-- I take no responsibility for this code at all. Use this at your own risk.
+- Use this software at your own risk. It is provided without warranties; the authors disclaim liability to the extent permitted by applicable law. See the [MIT license](LICENSE).
 - The devices listed as partially supported have been exercised on live hardware. Individual features still have separate testing limits; see [validation](docs/validation.md).
 - Take care and have fun!
 - This project is not an official Corsair product.
@@ -91,13 +91,15 @@ for the supplied packages. Images do not establish device support.
 
 [OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) inspired the README
 navigation and separate supported-device page. Its Go service is not an OpenQUI
-dependency. [Developer notes](docs/development.md#openlinkhub-as-a-reference)
-describe possible API integration and the boundary for reusing its support.
+dependency. [Developer notes](docs/development.md#native-corsair-device-support)
+describe independently implemented C++ device support and the direct HID path.
 
 ## License
 
 Authored source, QML, tests, translations and SVG drawings are available under
-[MIT](LICENSE). Dependencies and the KEMAR measurements have their own notices
+[MIT](LICENSE), including its warranty disclaimer and limitation of liability.
+Mandatory law can limit those exclusions; the license does not guarantee complete
+immunity from liability. Dependencies and the KEMAR measurements have their own notices
 in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Locally imported iCUE assets
 are not relicensed by this repository's MIT license. Corsair and iCUE are
 trademarks of their owners; this project is not affiliated with Corsair.

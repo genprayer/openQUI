@@ -4,6 +4,11 @@ OpenQUI separates local profile state from hardware observations and audio.
 The GUI and session D-Bus API share one C++ controller. Stable model, key and
 effect IDs stay independent of translated labels.
 
+QML invokes that controller directly in the GUI process. External clients use
+the session D-Bus adaptor to reach the same controller. Hardware commands then
+pass through the serialized worker and native hidraw transport to Linux HID/USB
+drivers. D-Bus itself does not run in the kernel or implement a device protocol.
+
 | Directory | Responsibility |
 | --- | --- |
 | `src/core` | Workspace locking and atomic JSON persistence |

@@ -98,22 +98,20 @@ starting it is an explicit distribution/user choice. CI builds Fedora/Debian
 from source, uses read-only GitHub permissions and does not publish artifacts
 or perform hardware writes.
 
-## OpenLinkHub as a reference
+## Native Corsair device support
 
-[OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) is a separate Go
-service with a [documented HTTP API](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/api/README.md).
-Its [supported device list](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/docs/supported-devices.md)
-can guide protocol research; support there does not establish support in OpenQUI.
+The goal is to expand native Linux support across Corsair's device range through
+independently implemented C++ backends. Follow the [device contribution workflow](adding-devices.md)
+for each protocol family, USB identity and feature. A device list in another
+application does not establish support in OpenQUI.
 
-A future native Qt client could use that service through an explicit backend
-adapter. The service would own the delegated HID devices; the native backend
-must release them first. The adapter would need device/capability mapping,
-connection/error handling and its own integration tests. Alternatively, verified
-protocol behavior can guide additional C++ implementations through the existing
-[device contribution workflow](adding-devices.md). Neither route is implemented.
+QML calls the shared C++ controller directly. External clients can reach that
+controller through the session D-Bus interface. Its serialized hardware worker
+uses `src/devices/hardware_backend.*` and `hid_transport.*` to exchange verified
+reports through `/dev/hidraw`. D-Bus is a userspace command interface; Linux HID
+and USB drivers handle the kernel/device boundary.
 
-OpenLinkHub's source is [GPL-3.0](https://github.com/jurkovic-nikola/OpenLinkHub/blob/main/LICENSE).
-No upstream code or driver is copied, linked or bundled by this documentation
-change. Future source reuse must preserve the applicable license and notices;
-it cannot simply be relabeled as OpenQUI's MIT source. Adopting documentation
-navigation does not change the current runtime or supported-device allowlist.
+OpenLinkHub was a reference for documentation navigation. Its Go service, HTTP
+API and source code are not dependencies or part of this implementation plan.
+The current device allowlist remains limited to the implementations in
+[supported-devices.md](supported-devices.md).

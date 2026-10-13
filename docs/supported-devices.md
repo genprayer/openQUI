@@ -1,5 +1,9 @@
 # Supported devices
 
+The goal is native Linux support across Corsair's device range through independent
+C++ implementations. The tables below describe current coverage, not that goal's
+completion. The [broader backlog](corsair-device-backlog.md) records pending models.
+
 OpenQUI currently has **three peripheral implementations and two receiver UI
 entries**. All entries below are **partially supported**: a working RGB or
 battery path does not imply every iCUE feature is available. Connection type and

@@ -25,5 +25,5 @@
 - [Development and code style](development.md): source ownership, QML, C++, formatting and translations.
 - [Testing](testing.md): deterministic suites, private PipeWire checks and hardware tests.
 - [Architecture](architecture.md): state, GUI, hardware worker, D-Bus and audio ownership.
-- [OpenLinkHub as a reference](development.md#openlinkhub-as-a-reference): possible API integration and source reuse.
+- [Native Corsair device support](development.md#native-corsair-device-support): independent C++ backends, D-Bus and HID ownership.
 - [Third-party notices](../THIRD_PARTY_NOTICES.md): dependencies, measurements and optional local assets.
