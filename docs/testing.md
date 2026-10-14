@@ -36,8 +36,9 @@ stable. The private server uses a temporary runtime directory and avoids the
 actual desktop server.
 
 Run the narrow relevant group while developing, then the baseline once for the
-finished change. CI exercises the clean default-resource build on Fedora 44
-and Debian 13. CI is only configured locally until the repository is published.
+finished change. CI targets the clean default-resource build on Fedora 44
+and Debian 13. See [GitHub validation](validation.md#github-actions) for actual
+run results and checks that still need to be exercised.
 
 ## Hardware acceptance
 

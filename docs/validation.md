@@ -21,8 +21,24 @@ Checked on 2026-10-12–13 during preparation and local installation of OpenQUI.
 The deterministic checks do not establish additional hardware support. Physical
 observations are recorded below and in [compatibility.md](compatibility.md).
 No pairing operation or audible/spatial acceptance test was performed in this
-profile-replay work. GitHub CI is configured but has not been run on GitHub.
+profile-replay work. GitHub CI results are recorded separately below.
 Raw build/test logs and captures are kept in ignored `artifacts/`.
+
+## GitHub Actions
+
+Inspected on 2026-10-14. The [run on 2026-10-13](https://github.com/genprayer/openQUI/actions/runs/38379838208)
+tested commit `60b1f77`. Fedora 44 completed checkout, build and all 10 CTest
+groups. Debian 13 slim stopped at checkout before configuring or compiling:
+Git reported `Problem with the SSL CA cert (path? access rights?)` and exit 128.
+
+The Debian dependency step used `--no-install-recommends`. Its log listed
+`ca-certificates` among recommended packages, without installing it. The workflow
+now explicitly includes that package before checkout. YAML, shell syntax and
+dependency order were checked locally. In the existing Debian development
+container, a Git probe reproduced the same exit 128 with missing CA data;
+it succeeded with the installed CA bundle and TLS verification enabled. This
+is a focused transport check, not a new GitHub run; the patched Debian job still
+needs to be exercised on GitHub.
 
 The asset index contains eight model/integration manifests and 2,697 local file
 entries, including runtime aliases. It is an inventory of the supplied iCUE

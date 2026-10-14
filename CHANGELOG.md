@@ -2,6 +2,7 @@
 
 ## Unreleased — OpenQUI repository
 
+- Install CA certificates explicitly before Debian CI checkout when recommended packages are disabled.
 - Clarify independent native Corsair support, the userspace D-Bus/HID boundary and the existing MIT disclaimer; remove the proposed OpenLinkHub API integration.
 - Add a categorized supported-device page and documentation index; shorten README navigation and document project intent, hardware testing limits and possible OpenLinkHub reuse.
 - Refresh README captures from the original-resource build, showing selected WASD keys and the VIRTUOSO equalizer.

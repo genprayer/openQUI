@@ -13,7 +13,8 @@ a Wayland session. Package commands are in [getting-started.md](getting-started.
 | Other distributions with Qt 6.8+ | Source-build candidates; not yet tested as release targets |
 | Older Qt or other operating systems | Outside the current build contract |
 
-CI is configured for Fedora/Debian, but no GitHub run exists before publication.
+CI is configured for Fedora/Debian; the [validation snapshot](validation.md#github-actions)
+records the actual GitHub results and the pending Debian checkout fix verification.
 Source-build success does not prove USB permissions or every physical feature.
 No portable binary, AppImage, Flatpak, RPM or DEB release is supplied yet. Build
 with the target distribution's shared libraries. Other architectures need their
